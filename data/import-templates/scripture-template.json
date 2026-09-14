@@ -1,0 +1,20 @@
+{
+  "slug": "diamond-sutra",
+  "title": "金刚般若波罗蜜经",
+  "categorySlug": "banruo",
+  "dynasty": "姚秦",
+  "translator": "鸠摩罗什",
+  "role": "适合般若空性观照与日常功课反复熏修",
+  "overlay": "可配六祖《金刚经口诀》或其他祖师注义逐段对照修学。",
+  "publishStatus": "pending_review",
+  "passages": [
+    {
+      "slug": "section-01",
+      "title": "法会因由分第一",
+      "originalText": "如是我闻。一时佛在舍卫国祇树给孤独园，与大比丘众千二百五十人俱。",
+      "plainText": "这一段交代法会发生的时间、地点以及与会大众，是整部经典的缘起。",
+      "commentaryText": "祖师多从“如是我闻”开示信受奉行之义，说明闻法必须从信入手。",
+      "audioUrl": ""
+    }
+  ]
+}

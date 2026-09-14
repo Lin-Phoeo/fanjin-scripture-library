@@ -1,0 +1,5 @@
+# 默认按 LF 归一化，避免 Windows CRLF 造成全文件 diff 噪声
+* text=auto eol=lf
+
+# 锁文件不做 diff 展示
+package-lock.json -diff linguist-generated
