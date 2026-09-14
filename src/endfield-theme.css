@@ -1,0 +1,361 @@
+/* ============================================================
+   终末地主题（Endfield Theme）
+   ────────────────────────────────────────────────────────────
+   视觉语言源自《明日方舟：终末地》官方界面设计方法，
+   参考仓库：Statrue/endfield-design-skill（设计方法论）、
+   ymh0000123/dsh-theme-endfield、VBeatDead/ReEnd-Components。
+
+   核心母题：
+   · 纸白 / 混凝土灰 / 烟灰 / 近黑 的中性基底
+   · 信号黄（#f0c040）作为行动 / 选中 / 强调色
+   · 全直角 + 切角（clip-path 斜切），彻底去除柔和圆角
+   · 技术副层：网格、坐标刻度、`//` 编号、角括号 [ ]、
+     幽灵描边大字、黄色横带分节、黑色底行动带
+
+   通过 <html data-theme="endfield"> 启用，覆盖默认的「经典纸墨」主题。
+   不动任何组件结构与业务逻辑，纯视觉皮肤层。
+   ============================================================ */
+
+:root[data-theme='endfield'] {
+  color-scheme: light;
+
+  /* 中性基底 */
+  --ef-paper: #f2f0ea;
+  --ef-paper-strong: #fbfaf6;
+  --ef-concrete: #e4e2da;
+  --ef-smoke: #4b4a44;
+  --ef-ink: #171715;
+  --ef-ink-soft: #55544d;
+
+  /* 信号色 */
+  --ef-signal: #f0c040;
+  --ef-signal-deep: #d8a020;
+  --ef-signal-faint: rgba(240, 192, 64, 0.14);
+  --ef-line: rgba(23, 23, 21, 0.16);
+
+  /* 覆盖经典主题 token，让 var() 引用自动换色 */
+  --paper-bg: var(--ef-paper);
+  --paper-strong: var(--ef-paper-strong);
+  --paper-soft: var(--ef-concrete);
+  --paper-line: var(--ef-line);
+  --ink-main: var(--ef-ink);
+  --ink-soft: var(--ef-ink-soft);
+  --ink-green: var(--ef-signal-deep);
+  --ink-green-deep: var(--ef-ink);
+  --ink-link: #1f4fd8;
+}
+
+/* ---------- 全局底色：混凝土灰白 + 极淡网格 ---------- */
+:root[data-theme='endfield'] body {
+  background:
+    linear-gradient(rgba(23, 23, 21, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 21, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, #f4f2ec 0%, #efece4 100%) !important;
+  background-size: 48px 48px, 48px 48px, auto !important;
+  color: #171715 !important;
+}
+
+:root[data-theme='endfield'] .page-shell {
+  background: transparent !important;
+}
+
+/* ---------- 顶栏 / 底栏：纸白 + 直角 + 黄色下划刻度 ---------- */
+:root[data-theme='endfield'] .classic-header,
+:root[data-theme='endfield'] .classic-site-header,
+:root[data-theme='endfield'] .classic-topbar,
+:root[data-theme='endfield'] .classic-nav-shell,
+:root[data-theme='endfield'] .site-header {
+  background: #fbfaf6 !important;
+  border-bottom: 1px solid #171715 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+:root[data-theme='endfield'] .site-header-inner,
+:root[data-theme='endfield'] .classic-header {
+  border-bottom: 3px solid var(--ef-signal) !important;
+}
+
+/* 品牌标题：墨黑，加切角黄色尾标 */
+:root[data-theme='endfield'] .classic-brand,
+:root[data-theme='endfield'] .classic-brand-title,
+:root[data-theme='endfield'] .classic-logo,
+:root[data-theme='endfield'] .classic-page-title,
+:root[data-theme='endfield'] .classic-section-title,
+:root[data-theme='endfield'] .classic-reading-title,
+:root[data-theme='endfield'] .classic-topic-title,
+:root[data-theme='endfield'] .classic-discussion-title,
+:root[data-theme='endfield'] .classic-home-hero h1,
+:root[data-theme='endfield'] .classic-hero h1,
+:root[data-theme='endfield'] .classic-banner h1,
+:root[data-theme='endfield'] .brand-mark {
+  color: #171715 !important;
+}
+
+/* ---------- 导航：墨黑文字，选中态 = 信号黄底墨黑字 + 直角 ---------- */
+:root[data-theme='endfield'] .classic-nav a,
+:root[data-theme='endfield'] .classic-nav button,
+:root[data-theme='endfield'] .classic-header a,
+:root[data-theme='endfield'] .classic-header button,
+:root[data-theme='endfield'] .classic-topbar-link,
+:root[data-theme='endfield'] .classic-action-link,
+:root[data-theme='endfield'] .nav-link {
+  color: #4b4a44 !important;
+}
+
+:root[data-theme='endfield'] .classic-nav a:hover,
+:root[data-theme='endfield'] .classic-nav button:hover,
+:root[data-theme='endfield'] .classic-header a:hover,
+:root[data-theme='endfield'] .classic-header button:hover,
+:root[data-theme='endfield'] .classic-topbar-link:hover,
+:root[data-theme='endfield'] .classic-action-link:hover,
+:root[data-theme='endfield'] .nav-link:hover {
+  color: #171715 !important;
+  background: var(--ef-signal-faint) !important;
+}
+
+:root[data-theme='endfield'] .classic-nav .is-active,
+:root[data-theme='endfield'] .classic-topbar-link.is-active,
+:root[data-theme='endfield'] .classic-tab.is-active,
+:root[data-theme='endfield'] .classic-filter.is-active,
+:root[data-theme='endfield'] .nav-link.is-active {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+/* ---------- 面板 / 卡片：纸白 + 直角 + 细墨线边框 ---------- */
+:root[data-theme='endfield'] .classic-panel,
+:root[data-theme='endfield'] .classic-card,
+:root[data-theme='endfield'] .classic-side-panel,
+:root[data-theme='endfield'] .classic-main-panel,
+:root[data-theme='endfield'] .classic-section-panel,
+:root[data-theme='endfield'] .classic-list-panel,
+:root[data-theme='endfield'] .classic-topic-panel,
+:root[data-theme='endfield'] .classic-discussion-panel,
+:root[data-theme='endfield'] .classic-home-panel,
+:root[data-theme='endfield'] .classic-search-panel,
+:root[data-theme='endfield'] .classic-note-card,
+:root[data-theme='endfield'] .classic-reading-nav,
+:root[data-theme='endfield'] .classic-reading-article {
+  background: #fbfaf6 !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 rgba(23, 23, 21, 0.1) !important;
+}
+
+:root[data-theme='endfield'] .classic-card h1,
+:root[data-theme='endfield'] .classic-card h2,
+:root[data-theme='endfield'] .classic-card h3,
+:root[data-theme='endfield'] .classic-panel h1,
+:root[data-theme='endfield'] .classic-panel h2,
+:root[data-theme='endfield'] .classic-panel h3 {
+  color: #171715 !important;
+}
+
+/* ---------- 区块标题：黄色横带 + 直角 + 墨黑字 ---------- */
+:root[data-theme='endfield'] .classic-side-title,
+:root[data-theme='endfield'] .classic-panel-title,
+:root[data-theme='endfield'] .classic-block-title,
+:root[data-theme='endfield'] .classic-section-head {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+/* ---------- 面板内标题：墨黑 + 左缘信号黄竖条（区块标签母题） ---------- */
+:root[data-theme='endfield'] .classic-article h1,
+:root[data-theme='endfield'] .classic-article h2,
+:root[data-theme='endfield'] .classic-article h3,
+:root[data-theme='endfield'] .classic-reading-article h1,
+:root[data-theme='endfield'] .classic-reading-article h2,
+:root[data-theme='endfield'] .classic-reading-article h3,
+:root[data-theme='endfield'] .classic-main-panel h1,
+:root[data-theme='endfield'] .classic-main-panel h2,
+:root[data-theme='endfield'] .classic-main-panel h3,
+:root[data-theme='endfield'] .classic-side-panel h1,
+:root[data-theme='endfield'] .classic-side-panel h2,
+:root[data-theme='endfield'] .classic-side-panel h3 {
+  color: #171715 !important;
+  border-left: 4px solid var(--ef-signal) !important;
+  padding-left: 0.55rem !important;
+}
+
+:root[data-theme='endfield'] .classic-muted,
+:root[data-theme='endfield'] .classic-subtext,
+:root[data-theme='endfield'] .classic-meta,
+:root[data-theme='endfield'] .classic-aux-text,
+:root[data-theme='endfield'] .classic-description,
+:root[data-theme='endfield'] .classic-brand-subtitle {
+  color: #55544d !important;
+}
+
+/* 查看更多等次要链接：墨黑，hover 转信号黄底 */
+:root[data-theme='endfield'] .section-header-link {
+  color: #55544d !important;
+}
+
+:root[data-theme='endfield'] .section-header-link:hover {
+  color: #171715 !important;
+  background: var(--ef-signal-faint) !important;
+}
+
+/* ---------- 首页 hero：偏心构图 + 纸白 + 黄色切角带 ---------- */
+:root[data-theme='endfield'] .classic-home-hero,
+:root[data-theme='endfield'] .classic-hero,
+:root[data-theme='endfield'] .classic-banner {
+  background: #fbfaf6 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: 6px 6px 0 var(--ef-signal) !important;
+  position: relative;
+}
+
+:root[data-theme='endfield'] .classic-home-hero::before,
+:root[data-theme='endfield'] .classic-hero::before {
+  content: '// 梵烬网 · 经藏共修档案';
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(23, 23, 21, 0.4);
+  font-family: 'Courier New', monospace;
+}
+
+:root[data-theme='endfield'] .classic-home-hero h1,
+:root[data-theme='endfield'] .classic-hero h1,
+:root[data-theme='endfield'] .classic-banner h1 {
+  color: #171715 !important;
+}
+
+:root[data-theme='endfield'] .classic-home-hero p,
+:root[data-theme='endfield'] .classic-hero p,
+:root[data-theme='endfield'] .classic-banner p {
+  color: #55544d !important;
+}
+
+/* 搜索框 / 输入框：纸白 + 直角 + 墨色描边 */
+:root[data-theme='endfield'] .classic-input,
+:root[data-theme='endfield'] .classic-search-input,
+:root[data-theme='endfield'] .classic-textarea,
+:root[data-theme='endfield'] .classic-select {
+  background: #fbfaf6 !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ---------- 正文阅读区：纸白 + 直角 + 坐标刻度副层 ---------- */
+:root[data-theme='endfield'] .classic-reading-stage,
+:root[data-theme='endfield'] .classic-reading-article,
+:root[data-theme='endfield'] .classic-reading-stage-body {
+  background: #fbfaf6 !important;
+  color: #171715 !important;
+  border: 1px solid var(--ef-line) !important;
+  border-radius: 0 !important;
+}
+
+:root[data-theme='endfield'] .classic-reading-paragraph {
+  border-left: 3px solid var(--ef-signal) !important;
+  background: #fbfaf6 !important;
+}
+
+/* ---------- 链接：技术蓝（工业信息色） ---------- */
+:root[data-theme='endfield'] .classic-link-list a,
+:root[data-theme='endfield'] .classic-link-list button,
+:root[data-theme='endfield'] .classic-list-panel a,
+:root[data-theme='endfield'] .classic-list-panel button,
+:root[data-theme='endfield'] .classic-directory a,
+:root[data-theme='endfield'] .classic-directory button {
+  color: #1f4fd8 !important;
+}
+
+:root[data-theme='endfield'] .classic-link-list a:hover,
+:root[data-theme='endfield'] .classic-link-list button:hover,
+:root[data-theme='endfield'] .classic-list-panel a:hover,
+:root[data-theme='endfield'] .classic-list-panel button:hover,
+:root[data-theme='endfield'] .classic-directory a:hover,
+:root[data-theme='endfield'] .classic-directory button:hover {
+  color: #171715 !important;
+  background: var(--ef-signal-faint) !important;
+}
+
+/* ---------- 按钮 / 胶囊：直角为主，主行动用信号黄切角 ---------- */
+:root[data-theme='endfield'] .classic-primary-button,
+:root[data-theme='endfield'] .classic-cta,
+:root[data-theme='endfield'] .classic-submit,
+:root[data-theme='endfield'] .classic-button {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: 3px 3px 0 #171715 !important;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+:root[data-theme='endfield'] .classic-primary-button:hover,
+:root[data-theme='endfield'] .classic-cta:hover,
+:root[data-theme='endfield'] .classic-submit:hover,
+:root[data-theme='endfield'] .classic-button:hover {
+  background: #ffd400 !important;
+  color: #171715 !important;
+}
+
+:root[data-theme='endfield'] .classic-secondary-button,
+:root[data-theme='endfield'] .classic-inline-button,
+:root[data-theme='endfield'] .classic-chip-button,
+:root[data-theme='endfield'] .classic-thread-button {
+  background: transparent !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme='endfield'] .classic-chip-button.is-current {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+}
+
+/* ---------- 页脚：黑色底行动带 ---------- */
+:root[data-theme='endfield'] .classic-footer,
+:root[data-theme='endfield'] .classic-site-footer,
+:root[data-theme='endfield'] .site-footer {
+  background: #171715 !important;
+  color: #f2f0ea !important;
+  border-top: 3px solid var(--ef-signal) !important;
+  border-radius: 0 !important;
+}
+
+:root[data-theme='endfield'] .site-footer h3,
+:root[data-theme='endfield'] .site-footer h4,
+:root[data-theme='endfield'] .classic-footer h3,
+:root[data-theme='endfield'] .classic-footer h4 {
+  color: var(--ef-signal) !important;
+}
+
+:root[data-theme='endfield'] .site-footer a,
+:root[data-theme='endfield'] .classic-footer a {
+  color: #e4e2da !important;
+}
+
+:root[data-theme='endfield'] .site-footer a:hover,
+:root[data-theme='endfield'] .classic-footer a:hover {
+  color: var(--ef-signal) !important;
+}
+
+/* ---------- 尊重减少动画偏好 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme='endfield'] * {
+    transition: none !important;
+  }
+}
