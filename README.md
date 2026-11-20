@@ -6,6 +6,8 @@
 
 站点地址：<https://lin-phoeo.github.io/fanjin-scripture-library/>。
 
+智能体参与开发前遵循 [AGENTS.md](AGENTS.md)。接续任务查看 [当前状态](docs/agents/STATUS.md)，按任务查找 [文档路由](docs/README.md)；Claude、Gemini 等入口引用同一份规范。
+
 ## 使用
 
 - 经藏按学派浏览与分页，支持简繁关键词检索和段落定位。
