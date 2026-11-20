@@ -1,122 +1,22 @@
-# 开发与运行说明
+# 静态应用开发
 
-## 1. 技术栈
+默认应用是 React + Vite + TypeScript，公共内容来自静态 JSON，个人数据来自浏览器 IndexedDB。开发与 Pages 发布都不需要 Express API、账号或 SQLite。
 
-- 前端：`Vite + React + TypeScript + react-router-dom`
-- 后端：`Express`
-- 数据库：`SQLite + better-sqlite3`
-- 脚本运行：`tsx`
+| 命令 | 用途 |
+| --- | --- |
+| `npm ci` | 按锁文件安装依赖 |
+| `npm run dev` | 先生成公共经典文件，再启动本地网页 |
+| `npm run build:catalog` | 验证 manifest 内容并生成静态目录、逐书详情和检索索引 |
+| `npm run build:pages` | 类型检查并构建 Pages 基础路径的 dist |
+| `npm run check:pages`、`npm run check` | 静态版本默认验收 |
+| `npm run test:static` | 无浏览器网络的静态目录和 fake-indexeddb 回归 |
+| `npm run typecheck`、`npm run lint` | 类型与静态检查 |
+| `npm run check:server` | 保留旧服务器实现的独立回归，不是 Pages 发布前置服务 |
 
-## 2. 本地环境要求
+`src/lib/local-catalog.ts` 读取 `import.meta.env.BASE_URL` 下的公共资料；`local-store.ts` 维护本机版本化状态；兼容请求层在浏览器内部处理个人读写。新增行为应通过 IndexedDB 单个 readwrite 事务完成读取、修改和提交，避免多个标签或并发操作丢记录。
 
-- Node.js 18 或以上
-- npm
-- Windows / macOS / Linux 均可
+所有静态资源必须使用 Vite 基础路径，不要写死 `/content/...` 或部署者用户名。路由使用 HashRouter，GitHub Pages 不提供服务器重写。可用 `PAGES_BASE_PATH=/` 构建根域名部署，默认是仓库项目路径。
 
-## 3. 安装依赖
+`public/content/` 及许可复制件由脚本生成，不提交；真实来源保存在 `data/catalog/`。严禁把浏览器用户备份、`.env`、SQLite 或管理员访问文件复制进 public/dist。
 
-```bash
-npm install
-```
-
-## 4. 本地启动
-
-项目需要同时启动后端和前端。
-
-### 启动后端 API
-
-```bash
-npm run api
-```
-
-默认地址：
-
-- `http://127.0.0.1:3001`
-
-### 启动前端开发服务器
-
-```bash
-npm run dev
-```
-
-默认地址：
-
-- `http://127.0.0.1:5173`
-
-## 5. 构建
-
-```bash
-npm run build
-```
-
-构建产物位于：
-
-- `dist/`
-
-## 6. 经典导入
-
-### 预检导入
-
-```bash
-npm run import:scripture -- data/import-templates/scripture-template.json --dry-run
-```
-
-### 正式导入
-
-```bash
-npm run import:scripture -- data/import-templates/scripture-template.json
-```
-
-### 直接发布导入
-
-```bash
-npm run import:scripture -- data/import-templates/scripture-template.json --published
-```
-
-## 7. 默认账号
-
-### 管理员
-
-- 账号：`法音法师`
-- 密码：`fayin123`
-
-### 审核员
-
-- 账号：`慧安居士`
-- 密码：`huian123`
-
-### 普通用户
-
-- 账号：`梵烬用户`
-- 密码：`fanjin123`
-
-## 8. 常见开发动作
-
-### 新增前台页面
-
-1. 在 `src/pages/` 中创建页面组件
-2. 在 `src/App.tsx` 中补路由
-3. 如需前台导航入口，在 `src/data/site.ts` 中补导航
-
-### 新增后台页面
-
-1. 在 `src/pages/` 中创建后台页面组件
-2. 在 `src/App.tsx` 中补 `/admin/*` 路由
-3. 在 `src/components/AdminLayout.tsx` 中补后台导航
-
-### 新增数据库字段或表
-
-1. 修改 `server/db.ts` 的 `createSchema`
-2. 如已有数据库，需要补 `migrateSchema`
-3. 如需种子数据，修改 `server/data.ts`
-4. 如前端需要读取，补 `server/index.ts` 接口和 `src/lib/api.ts`
-
-## 9. 当前开发重点
-
-当前项目已经具备可运行的前后台与数据库能力，后续开发建议按以下顺序推进：
-
-1. 批量导入真实经典内容
-2. 继续补白话导读与祖师注义
-3. 完善后台内容治理
-4. 完善账号安全与找回密码
-5. 补全文检索与内容运营能力
+旧后端修改、迁移与独立部署的历史说明见 [server/DEVELOPMENT.md](server/DEVELOPMENT.md)。

@@ -3,3 +3,9 @@
 
 # 锁文件不做 diff 展示
 package-lock.json -diff linguist-generated
+
+# Preserve verbatim source evidence, licenses and user-supplied reference documents.
+data/catalog/sources/** -whitespace
+data/catalog/licenses/** -whitespace
+data/catalog/COPYRIGHT.md -whitespace
+docs/plans/** -whitespace

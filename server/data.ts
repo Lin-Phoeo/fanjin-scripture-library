@@ -12,7 +12,7 @@ export const seedScriptures = [
     dynasty: '姚秦',
     translator: '鸠摩罗什译',
     role: '破相显智、照见无住',
-    overlay: '可并列六祖《金刚经口诀》或白话释义',
+    overlay: '从无住与般若智慧开始阅读',
     summary: '以“无住生心”为关键切入口，适合作为般若法门的专题共修入口。',
     passages: [
       {
@@ -55,7 +55,7 @@ export const seedScriptures = [
     dynasty: '唐代',
     translator: '法海集录',
     role: '顿悟见性、教观并重',
-    overlay: '可挂接《金刚经》相关段落，形成祖师注解网',
+    overlay: '从自性与日常观照开始阅读',
     summary: '适合作为祖师法门入门，配合《金刚经》建立经论互证关系。',
     passages: [
       {
@@ -77,7 +77,7 @@ export const seedScriptures = [
     dynasty: '姚秦',
     translator: '鸠摩罗什译',
     role: '开权显实、会三归一',
-    overlay: '后续可加入天台疏义与白话导读',
+    overlay: '循经典原文，逐节研读',
     summary: '适合作为长期精读专题，后续可扩展判教、注疏与讲记体系。',
     passages: [
       {
@@ -129,8 +129,8 @@ export const seedTopics = [
 
 export const seedAnnouncements = [
   {
-    title: '梵烬网首期内测开放',
-    detail: '当前开放经藏入口、对照阅读、专题共修和后台演示，便于尽快收集真实修学反馈。',
+    title: '书斋开放阅读',
+    detail: '从经典原文开始，建立私人修读计划，保存自己的摘录与心得。',
   },
   {
     title: '招募古籍整理志工',
@@ -226,8 +226,8 @@ export const defaultUsers = [
 ] as const;
 
 export const seedSettings = [
-  { key: 'site_name', value: '梵烬网' },
-  { key: 'site_subtitle', value: '佛教共修公益古籍网' },
-  { key: 'site_description', value: '用于佛教古籍数字化、公益共修与内容整理，不以商业变现为首要目标。' },
-  { key: 'footer_notice', value: '欢迎参与经文录入、白话整理、祖师注义锚定与内容校对。' },
+  { key: 'site_name', value: '梵烬' },
+  { key: 'site_subtitle', value: '东方经典个人自修驿站' },
+  { key: 'site_description', value: '公益开放阅读，以佛道经典为主，兼读诸子百家。按自己的步调，记录私人修读与心得。' },
+  { key: 'footer_notice', value: '为阅读留一方清净，为自己留一点时间。' },
 ] as const;

@@ -1,0 +1,16 @@
+.git
+.memorax-code
+node_modules
+data
+!data/
+data/*
+!data/catalog/
+!data/catalog/**
+backups
+test-results
+tests
+docs
+.env
+.env.*
+*.log
+*.tsbuildinfo

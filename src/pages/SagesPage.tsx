@@ -1,9 +1,10 @@
-import { startTransition, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { sages } from '../data/sages';
 
 function SagesPage() {
-  const [activeSlug, setActiveSlug] = useState(sages[0]?.slug ?? '');
+  const [params, setParams] = useSearchParams();
+  const activeSlug = params.get('sage') ?? sages[0]?.slug ?? '';
 
   const activeSage = useMemo(
     () => sages.find((item) => item.slug === activeSlug) ?? sages[0],
@@ -26,11 +27,7 @@ function SagesPage() {
                   key={sage.slug}
                   className={sage.slug === activeSage.slug ? 'classic-filter-link is-current' : 'classic-filter-link'}
                   type="button"
-                  onClick={() =>
-                    startTransition(() => {
-                      setActiveSlug(sage.slug);
-                    })
-                  }
+                  onClick={() => setParams({ sage: sage.slug })}
                 >
                   <span>{sage.name}</span>
                   <small>{sage.honorific}</small>
@@ -121,7 +118,7 @@ function SagesPage() {
                       <strong>{item}</strong>
                       <p>可作为人物法脉与义理解读的延伸阅读入口。</p>
                     </div>
-                    <Link className="classic-inline-link" to="/canon">
+                    <Link className="classic-inline-link" to={`/search?q=${encodeURIComponent(item)}`}>
                       前往经藏
                     </Link>
                   </div>
@@ -140,7 +137,7 @@ function SagesPage() {
                       <strong>{item}</strong>
                       <p>适合将人物风骨与经义实修结合起来做长期研学。</p>
                     </div>
-                    <Link className="classic-inline-link" to="/topics">
+                    <Link className="classic-inline-link" to={`/topics?title=${encodeURIComponent(item)}`}>
                       进入专题
                     </Link>
                   </div>

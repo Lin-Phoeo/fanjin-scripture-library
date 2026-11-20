@@ -1,375 +1,218 @@
-import { startTransition, useEffect, useMemo, useState } from 'react';
-import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useAppState } from '../context/AppStateContext';
-import { createReadingHistory, getAdminScripture, getScripture, type ScriptureDetail } from '../lib/api';
+import { apiRequest } from '../lib/api';
+import { getBook } from '../lib/books';
+import { ErrorNotice, errorMessage } from '../components/AsyncFeedback';
+import { useResource } from '../lib/useResource';
+import { useReadingPreferences } from '../lib/reading-preferences';
+import { readingUrl, saveProgress } from '../lib/reading-progress';
+import { addBookmark, deleteBookmark, getBookmarks } from '../lib/workbench-api';
 
-type ReadingMode = 'plain' | 'commentary';
-type ReadingPage = {
-  id: string;
-  passageSlug: string;
-  passageTitle: string;
-  originalText: string;
-  plainText: string;
-  commentaryText: string;
-};
-
-function ReaderPage() {
-  const { scriptureId } = useParams();
+export default function ReaderPage() {
+  const params = useParams();
+  const scriptureSlug = params.slug ?? params.scriptureId ?? '';
   const [searchParams] = useSearchParams();
-  const { isFavorite, saveNote, session, toggleFavorite, token } = useAppState();
-  const previewDraft = searchParams.get('draft') === '1';
-  const [mode, setMode] = useState<ReadingMode>('commentary');
-  const [fontScale, setFontScale] = useState(1.32);
-  const [scripture, setScripture] = useState<ScriptureDetail | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [activePassageId, setActivePassageId] = useState('');
-  const [noteDraft, setNoteDraft] = useState('');
-  const [noteStatus, setNoteStatus] = useState('');
-  const [helperOpen, setHelperOpen] = useState(true);
-
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { session, token, notes, saveNote, isFavorite, toggleFavorite, refreshUserData } = useAppState();
+  const draft = false;
+  const { data: book, loading, error, reload } = useResource(() => getBook(scriptureSlug, draft, token), [scriptureSlug, draft, token, session?.id]);
+  const passageSlug = params.chapterKey ?? searchParams.get('passage') ?? book?.passages[0]?.slug ?? '';
+  const passage = book?.passages.find((item) => item.slug === passageSlug);
+  const [preferences, updatePreferences] = useReadingPreferences();
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [contentsOpen, setContentsOpen] = useState(false);
+  const [actionsOpen, setActionsOpen] = useState(false);
+  const [panel, setPanel] = useState<'note' | 'correction' | null>(null);
+  const [note, setNote] = useState('');
+  const [correction, setCorrection] = useState('');
+  const [message, setMessage] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [manualCopy, setManualCopy] = useState('');
+  const [correctionText, setCorrectionText] = useState('');
+  const [highlight, setHighlight] = useState(false);
+  const [notesOpen, setNotesOpen] = useState(false);
+  const [indexTab, setIndexTab] = useState<'contents' | 'bookmarks'>('contents');
+  const [indexQuery, setIndexQuery] = useState('');
+  const [noteScope, setNoteScope] = useState<'passage' | 'book'>('passage');
+  const [editingId, setEditingId] = useState<number | null>(null);
+  const skipScroll = useRef(false);
+  const replacedPosition = useRef<string | null>(null);
+  const replacementPaused = useRef(false);
   useEffect(() => {
-    if (!scriptureId) {
-      return;
+    const clearEditing = () => {
+      replacementPaused.current = true;
+      setEditingId(null); setNote(''); setPanel(null); setNotesOpen(false); setMessage('本机记录已替换，已关闭旧笔记草稿。');
+      try { Object.keys(sessionStorage).filter((key) => key.startsWith('fanjin-note-draft:')).forEach((key) => sessionStorage.removeItem(key)); } catch { /* Draft remains cleared in memory. */ }
+    };
+    window.addEventListener('fanjin-local-data-changing', clearEditing);
+    return () => window.removeEventListener('fanjin-local-data-changing', clearEditing);
+  }, []);
+  const chapters = useMemo(() => {
+    const groups: Array<{ key: string; title: string; indexes: number[] }> = [];
+    for (const [index, item] of (book?.passages || []).entries()) {
+      const key = item.slug.includes('--') ? item.slug.split('--')[0] : (book?.passages.length || 0) <= 20 ? 'whole-book' : item.slug;
+      const group = groups.find((value) => value.key === key);
+      if (group) group.indexes.push(index);
+      else groups.push({ key, title: key === 'whole-book' ? book!.title : item.title.split(' · ')[0], indexes: [index] });
     }
-
-    void (async () => {
-      setLoading(true);
-      const data =
-        previewDraft && token ? await getAdminScripture(scriptureId, token) : await getScripture(scriptureId);
-      setScripture(data);
-      setActivePassageId(searchParams.get('passage') ?? data.passages[0]?.slug ?? '');
-      setNoteDraft('');
-      setNoteStatus('');
-      setFontScale(1.32);
-      setHelperOpen(true);
-      setLoading(false);
-    })();
-  }, [previewDraft, scriptureId, searchParams, token]);
-
-  const activePassage = useMemo(
-    () => scripture?.passages.find((passage) => passage.slug === activePassageId) ?? scripture?.passages[0],
-    [activePassageId, scripture],
-  );
-
-  const currentPassageIndex = useMemo(
-    () => scripture?.passages.findIndex((passage) => passage.slug === activePassage?.slug) ?? -1,
-    [activePassage?.slug, scripture],
-  );
-
-  const readingPages = useMemo<ReadingPage[]>(
-    () =>
-      scripture?.passages.map((passage, index) => ({
-        id: `page-${index + 1}`,
-        passageSlug: passage.slug,
-        passageTitle: passage.title,
-        originalText: passage.originalText,
-        plainText: passage.plainText,
-        commentaryText: passage.commentaryText,
-      })) ?? [],
-    [scripture],
-  );
-
-  const currentPageIndex = useMemo(
-    () => readingPages.findIndex((page) => page.passageSlug === activePassage?.slug),
-    [activePassage?.slug, readingPages],
-  );
-
-  const activePage = currentPageIndex >= 0 ? readingPages[currentPageIndex] : readingPages[0];
-
-  const cleanPassageTitle = (title: string) =>
-    title
-      .replace(/^第[一二三四五六七八九十百千0-9]+品\s*/u, '')
-      .replace(/^第[一二三四五六七八九十百千0-9]+章\s*/u, '')
-      .trim();
-
-  const navLabelForPage = (page: ReadingPage) => {
-    const cleaned = cleanPassageTitle(page.passageTitle);
-    if (cleaned) {
-      return cleaned;
-    }
-    const firstLine = page.originalText.split('\n').find(Boolean)?.trim() ?? '';
-    return firstLine.slice(0, 12) || '正文';
+    return groups;
+  }, [book]);
+  const bookmarks = useResource(() => token ? getBookmarks(scriptureSlug, token) : Promise.resolve([]), [token, session?.id, scriptureSlug]);
+  const currentBookmark = bookmarks.data?.find((item) => item.passageSlug === passageSlug);
+  const visibleNotes = notes.filter((item) => item.scriptureSlug === scriptureSlug && (noteScope === 'book' || item.passageSlug === passageSlug));
+  const indexedPassages = indexQuery.trim() ? book?.passages.map((item, index) => ({ item, index })).filter(({ item, index }) => item.title.includes(indexQuery.trim()) || String(index + 1) === indexQuery.trim()) || [] : chapters.map((chapter) => ({ item: { ...book!.passages[chapter.indexes[0]], title: `${chapter.title}（${chapter.indexes.length}段）` }, index: chapter.indexes[0] }));
+  const openNotes = () => { setNotesOpen(true); setPanel('note'); setEditingId(null); };
+  const saveBookmark = async () => {
+    if (busy || draft) return;
+    setBusy(true); setMessage('');
+    try {
+      if (currentBookmark) await deleteBookmark(currentBookmark.id, token);
+      else await addBookmark(scriptureSlug, passageSlug, token);
+      bookmarks.reload();
+    } catch (reason) { setMessage(errorMessage(reason)); } finally { setBusy(false); }
+  };
+  const requestedQuery = searchParams.get('highlight') ?? searchParams.get('q') ?? '';
+  const text = passage ? (preferences.script === 'tc' ? passage.contentTc : passage.contentSc) || passage.originalText : '';
+  const hasPreferredScript = !!(preferences.script === 'tc' ? passage?.contentTc : passage?.contentSc);
+  const currentIndex = book?.passages.findIndex((item) => item.slug === passageSlug) ?? -1;
+  const chapterIndex = chapters.findIndex((chapter) => chapter.indexes.includes(currentIndex));
+  const currentChapter = chapters[chapterIndex];
+  const draftKey = `fanjin-note-draft:${session?.id ?? 'guest'}:${scriptureSlug}:${passageSlug}`;
+  const startReflection = (prompt: string) => {
+    const next = note.trim() ? `${note.trim()}\n\n${prompt}` : prompt;
+    setNote(next); setPanel('note'); setNotesOpen(true); setEditingId(null); setMessage('');
+    try { sessionStorage.setItem(draftKey, next); } catch { /* Keep the current in-memory draft. */ }
+    window.setTimeout(() => document.querySelector<HTMLTextAreaElement>('.reader-note-editor textarea')?.focus(), 0);
   };
 
-  const previousPassage =
-    currentPassageIndex > 0 ? scripture?.passages[currentPassageIndex - 1] ?? null : null;
-  const nextPassage =
-    currentPassageIndex >= 0 && scripture && currentPassageIndex < scripture.passages.length - 1
-      ? scripture.passages[currentPassageIndex + 1]
-      : null;
-
   useEffect(() => {
-    if (!token || !scripture || !activePassage || previewDraft) {
-      return;
-    }
-
+    setPanel(null); setEditingId(null); setMessage(''); setActionsOpen(false); setManualCopy(''); setContentsOpen(false);
+    try {
+      let pending = sessionStorage.getItem(draftKey);
+      const guestKey = `fanjin-note-draft:guest:${scriptureSlug}:${passageSlug}`;
+      if (session && searchParams.get('resumeNote') === '1' && !pending) {
+        pending = sessionStorage.getItem(guestKey);
+        if (pending) { sessionStorage.setItem(draftKey, pending); sessionStorage.removeItem(guestKey); }
+      }
+      setNote(pending || ''); if (pending || searchParams.get('resumeNote') === '1') { setPanel('note'); setNotesOpen(true); }
+    } catch { setNote(''); }
+  }, [draftKey, scriptureSlug, passageSlug, session?.id]);
+  useEffect(() => {
+    if (!book || !passage || draft || replacementPaused.current) return;
+    const position = `${book.slug}/${passage.slug}`;
+    if (replacedPosition.current === position) return;
+    replacedPosition.current = null;
+    const controller = new AbortController();
     const timer = window.setTimeout(() => {
-      void createReadingHistory(
-        {
-          scriptureSlug: scripture.slug,
-          passageSlug: activePassage.slug,
-        },
-        token,
-      );
-    }, 400);
+      const value = { scriptureSlug: book.slug, scriptureTitle: book.title, passageSlug: passage.slug, passageTitle: passage.title, updatedAt: new Date().toISOString() };
 
-    return () => window.clearTimeout(timer);
-  }, [activePassage, previewDraft, scripture, token]);
-
-  const handleSaveNote = () => {
-    if (!scripture || !activePassage) {
+      void saveProgress(value, token, controller.signal).catch((reason) => { if (!controller.signal.aborted) setMessage('阅读位置未保存：' + errorMessage(reason)); });
+    }, 2000);
+    const cancel = () => { replacedPosition.current = position; window.clearTimeout(timer); controller.abort(); };
+    window.addEventListener('fanjin-local-data-changing', cancel);
+    return () => { window.clearTimeout(timer); controller.abort(); window.removeEventListener('fanjin-local-data-changing', cancel); };
+  }, [book, passage, draft, token, session?.id]);
+  useEffect(() => {
+    if (!passage) return;
+    if (skipScroll.current) { skipScroll.current = false; return; }
+    const id = `p-${passage.slug}`;
+    const timer = window.setTimeout(() => {
+      if (currentChapter?.indexes[0] === currentIndex && !requestedQuery) window.scrollTo({ top: 0, behavior: 'instant' });
+      else document.getElementById(id)?.scrollIntoView({ block: 'start', behavior: 'auto' });
+      if (location.hash || requestedQuery) setHighlight(true);
+    }, 50);
+    const clear = window.setTimeout(() => setHighlight(false), 2050);
+    return () => { window.clearTimeout(timer); window.clearTimeout(clear); setHighlight(false); };
+  }, [passage?.slug, location.hash, requestedQuery]);
+  const move = (index: number) => {
+    const target = book?.passages[index];
+    if (!book || !target) return;
+    replacementPaused.current = false;
+    replacedPosition.current = null;
+    navigate(draft ? `/reader/${encodeURIComponent(book.slug)}?draft=1&passage=${encodeURIComponent(target.slug)}` : readingUrl(book.slug, target.slug));
+  };
+  const selectPassage = (index: number, manual = true) => {
+    if (manual) { replacementPaused.current = false; replacedPosition.current = null; }
+    const target = book?.passages[index];
+    if (!target || target.slug === passageSlug) return;
+    skipScroll.current = true;
+    navigate(draft ? `/reader/${encodeURIComponent(book!.slug)}?draft=1&passage=${encodeURIComponent(target.slug)}` : readingUrl(book!.slug, target.slug), { replace: true });
+  };
+  useEffect(() => {
+    if (!book || !currentChapter || notesOpen || contentsOpen || replacementPaused.current) return;
+    let timer: number | undefined;
+    const onScroll = () => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        const visible = currentChapter.indexes.map((index) => ({ index, rect: document.getElementById(`p-${book.passages[index].slug}`)?.getBoundingClientRect() }))
+          .filter((item) => item.rect && item.rect.bottom > 100 && item.rect.top < window.innerHeight - 100);
+        const candidate = visible.sort((a, b) => Math.abs(a.rect!.top - 140) - Math.abs(b.rect!.top - 140))[0];
+        if (!replacementPaused.current && candidate && candidate.index !== currentIndex) selectPassage(candidate.index, false);
+      }, 450);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => { window.removeEventListener('scroll', onScroll); window.clearTimeout(timer); };
+  }, [book, currentChapter?.key, currentIndex, notesOpen, contentsOpen, editingId, note, draft]);
+  const recordNote = async () => {
+    if (!book || !passage || busy) return;
+    if (!token) { setMessage('登录后可保存私人摘录，填写的心得会保留在当前浏览器。'); return; }
+    setBusy(true);
+    if (editingId) {
+      try {
+        await apiRequest(`/api/notes/${editingId}`, { method: 'PUT', body: JSON.stringify({ note: note.trim() }) }, token);
+        await refreshUserData(); setEditingId(null); setNote(''); setMessage('心得已更新，原文快照保持不变。');
+      } catch (reason) { setMessage(errorMessage(reason)); } finally { setBusy(false); }
       return;
     }
-
-    void (async () => {
-      if (!noteDraft.trim()) {
-        setNoteStatus('请先写下这段经文给你的体会。');
-        return;
-      }
-
-      const result = await saveNote({
-        scriptureSlug: scripture.slug,
-        passageSlug: activePassage.slug,
-        note: noteDraft.trim(),
-      });
-
-      if (!result.ok) {
-        setNoteStatus(result.message ?? '保存失败');
-        return;
-      }
-
-      setNoteDraft('');
-      setNoteStatus('这条摘录已加入你的修学记录。');
-    })();
+    const result = await saveNote({ scriptureSlug: book.slug, passageSlug: passage.slug, note: note.trim() });
+    setBusy(false); setMessage(result.ok ? '摘录已保存到你的私人书斋。' : result.message || '保存失败。');
+    if (result.ok) { setNote(''); try { sessionStorage.removeItem(draftKey); } catch { /* Storage may be unavailable. */ } }
   };
-
-  if (loading || !scripture || !activePassage) {
-    return (
-      <main className="content-page">
-        <section className="page-hero">
-          <h1>正在载入经典内容…</h1>
-        </section>
-      </main>
-    );
-  }
-
-  const helperText = mode === 'commentary' ? activePage?.commentaryText ?? '' : activePage?.plainText ?? '';
-  const originalParagraphs = (activePage?.originalText ?? '').split('\n').filter(Boolean);
-  const helperParagraphs = helperText.split('\n').filter(Boolean);
-
-  return (
-    <main className="content-page classic-page">
-      <section className="classic-reader-topbar">
-        <Link className="classic-topbar-link" to="/canon">
-          返回目录
-        </Link>
-        <button
-          className={mode === 'plain' ? 'classic-topbar-link is-active' : 'classic-topbar-link'}
-          type="button"
-          onClick={() => setMode('plain')}
-        >
-          白话导读
-        </button>
-        <button
-          className={mode === 'commentary' ? 'classic-topbar-link is-active' : 'classic-topbar-link'}
-          type="button"
-          onClick={() => setMode('commentary')}
-        >
-          祖师注义
-        </button>
-      </section>
-
-      <section className="classic-shell classic-reader-shell">
-        <aside className="classic-sidebar">
-          <div className="classic-side-panel">
-            <div className="classic-side-title">{scripture.title}</div>
-            <div className="classic-reader-meta compact-meta">
-              <span>{scripture.dynasty}</span>
-              <span>{scripture.translator}</span>
-              <span>{mode === 'commentary' ? '原文 + 注义' : '原文 + 白话'}</span>
-            </div>
-            <div className="classic-link-list classic-page-link-list">
-              {readingPages.map((page, index) => (
-                <button
-                  key={page.id}
-                  className={page.passageSlug === activePassage.slug ? 'classic-filter-link is-current' : 'classic-filter-link'}
-                  onClick={() =>
-                    startTransition(() => {
-                      setActivePassageId(page.passageSlug);
-                    })
-                  }
-                  type="button"
-                  title={page.passageTitle}
-                >
-                  {navLabelForPage(page) || `段落 ${index + 1}`}
-                </button>
-              ))}
-            </div>
-          </div>
-        </aside>
-
-        <section className="classic-main">
-          <article className="classic-reading-article">
-            <div className="classic-reading-breadcrumb">
-              <Link to="/canon">经藏</Link>
-              <span>/</span>
-              <span>{scripture.categoryName}</span>
-            </div>
-            <h1>{scripture.title}</h1>
-            <div className="classic-reading-meta-strip">
-              <span>{scripture.dynasty}</span>
-              <span>{scripture.translator}</span>
-              <span>{cleanPassageTitle(activePage?.passageTitle ?? activePassage.title)}</span>
-              <span>{mode === 'commentary' ? '原文对照注义' : '原文对白话导读'}</span>
-            </div>
-
-            <div className="classic-reading-toolbar-inline">
-              <div className="classic-chip-group classic-chip-group-primary">
-                <button
-                  className={mode === 'commentary' ? 'classic-chip-button is-current' : 'classic-chip-button'}
-                  onClick={() => setMode('commentary')}
-                  type="button"
-                >
-                  注义
-                </button>
-                <button
-                  className={mode === 'plain' ? 'classic-chip-button is-current' : 'classic-chip-button'}
-                  onClick={() => setMode('plain')}
-                  type="button"
-                >
-                  白话
-                </button>
-                <button
-                  className={helperOpen ? 'classic-chip-button is-current' : 'classic-chip-button'}
-                  onClick={() => setHelperOpen((value) => !value)}
-                  type="button"
-                >
-                  {helperOpen ? '收起注义' : '展开注义'}
-                </button>
-              </div>
-              <div className="classic-chip-group classic-chip-group-secondary">
-                <button className="classic-chip-button" onClick={() => setFontScale(1.2)} type="button">
-                  小字
-                </button>
-                <button className="classic-chip-button" onClick={() => setFontScale(1.32)} type="button">
-                  标准
-                </button>
-                <button className="classic-chip-button" onClick={() => setFontScale(1.46)} type="button">
-                  舒朗
-                </button>
-              </div>
-            </div>
-
-            {activePassage.audioUrl ? (
-              <div className="classic-audio-panel">
-                <span className="classic-meta-label">音频诵读</span>
-                <audio className="reader-audio" controls preload="none" src={activePassage.audioUrl}>
-                  你的浏览器暂不支持音频播放。
-                </audio>
-              </div>
-            ) : null}
-
-            <div className="classic-reading-stage">
-              <div className="classic-reading-stage-body helper-collapsed">
-                <section className="classic-reading-pane classic-reading-scripture" style={{ fontSize: `${fontScale}rem` }}>
-                  {(originalParagraphs.length ? originalParagraphs : [activePage?.originalText ?? '']).map((paragraph, index) => (
-                    <p key={`${paragraph}-${index}`} className="classic-reading-paragraph">
-                      {paragraph}
-                    </p>
-                  ))}
-                </section>
-              </div>
-            </div>
-
-            <section className="classic-reading-helper-section">
-              <button
-                className="classic-reading-helper-toggle"
-                onClick={() => setHelperOpen((value) => !value)}
-                type="button"
-              >
-                <span>{mode === 'commentary' ? '祖师注义' : '白话导读'}</span>
-                <span>{helperOpen ? '收起' : '展开'}</span>
-              </button>
-              {helperOpen ? (
-                <div className="classic-reading-helper-content is-open" style={{ fontSize: `${Math.max(1.06, fontScale - 0.08)}rem` }}>
-                  {(helperParagraphs.length ? helperParagraphs : [helperText]).map((paragraph, index) => (
-                    <p key={`${paragraph}-${index}`} className="classic-reading-paragraph classic-reading-paragraph-helper">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              ) : null}
-            </section>
-
-            <div className="classic-reading-actions classic-reading-actions-bar">
-              <div className="classic-reading-actions-group">
-                <button
-                  className="classic-inline-button"
-                  disabled={!previousPassage}
-                  onClick={() =>
-                    previousPassage &&
-                    startTransition(() => {
-                      setActivePassageId(previousPassage.slug);
-                    })
-                  }
-                  type="button"
-                >
-                  上一则
-                </button>
-                <button
-                  className="classic-inline-button"
-                  disabled={!nextPassage}
-                  onClick={() =>
-                    nextPassage &&
-                    startTransition(() => {
-                      setActivePassageId(nextPassage.slug);
-                    })
-                  }
-                  type="button"
-                >
-                  下一则
-                </button>
-              </div>
-              <div className="classic-reading-actions-group">
-                <button
-                  className="classic-inline-button"
-                  onClick={() => {
-                    void (async () => {
-                      try {
-                        await toggleFavorite(scripture.slug);
-                      } catch (error) {
-                        setNoteStatus(error instanceof Error ? error.message : '收藏失败');
-                      }
-                    })();
-                  }}
-                  type="button"
-                >
-                  {isFavorite(scripture.slug) ? '取消收藏' : '收藏经典'}
-                </button>
-              </div>
-            </div>
-
-            <div className="classic-reading-subtitle">修学摘录</div>
-            <div className="classic-reading-block classic-reading-note-block">
-              <textarea
-                className="note-textarea"
-                placeholder="写下体会"
-                rows={4}
-                value={noteDraft}
-                onChange={(event) => setNoteDraft(event.target.value)}
-              />
-              <div className="classic-reading-actions">
-                <button className="classic-inline-button" onClick={handleSaveNote} type="button">
-                  保存摘录
-                </button>
-              </div>
-              {noteStatus ? <p className="feedback-text">{noteStatus}</p> : null}
-            </div>
-          </article>
-        </section>
-      </section>
-    </main>
-  );
+  const copyCitation = async () => {
+    if (!book || !passage) return;
+    const citation = `${text}\n\n——《${book.title}》· ${passage.title}${book.edition ? `\n底本：${book.edition}` : ''}${book.sourceName ? `\n来源：${book.sourceName}` : ''}${book.sourceUrl ? `\n${book.sourceUrl}` : ''}\n${window.location.origin}${import.meta.env.BASE_URL}#${readingUrl(book.slug, passage.slug)}`;
+    try { await navigator.clipboard.writeText(citation); setMessage('已复制原文与出处。'); }
+    catch { setManualCopy(citation); setMessage('浏览器未允许自动复制，请在下方选择文本复制。'); }
+  };
+  const submitCorrection = async () => {
+    if (!book || !passage || !correction.trim()) return;
+    const report = `书名：${book.title}\n段落：${passage.title}\n稳定标识：${book.slug} / ${passage.slug}\n来源：${book.sourceName || '见版本页'}\n来源链接：${book.sourceUrl || '未登记'}\n\n原文：\n${passage.originalText}\n\n问题与建议：\n${correction.trim()}\n\n阅读链接：${window.location.origin}${import.meta.env.BASE_URL}#${readingUrl(book.slug, passage.slug)}`;
+    setCorrectionText(report); setMessage('勘误文本已生成，尚未发送。你可以复制或在 GitHub 预览后自行提交。');
+    try { await navigator.clipboard.writeText(report); setMessage('勘误文本已复制，尚未发送。打开 GitHub 后仍需你确认提交。'); } catch { /* The generated text remains selectable. */ }
+  };
+  const highlightedText = (value: string) => {
+    if (!requestedQuery) return value;
+    const index = value.toLocaleLowerCase().indexOf(requestedQuery.toLocaleLowerCase());
+    return index < 0 ? value : <>{value.slice(0, index)}<mark>{value.slice(index, index + requestedQuery.length)}</mark>{value.slice(index + requestedQuery.length)}</>;
+  };
+  if (loading) return <main className="reader-workspace"><p role="status">正在载入经典…</p></main>;
+  if (error || !book || !passage) return <main className="content-page"><h1>暂时无法打开这一页</h1><ErrorNotice message={error || '本章节不存在或已调整，请从目录重新选择。'} retry={reload} /><Link className="quiet-link" to={book ? `/book/${encodeURIComponent(book.slug)}` : '/library'}>回到目录</Link></main>;
+  return <main className={`reader-workspace${notesOpen ? ' with-notes' : ''}`} style={{ '--reader-size': `${preferences.fontSize}px`, '--reader-leading': preferences.lineHeight } as CSSProperties}>
+    <div className="reader-workspace-toolbar"><div className="reader-workspace-title"><Link to="/">书架</Link><span>/</span><Link to={`/book/${encodeURIComponent(book.slug)}`}>{book.title}</Link></div><div className="reader-workspace-tools"><button className="reader-mobile-index" type="button" aria-expanded={contentsOpen} onClick={() => setContentsOpen((value) => !value)}>目录</button><button type="button" disabled={busy || draft} aria-pressed={!!currentBookmark} onClick={() => void saveBookmark()}>{currentBookmark ? '取消此页书签' : '标记这页'}</button><button type="button" aria-expanded={notesOpen} onClick={() => setNotesOpen((value) => !value)}>笔记（{notes.filter((item) => item.scriptureSlug === scriptureSlug).length}）</button><button type="button" aria-expanded={settingsOpen} onClick={() => setSettingsOpen((value) => !value)}>阅读设置</button></div></div>
+    {draft ? <p className="draft-notice">草稿预览 · 未公开发布</p> : null}
+    {settingsOpen ? <section className="reader-preferences" aria-label="阅读偏好"><fieldset><legend>纸色</legend>{(['paper', 'sepia', 'dark'] as const).map((theme) => <button type="button" aria-pressed={preferences.theme === theme} key={theme} onClick={() => updatePreferences({ theme })}>{{ paper: '素宣', sepia: '古纸', dark: '松烟' }[theme]}</button>)}</fieldset><fieldset><legend>字号</legend>{([16, 17, 18, 20, 23] as const).map((fontSize) => <button type="button" aria-pressed={preferences.fontSize === fontSize} key={fontSize} onClick={() => updatePreferences({ fontSize })}>{fontSize}</button>)}</fieldset><fieldset><legend>行距</legend>{([1.85, 1.9, 1.95] as const).map((lineHeight) => <button type="button" aria-pressed={preferences.lineHeight === lineHeight} key={lineHeight} onClick={() => updatePreferences({ lineHeight })}>{lineHeight}</button>)}</fieldset><fieldset><legend>字形</legend><button type="button" aria-pressed={preferences.script === 'sc'} onClick={() => updatePreferences({ script: 'sc' })}>简体</button><button type="button" aria-pressed={preferences.script === 'tc'} onClick={() => updatePreferences({ script: 'tc' })}>繁體</button></fieldset><fieldset><legend>辅助阅读</legend><label><input type="checkbox" checked={preferences.commentary} onChange={(event) => updatePreferences({ commentary: event.target.checked })} /> 古代注疏</label><label><input type="checkbox" checked={preferences.guide} onChange={(event) => updatePreferences({ guide: event.target.checked })} /> 现代导读</label></fieldset></section> : null}
+    <ErrorNotice message={message} />
+    <div className="reader-workspace-grid"><aside className={`reader-index-panel${contentsOpen ? ' is-open' : ''}`}><div className="reader-index-tabs" role="group" aria-label="阅读索引"><button type="button" aria-pressed={indexTab === 'contents'} onClick={() => setIndexTab('contents')}>目录</button><button type="button" aria-pressed={indexTab === 'bookmarks'} onClick={() => setIndexTab('bookmarks')}>书签（{bookmarks.data?.length || 0}）</button></div>{indexTab === 'contents' ? <div><input className="reader-index-search" aria-label="查找章节" placeholder="查章节名或序号" value={indexQuery} onChange={(event) => setIndexQuery(event.target.value)} /><nav aria-label="篇章目录">{indexedPassages.map(({item, index}) => <button type="button" key={item.slug} aria-current={item.slug === passageSlug ? 'page' : undefined} onClick={() => move(index)}><span>{index + 1}</span>{item.title}</button>)}</nav>{!indexedPassages.length ? <p className="reader-index-empty">没有匹配章节</p> : null}</div> : <div className="reader-bookmarks"><ErrorNotice message={bookmarks.error} retry={bookmarks.reload} />{bookmarks.loading ? <p role="status">正在载入书签…</p> : bookmarks.data?.length ? bookmarks.data.map((item) => <button key={item.id} type="button" onClick={() => { navigate(readingUrl(item.scriptureSlug, item.passageSlug)); setContentsOpen(false); }}>{item.passageTitle}</button>) : <p>点击上方“标记这页”，保存想再读的位置。</p>}</div>}<div className="reader-index-footer"><p>当前第 {currentIndex + 1} / {book.passages.length} 节</p><Link to={`/book/${encodeURIComponent(book.slug)}`}>版本与来源</Link><button type="button" disabled={busy} onClick={() => { setBusy(true); void toggleFavorite(book.slug).catch((reason) => setMessage(errorMessage(reason))).finally(() => setBusy(false)); }}>{isFavorite(book.slug) ? '取消收藏这部书' : '收藏这部书'}</button></div></aside>
+    <article className="reader-document"><header className="reader-chapter-heading"><h1>{currentChapter?.title || passage.title}</h1><p>{book.dynasty} · {book.translator}{book.isExcerpt ? ' · 节选' : ''}</p></header>{!hasPreferredScript ? <p className="reader-script-notice">尚未收录{preferences.script === 'tc' ? '校对繁体' : '校对简体'}，以下保留来源原文。</p> : null}
+      <div className="reader-continuous">{(currentChapter?.indexes || [currentIndex]).map((index) => {
+        const item = book.passages[index];
+        const original = (preferences.script === 'tc' ? item.contentTc : item.contentSc) || item.originalText;
+        const saved = notes.some((entry) => entry.scriptureSlug === scriptureSlug && entry.passageSlug === item.slug);
+        return <section className={`reader-continuous-passage${item.slug === passageSlug ? ' is-selected' : ''}`} key={item.slug}>
+          <div id={`p-${item.slug}`} tabIndex={0} role="group" aria-label={`${item.title}，按回车选中此段`} className={`reader-passage${item.slug === passageSlug && highlight ? ' is-located' : ''}`} onClick={() => selectPassage(index)} onKeyDown={(event) => { if (event.key === 'Enter') { event.preventDefault(); selectPassage(index); } }}><span className="reader-paragraph-number">{index + 1}</span>{original.split('\n').filter(Boolean).map((paragraph, paragraphIndex) => <p className="reader-original" key={paragraphIndex}>{highlightedText(paragraph)}</p>)}</div>
+          <div className="reader-paragraph-actions"><button type="button" onClick={() => { selectPassage(index); openNotes(); }}>{saved ? '查看 / 写笔记' : '记笔记'}</button>{item.slug === passageSlug ? <span>已选中 · 书签与摘录对应此段</span> : null}</div>
+          {preferences.commentary && item.classicalCommentary && item.commentarySource ? <aside className="reader-annotation"><h2>古代注疏</h2><p className="annotation-source">{item.commentarySource}</p>{item.classicalCommentary.split('\n').filter(Boolean).map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}</aside> : null}
+          {preferences.guide && item.modernGuide ? <aside className="reader-annotation modern-guide"><h2>现代编校导读</h2>{item.modernGuide.split('\n').filter(Boolean).map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}</aside> : null}
+        </section>;
+      })}</div>
+      <div className="reader-inline-actions"><button type="button" onClick={() => void copyCitation()}>复制原文与出处</button><button type="button" onClick={openNotes}>摘录 / 写心得</button><button type="button" onClick={() => { setPanel(panel === 'correction' ? null : 'correction'); setActionsOpen(true); }}>勘误</button></div>
+      {manualCopy ? <label className="manual-copy-label">原文与出处<textarea readOnly value={manualCopy} rows={6} onFocus={(event) => event.target.select()} /></label> : null}
+      {panel === 'correction' && actionsOpen ? <form className="reader-correction-form" onSubmit={(event) => { event.preventDefault(); void submitCorrection(); }}><label>勘误说明<textarea required minLength={5} maxLength={4000} rows={3} value={correction} onChange={(event) => setCorrection(event.target.value)} placeholder="请指出错字、建议修改与可核对的出处。" /></label><button className="ink-button" type="submit" disabled={busy}>生成勘误文本</button>{correctionText ? <div className="correction-export"><label>可复制的勘误文本<textarea readOnly rows={8} value={correctionText} onFocus={(event) => event.target.select()} /></label><a className="workbench-action" href={`https://github.com/Lin-Phoeo/fanjin-scripture-library/issues/new?title=${encodeURIComponent(`勘误：${book.title} · ${passage.title}`)}&body=${encodeURIComponent(correctionText)}`} target="_blank" rel="noreferrer">到 GitHub 预览勘误（需自行提交）</a><p>不要在公开 Issue 中包含私人心得或个人信息。</p></div> : null}</form> : null}
+      {passage.audioUrl ? <section className="reader-audio-block"><h2>音频诵读</h2><audio key={passage.audioUrl} controls preload="none" src={passage.audioUrl} onError={() => setMessage('这段音频暂时无法播放，请稍后重试。')} /></section> : null}
+      <nav className="reader-pagination" aria-label="篇章切换"><button disabled={chapterIndex <= 0} type="button" onClick={() => move(chapters[chapterIndex - 1].indexes[0])}>上一章</button><span>第 {chapterIndex + 1} / {chapters.length} 章 · 当前段 {currentIndex + 1}</span><button disabled={chapterIndex >= chapters.length - 1} type="button" onClick={() => move(chapters[chapterIndex + 1].indexes[0])}>下一章</button></nav><div className="reader-end-actions"><Link className="workbench-action" to={`/study?scripture=${encodeURIComponent(book.slug)}&passage=${encodeURIComponent(passage.slug)}`}>记录今日功课</Link><button className="workbench-action" type="button" onClick={openNotes}>留下心得</button></div>
+    </article>
+    {notesOpen ? <aside className="reader-notes-panel"><header><h2>私人笔记</h2><button type="button" onClick={() => setNotesOpen(false)}>收起</button></header><div className="reader-notes-filter"><button type="button" aria-pressed={noteScope === 'passage'} onClick={() => setNoteScope('passage')}>当前一节</button><button type="button" aria-pressed={noteScope === 'book'} onClick={() => setNoteScope('book')}>本书全部</button></div><form className="reader-note-editor" onSubmit={(event) => { event.preventDefault(); void recordNote(); }}><p>{editingId ? '编辑已保存的心得' : `摘录：${passage.title}`}</p>{!editingId ? <blockquote>{passage.originalText}</blockquote> : null}<label>我的心得<textarea rows={5} maxLength={10000} value={note} onChange={(event) => { setNote(event.target.value); if (!editingId) { try { sessionStorage.setItem(draftKey, event.target.value); } catch { /* Keep in memory. */ } } }} placeholder="可只摘录原文，也可写一点体会。" /></label><div className="reader-prompt-options"><button type="button" onClick={() => startReflection('这句话让我想到…')}>联想到的事</button><button type="button" onClick={() => startReflection('还有哪里不理解…')}>不理解的地方</button><button type="button" onClick={() => startReflection('今天想试着…')}>想尝试的事</button></div><button className="ink-button" type="submit" disabled={busy}>{busy ? '保存中…' : editingId ? '保存修改' : '保存摘录'}</button>{editingId ? <button className="workbench-action" type="button" onClick={() => { setEditingId(null); setNote(''); }}>取消编辑</button> : null}</form><ErrorNotice message={message} /><div className="reader-saved-notes">{visibleNotes.length ? visibleNotes.map((item) => <article key={item.id}><Link to={readingUrl(item.scriptureSlug, item.passageSlug)}>{item.passageTitle}</Link><p>{item.note || '仅摘录原文'}</p><small>{new Date(item.createdAt).toLocaleDateString('zh-CN')}</small><button type="button" onClick={() => { setEditingId(item.id); setNote(item.note); }}>编辑心得</button></article>) : <p>这一范围还没有摘录。</p>}</div><Link className="workbench-action" to="/notes">管理 / 导出全部摘录</Link></aside> : null}</div>
+  </main>;
 }
-
-export default ReaderPage;

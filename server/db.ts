@@ -1,7 +1,10 @@
 import Database from 'better-sqlite3';
+import { Converter } from 'opencc-js/t2cn';
+export const normalizeSearch = Converter({ from: 't', to: 'cn' });
 import { mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
-import { randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
+import { createHash, randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
+import { runMigrations, type Migration } from './migrations.ts';
 import {
   defaultUsers,
   seedActivities,
@@ -14,12 +17,22 @@ import {
   seedTopics,
 } from './data.ts';
 
-const DB_PATH = resolve(process.cwd(), 'data', 'fanjin.sqlite');
+export const DB_PATH = resolve(process.env.FANJIN_DB_PATH || resolve(process.cwd(), 'data', 'fanjin.sqlite'));
+const production = process.env.NODE_ENV === 'production';
+const demoEnabled = !production && process.env.SEED_DEMO !== '0' && process.env.SEED_DEMO !== 'false';
+export const SESSION_TTL_SECONDS = 7 * 24 * 60 * 60;
+
+if (production && ['1', 'true'].includes(process.env.SEED_DEMO || '')) {
+  throw new Error('生产环境不允许开启 SEED_DEMO。');
+}
 
 mkdirSync(dirname(DB_PATH), { recursive: true });
 
 export const db = new Database(DB_PATH);
 db.pragma('journal_mode = WAL');
+db.pragma('foreign_keys = ON');
+db.pragma('busy_timeout = 5000');
+db.function('normalize_text', {deterministic:true}, (value:unknown)=>normalizeSearch(String(value??'')));
 
 export function hashPassword(password: string) {
   const salt = randomBytes(16).toString('hex');
@@ -29,6 +42,7 @@ export function hashPassword(password: string) {
 
 export function verifyPassword(password: string, stored: string) {
   const [salt, key] = stored.split(':');
+  if (!salt || !key || !/^[a-f0-9]{32}$/.test(salt) || !/^[a-f0-9]{128}$/.test(key)) return false;
   const hashedBuffer = scryptSync(password, salt, 64);
   const keyBuffer = Buffer.from(key, 'hex');
   return timingSafeEqual(hashedBuffer, keyBuffer);
@@ -116,6 +130,8 @@ function createSchema() {
       name TEXT NOT NULL UNIQUE,
       password_hash TEXT NOT NULL,
       role TEXT NOT NULL DEFAULT 'user',
+      status TEXT NOT NULL DEFAULT 'active',
+      recovery_code_hash TEXT,
       created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
     );
 
@@ -123,6 +139,7 @@ function createSchema() {
       token TEXT PRIMARY KEY,
       user_id INTEGER NOT NULL,
       created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      expires_at INTEGER NOT NULL,
       FOREIGN KEY(user_id) REFERENCES users(id)
     );
 
@@ -206,6 +223,18 @@ function columnExists(table: string, column: string) {
 }
 
 function migrateSchema() {
+  if (!columnExists('users', 'status')) {
+    db.exec("ALTER TABLE users ADD COLUMN status TEXT NOT NULL DEFAULT 'active'");
+  }
+  if (!columnExists('users', 'recovery_code_hash')) {
+    db.exec('ALTER TABLE users ADD COLUMN recovery_code_hash TEXT');
+  }
+  if (!columnExists('sessions', 'expires_at')) {
+    db.exec('ALTER TABLE sessions ADD COLUMN expires_at INTEGER NOT NULL DEFAULT 0');
+    // Legacy tokens were stored in cleartext without an expiry. Require a fresh login.
+    db.prepare('DELETE FROM sessions').run();
+  }
+  db.exec('CREATE INDEX IF NOT EXISTS sessions_user_idx ON sessions(user_id); CREATE INDEX IF NOT EXISTS sessions_expiry_idx ON sessions(expires_at)');
   if (!columnExists('scriptures', 'publish_status')) {
     db.exec("ALTER TABLE scriptures ADD COLUMN publish_status TEXT NOT NULL DEFAULT 'published'");
   }
@@ -229,10 +258,10 @@ function seedData() {
   );
   seedSettings.forEach((setting) => insertSetting.run(setting));
 
-  const categoryCount = db.prepare('SELECT COUNT(*) as count FROM categories').get() as { count: number };
+  const categoryCount = db.prepare('SELECT COUNT(*) as count FROM scriptures').get() as { count: number };
 
   const insertCategory = db.prepare(
-    'INSERT INTO categories (slug, name, description, sort_order) VALUES (@slug, @name, @description, @sortOrder)',
+    'INSERT OR IGNORE INTO categories (slug, name, description, sort_order) VALUES (@slug, @name, @description, @sortOrder)',
   );
   const insertScripture = db.prepare(
     `INSERT INTO scriptures
@@ -265,12 +294,7 @@ function seedData() {
   const insertReview = db.prepare(
     'INSERT INTO review_queue (title, type, submitter, status) VALUES (@title, @type, @submitter, @status)',
   );
-  const insertUser = db.prepare(
-    'INSERT INTO users (name, password_hash, role) VALUES (@name, @passwordHash, @role)',
-  );
-
-  const activityCount = db.prepare('SELECT COUNT(*) as count FROM activities').get() as { count: number };
-  if (activityCount.count === 0) {
+  if (demoEnabled && categoryCount.count === 0) {
     seedActivities.forEach((activity) => insertActivity.run(activity));
   }
 
@@ -282,6 +306,8 @@ function seedData() {
     for (const category of seedCategories) {
       insertCategory.run(category);
     }
+
+    if (!demoEnabled) return;
 
     const categoryMap = new Map(
       (db.prepare('SELECT id, slug FROM categories').all() as Array<{ id: number; slug: string }>).map((item) => [
@@ -344,26 +370,59 @@ function seedData() {
 
     seedReviewQueue.forEach((item) => insertReview.run(item));
 
-    defaultUsers.forEach((user) => {
-      insertUser.run({
-        name: user.name,
-        passwordHash: hashPassword(user.password),
-        role: user.role,
-      });
-    });
   });
 
   transaction();
 }
 
-export function initializeDatabase() {
-  createSchema();
-  migrateSchema();
+function initializeAccounts() {
+  if (production) {
+    // A development database must not silently expose its well-known accounts after deployment.
+    for (const sample of defaultUsers) {
+      const existing = db.prepare("SELECT password_hash FROM users WHERE name = ? AND status = 'active'")
+        .get(sample.name) as { password_hash: string } | undefined;
+      if (existing && verifyPassword(sample.password, existing.password_hash)) {
+        throw new Error('数据库仍含使用示例密码的活跃账号，请先修改或禁用示例账号，再进入生产模式。');
+      }
+    }
+    const admin = db.prepare("SELECT id FROM users WHERE role = 'admin' AND status = 'active' LIMIT 1").get();
+    if (admin) return;
+    const name = process.env.ADMIN_NAME?.trim();
+    const password = process.env.ADMIN_PASSWORD;
+    if (!name || name.length < 2 || name.length > 40 || !password || password.length < 12 || password.length > 128) {
+      throw new Error('首次生产启动需设置 ADMIN_NAME（2–40 字符）和 ADMIN_PASSWORD（12–128 字符）。');
+    }
+    if (db.prepare('SELECT id FROM users WHERE name = ?').get(name)) {
+      throw new Error('ADMIN_NAME 已由现有账号使用，请选择独立管理员账号。');
+    }
+    db.prepare("INSERT INTO users (name, password_hash, role) VALUES (?, ?, 'admin')")
+      .run(name, hashPassword(password));
+    return;
+  }
+  const userCount = db.prepare('SELECT COUNT(*) as count FROM users').get() as { count: number };
+  if (demoEnabled && userCount.count === 0) {
+    const insert = db.prepare('INSERT INTO users (name, password_hash, role) VALUES (?, ?, ?)');
+    db.transaction(() => {
+      defaultUsers.forEach((user) => insert.run(user.name, hashPassword(user.password), user.role));
+    })();
+  }
+}
+
+export async function initializeDatabase(extraMigrations: Migration[] = []) {
+  const result = await runMigrations(db, DB_PATH, [
+    { id: 'core-20261120-v1', up: () => { createSchema(); migrateSchema(); } },
+    ...extraMigrations,
+  ]);
+  initializeAccounts();
   seedData();
+  return result;
 }
 
 export function createSession(userId: number) {
   const token = randomBytes(24).toString('hex');
-  db.prepare('INSERT INTO sessions (token, user_id) VALUES (?, ?)').run(token, userId);
+  const now = Date.now();
+  db.prepare('DELETE FROM sessions WHERE expires_at <= ?').run(now);
+  db.prepare('INSERT INTO sessions (token, user_id, expires_at) VALUES (?, ?, ?)')
+    .run(createHash('sha256').update(token).digest('hex'), userId, now + SESSION_TTL_SECONDS * 1000);
   return token;
 }

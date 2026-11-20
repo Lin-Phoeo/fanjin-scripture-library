@@ -1,0 +1,31 @@
+name: fanjin
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    init: true
+    env_file: ${FANJIN_ENV_FILE:-.env}
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3001
+      FANJIN_DB_PATH: /data/fanjin.sqlite
+      FANJIN_BACKUP_DIR: /data/backups
+      SEED_DEMO: "0"
+    ports:
+      - "127.0.0.1:3007:3001"
+    volumes:
+      - fanjin-data:/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+volumes:
+  fanjin-data:

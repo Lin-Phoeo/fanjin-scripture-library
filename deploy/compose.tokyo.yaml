@@ -1,0 +1,27 @@
+services:
+  app:
+    environment:
+      # SNI passthrough does not preserve end-user IP; registration quota is shared.
+      AUTH_REGISTER_LIMIT: "60"
+  gateway:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8543:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - fanjin-caddy-data:/data
+      - fanjin-caddy-config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+volumes:
+  fanjin-caddy-data:
+  fanjin-caddy-config:

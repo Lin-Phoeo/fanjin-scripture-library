@@ -4,30 +4,53 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "api": "tsx server/index.ts",
-    "import:scripture": "tsx server/import-scripture.ts",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "test": "node tests/run.mjs"
+    "dev": "npm run build:catalog && vite --config vite.config.ts",
+    "api": "node --env-file-if-exists=.env --import tsx server/index.ts",
+    "start": "node --env-file-if-exists=.env --import tsx scripts/start.mjs",
+    "import:scripture": "node --env-file-if-exists=.env --import tsx server/import-scripture.ts",
+    "build": "npm run build:catalog && npm run typecheck && vite build --config vite.config.ts",
+    "build:catalog": "node --import tsx scripts/build-catalog.mjs",
+    "build:pages": "npm run build:catalog && npm run typecheck && node scripts/build-pages.mjs",
+    "typecheck": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && tsc -p tsconfig.server.json",
+    "lint": "eslint src server scripts tests vite.config.ts",
+    "check": "npm run check:pages",
+    "check:pages": "npm run lint && npm run build:pages && npm run test:static",
+    "check:server": "npm run lint && npm run build && npm run test:server && npm run test:production && npm run test:catalog",
+    "backup": "node --env-file-if-exists=.env scripts/backup.mjs",
+    "preview": "vite preview --config vite.config.ts",
+    "test": "npm run test:static",
+    "test:server": "node scripts/test.mjs",
+    "test:production": "node tests/production.mjs",
+    "test:catalog": "node tests/catalog.mjs",
+    "test:static": "node --import tsx tests/static-catalog.mjs && node --import tsx tests/local-state.mjs && node --import tsx tests/local-api.mjs"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.14.0"
   },
   "dependencies": {
     "better-sqlite3": "^12.9.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
+    "opencc-js": "^1.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^7.18.6",
+    "tsx": "^4.19.2"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.19.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.1",
-    "tsx": "^4.19.2",
+    "@vitejs/plugin-react": "^5.2.0",
+    "eslint": "^10.15.0",
+    "fake-indexeddb": "^6.2.8",
+    "globals": "^17.14.0",
     "typescript": "^5.6.3",
-    "vite": "^5.4.10"
+    "typescript-eslint": "^8.73.0",
+    "vite": "^7.3.8"
   }
 }

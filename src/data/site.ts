@@ -1,11 +1,9 @@
 export const frontNavigation = [
   { label: '首页', to: '/' },
-  { label: '经藏', to: '/canon' },
-  { label: '高僧大德', to: '/sages' },
-  { label: '专题共修', to: '/topics' },
-  { label: '活动', to: '/activities' },
+  { label: '经藏', to: '/library' },
+  { label: '自修', to: '/study' },
   { label: '搜索', to: '/search' },
-  { label: '讨论', to: '/discussion' },
+  { label: '摘录', to: '/notes' },
 ] as const;
 
 export const featuredAnnouncements = [

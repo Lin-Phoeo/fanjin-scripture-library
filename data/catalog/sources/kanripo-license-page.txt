@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kanripo 漢籍リポジトリ :  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    <link rel="stylesheet" type="text/css" href="/static/jquery/jquery.ui.core.css">
+    <link rel="stylesheet" type="text/css" href="/static/jquery/jquery.ui.tabs.css">
+    <link rel="stylesheet" type="text/css" href="/static/jquery/jquery.ui.theme.css">
+    -->
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/docs.css" rel="stylesheet"> 
+    <link href="/static/css/mdweb.css" rel="stylesheet"> 
+
+    
+  </head>
+  <body onload="highlightSearchTerms('');" data-spy="scroll" data-target=".bs-docs-sidebar">
+    
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="/" class="pull-left" title="Kanseki Repository">
+	<img width="40" height="40" src="/static/img/kanripo-64.png"/>
+	</a>
+      <a class="brand" href="/">
+	  
+Kanseki Repository
+
+      </a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+	  <!--          <li class="active"><a href="/texts/dzjy">Collections</a></li> -->
+	  
+<li><a href="/catalog">Catalog</a></li>
+<li><a href="http://blog.kanripo.org">Blog</a></li>
+
+	   <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More...
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/citfind">Find related texts</a></li>
+            <li><a href="/advsearch">Advanced search</a></li>
+            <li><a href="/locjump">Jump to page</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+        <ul class="nav pull-right">
+	<li class="active"><a href="/contact">Contact</a></li>
+
+<li class="label-important"><a href="/login">Login</a></li>
+
+      </ul>
+      <form class="navbar-search pull-right form-inline" action="/search" method="GET">
+	<input name="query" id="query" type="text" class="search-query" style="width:9em;" placeholder="Text">
+	<button type="submit" class="btn btn-small" title="Text Search"><i class="icon-search"></i></button>
+      </form>
+      <form class="navbar-search pull-right form-inline" action="/titlesearch" method="GET">
+	<input name="query" id="query-title" type="text" class="search-query" style="width:9em;" placeholder="Title">
+	<button type="submit" class="btn btn-small" title="Title Search"><i class="icon-search"></i></button>
+      </form>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>漢リポ  Kanseki Repository</h1>
+    <p class="lead">Electronic texts for researchers from researchers.</p>
+  </div>
+</header>
+
+
+
+
+<div class="container">
+    
+
+  <div class="row">
+    <div id="sidebardiv" class="span2">
+      
+    <h2>News</h2>
+    
+    <ul>
+      <li><span class="label-success">[2016-03-10]</span><br />
+	このウエブサイトの初公開。
+      </li>
+      <li><span class="label-info">[2015-10-22]</span><br />
+	テスト中の新しいウエブサイト、約９千種漢籍オンライン。
+      </li>
+    
+    
+    </div>
+
+    <div id="maintextdiv" class="span9 textbody">
+      
+
+<div class="row">
+  <div id="txtcont" class="span9">
+    
+    <h3>漢籍リポジトリについて</h3>
+    
+    
+<!--    <p><b>Important note [2015-11-22]:</b> This website is currently under development. Please do not base an evaluation of its content or functionality on the current state, which might change every day. Blackouts and Failures are also expected.  Documentation is missing.  That said, any feedback that might lead to the improvement of its site and its content is very much appreciated.  Anybody who is interested in developing tools that interoperate with this site should contact me through @kanripo on github. <b>A public release is planned for March 2016.</b></p> -->
+    
+    <p>ここでは<a href="https://github.com">ウェブサイトGitHub.com</a>の<a href="https://github.com/kanripo">@kanripoユーザーアカウント</a>の中に有るテキストへの閲覧と検索機能を提供しています。現時点では簡単な検索しか出来ませんが、使用者の要望に従って次第に機能を拡張したいと思っています。
+    <p><b>漢籍リポジトリ</b>、その設計背景と目標についての情報は<a href="http://blog.kanripo.org">漢リポブログ</a>にあります。</p>
+    <p>ブラウザー上でテキストを編集すること、また読むことでさえ、それが長時間になると面倒です。この目的のために、<b><a href="http://www.mandoku.org">マンドク</a></b>と呼ばれる特化されたソフトウェアを開発しました。マンドクはその基盤として<a href="https://www.gnu.org/software/emacs/">Emacs</a>というテキストエディターを使っています。</p>
+    <h3>目録</h3>
+    
+    <h4>　<a href="/catalog?coll=KR1">KR1 	經部</a></h4>
+    <h4>　<a href="/catalog?coll=KR2">KR2 	史部</a></h4>
+    <h4>　<a href="/catalog?coll=KR3">KR3 	子部</a></h4>
+    <h4>　<a href="/catalog?coll=KR4">KR4 	集部</a></h4>
+    <h4>　<a href="/catalog?coll=KR5">KR5 	道部</a></h4>
+    <h4>　<a href="/catalog?coll=KR6">KR6 	佛部</a></h4>
+  </div>
+</div>
+</div>
+
+    </div>
+    <div id="imagediv" class="span1 hidden" style="margin-left:20px;">
+      <div id="imageinner">
+	<div class="buttons">
+	  <div class="dropdown">
+	    <!-- Link or button to toggle dropdown -->
+	    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+	      <li><a tabindex="-1" href="#">Action</a></li>
+	      <li><a tabindex="-1" href="#">Another action</a></li>
+	      <li><a tabindex="-1" href="#">Something else here</a></li>
+	      <li class="divider"></li>
+	      <li><a tabindex="-1" href="#">Separated link</a></li>
+	    </ul>
+	  </div>    
+	  <button class="pz-close" title="Close">X</button>
+	  <button class="zoom-in"  title="Enlarge">+</button>
+	  <button class="zoom-out"  title="Shrink">-</button>
+	  <input type="range" class="zoom-range">
+	  <button class="reset"  title="Reset">⟲</button>
+	  <button class="pz-prev"  title="Previous page" >&lt;</button>
+	  
+	  <button class="pz-next"  title="Next page" >&gt;</button>
+	</div>
+	<div id="imgcont">
+	  <div class="panzoom">
+	  </div>
+	</div>
+      </div>
+    </div>
+</div> <!-- closes row -->
+</div>
+<script  src="/static/jquery/jquery.js"></script>
+<!--
+    <script  src="/static/jquery/jquery.ui.core.js"></script>
+    <script  src="/static/jquery/jquery.ui.widget.js"></script>
+    <script  src="/static/jquery/jquery.ui.tabs.js"></script>
+-->
+    <script  src="/static/js/highlight.js"></script>
+    <script  src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.panzoom.js"></script>
+    
+    
+    
+    <div id="footer">
+      <div class="container">
+	<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+	  (c) Kanseki Repository. All content created by us is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Attribution-ShareAlike 4.0 International License">CC BY SA</a> license. 
+	  <!-- Users retain copyright of their contributions.--> </p>
+      </div>
+    </div>    
+    
+  </body>
+</html>

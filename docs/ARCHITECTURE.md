@@ -1,136 +1,21 @@
-# 系统架构说明
-
-## 1. 项目定位
-
-梵烬网是一个面向佛教古籍数字化、公益共修、原文对白话与祖师注义阅读的前后端一体化网站。
-
-当前版本已经具备：
-
-- 前台阅读与搜索
-- 用户登录、收藏、摘录、阅读历史
-- 专题共修、活动、讨论
-- 后台录入、审核、活动与公告管理
-- SQLite 真实数据存储
-
-## 2. 系统组成
-
-### 前端
-
-- 路由入口：`src/App.tsx`
-- 公共前台框架：`src/components/SiteLayout.tsx`
-- 公共后台框架：`src/components/AdminLayout.tsx`
-- 全局样式：`src/index.css`
-- 页面目录：`src/pages/`
-- API 调用封装：`src/lib/api.ts`
-- 前端状态：`src/context/AppStateContext.tsx`
-
-### 后端
-
-- 服务入口：`server/index.ts`
-- 数据库初始化与迁移：`server/db.ts`
-- 种子数据：`server/data.ts`
-- 导入脚本：`server/import-scripture.ts`
-
-### 数据库
-
-- SQLite 文件：`data/fanjin.sqlite`
-
-## 3. 架构关系
+# 静态架构
 
 ```mermaid
 flowchart LR
-  A["浏览器前端 React"] --> B["前端状态层 AppStateContext"]
-  B --> C["API 调用层 src/lib/api.ts"]
-  C --> D["Express API server/index.ts"]
-  D --> E["SQLite 数据库 data/fanjin.sqlite"]
-  F["内容导入脚本 import-scripture.ts"] --> E
-  G["后台管理页 /admin/*"] --> C
-  H["前台阅读页 /reader/*"] --> C
+  Catalog[经典 JSON 与许可] --> Build[构建期校验与简繁规范化]
+  Build --> Pages[GitHub Pages 静态文件]
+  Pages --> Browser[React 阅读应用]
+  Browser --> Local[(浏览器 IndexedDB)]
+  Local --> Backup[用户下载的 JSON 备份]
+  Backup --> Local
 ```
 
-## 4. 前端结构
+公共内容与个人记录有不同存储位置。公共经典属于随站点发布的只读资料；个人阅读进度、书签、摘录、偏好和功课在当前浏览器保存，没有服务器账户或同步任务。
 
-### 前台路由
+`build-catalog.mjs` 根据显式 manifest 读取来源文件，复用纯内容校验函数，不导入或初始化 SQLite。构建产物包括目录、每部经典详情、检索文本及 4 千余项轻量简繁字映射。OpenCC 在构建期运行，浏览器不需要加载完整转换库。原始古文和出版声明不经过检索规范化改写。
 
-- `/`：首页
-- `/canon`：经藏浏览
-- `/reader/:scriptureId`：经文阅读
-- `/topics`：专题共修
-- `/activities`：活动
-- `/search`：搜索
-- `/discussion`：讨论
-- `/auth`：登录注册
-- `/profile`：个人中心
-- `/notes`：收藏摘录
+`local-catalog.ts` 按部署基础路径读取公共 JSON。`local-store.ts` 用 IndexedDB readwrite 事务完成原子更新，并验证存储结构。浏览器请求兼容层保留阅读页面使用的业务调用形状，在本地分派操作，不向 `/api` 发送私人数据。
 
-### 后台路由
+备份格式具有独立版本；导入先完整校验，再一次性替换。本机数据与网站 origin 绑定，不同域名、设备和浏览器资料之间不自动共享。HashRouter 支持 Pages 子路径和刷新深链接。
 
-- `/admin`：后台首页
-- `/admin/editor`：经文录入与编辑
-- `/admin/topics`：专题管理
-- `/admin/review`：审核队列
-- `/admin/activities`：活动管理
-- `/admin/users`：用户与角色管理
-- `/admin/settings`：系统配置与公告管理
-
-## 5. 核心业务流
-
-### 经典阅读流
-
-1. 前台进入经藏页
-2. 选择经典
-3. 进入阅读页
-4. 切换段落、白话、祖师注义
-5. 保存收藏与摘录
-6. 写入阅读历史
-
-### 内容录入与发布流
-
-1. 后台录入新经典或更新经典
-2. 经典写入数据库并标记 `pending_review`
-3. 同时写入审核队列
-4. 审核通过后，经典 `publish_status` 变为 `published`
-5. 前台公开接口才会展示该经典
-
-### 讨论流
-
-1. 用户进入讨论区
-2. 可按经典或专题筛选
-3. 发主题或回复
-4. 讨论可带经典、专题关联
-5. 可从讨论跳回阅读页
-
-## 6. 当前架构优点
-
-- 前后端职责清晰
-- SQLite 适合当前单机部署与中小体量数据
-- 后台审核流已能控制前台公开状态
-- 导入脚本已接入现有审核发布逻辑
-
-## 7. 当前架构限制
-
-- 暂无独立文件上传服务
-- 暂无对象存储
-- 暂无全文检索引擎
-- 暂无消息通知系统
-- 暂无更完整的权限粒度
-
-## 8. 后续可扩展方向
-
-### 数据层
-
-- 从 SQLite 迁移到 PostgreSQL
-- 增加全文检索
-- 增加音频与附件资源管理
-
-### 应用层
-
-- 增加找回密码、账号安全
-- 增加评论审核与风控
-- 增加批量导入多部经典
-
-### 部署层
-
-- 前端静态部署
-- 后端进程守护
-- 数据库备份与日志轮转
+历史 Express/SQLite 源码仍保存在仓库，单独测试；不会打入当前静态应用的执行链路。历史架构见 [server/ARCHITECTURE.md](server/ARCHITECTURE.md)。

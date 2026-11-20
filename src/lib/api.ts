@@ -1,4 +1,16 @@
-export type ScriptureSummary = {
+export type ScriptureMetadata = {
+  school?: string;
+  tags?: string[];
+  edition?: string;
+  sourceName?: string;
+  sourceUrl?: string;
+  license?: string;
+  licenseUrl?: string;
+  isExcerpt?: boolean;
+  sourceVerified?: boolean;
+  sourceHeader?: string;
+};
+export type ScriptureSummary = ScriptureMetadata & {
   id: number;
   slug: string;
   title: string;
@@ -21,6 +33,11 @@ export type ScripturePassage = {
   plainText: string;
   commentaryText: string;
   audioUrl: string;
+  contentTc?: string | null;
+  contentSc?: string | null;
+  classicalCommentary?: string | null;
+  commentarySource?: string | null;
+  modernGuide?: string | null;
 };
 
 export type ScriptureDetail = ScriptureSummary & {
@@ -125,9 +142,10 @@ export type ActivityItem = {
   format: string;
   status: string;
   createdAt: string;
+  participants: number;
 };
 
-export type AdminScriptureInput = {
+export type AdminScriptureInput = ScriptureMetadata & {
   title: string;
   slug: string;
   categorySlug: string;
@@ -149,7 +167,7 @@ export type ReviewItem = {
   targetKind?: string | null;
   targetSlug?: string | null;
 };
-export type AdminUser = AdminDashboardResponse['users'][number];
+export type AdminUser = AdminDashboardResponse['users'][number] & { status: 'active' | 'disabled' };
 export type CategoryItem = {
   id: number;
   slug: string;
@@ -176,26 +194,12 @@ export type ReadingHistoryItem = {
   passageTitle: string | null;
 };
 
-async function apiRequest<T>(path: string, init: RequestInit = {}, token?: string | null): Promise<T> {
-  const response = await fetch(path, {
-    ...init,
-    headers: {
-      'Content-Type': 'application/json',
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      ...(init.headers ?? {}),
-    },
-  });
-
-  if (!response.ok) {
-    const maybeJson = (await response.json().catch(() => null)) as { message?: string } | null;
-    throw new Error(maybeJson?.message ?? `请求失败: ${response.status}`);
-  }
-
-  if (response.status === 204) {
-    return undefined as T;
-  }
-
-  return response.json() as Promise<T>;
+export async function apiRequest<T>(path: string, init: RequestInit = {}, _token?: string | null): Promise<T> {
+  if (init.signal?.aborted) throw new DOMException('请求已取消', 'AbortError');
+  const { dispatchLocalApi } = await import('./local-api');
+  const result = await dispatchLocalApi(path, init);
+  if ((!init.method || init.method.toUpperCase()==='GET') && init.signal?.aborted) throw new DOMException('请求已取消', 'AbortError');
+  return result as T;
 }
 
 export function getScriptures(query?: string, category?: string) {
@@ -368,7 +372,7 @@ export function deleteAdminTopic(id: number, token: string) {
 }
 
 export function createAdminActivity(
-  input: Omit<ActivityItem, 'id' | 'createdAt'>,
+  input: Omit<ActivityItem, 'id' | 'createdAt' | 'participants'>,
   token: string,
 ) {
   return apiRequest<{ ok: boolean }>(

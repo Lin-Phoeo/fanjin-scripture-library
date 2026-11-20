@@ -1,239 +1,28 @@
-# 接口说明
+# 静态资料与本机操作契约
 
-后端入口：
+当前公开站点没有运行 HTTP 后端。页面保留的 `/api/...` 形状是浏览器内部业务兼容层，不代表会向服务器发送私人数据。旧服务器 HTTP 接口文档保存在 [server/API.md](server/API.md)。
 
-- `server/index.ts`
+## 公共只读文件
 
-默认本地地址：
+所有路径相对 `import.meta.env.BASE_URL`：
 
-- `http://127.0.0.1:3001`
+| 文件 | 格式 |
+| --- | --- |
+| `content/index.json` | `{version:1,generatedAt,retrievedAt,categories,settings,announcements:[],books}` |
+| `content/books/{slug}.json` | 完整经典元数据与 `passages` |
+| `content/search.json` | `{version:1,charMap,items}` |
+| `content-notices.txt` | 完整来源与版权说明 |
+| `content-sources/heart-sutra-T08n0251.xml` | 保留完整 CBETA 出版头的原始资料 |
+| `content-sources/opencc-notices.txt` | 简繁字映射的上游许可说明 |
 
-## 1. 公开接口
+目录书项包含 ScriptureSummary 字段、完整来源元数据、`passageCount/wordCount`，不包含逐段正文。详情段落包含稳定 ID、slug、顺序、原文、繁简底本、古注及其出处、现代导读和可选音频。
 
-### 首页
+检索项包含经典/段落标识、分类/学派、`original/plain/commentary`，以及 `normalized:{title,original,plain,commentary,summary}`。检索规范化统一使用 NFKC、轻量简繁字映射和小写；原文显示仍使用原始资料。
 
-- `GET /api/home`
+## 本机操作
 
-返回：
+本机兼容层提供经典浏览、检索、书架、收藏、书签、阅读进度、摘录、偏好、计划与功课。所有个人修改写入当前浏览器 IndexedDB；不存在登录后用户 ID，也不会自动同步多个设备。
 
-- 公告
-- 推荐经典
-- 统计信息
-- 站点配置
+摘录原文快照保存后保持不变，心得可编辑。同一段书签重复保存幂等。功课按当前设备本地自然日、每计划每天一条；重复提交不会重复累加时长，支持最近三天补记。导入和清空操作均应通过明确的界面确认，不通过服务器 API 执行。
 
-### 分类
-
-- `GET /api/categories`
-
-### 经典列表
-
-- `GET /api/scriptures`
-
-查询参数：
-
-- `q`：关键词
-- `category`：分类 slug
-
-### 经典详情
-
-- `GET /api/scriptures/:slug`
-
-说明：
-
-- 只返回 `published` 的经典
-
-### 专题列表
-
-- `GET /api/topics`
-
-### 活动列表
-
-- `GET /api/activities`
-
-### 站点配置
-
-- `GET /api/settings`
-
-### 讨论列表
-
-- `GET /api/discussions`
-
-查询参数：
-
-- `scripture`：经典 slug
-- `topic`：专题 slug
-
-### 讨论详情
-
-- `GET /api/discussions/:id`
-
-## 2. 用户接口
-
-### 登录
-
-- `POST /api/auth/login`
-
-请求体：
-
-```json
-{
-  "name": "梵烬用户",
-  "password": "fanjin123"
-}
-```
-
-### 注册
-
-- `POST /api/auth/register`
-
-### 当前用户信息
-
-- `GET /api/me`
-
-### 收藏列表
-
-- `GET /api/favorites`
-
-### 新增收藏
-
-- `POST /api/favorites`
-
-### 删除收藏
-
-- `DELETE /api/favorites/:scriptureSlug`
-
-### 摘录列表
-
-- `GET /api/notes`
-
-### 新增摘录
-
-- `POST /api/notes`
-
-### 删除摘录
-
-- `DELETE /api/notes/:id`
-
-### 阅读历史
-
-- `GET /api/history`
-
-### 写入阅读历史
-
-- `POST /api/history`
-
-### 我的讨论
-
-- `GET /api/my/discussions`
-
-### 新建讨论
-
-- `POST /api/discussions`
-
-### 回复讨论
-
-- `POST /api/discussions/:id/replies`
-
-## 3. 后台接口
-
-后台接口需要管理员或审核员权限。
-
-### 后台看板
-
-- `GET /api/admin/dashboard`
-
-### 后台经典列表
-
-- `GET /api/admin/scriptures`
-
-### 后台经典详情
-
-- `GET /api/admin/scriptures/:slug`
-
-### 新增经典
-
-- `POST /api/admin/scriptures`
-
-### 更新经典
-
-- `PUT /api/admin/scriptures/:slug`
-
-### 审核列表
-
-- `GET /api/admin/review`
-
-查询参数：
-
-- `status`
-
-### 更新审核状态
-
-- `PATCH /api/admin/review/:id`
-
-### 用户列表
-
-- `GET /api/admin/users`
-
-### 更新用户角色
-
-- `PATCH /api/admin/users/:id`
-
-### 后台配置
-
-- `GET /api/admin/settings`
-- `PUT /api/admin/settings`
-
-### 公告管理
-
-- `GET /api/admin/announcements`
-- `POST /api/admin/announcements`
-- `DELETE /api/admin/announcements/:id`
-
-### 活动管理
-
-- `GET /api/admin/activities`
-- `POST /api/admin/activities`
-- `DELETE /api/admin/activities/:id`
-
-### 专题管理
-
-- `GET /api/admin/topics`
-- `POST /api/admin/topics`
-- `DELETE /api/admin/topics/:id`
-
-## 4. 鉴权方式
-
-当前采用 Bearer Token。
-
-前端登录后会拿到：
-
-```json
-{
-  "token": "xxxxx",
-  "user": {
-    "id": 1,
-    "name": "法音法师",
-    "role": "admin"
-  }
-}
-```
-
-后续请求通过：
-
-```http
-Authorization: Bearer <token>
-```
-
-## 5. 当前接口特点
-
-- 公开接口只展示已发布经典
-- 后台接口可访问待审核或未发布内容
-- 经典更新会走审核发布链路
-- 讨论、收藏、摘录、历史都是真实落库
-
-## 6. 后续接口扩展建议
-
-- 增加批量导入接口
-- 增加找回密码接口
-- 增加附件上传接口
-- 增加评论审核与操作日志接口
+公共资料不存在、离线未缓存或本机存储不可用时返回用户可理解的错误，不将未保存操作显示为已保存。前端业务接口以 `src/lib/local-api.ts`、`local-store.ts` 和对应回归为准。

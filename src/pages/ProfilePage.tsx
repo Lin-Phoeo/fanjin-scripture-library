@@ -1,156 +1,35 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppState } from '../context/AppStateContext';
-import { getMyDiscussions, type DiscussionItem, type ReadingHistoryItem, getReadingHistory } from '../lib/api';
+import { apiRequest } from '../lib/api';
+import { ErrorNotice, errorMessage } from '../components/AsyncFeedback';
+import { usePersonalPreferences } from '../lib/personal-preferences';
+import PreferenceChoices from '../components/PreferenceChoices';
+import { applyTheme, readPreferences } from '../lib/reading-preferences';
+import { useResource } from '../lib/useResource';
 
-function ProfilePage() {
-  const { favorites, notes, session, token } = useAppState();
-  const [history, setHistory] = useState<ReadingHistoryItem[]>([]);
-  const [myDiscussions, setMyDiscussions] = useState<DiscussionItem[]>([]);
-
-  useEffect(() => {
-    void (async () => {
-      if (!token) {
-        setHistory([]);
-        setMyDiscussions([]);
-        return;
-      }
-      const [historyData, discussionData] = await Promise.all([
-        getReadingHistory(token),
-        getMyDiscussions(token),
-      ]);
-      setHistory(historyData);
-      setMyDiscussions(discussionData);
-    })();
-  }, [token]);
-
-  return (
-    <main className="content-page">
-      <section className="page-hero">
-        <p className="eyebrow">个人中心</p>
-        <h1>{session?.name ?? '尚未登录'}</h1>
-        <p className="page-lead">
-          {session ? `${session.role} · 当前为前端演示账号状态` : '登录后可同步收藏经典、摘录体会和共修参与记录。'}
-        </p>
-      </section>
-
-      <section className="stat-grid">
-        <article className="overview-card">
-          <span className="overview-label">收藏经典</span>
-          <strong>{favorites.length} 部</strong>
-        </article>
-        <article className="overview-card">
-          <span className="overview-label">摘录记录</span>
-          <strong>{notes.length} 条</strong>
-        </article>
-        <article className="overview-card">
-          <span className="overview-label">账号状态</span>
-          <strong>{session ? '已登录' : '访客'}</strong>
-        </article>
-        <article className="overview-card">
-          <span className="overview-label">我的讨论</span>
-          <strong>{myDiscussions.length} 条</strong>
-        </article>
-      </section>
-
-      <section className="card-grid">
-        <article className="content-card">
-          <h2>我的收藏与摘录</h2>
-          <p>查看重点经句、管理摘录备注，并快速跳回原文位置继续阅读。</p>
-          <Link className="primary-link" to="/notes">
-            进入管理
-          </Link>
-        </article>
-        <article className="content-card">
-          <h2>继续阅读</h2>
-          <p>你可以回到经藏页继续浏览，或直接从最近阅读记录返回到上次停留位置。</p>
-          <div className="card-actions">
-            <Link className="primary-link" to="/canon">
-              浏览经藏
-            </Link>
-            <Link className="secondary-link" to="/search">
-              打开搜索
-            </Link>
-          </div>
-        </article>
-        <article className="content-card">
-          <h2>我的讨论</h2>
-          <p>回到你发起过的共修主题，继续查看回复与补充讨论内容。</p>
-          <Link className="primary-link" to="/discussion">
-            打开讨论区
-          </Link>
-        </article>
-      </section>
-
-      <section className="public-panel">
-        <div className="results-header">
-          <h2>最近阅读</h2>
-          <span>{history.length} 条记录</span>
-        </div>
-        <div className="list-stack compact-stack public-list-stack">
-          {history.length ? (
-            history.map((item) => (
-              <article key={item.id} className="list-card">
-                <div>
-                  <span className="content-kicker">{new Date(item.viewedAt).toLocaleString('zh-CN')}</span>
-                  <h3>{item.scriptureTitle}</h3>
-                  <p>{item.passageTitle ?? '经典入口'}</p>
-                </div>
-                <Link
-                  className="header-button"
-                  to={`/reader/${item.scriptureSlug}${item.passageSlug ? `?passage=${item.passageSlug}` : ''}`}
-                >
-                  继续阅读
-                </Link>
-              </article>
-            ))
-          ) : (
-            <article className="list-card">
-              <p>登录后阅读过的经典会记录在这里。</p>
-            </article>
-          )}
-        </div>
-      </section>
-
-      <section className="public-panel">
-        <div className="results-header">
-          <h2>我发起的讨论</h2>
-          <span>{myDiscussions.length} 条主题</span>
-        </div>
-        <div className="list-stack compact-stack public-list-stack">
-          {myDiscussions.length ? (
-            myDiscussions.map((item) => (
-              <article key={item.id} className="list-card">
-                <div>
-                  <span className="content-kicker">{item.scriptureTitle ?? item.topicTitle ?? '我的讨论'}</span>
-                  <h3>{item.title}</h3>
-                  <p>
-                    {item.repliesCount} 条回复 · {item.likesCount} 次赞同
-                  </p>
-                </div>
-                <Link
-                  className="header-button"
-                  to={
-                    item.topicSlug
-                      ? `/discussion?topic=${item.topicSlug}&discussion=${item.id}`
-                      : item.scriptureSlug
-                        ? `/discussion?scripture=${item.scriptureSlug}&discussion=${item.id}`
-                        : `/discussion?discussion=${item.id}`
-                  }
-                >
-                  查看讨论
-                </Link>
-              </article>
-            ))
-          ) : (
-            <article className="list-card">
-              <p>登录后你发起过的讨论会显示在这里。</p>
-            </article>
-          )}
-        </div>
-      </section>
-    </main>
-  );
+type Backup = { format: string; version: number; exportedAt: string; data: { profile?: { name?: string }; favorites?: unknown[]; notes?: unknown[]; progress?: unknown[]; bookmarks?: unknown[]; plans?: unknown[]; logs?: unknown[] } };
+function download(value: unknown, filename: string) { const url = URL.createObjectURL(new Blob([JSON.stringify(value, null, 2)], { type: 'application/json;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = filename; link.click(); window.setTimeout(() => URL.revokeObjectURL(url), 1000); }
+function clearAuxiliaryStorage() { try { Object.keys(localStorage).filter((key) => key.startsWith('fanjin-progress-') || key.startsWith('fanjin-guest-') || key === 'fanjin-reading-preferences-v1').forEach((key) => localStorage.removeItem(key)); Object.keys(sessionStorage).filter((key) => key.startsWith('fanjin-note-draft:')).forEach((key) => sessionStorage.removeItem(key)); } catch { /* Primary store errors are handled by the local API. */ } applyTheme(readPreferences().theme); }
+export default function ProfilePage() {
+  const { session, favorites, notes, refreshUserData, storageError } = useAppState();
+  const preferences = usePersonalPreferences();
+  const overview = useResource(() => apiRequest<Backup>('/api/local/export'));
+  const [name, setName] = useState(session.name);
+  const [message, setMessage] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [backup, setBackup] = useState<Backup | null>(null);
+  const [fileName, setFileName] = useState('');
+  const [clearConfirmation, setClearConfirmation] = useState('');
+  useEffect(() => setName(session.name), [session.name]);
+  const run = async (action: () => Promise<void>) => { if (busy) return; setBusy(true); setMessage(''); try { await action(); } catch (reason) { setMessage(errorMessage(reason)); } finally { setBusy(false); } };
+  const updated = async () => { await refreshUserData(); overview.reload(); preferences.reload(); window.dispatchEvent(new Event('fanjin-local-data-updated')); };
+  const readBackup = async (file?: File) => { setBackup(null); setFileName(''); if (!file) return; try { if (file.size > 20 * 1024 * 1024) throw new Error('备份超过20MB，请选择梵烬导出的JSON备份。'); const value: unknown = JSON.parse(await file.text()); if (!value || typeof value !== 'object' || (value as Backup).format !== 'fanjin-local-backup' || (value as Backup).version !== 1 || !(value as Backup).data) throw new Error('这不是支持的梵烬完整备份。请选择导出的完整JSON备份。'); const { validateLocalBackup } = await import('../lib/local-store'); const state = validateLocalBackup(value); setBackup({ format: 'fanjin-local-backup', version: 1, exportedAt: (value as Backup).exportedAt, data: state }); setFileName(file.name); setMessage('已读取备份预览，尚未覆盖本机数据。'); } catch (reason) { setMessage(errorMessage(reason)); } };
+  return <main className="content-page profile-page"><header><h1>本机书斋</h1><p>所有书签、摘录、进度和功课保存在当前浏览器。无需注册，也不会自动同步到其他设备。</p><div className="card-actions"><Link className="workbench-action" to="/">返回书架</Link><Link className="workbench-action" to="/privacy">本机存储说明</Link></div></header><ErrorNotice message={storageError || message} />
+    <section className="public-panel"><h2>称呼与数据概览</h2><form className="local-name-form" onSubmit={(event) => { event.preventDefault(); void run(async () => { await apiRequest('/api/local/profile', { method: 'PUT', body: JSON.stringify({ name: name.trim() }) }); await updated(); setMessage('称呼已保存到此浏览器。'); }); }}><label>书斋称呼<input required minLength={1} maxLength={40} value={name} onChange={(event) => setName(event.target.value)} /></label><button className="ink-button" disabled={busy} type="submit">保存称呼</button></form><dl className="local-data-overview"><div><dt>收藏</dt><dd>{favorites.length} 部</dd></div><div><dt>摘录</dt><dd>{notes.length} 条</dd></div><div><dt>书签</dt><dd>{overview.data?.data.bookmarks?.length || 0} 处</dd></div><div><dt>功课记录</dt><dd>{overview.data?.data.logs?.length || 0} 条</dd></div></dl><ErrorNotice message={overview.error} retry={overview.reload} /></section>
+    <section className="public-panel"><h2>导出完整备份</h2><p>完整JSON包含称呼、收藏、摘录、阅读位置、书签、自修计划、功课和偏好。换设备时，先导出再在新设备导入。阅读纸色、字号等外观设置不包含在备份内。文件没有加密，请妥善保管。</p><button className="ink-button" type="button" disabled={busy} onClick={() => void run(async () => { download(await apiRequest('/api/local/export'), `梵烬-本机书斋备份-${new Date().toISOString().slice(0, 10)}.json`); setMessage('完整备份已下载。请保存到浏览器之外的位置。'); })}>导出完整 JSON 备份</button><p className="form-footnote">建议定期备份。清除浏览器网站数据、使用无痕窗口或设备损坏都可能导致记录丢失。</p></section>
+    <section className="public-panel"><h2>导入备份</h2><p>导入会替换当前书斋全部记录，不会与现有数据合并。建议先导出当前备份。</p><label className="backup-picker">选择梵烬完整备份<input type="file" accept="application/json,.json" disabled={busy} onChange={(event) => void readBackup(event.target.files?.[0])} /></label>{backup ? <div className="backup-preview"><h3>{fileName}</h3><p>导出时间：{new Date(backup.exportedAt).toLocaleString('zh-CN')} · 称呼：{backup.data.profile?.name || '未指定'}</p><p>{backup.data.notes?.length || 0} 条摘录 · {backup.data.bookmarks?.length || 0} 处书签 · {backup.data.plans?.length || 0} 个计划 · {backup.data.logs?.length || 0} 条功课</p><button className="ink-button" type="button" disabled={busy} onClick={() => { if (!window.confirm('确认用此备份替换当前浏览器里的全部书斋记录？建议先导出当前数据。')) return; void run(async () => { window.dispatchEvent(new Event('fanjin-local-data-changing')); await apiRequest('/api/local/import', { method: 'POST', body: JSON.stringify({ backup }) }); clearAuxiliaryStorage(); await updated(); setBackup(null); setMessage('备份已导入，当前本机书斋已替换。'); }); }}>确认替换并导入</button><button className="workbench-action" type="button" disabled={busy} onClick={() => setBackup(null)}>取消</button></div> : null}</section>
+    <section className="public-panel profile-preferences"><h2>阅读兴趣与时间</h2><p>用于书架“适合这次阅读”的辅助排序，保存在此浏览器，也随完整备份导出。</p><PreferenceChoices value={preferences.value} update={preferences.update} disabled={preferences.loading || preferences.saving} compact /><div className="preference-storage"><span role="status">{preferences.saving ? '正在保存…' : preferences.status || '仅在此浏览器保存。'}</span><button type="button" disabled={preferences.loading || preferences.saving} onClick={() => void preferences.reset()}>清除偏好</button></div><ErrorNotice message={preferences.error} retry={preferences.retry} /></section>
+    <section className="public-panel local-danger"><h2>清除本机记录</h2><p>删除当前浏览器保存的全部书斋数据。此操作无法撤销，导出的备份文件不会被删除。</p><label>输入“清除”确认<input value={clearConfirmation} onChange={(event) => setClearConfirmation(event.target.value)} autoComplete="off" /></label><button type="button" disabled={busy || clearConfirmation !== '清除'} onClick={() => { if (!window.confirm('确定清除本机全部记录？请确认已经保存备份。')) return; void run(async () => { window.dispatchEvent(new Event('fanjin-local-data-changing')); await apiRequest('/api/local/data', { method: 'DELETE' }); clearAuxiliaryStorage(); await updated(); setClearConfirmation(''); setMessage('本机记录已清除，可重新阅读或导入备份。'); }); }}>清除全部本机记录</button></section>
+  </main>;
 }
-
-export default ProfilePage;

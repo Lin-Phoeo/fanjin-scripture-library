@@ -1,92 +1,60 @@
-# 内容导入准备
+# 静态经典整理与发布
 
-这个项目目前已经有真实的 `SQLite` 数据库与前后台结构，下一步如果要批量导入经文、白话、祖师注义，建议先统一内容格式，再写导入脚本。
+正式内容在 `data/catalog/`，由 `catalog-manifest.json` 显式列出发布文件。新增经典不是写数据库，而是提交经过核验的 JSON，再构建和发布 GitHub Pages。
 
-## 当前适合的导入粒度
-
-建议按“经典 -> 段落”两层来整理：
-
-1. 经典主信息
-2. 每段原文
-3. 每段白话
-4. 每段祖师注义
-5. 每段可选音频地址
-
-## 推荐字段
-
-### 经典主信息
-
-- `slug`：唯一英文标识，例如 `diamond-sutra`
-- `title`：经典名称
-- `categorySlug`：分类标识
-- `dynasty`：朝代
-- `translator`：译者或整理者
-- `role`：修学定位
-- `overlay`：经典简介
-- `publishStatus`：建议导入时先用 `pending_review`
-
-### 段落信息
-
-- `slug`：段落唯一标识，例如 `chapter-01`
-- `title`：段落标题
-- `originalText`：原文
-- `plainText`：白话导读
-- `commentaryText`：祖师注义
-- `audioUrl`：可选
-
-## 推荐文件格式
-
-优先推荐 `JSON`，因为一部经典天然就是嵌套结构，后续写导入脚本也更稳。
-
-模板文件：
-
-- [data/import-templates/scripture-template.json](C:/Users/Administrator/Desktop/梵烬网/data/import-templates/scripture-template.json:1)
-
-当前项目内置分类 slug：
-
-- `banruo`：般若部
-- `zushi`：祖师语录
-- `fahua`：法华部
-
-## 导入建议流程
-
-1. 先在 `data/import-templates/` 里按模板整理一部经典
-2. 确认分类 `categorySlug` 在系统里已存在
-3. 每段都补齐原文、白话、注义
-4. 导入时先写成待审核
-5. 审核通过后再发布到前台
-
-## 当前可用导入命令
-
-先预检：
-
-```bash
-npm run import:scripture -- data/import-templates/scripture-template.json --dry-run
+```sh
+npm run build:catalog
+npm run test:static
+npm run build:pages
 ```
 
-正式导入：
+未登记在 manifest 的 JSON 不会公开。构建拒绝未核验来源、缺少底本/来源/许可、重复 slug、非法文件名或未知分类，避免把临时材料顺带发布。
 
-```bash
-npm run import:scripture -- data/import-templates/scripture-template.json
+## 三层正文
+
+| 层次 | 字段 |
+| --- | --- |
+| 原文 | `originalText`，可选 `contentTc/contentSc` |
+| 古注 | `classicalCommentary` 和必需的 `commentarySource` |
+| 现代导读 | `modernGuide` |
+
+资料空缺就留空，不生成古文或冒充古注。检索时的简繁规范化不改变显示底本，自动转换不能等同校勘。`sourceHeader` 如有上游完整出版声明则逐字保留。
+
+```json
+{
+  "slug": "new-classic",
+  "title": "待整理经典",
+  "categorySlug": "dao",
+  "dynasty": "待核对",
+  "translator": "待核对作者或译者",
+  "school": "道家",
+  "tags": ["原文"],
+  "summary": "说明收录范围",
+  "edition": "具体底本版本",
+  "sourceName": "数字资料来源",
+  "sourceUrl": "https://example.org/source",
+  "license": "实际许可说明",
+  "licenseUrl": "https://example.org/license",
+  "sourceVerified": false,
+  "isExcerpt": true,
+  "passages": [{
+    "slug": "chapter-01",
+    "title": "第一章",
+    "originalText": "这里替换为已经核对的原文",
+    "contentTc": null,
+    "contentSc": null,
+    "classicalCommentary": null,
+    "commentarySource": null,
+    "modernGuide": null,
+    "audioUrl": ""
+  }]
+}
 ```
 
-如果明确要跳过审核直接发布：
+此模板刻意保持 `sourceVerified:false`，不能直接通过发布构建。example.org 是占位链接，必须替换并人工核对。作品处于公有领域，不自动表示现代标点、译注、数字整理或录音也可随意转载。
 
-```bash
-npm run import:scripture -- data/import-templates/scripture-template.json --published
-```
+分类为 `banruo/zushi/fahua/dao/ru/zhuzi`；学派和分类分别记录。经典 slug 和段落 slug 发布后应保持稳定，否则用户现有书签、摘录与进度无法准确回到原处。`isExcerpt` 默认 true，只有核对全本后才能设 false。
 
-## 录入注意
+公共许可在构建时复制到 `public/content-notices.txt`，心经原始 XML 与 OpenCC 许可另行复制。不要把私人用户备份、数据库或未经核验的材料加入公共目录。
 
-- `slug` 不要重复
-- 段落顺序要稳定，避免后续摘录和阅读历史错位
-- 白话与注义尽量按段对应，不要整章只塞成一大段
-- 如果暂时没有音频，`audioUrl` 留空即可
-
-## 下一步建议
-
-后续可以继续补一套真正的导入脚本，例如：
-
-- `npm run import:scripture data/import-templates/diamond-sutra.json`
-
-目前这份文档的作用是先把内容整理规范定下来，避免后面导入时反复返工。
+历史数据库导入 CLI 说明仅供保留源码参考：[server/CONTENT_IMPORT.md](server/CONTENT_IMPORT.md)。

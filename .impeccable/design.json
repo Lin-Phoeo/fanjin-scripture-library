@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-20T00:00:00+08:00",
+  "title": "Design System: 梵烬 · 阅读工作台",
+  "extensions": {
+    "colorMeta": {
+      "cinnabar": {
+        "role": "primary",
+        "displayName": "印泥朱红",
+        "canonical": "#9B3B31"
+      },
+      "ink-teal": {
+        "role": "secondary",
+        "displayName": "青黛",
+        "canonical": "#3E5C58"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "素宣",
+        "canonical": "#FAF8F5"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "工作台标题",
+        "purpose": "书架、本机数据和阅读工具任务标题，29px桌面、27px手机。"
+      },
+      "reading": {
+        "displayName": "原文",
+        "purpose": "680px版心内长时阅读。"
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "value": "140ms ease-out",
+        "purpose": "按钮和选项状态反馈，reduced-motion关闭。",
+        "name": "control-response"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1000px"
+      },
+      {
+        "name": "mobile",
+        "value": "740px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "进入阅读或保存私人记录。",
+      "html": "<button class=\"ds-primary\">读这一篇</button>",
+      "css": ".ds-primary{min-height:44px;padding:11px 21px;background:var(--accent-primary,#9B3B31);color:#fff;border:1px solid var(--accent-primary,#9B3B31);border-radius:3px;font:13px/1.6 sans-serif}.ds-primary:hover{filter:brightness(.94)}.ds-primary:focus-visible{outline:2px solid var(--accent-primary,#9B3B31);outline-offset:4px}"
+    },
+    {
+      "name": "Quiet action",
+      "kind": "button",
+      "description": "次级行为，不争夺原文注意力。",
+      "html": "<button class=\"ds-quiet\">先看版本</button>",
+      "css": ".ds-quiet{min-height:44px;padding:6px 0;border:0;background:transparent;color:var(--accent-secondary,#3E5C58);font:13px sans-serif}.ds-quiet:hover{text-decoration:underline;text-underline-offset:5px}.ds-quiet:focus-visible{outline:2px solid var(--accent-primary,#9B3B31);outline-offset:4px}"
+    },
+    {
+      "name": "Interest choice",
+      "kind": "chip",
+      "refersTo": "option-selected",
+      "description": "主动选择的阅读兴趣，可多选。",
+      "html": "<button class=\"ds-choice\" aria-pressed=\"true\">佛家</button>",
+      "css": ".ds-choice{min-height:44px;padding:9px 15px;border:1px solid var(--accent-secondary,#3E5C58);border-radius:4px;background:var(--accent-secondary,#3E5C58);color:var(--bg-canvas,#FAF8F5);font:13px sans-serif;transition:background-color 160ms ease-out}.ds-choice:focus-visible{outline:2px solid var(--accent-primary,#9B3B31);outline-offset:4px}"
+    },
+    {
+      "name": "Search input",
+      "kind": "input",
+      "description": "搜索真实经藏。",
+      "html": "<input class=\"ds-input\" aria-label=\"经藏搜索\" placeholder=\"经名、原文、古注都可以搜\" />",
+      "css": ".ds-input{min-height:44px;padding:11px 12px;border:1px solid var(--border-subtle,#E5E0D8);border-radius:3px;background:var(--bg-canvas,#FAF8F5);color:var(--text-primary,#24211E);caret-color:var(--accent-primary,#9B3B31);font:13px sans-serif}.ds-input::placeholder{color:var(--text-secondary,#68625D)}.ds-input:focus-visible{outline:2px solid var(--accent-primary,#9B3B31);outline-offset:4px}"
+    },
+    {
+      "name": "Primary navigation",
+      "kind": "nav",
+      "description": "常规路由位置与明确当前页。",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">首页</a><a href=\"#\">经藏</a><a href=\"#\">自修</a></nav>",
+      "css": ".ds-nav{display:flex;gap:28px;font:14px sans-serif}.ds-nav a{min-height:44px;display:flex;align-items:center;text-decoration:none;color:var(--text-secondary,#68625D)}.ds-nav a[aria-current]{color:var(--accent-primary,#9B3B31)}.ds-nav a:focus-visible{outline:2px solid var(--accent-primary,#9B3B31);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "阅读工作台",
+    "overview": "首次打开直接搜索、筛选和阅读真实书目；已有本机记录时显示本机书架、继续阅读和最近摘录。阅读区固定目录、连续正文与私人笔记同屏，偏好作为折叠辅助。",
+    "keyCharacteristics": [
+      "真实书目与直接阅读操作优先。",
+      "目录/书签、连续正文、可编辑私人笔记同屏。",
+      "偏好仅在辅助排序选择后生效，可重设并通过本机备份迁移。"
+    ],
+    "rules": [
+      {
+        "name": "真实内容",
+        "body": "推荐使用已发布原文与公开规则，缺内容明确说明。",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "让真实书目与继续阅读成为首要操作。",
+      "在连续正文旁完成书签和私人笔记。",
+      "保留版本来源和三层文本边界。"
+    ],
+    "donts": [
+      "不把偏好问卷当首页主体。",
+      "不显示假统计或虚构云端同步。",
+      "不生成或冒充经典原文和用户心得。"
+    ]
+  }
+}

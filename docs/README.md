@@ -1,23 +1,14 @@
-# 梵烬网文档中心
+# 梵烬文档
 
-这个目录用于集中维护梵烬网的开发、部署、数据库与接口文档。
+| 文档 | 内容 |
+| --- | --- |
+| [项目总览](../README.md) | 定位、主要入口、启动与验收 |
+| [开发说明](DEVELOPMENT.md) | 静态构建、开发与验收 |
+| [系统架构](ARCHITECTURE.md) | Pages、公共资料和本机存储 |
+| [本机数据](DATABASE.md) | IndexedDB、事务与备份格式 |
+| [资料契约](API.md) | 静态 JSON 和浏览器本机操作 |
+| [内容导入](CONTENT_IMPORT.md) | 三层内容、来源许可及 JSON 格式 |
+| [部署与备份](DEPLOYMENT.md) | 免费 GitHub Pages、用户备份与恢复 |
+| [实施记录](IMPLEMENTATION-2026-11-20.md) | 本次产品方向及实施决策 |
 
-## 文档索引
-
-- [项目总览与启动](C:/Users/Administrator/Desktop/梵烬网/README.md:1)
-- [开发与运行说明](C:/Users/Administrator/Desktop/梵烬网/docs/DEVELOPMENT.md:1)
-- [系统架构说明](C:/Users/Administrator/Desktop/梵烬网/docs/ARCHITECTURE.md:1)
-- [数据库设计说明](C:/Users/Administrator/Desktop/梵烬网/docs/DATABASE.md:1)
-- [接口说明](C:/Users/Administrator/Desktop/梵烬网/docs/API.md:1)
-- [内容导入说明](C:/Users/Administrator/Desktop/梵烬网/docs/CONTENT_IMPORT.md:1)
-
-## 阅读顺序建议
-
-如果是首次接手项目，建议按下面顺序阅读：
-
-1. `README.md`
-2. `docs/DEVELOPMENT.md`
-3. `docs/ARCHITECTURE.md`
-4. `docs/DATABASE.md`
-5. `docs/API.md`
-6. `docs/CONTENT_IMPORT.md`
+`plans/` 下的研究参考与历史材料说明设计依据；`server/` 下是已取消部署的旧服务器文档。当前以纯静态 Pages 与本机数据保存为准。

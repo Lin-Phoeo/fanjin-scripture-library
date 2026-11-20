@@ -1,158 +1,66 @@
-# 梵烬网
+# 梵烬 · 本机书斋
 
-佛教共修公益古籍网站，当前为可运行的前后端一体化版本。
+公益东方经典阅读与个人自修应用，以佛、道为主，兼读儒家与诸子。当前版本发布到 **GitHub Pages**，是无需服务器、无需注册的静态网站。
 
-技术栈：
+经典原文、出处与许可随站点发布；个人书架、阅读进度、书签、摘录、偏好和功课保存在当前设备浏览器的 IndexedDB 中，不上传到项目服务器。不同设备、浏览器或网站域名之间不会自动同步；换设备前请导出备份。
 
-- 前端：`Vite + React + TypeScript + react-router-dom`
-- 后端：`Express`
-- 数据库：`SQLite + better-sqlite3`
+站点地址：<https://lin-phoeo.github.io/fanjin-scripture-library/>。
 
-## 快速开始
+## 使用
 
-### 安装依赖
+- 经藏按学派和分类浏览，支持简繁关键词检索与段落定位。
+- 阅读器区分原文、古注与现代导读，提供字号、阅读主题、段落书签和摘录。
+- 本机书架汇总实际收藏、阅读位置、书签和摘录。
+- 个人定课记录每日修读时长与心得，没有活动报名、社区、排行或虚构人数。
+- 书斋设置提供完整 JSON 备份导出、备份恢复及本机数据清理；摘录可单独导出。
 
-```bash
-npm install
-```
+清除网站数据、无痕会话结束或浏览器存储被回收可能丢失本机记录。建议定期下载备份到自己的文件夹。静态网站不能替你找回删除后的记录，也不提供账号或云同步。
 
-### 启动后端
+## 本地开发
 
-```bash
-npm run api
-```
+需要 Node.js >= 22.14，推荐 22 或 24 LTS。
 
-后端默认地址：
-
-- [http://127.0.0.1:3001](http://127.0.0.1:3001)
-
-### 启动前端
-
-```bash
+```sh
+npm ci
 npm run dev
 ```
 
-前端默认地址：
+打开 <http://127.0.0.1:5173> 即可，**不需要启动 API 或数据库服务**。
 
-- [http://127.0.0.1:5173](http://127.0.0.1:5173)
-
-### 构建
-
-```bash
-npm run build
+```sh
+npm run check:pages  # lint、类型检查、Pages构建、静态数据与本机存储验证
+npm run build:pages  # 输出 dist/，默认基础路径 /fanjin-scripture-library/
+npm run test:static  # 目录、简繁检索、IndexedDB并发与备份验证
+npm audit --audit-level=moderate
 ```
 
-## 常用命令
+页面使用 Hash 路由，例如 `/#/library`、`/#/read/heart-sutra`，可直接刷新或分享，不依赖服务器重写。
 
-```bash
-npm run api
-npm run dev
-npm run build
-npm run import:scripture -- data/import-templates/scripture-template.json --dry-run
+## GitHub Pages 发布
+
+仓库 Settings → Pages → Source 选择 **GitHub Actions**。推送 `main` 或手动执行 `Publish GitHub Pages` 工作流，将构建并发布 `dist/`。工作流根据仓库名设置资源基础路径，不绑定某个 GitHub 用户。
+
+`PAGES_BASE_PATH` 可覆盖基础路径；若迁移到自定义域名根目录，设为 `/`。更换域名会改变浏览器存储作用域，必须先导出、再在新地址导入本机备份。
+
+当前发布不需要 Azure、Docker、Caddy、Nginx、数据库凭据或付费服务器。[部署与备份说明](docs/DEPLOYMENT.md) 包含完整步骤。
+
+## 经典内容
+
+`data/catalog/catalog-manifest.json` 显式列出要发布的经典。当前为六部、617 段；《道德经》明确标为前 32 章节选。来源、许可、完整出版声明与选定原始 XML 一并公开。未补写古文，也没有将模型解释冒充古注。
+
+```sh
+npm run build:catalog
 ```
 
-### 导入经典 JSON
+构建生成 `public/content/index.json`、逐书 JSON 和静态检索索引；生成物由构建流程重新产出，不包含用户数据。来源未核验、缺许可或重复标识会使构建失败。详见 [内容格式](docs/CONTENT_IMPORT.md)。
 
-```bash
-# 预检（不写库）
-npm run import:scripture -- data/import-templates/diamond-sutra-full.json --dry-run
+## 目录
 
-# 正式导入（默认进入待审核状态）
-npm run import:scripture -- data/import-templates/diamond-sutra-full.json
+- `src/`：React 应用、静态目录读取和 IndexedDB 本机数据逻辑。
+- `data/catalog/`：公共经典、来源证据与许可。
+- `scripts/build-catalog.mjs`、`scripts/build-pages.mjs`：静态数据和 Pages 构建。
+- `tests/`：静态目录、本机存储及保留的旧服务端测试。
+- `.github/workflows/pages.yml`：免费 Pages 发布。
+- `server/`、`deploy/`：保留的历史服务器实现，当前站点不运行这些代码。
 
-# 导入并直接发布（跳过审核）
-npm run import:scripture -- data/import-templates/diamond-sutra-full.json --published
-```
-
-> 提示：默认导入后经典进入「待审核」，需在后台 `/admin/review` 审核通过后前台才可见；
-> 使用 `--published` 可直接发布。导入的完整说明见 [docs/CONTENT_IMPORT.md](docs/CONTENT_IMPORT.md)。
-
-## 默认账号
-
-管理员：
-
-- 账号：`法音法师`
-- 密码：`fayin123`
-
-审核员：
-
-- 账号：`慧安居士`
-- 密码：`huian123`
-
-普通用户：
-
-- 账号：`梵烬用户`
-- 密码：`fanjin123`
-
-## 当前已实现模块
-
-- 经藏分类浏览
-- 经文阅读
-- 原文 / 白话 / 祖师注义对照
-- 收藏、摘录、阅读历史
-- 专题共修
-- 活动模块
-- 讨论发帖、回帖、筛选
-- 用户注册、登录、个人中心
-- 后台经文录入
-- 后台审核与发布状态控制
-- 后台公告管理
-- 后台活动管理
-- 经典 JSON 导入脚本
-
-## 主要访问入口
-
-### 前台
-
-- 首页：`/`
-- 经藏：`/canon`
-- 阅读：`/reader/:scriptureId`
-- 专题：`/topics`
-- 活动：`/activities`
-- 搜索：`/search`
-- 讨论：`/discussion`
-- 登录/注册：`/auth`
-- 个人中心：`/profile`
-- 收藏摘录：`/notes`
-
-### 后台
-
-- 后台首页：`/admin`
-- 经文录入：`/admin/editor`
-- 内容审核：`/admin/review`
-- 专题管理：`/admin/topics`
-- 活动管理：`/admin/activities`
-- 用户权限：`/admin/users`
-- 系统配置 / 公告管理：`/admin/settings`
-
-## 数据库
-
-当前数据库文件：
-
-- `data/fanjin.sqlite`
-
-## 文档入口
-
-完整文档请看：
-
-- [docs/README.md](docs/README.md)
-- [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)
-- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
-- [docs/DATABASE.md](docs/DATABASE.md)
-- [docs/API.md](docs/API.md)
-- [docs/CONTENT_IMPORT.md](docs/CONTENT_IMPORT.md)
-
-## 目录说明
-
-- `src/`：前端页面、组件、路由、样式
-- `server/`：Express API、数据库初始化、导入脚本
-- `data/`：SQLite 数据库与导入模板
-- `docs/`：开发、架构、数据库、接口与内容文档
-
-## 当前仍待继续补强的部分
-
-- 更完整的账号安全能力
-- 更完整的后台内容治理能力
-- 更完善的全文检索
-- 更完善的音频资源管理
-- 更多真实经典、白话和祖师注义内容
+文档入口：[docs/README.md](docs/README.md)。旧服务器文档保留在 `docs/server/`，不能用于描述当前纯静态站点的数据保存方式。

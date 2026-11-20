@@ -1,0 +1,76 @@
+{
+  "slug": "heart-sutra",
+  "title": "般若波罗蜜多心经",
+  "categorySlug": "banruo",
+  "dynasty": "唐",
+  "translator": "玄奘译",
+  "role": "短篇般若经典，可依原文分段诵读。",
+  "overlay": "大正藏 T08 No.251，经文正文全文；不含附序及校勘记。保留底本“揭帝、般羅、僧莎訶”等字样。",
+  "summary": "收录玄奘译《般若波罗蜜多心经》正文七段。采用 CBETA 新式标点版，原始 XML 与完整出版头信息随本数据一并保存。",
+  "school": "佛家",
+  "tags": [
+    "佛家",
+    "般若",
+    "心经",
+    "原文"
+  ],
+  "edition": "大正新脩大藏經 第8冊 No.251（T08n0251），CBETA 新式標點版 Revision 1.14，2012-08-27",
+  "sourceName": "中華電子佛典協會 CBETA / cbeta-git/xml-p5",
+  "sourceUrl": "https://github.com/cbeta-git/xml-p5/blob/master/T/T08/T08n0251.xml",
+  "license": "此版本XML出版声明：Available for non-commercial use when distributed with this header intact. 本站仅公益非商业使用；完整teiHeader及原始XML随数据保留，版权所有及供稿署名见sourceHeader与sources/heart-sutra-T08n0251.xml。",
+  "licenseUrl": "https://github.com/cbeta-git/xml-p5/blob/master/T/T08/T08n0251.xml",
+  "isExcerpt": false,
+  "sourceVerified": true,
+  "sourceHeader": "<teiHeader><fileDesc>\n<titleStmt>\n<title>Taisho Tripitaka, Electronic version, No. 0251 般若波羅蜜多心經</title>\n<author>唐 玄奘譯</author>\n<respStmt>\n<resp>Electronic Version by</resp><name>CBETA</name></respStmt></titleStmt>\n<editionStmt><edition>$Revision: 1.14 $<date>$Date: 2012/08/27 03:14:21 $</date>新式標點版</edition>\n\t\t<respStmt xml:id=\"resp1\"><resp>corrections</resp><name>Taisho</name></respStmt>\n\t\t<respStmt xml:id=\"resp2\"><resp>corrections</resp><name>CBETA</name></respStmt></editionStmt>\n<extent>1卷</extent>\n<publicationStmt><distributor><name>中華電子佛典協會 (CBETA)</name>\n<address><addrLine>service@cbeta.org</addrLine></address>\n</distributor>\n<availability><p>Available for non-commercial use when distributed with this header intact.</p></availability>\n<date>$Date: 2012/08/27 03:14:21 $</date></publicationStmt>\n<sourceDesc><bibl>Taisho Tripitaka Vol. 08, No. 251</bibl><listWit>\n\t\t<witness xml:id=\"wit1\">【大】</witness>\n\t\t<witness xml:id=\"wit2\">【宋】</witness>\n\t\t<witness xml:id=\"wit3\">【元】</witness>\n\t\t<witness xml:id=\"wit4\">【明】</witness>\n\t</listWit>\n\t</sourceDesc></fileDesc>\n<encodingDesc><projectDesc>\n<p xml:lang=\"en\" cb:type=\"ly\">Text as provided by Mr. Zhuang Derming, CBETA OCR Group, Punctuated text as provided by Maha Studio, Others</p>\n<p xml:lang=\"zh\" cb:type=\"ly\">莊德明大德提供，CBETA 自行掃瞄辨識，摩訶工作室提供新式標點，其他</p>\n</projectDesc>\n</encodingDesc>\n<profileDesc>\n\t\t<langUsage>\n\t\t\t<language ident=\"en\">English</language>\n\t\t\t<language ident=\"zh\">Chinese</language>\n\t\t</langUsage>\n\t</profileDesc>\n\t<revisionDesc>\n\t\t<change when=\"2013-05-20\">\n\t\t\t<name>CW</name><name>Ray Chou 周邦信</name>P4 to P5 conversion by p4top5a.py, intended for publication\n\t\t</change>\n<change when=\"1999-07-21T18:35:54\">CW (ed.) converted to XML with CBXML.BAT (99/6/30)</change>\n<!--\n$Log: T08n0251.xml,v $\nRevision 1.14  2012/08/27 03:14:21  maha\n修訂新標小圓點及著重號\n\nRevision 1.13  2009/04/23 07:57:09  amtbgrace\nmodified: 檔頭編碼由 big5 改為 cp950。\n\nRevision 1.12  2006/04/12 21:54:27  saywhat\nlem 加 wit 屬性，p, lg, item 第二次加 id 屬性\n\nRevision 1.10  2005/12/26 03:03:15  saywhat\n修訂檔頭資料提供者，「其它」放在最後\n\nRevision 1.9  2005/07/19 09:32:02  saywhat\n新式標點版\n\nRevision 1.8  2004/11/14 03:17:04  maha\n將八個M碼(M024261 M040426 M034294 M005505 M010528 M010527 M026945 M006710) 取代為 Big5 系統字(碁 銹 裏 墻 恒 恒 粧 嫺)\n\nRevision 1.7  2004/10/11 10:52:38  saywhat\n段落前加入圈點\n\nRevision 1.6  2004/05/19 09:11:57  saywhat\nadded juan & jhead\n\nRevision 1.5  2004/04/20 08:37:21  maha\n「版本日期」標記修訂\n\nRevision 1.4  2004/02/27 05:56:56  ray\nadd cvs log\n\n-->\n </revisionDesc>\n</teiHeader>",
+  "passages": [
+    {
+      "slug": "pt08p0848c0701",
+      "title": "心经 · 第1段",
+      "originalText": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+      "contentTc": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+      "audioUrl": ""
+    },
+    {
+      "slug": "pt08p0848c0809",
+      "title": "心经 · 第2段",
+      "originalText": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+      "contentTc": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+      "audioUrl": ""
+    },
+    {
+      "slug": "pt08p0848c1002",
+      "title": "心经 · 第3段",
+      "originalText": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。",
+      "contentTc": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。",
+      "audioUrl": ""
+    },
+    {
+      "slug": "pt08p0848c1416",
+      "title": "心经 · 第4段",
+      "originalText": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。",
+      "contentTc": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。",
+      "audioUrl": ""
+    },
+    {
+      "slug": "pt08p0848c1809",
+      "title": "心经 · 第5段",
+      "originalText": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+      "contentTc": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+      "audioUrl": ""
+    },
+    {
+      "slug": "pt08p0848c2101",
+      "title": "心经 · 第6段",
+      "originalText": "即說咒曰：",
+      "contentTc": "即說咒曰：",
+      "audioUrl": ""
+    },
+    {
+      "slug": "pt08p0848c2201",
+      "title": "心经 · 第7段",
+      "originalText": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+      "contentTc": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+      "audioUrl": ""
+    }
+  ]
+}

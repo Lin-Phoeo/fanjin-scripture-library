@@ -1,0 +1,9 @@
+[Unit]
+Description=Fanjin verified SQLite online backup
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/fanjin/current
+ExecStart=/usr/bin/docker compose -f compose.yaml -f deploy/compose.tokyo.yaml exec -T app npm run backup
