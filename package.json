@@ -22,7 +22,7 @@
     "test:server": "node scripts/test.mjs",
     "test:production": "node tests/production.mjs",
     "test:catalog": "node tests/catalog.mjs",
-    "test:static": "node --import tsx tests/static-catalog.mjs && node --import tsx tests/local-state.mjs && node --import tsx tests/local-api.mjs"
+    "test:static": "node --import tsx tests/static-catalog.mjs && node --import tsx tests/local-state.mjs && node --import tsx tests/local-api.mjs && node tests/corpus-inventory.mjs && node --import tsx tests/i18n.mjs"
   },
   "engines": {
     "node": ">=22.14.0"

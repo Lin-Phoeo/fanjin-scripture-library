@@ -1,0 +1,232 @@
+{
+  "repo": "KR5f0001",
+  "slug": "taishang-ganying-pian-zhu",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "2620c331e0e56842d29090cceef801e3aac16822366e48e9ff157a834f9024d1",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "三十卷经文与注释、事例及原序同收，不与千余字白文等同。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "原序",
+    "卷1",
+    "卷2",
+    "卷3",
+    "卷4",
+    "卷5",
+    "卷6",
+    "卷7",
+    "卷8",
+    "卷9",
+    "卷10",
+    "卷11",
+    "卷12",
+    "卷13",
+    "卷14",
+    "卷15",
+    "卷16",
+    "卷17",
+    "卷18",
+    "卷19",
+    "卷20",
+    "卷21",
+    "卷22",
+    "卷23",
+    "卷24",
+    "卷25",
+    "卷26",
+    "卷27",
+    "卷28",
+    "卷29",
+    "卷30"
+  ],
+  "files": [
+    {
+      "file": "KR5f0001_000.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_000.txt",
+      "sha256": "562e6eb4a2e0f49e4aeda7df7e526d094e518365946f31ed9cf93b425c9e41a5",
+      "bytes": 16241
+    },
+    {
+      "file": "KR5f0001_001.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_001.txt",
+      "sha256": "e2899c0f11abc80f321774bfd73f8334be0795ae35fb405c9dedae2fbe9a1fb1",
+      "bytes": 29174
+    },
+    {
+      "file": "KR5f0001_002.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_002.txt",
+      "sha256": "e09f8ad3038a5f041002cc58df1f4a7c2cbed38f0aa9f517cd3549bf8d265378",
+      "bytes": 13427
+    },
+    {
+      "file": "KR5f0001_003.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_003.txt",
+      "sha256": "a2061ee023bba031abeda9978589fecff34caf158bb1acc01f30ff0d32d8c101",
+      "bytes": 12176
+    },
+    {
+      "file": "KR5f0001_004.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_004.txt",
+      "sha256": "83cc0c05d07fe970d79474f5d5715b95ad8f15a3e715958ee7c642f155b43f5a",
+      "bytes": 12340
+    },
+    {
+      "file": "KR5f0001_005.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_005.txt",
+      "sha256": "b88257628b638ce7ffab0915824a9aa9af642d4ac9567f773863e56faba55987",
+      "bytes": 15416
+    },
+    {
+      "file": "KR5f0001_006.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_006.txt",
+      "sha256": "5dd95cfca24f4d38a85e02b97af39dacdbebc38d255f93559e54d4a6fa36897f",
+      "bytes": 17429
+    },
+    {
+      "file": "KR5f0001_007.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_007.txt",
+      "sha256": "b0ec9f63e8f2cce3e011da6030f71eed81864ea56bac8d5e6a8c24752b86efe7",
+      "bytes": 10940
+    },
+    {
+      "file": "KR5f0001_008.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_008.txt",
+      "sha256": "d694a090b5d62baa52d6680747e7bfe2e5e28392e63436a204bdc5d9c6d00800",
+      "bytes": 14061
+    },
+    {
+      "file": "KR5f0001_009.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_009.txt",
+      "sha256": "231a02c74d81d92c6437c972bf0896132aa7c7e7e442bec4a8caafe4bf27fde8",
+      "bytes": 16793
+    },
+    {
+      "file": "KR5f0001_010.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_010.txt",
+      "sha256": "9124a421ba587853d173361f8266bd01a4614494bd44dde09b1191e11877d9ed",
+      "bytes": 11131
+    },
+    {
+      "file": "KR5f0001_011.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_011.txt",
+      "sha256": "10a9a5ccfd7bc1710d18b81f58adb4406028fef00b15eba860f2d21ff869fd86",
+      "bytes": 11459
+    },
+    {
+      "file": "KR5f0001_012.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_012.txt",
+      "sha256": "9a26c05e4743f128046a985960cad1c5823397fd5a8fc3283beccce4d3e9d8e2",
+      "bytes": 14527
+    },
+    {
+      "file": "KR5f0001_013.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_013.txt",
+      "sha256": "bd3621862255998f060fadc742868c654064266afe66f4ec83c822e08c752367",
+      "bytes": 11634
+    },
+    {
+      "file": "KR5f0001_014.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_014.txt",
+      "sha256": "663e6bfccbf1389435c8ce5d21ce2e88b59dc08271b588a3087e8d4570dc3fa8",
+      "bytes": 9451
+    },
+    {
+      "file": "KR5f0001_015.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_015.txt",
+      "sha256": "95be7ecb0728c592675cc7c67756caba09dc95ba9913bfaa81c4041e61cf4e0e",
+      "bytes": 11624
+    },
+    {
+      "file": "KR5f0001_016.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_016.txt",
+      "sha256": "2ad73b5597eb838111d2e764ef87dccc0063d2c8a00b5620d210724242526cf3",
+      "bytes": 16004
+    },
+    {
+      "file": "KR5f0001_017.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_017.txt",
+      "sha256": "b6698cceb095144475b81ea51bfa8dc646370e283a4f5736c4a6fe087afac9e7",
+      "bytes": 14588
+    },
+    {
+      "file": "KR5f0001_018.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_018.txt",
+      "sha256": "3a8ac2a00eb3c5fb877fa91ce260c66d722833f690d640a0caa46df240846293",
+      "bytes": 14762
+    },
+    {
+      "file": "KR5f0001_019.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_019.txt",
+      "sha256": "b782d8780cd025c6771c665badbbc257dd84f2cb28f419bd0e85fa98e8b9433b",
+      "bytes": 12509
+    },
+    {
+      "file": "KR5f0001_020.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_020.txt",
+      "sha256": "214744b300e8ee790d7a56dfaf4b5ae2566a2fba69a2a65c6c48d63564ba1923",
+      "bytes": 12600
+    },
+    {
+      "file": "KR5f0001_021.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_021.txt",
+      "sha256": "cbeb9cc65bbfd70051d583af33dc2e1dedeae9efdb92e848c18324cfe534e932",
+      "bytes": 15868
+    },
+    {
+      "file": "KR5f0001_022.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_022.txt",
+      "sha256": "db1714396802af6399cff4e206bf342f26aee988c89f9e9176de0c7389e8ecb0",
+      "bytes": 12709
+    },
+    {
+      "file": "KR5f0001_023.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_023.txt",
+      "sha256": "57d21c759fdbe0eb035125a0757ba2802a9fa21c677260541717476d37ae2f90",
+      "bytes": 14336
+    },
+    {
+      "file": "KR5f0001_024.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_024.txt",
+      "sha256": "163340b8fcb14d521932facda804d2584eb2c1ab6b229fe18f103795da1f4316",
+      "bytes": 18004
+    },
+    {
+      "file": "KR5f0001_025.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_025.txt",
+      "sha256": "2cf5a9c4e6933da684d2ef3dba812feb2e0f16bfe9fd06505c42051f3257e232",
+      "bytes": 13562
+    },
+    {
+      "file": "KR5f0001_026.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_026.txt",
+      "sha256": "7a35a7ec496644fec68ef831bc1dc9f65bb6f712021807f89b66ce30ebc59f00",
+      "bytes": 13564
+    },
+    {
+      "file": "KR5f0001_027.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_027.txt",
+      "sha256": "b0fc253a162aa4bd1030044ae35781c58eecd8b202cbc76c89bdceebbe048065",
+      "bytes": 13631
+    },
+    {
+      "file": "KR5f0001_028.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_028.txt",
+      "sha256": "3ff8199f3c6e46dd36e8db2b97c93546d8f4fe3a669bbf080c4d8c67025ff927",
+      "bytes": 14639
+    },
+    {
+      "file": "KR5f0001_029.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_029.txt",
+      "sha256": "9a575c9b1fb8c7f7e70f1c8391bf06b038a745dcae2ef16c9799f0c2f4287193",
+      "bytes": 17027
+    },
+    {
+      "file": "KR5f0001_030.txt",
+      "url": "https://github.com/kanripo/KR5f0001/blob/master/KR5f0001_030.txt",
+      "sha256": "10c527ed45b6f0bbb6e84118aea314226bcfd3f5d2c1ba581d3b361d86aa9b56",
+      "bytes": 10702
+    }
+  ]
+}

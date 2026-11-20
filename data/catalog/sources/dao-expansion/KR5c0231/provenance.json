@@ -1,0 +1,22 @@
+{
+  "repo": "KR5c0231",
+  "slug": "cunshen-lianqi-ming",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "41130c2f484a738ac1b4f47a2b48749699ae47c72d1958e024d0667a2771b0be",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "一卷传本正文，保留五时七候等原文结构。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "正文"
+  ],
+  "files": [
+    {
+      "file": "KR5c0231_000.txt",
+      "url": "https://github.com/kanripo/KR5c0231/blob/master/KR5c0231_000.txt",
+      "sha256": "2818a88add0a20495786984f6fd3d6f5bc9cbb71eae11ef6596441c8c0a41811",
+      "bytes": 3010
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "repo": "KR5c0118",
+  "slug": "wenzi",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "c4d89b85ead789fb2a54dfd09dd0f8df4a08d96148126c0d1df8778f50456f3a",
+  "baseEditions": [
+    "WYG"
+  ],
+  "scope": "文渊阁本上下卷十二篇，提要另作附录；源文少量音注保留，不新增注释。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "四库提要（附录）",
+    "道原",
+    "精誠",
+    "九守",
+    "符言",
+    "道徳",
+    "上徳",
+    "微明",
+    "自然",
+    "下德",
+    "上仁",
+    "上義",
+    "上禮"
+  ],
+  "files": [
+    {
+      "file": "KR5c0118_000.txt",
+      "url": "https://github.com/kanripo/KR5c0118/blob/master/KR5c0118_000.txt",
+      "sha256": "3b5ce25ac511d5f5c7d7c60d4ecbb816aac006c0b919af4a10cb4efc800e9ff1",
+      "bytes": 2576
+    },
+    {
+      "file": "KR5c0118_001.txt",
+      "url": "https://github.com/kanripo/KR5c0118/blob/master/KR5c0118_001.txt",
+      "sha256": "77cbe0b961fd51e8832e248d45b6a0daae4efda2ae28e9eb9d07f74c71a74a5f",
+      "bytes": 67026
+    },
+    {
+      "file": "KR5c0118_002.txt",
+      "url": "https://github.com/kanripo/KR5c0118/blob/master/KR5c0118_002.txt",
+      "sha256": "fc9f01de7a720ad4cfae7ec68b7d6f00b938b69a000e858e9d9193b448b7de50",
+      "bytes": 65310
+    }
+  ]
+}

@@ -9,8 +9,11 @@ try {
   const result = await buildCatalog({ outputDirectory: directory });
   const index = JSON.parse(await readFile(join(directory, 'content/index.json'), 'utf8'));
   const search = JSON.parse(await readFile(join(directory, 'content/search.json'), 'utf8'));
-  assert.equal(index.version, 1); assert.equal(index.books.length, result.books); assert.equal(index.books.length, 6);
-  assert.equal(search.items.length, result.passages);
+  const manifest=JSON.parse(await readFile(resolve('data/catalog/catalog-manifest.json'),'utf8'));
+  assert.equal(index.version, 1); assert.equal(index.books.length, result.books); assert.equal(index.books.length, manifest.files.length);
+  assert.ok(index.books.length>=60);
+  assert.equal(search.shards.reduce((sum,shard)=>sum+shard.passages,0), result.passages);
+  assert.ok(!('items' in search));
   assert.ok(index.books.every((book) => book.sourceVerified && book.sourceUrl && book.license && book.licenseUrl && book.categoryName && book.publishStatus === 'published'));
   assert.ok(index.books.every((book) => !('passages' in book)));
   console.log('  PASS static index includes verified public metadata and no private user state');
@@ -18,19 +21,27 @@ try {
     const detail = JSON.parse(await readFile(join(directory, 'content/books', `${book.slug}.json`), 'utf8'));
     assert.equal(detail.id, book.id); assert.equal(detail.passages.length, book.passageCount);
     assert.equal(detail.wordCount, book.wordCount);
-    assert.ok(detail.passages.every((passage) => passage.id > 0 && passage.originalText && passage.slug));
+    const raw=JSON.parse(await readFile(resolve('data/catalog',manifest.files.find(name=>name===book.slug+'.json')),'utf8'));
+    assert.ok(detail.passages.every((passage) => passage.id > 0 && passage.originalText && passage.slug && passage.contentSc && passage.contentTc && passage.scriptVariants));
+    assert.deepEqual(detail.passages.map(p=>[p.slug,p.originalText]),raw.passages.map(p=>[p.slug,p.originalText]));
   }
   console.log('  PASS each static book has compatible complete passages and stable identities');
   const normalize = (text) => Array.from(text).map((character) => search.charMap[character] || character).join('').toLowerCase();
+  const lunyuSearch=JSON.parse(await readFile(join(directory,'content/search/lunyu.json'),'utf8'));
   for (const query of ['學而時習之', '学而时习之']) {
-    const hits = search.items.filter((item) => item.normalized.original.includes(normalize(query)));
-    assert.ok(hits.some((item) => item.scriptureSlug === 'lunyu'));
+    const hits = lunyuSearch.items.filter((item) => item.normalized.original.includes(normalize(query)));
+    assert.ok(hits.length);
   }
   assert.equal(normalize('𠮷學'), '𠮷学');
   console.log('  PASS lightweight query character map matches normalized traditional and simplified passages');
   const heart = JSON.parse(await readFile(resolve('data/catalog/heart-sutra.json'), 'utf8'));
   const publishedHeart = JSON.parse(await readFile(join(directory, 'content/books/heart-sutra.json'), 'utf8'));
   assert.equal(publishedHeart.sourceHeader, heart.sourceHeader);
+  assert.match(publishedHeart.passages[0].contentSc,/观自在菩萨/);
+  assert.equal(publishedHeart.passages[0].contentTc,heart.passages[0].originalText);
+  assert.deepEqual(publishedHeart.passages[0].scriptVariants,{sc:'converted',tc:'source'});
+  const maps=JSON.parse(await readFile(join(directory,'content/display-maps.json'),'utf8'));
+  assert.equal(maps.tc['学'],'學');assert.equal(maps.sc['學'],'学');
   assert.equal(await readFile(join(directory, 'content-notices.txt'), 'utf8'), await readFile(resolve('data/catalog/COPYRIGHT.md'), 'utf8'));
   assert.deepEqual(await readFile(join(directory, 'content-sources/heart-sutra-T08n0251.xml')), await readFile(resolve('data/catalog/sources/heart-sutra-T08n0251.xml')));
   assert.match(await readFile(join(directory, 'content-sources/opencc-notices.txt'), 'utf8'), /Apache/);

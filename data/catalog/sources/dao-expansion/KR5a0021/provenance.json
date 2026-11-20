@@ -1,0 +1,22 @@
+{
+  "repo": "KR5a0021",
+  "slug": "changsheng-jifude-jing",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "4c23808675345ea92d5b7d86d47bdb66040398d2288e1ff678385df2140b8788",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "一卷正文，保留经文中的偈颂。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "正文"
+  ],
+  "files": [
+    {
+      "file": "KR5a0021_000.txt",
+      "url": "https://github.com/kanripo/KR5a0021/blob/master/KR5a0021_000.txt",
+      "sha256": "f6f7c9cc0f8264419adbdcd69ada0897faacad4fe413a3aea4bb403dc16ef107",
+      "bytes": 2156
+    }
+  ]
+}

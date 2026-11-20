@@ -1,0 +1,33 @@
+{
+  "slug": "yuhuang-taixi-jing",
+  "title": "高上玉皇胎息经",
+  "categorySlug": "dao",
+  "dynasty": "成书年代待考",
+  "translator": "佚名",
+  "role": "道家道教历史典籍阅读",
+  "overlay": "仅取首尾同名题记之间的胎息经正文；源文件随后混入的谢雷经及赞诗不收。",
+  "summary": "仅取首尾同名题记之间的胎息经正文；源文件随后混入的谢雷经及赞诗不收。仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "school": "道家",
+  "tags": [
+    "道家",
+    "道教典籍",
+    "原文"
+  ],
+  "edition": "《正统道藏》涵芬楼电子本；Kanripo KR5a0014；底本正文",
+  "sourceName": "漢籍リポジトリ Kanseki Repository / kanripo",
+  "sourceUrl": "https://github.com/kanripo/KR5a0014",
+  "license": "古典原作属公有领域；Kanripo官网声明其制作内容按CC BY-SA 4.0共享。本次按所列底本格式整理，保留来源、署名与修改说明，衍生文本沿用CC BY-SA 4.0。第三方CHANT版未纳入此授权判断。",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "isExcerpt": false,
+  "sourceVerified": true,
+  "sourceHeader": "来源仓库：kanripo/KR5a0014\n底本：《正统道藏》涵芬楼电子本；Kanripo KR5a0014；底本正文\n源文件SOURCE：正統道藏，三家本，1988，1—748 一卷 洞真部本文類\n收录范围：仅取首尾同名题记之间的胎息经正文；源文件随后混入的谢雷经及赞诗不收。\n整理方式：仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。\n许可：CC BY-SA 4.0；https://creativecommons.org/licenses/by-sa/4.0/\n版权依据：Kanripo官网页脚“All content created by us is licensed under a CC BY SA license.”\n获取与核验日期：2026-11-20\n逐文件哈希：data/catalog/sources/dao-expansion/KR5a0014/provenance.json",
+  "passages": [
+    {
+      "slug": "ch-01--p-001",
+      "title": "正文 · 第1段",
+      "originalText": "玉皇天尊曰胎從伏氣中結氣從有胎中息氣八身來謂之生神去離形謂之死知神氣可以長生故守虚無以養神氣神行即氣行神住即氣住若欲長生神氣相注心不動念無來無去不出不入自然常在勤而行之是眞道路",
+      "contentTc": "玉皇天尊曰胎從伏氣中結氣從有胎中息氣八身來謂之生神去離形謂之死知神氣可以長生故守虚無以養神氣神行即氣行神住即氣住若欲長生神氣相注心不動念無來無去不出不入自然常在勤而行之是眞道路",
+      "audioUrl": ""
+    }
+  ]
+}

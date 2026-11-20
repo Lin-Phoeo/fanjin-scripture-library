@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { preferredUiScript, convertPublicText, translateInterface } from '../src/lib/i18n.ts';
+const maps=JSON.parse(await readFile('public/content/display-maps.json','utf8'));
+let stored=null;
+globalThis.localStorage={getItem:()=>stored};
+Object.defineProperty(globalThis,'navigator',{value:{languages:['zh-TW'],language:'zh-TW'},configurable:true});
+assert.equal(preferredUiScript(),'tc');
+Object.defineProperty(globalThis,'navigator',{value:{languages:['zh-CN'],language:'zh-CN'},configurable:true});
+assert.equal(preferredUiScript(),'sc');
+stored='tc';assert.equal(preferredUiScript(),'tc');
+stored='sc';Object.defineProperty(globalThis,'navigator',{value:{languages:['zh-Hant-TW']},configurable:true});assert.equal(preferredUiScript(),'sc');
+assert.equal(convertPublicText('学而时习之','tc',maps),'學而時習之');
+assert.equal(convertPublicText('觀自在菩薩','sc',maps),'观自在菩萨');
+assert.equal(translateInterface('导入备份文件','tc',maps),'匯入備份檔案');
+assert.equal(translateInterface('默认设置','tc',maps),'預設設定');
+console.log('PASS locale defaults, persistent user choice, public script conversion and Taiwan interface terminology');

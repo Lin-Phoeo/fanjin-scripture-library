@@ -1,0 +1,118 @@
+{
+  "slug": "six-realms-verses",
+  "title": "佛說六道伽陀經",
+  "categorySlug": "fojing",
+  "dynasty": "宋",
+  "translator": "宋 法天譯",
+  "role": "依原典逐段閱讀，保留自己的摘錄與理解。",
+  "overlay": "所選CBETA來源檔正文全集；依XML結構排除標作xu的附序、w附文、獨立題署與卷題；排除note中的校勘、行內音義、譯注及咒句編號，保留咒文正文與原有全角間隔。經文節點內原有的攝頌、經記及敘事保留，不含本站新增白話或生成古注。 缺字依原檔Unicode/通行字映射處理；1處使用原檔通行字，0處以〔組字式〕保留。",
+  "summary": "佛說六道伽陀經，宋 法天譯。本次依 CBETA 大正藏 T17n0725 收錄1卷；保留正文、偈頌及咒文，排除校勘、行內音義、譯注和咒句編號。完整原XML可供核對，不添加白話導讀或注疏。",
+  "school": "佛家",
+  "tags": [
+    "佛家",
+    "原典",
+    "六道",
+    "偈頌"
+  ],
+  "edition": "大正新脩大藏經 T17n0725；$Revision: 1.12 $$Date: 2012/09/28 08:51:51 $新式標點版",
+  "sourceName": "中華電子佛典協會 CBETA / 大正新脩大藏經",
+  "sourceUrl": "https://github.com/cbeta-git/xml-p5/blob/master/T/T17/T17n0725.xml",
+  "license": "CBETA A類古典佛典：CC BY-NC-SA 4.0（非商業、署名、相同方式共享）。此XML另載明非商業分發須完整保留檔頭；本資料保留全部teiHeader與來源XML。公益閱讀不代表免除署名、版本及相同方式共享要求。",
+  "licenseUrl": "https://cbeta.org/copyright",
+  "sourceHeader": "<teiHeader>\n\t<fileDesc>\n\t\t<titleStmt>\n\t\t\t<title>Taisho Tripitaka, Electronic version, No. 0725 佛說六道伽陀經</title>\n\t\t\t<author>宋 法天譯</author>\n\t\t\t<respStmt>\n\t\t\t\t<resp>Electronic Version by</resp>\n\t\t\t\t<name>CBETA</name>\n\t\t\t</respStmt>\n\t\t</titleStmt>\n\t<editionStmt>\n\t\t<edition>$Revision: 1.12 $<date>$Date: 2012/09/28 08:51:51 $</date>新式標點版</edition>\n\t\t<respStmt xml:id=\"resp1\"><resp>corrections</resp><name>Taisho</name></respStmt>\n\t\t<respStmt xml:id=\"resp2\"><resp>corrections</resp><name>CBETA</name></respStmt>\n\t</editionStmt>\n\t<extent>1卷</extent>\n\t<publicationStmt>\n\t\t<distributor>\n\t\t\t<name>中華電子佛典協會 (CBETA)</name>\n\t\t\t<address>\n\t\t\t\t<addrLine>service@cbeta.org</addrLine>\n\t\t\t</address>\n\t\t</distributor>\n\t\t<availability>\n\t\t\t<p>Available for non-commercial use when distributed with this header intact.</p>\n\t\t</availability>\n\t\t<date>$Date: 2012/09/28 08:51:51 $</date>\n\t</publicationStmt>\n\t<sourceDesc>\n\t\t<bibl>Taisho Tripitaka Vol. 17, No. 725 </bibl>\n\t<listWit>\n\t\t<witness xml:id=\"wit1\">【大】</witness>\n\t\t<witness xml:id=\"wit2\">【宋】</witness>\n\t\t<witness xml:id=\"wit3\">【元】</witness>\n\t\t<witness xml:id=\"wit4\">【明】</witness>\n\t\t<witness xml:id=\"wit5\">【宮】</witness>\n\t</listWit>\n\t</sourceDesc>\n</fileDesc>\n<encodingDesc>\n\t<projectDesc>\n\t\t<p xml:lang=\"en\" cb:type=\"ly\">Text as provided by Mr. Hsiao Chen-Kuo, Tripitaka Koreana as provided by Mr. Christian Wittern, Text as provided by Anonymous from USA, Punctuated text as provided by Mr. Chen Bo-Xun</p>\n\t\t<p xml:lang=\"zh\" cb:type=\"ly\">蕭鎮國大德提供，維習安大德提供之高麗藏 CD 經文，北美某大德提供，陳伯勳大德提供新式標點</p>\n\t</projectDesc>\n<charDecl>\n<char xml:id=\"CB00859\">\n\t<charName>CBETA CHARACTER CB00859</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[薛/女]</value>\n\t</charProp>\n\t<charProp>\n\t\t<localName>normalized form</localName>\n\t\t<value>孽</value>\n\t</charProp>\n\t<mapping type=\"unicode\">U+3738</mapping>\n\t<mapping cb:dec=\"983899\" type=\"PUA\">U+F035B</mapping>\n</char>\n<char xml:id=\"CB01463\">\n\t<charName>CBETA CHARACTER CB01463</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[麩-夫+欠]</value>\n\t</charProp>\n\t<mapping type=\"normal_unicode\">U+2A312</mapping>\n\t<mapping cb:dec=\"984503\" type=\"PUA\">U+F05B7</mapping>\n</char>\n</charDecl>\n</encodingDesc>\n<profileDesc>\n\t\t<langUsage>\n\t\t\t<language ident=\"en\">English</language>\n\t\t\t<language ident=\"zh\">Chinese</language>\n\t\t</langUsage>\n\t</profileDesc>\n\t<revisionDesc>\n\t\t<change when=\"2013-05-20\">\n\t\t\t<name>CW</name><name>Ray Chou 周邦信</name>P4 to P5 conversion by p4top5a.py, intended for publication\n\t\t</change>\n\t<change when=\"1999-10-12T10:16:16\">CW (ed.) Created initial TEI XML version with BASICX.BAT (99/10/12)</change>\n<!--\n$Log: T17n0725.xml,v $\nRevision 1.12  2012/09/28 08:51:51  eva\n新式標點版 上傳\n\nRevision 1.11  2009/04/23 07:59:24  amtbgrace\nmodified: 檔頭編碼由 big5 改為 cp950。\n\nRevision 1.10  2006/04/12 21:55:16  saywhat\nlem 加 wit 屬性，p, lg, item 第二次加 id 屬性\n\nRevision 1.8  2004/11/14 03:17:18  maha\n將八個M碼(M024261 M040426 M034294 M005505 M010528 M010527 M026945 M006710) 取代為 Big5 系統字(碁 銹 裏 墻 恒 恒 粧 嫺)\n\nRevision 1.7  2004/10/12 16:02:55  saywhat\n段落前加入圈點\n\nRevision 1.6  2004/09/12 07:01:06  saywhat\n<trailer> => <juan fun=\"close\"><jhead>\n\nRevision 1.5  2004/05/11 14:39:02  saywhat\n修訂經號的<head> → <head type=\"no\">\n\nRevision 1.4  2004/04/20 08:38:25  maha\n「版本日期」標記修訂\n\nRevision 1.3  2003/12/02 08:39:06  ray\n<rdg>版本重複修訂\n\nRevision 1.2  2003/06/23 06:10:28  saywhat\n[＊]校勘插入XML\n\nRevision 1.1.1.1  2003/05/05 04:09:01  ray\nrecover cvs\n\nRevision 1.19  2002/12/05 06:37:56  saywhat\n校勘插入處理\n\nRevision 1.18  2002/11/18 10:24:47  saywhat\nno message\n\nRevision 1.17  2002/11/04 10:43:44  ray\ntei.2 => TEI.2\n\nRevision 1.16  2002/10/07 13:08:35  moved\nmodified\n\nRevision 1.15  2002/07/29 09:55:33  vinking\nmodified lang\n\nRevision 1.14  2002/04/04 09:04:59  ray\nxml:stylesheet => xml-stylesheet\n\nRevision 1.13  2001/07/27 07:12:06  ray\n去除多餘的 <author>\n\nRevision 1.12  2001/07/24 06:51:55  ray\nadd 作者、譯者 <author> 卷數 <extent>\n\nRevision 1.11  2001/05/25 08:57:23  ray\n經號統一為四碼\n\nRevision 1.10  2001/05/09 08:45:33  vinking\nmodified gaiji\n\nRevision 1.9  2001/04/01 08:17:31  ray\nCB00380 => CB00308\n\nRevision 1.8  2001/03/30 05:47:01  ray\n缺字CB碼由四碼增長為五碼\n\nRevision 1.7  2001/03/25 09:07:17  ray\nadd <milestone>\n\nRevision 1.6  2001/02/07 06:52:04  chris\nFixed problem with comment in the previous checkin\n\nRevision 1.5  2001/02/03 07:41:42  chris\nAdded keywords $Revision: 1.12 $, $Date: 2012/09/28 08:51:51 $ and $Log.\nAdded comment  for Emacs\n\n-->\n </revisionDesc>\n</teiHeader>",
+  "isExcerpt": false,
+  "sourceVerified": true,
+  "passages": [
+    {
+      "slug": "juan-001--lgt17p0452c0801",
+      "title": "佛說六道伽陀經 · 第1段",
+      "originalText": "歸命一切佛，\n及諸菩薩眾，\n願開正智慧，\n憶念佛功德。\n歸依三界尊，\n身口意三業，\n所作善不善，\n為彼作分別。\n彼人受果報，\n無有主宰者，\n三界天中尊，\n願起於悲智，\n廣為世間說，\n我今聞彼說。\n如依於輪迴，\n觀察業果報，\n佛說惡道因，\n貪瞋癡為本。\n若人行殺害，\n彼業隨纏縛，\n決定墮等活，\n五百歲方出。\n彼彼等活者，\n重重受生死，\n是故說等活。\n父母及親姻，\n眷屬善知識，\n欺慢若憎嫌，\n墮落於黑繩。\n熾焰麁澁繩，\n纏縛有情體，\n如鋸解樹木，\n是故名黑繩。\n若墮於炎熱，\n猛火競來燒，\n焰焰相接續，\n令彼罪業人，\n奔聚都一處，\n燒燃苦惱深，\n是故說炎熱。\n修習非法行，\n惱亂於大眾，\n說彼無有盡，\n墮彼極炎熱。\n入此惡道已，\n熾極火燒煮，\n熱苦受長時，\n是名極炎熱。\n猪羊狼兔等，\n及餘諸物命，\n如是行殺害，\n而墮於眾合。\n墮彼惡趣已，\n眾山合身碎，\n痛苦不可當，\n故得名眾合。\n若起身口意，\n而發諸煩惱，\n欺誑於有情，\n墮落於號叫。\n入彼惡道已，\n暴惡火燒身，\n叫苦聲不絕，\n是故名號叫。\n聖賢淨行師，\n所有財寶等，\n若貪若偷盜，\n而墮大號叫。\n若諸偷盜業，\n感大火燒身，\n叫喚出大聲，\n是名大號叫。\n作大功德人，\n及與父母等，\n毀謗而返恩，\n決定墮無間。\n持罰骨髓碎，\n受苦純無間，\n身命報等爾，\n是故名無間。\n互相愛憎嫉，\n并及相殺害，\n感彼惡趣身，\n手生鋒刃甲，\n如是鐵爪甲，\n甲長十六指，\n暴惡熾焱身，\n抓擭相損害，\n故名鋒刃甲。\n愚癡邪婬者，\n登彼鐵叉樹，\n大身鐵牙鬼，\n醜惡身炎熾，\n逼惱恒無盡。\n復有鐵烏鳥，\n獯狐諸惡獸，\n食啗彼有情。\n復生劍葉林，\n割截於罪人，\n叫喚出惡聲，\n痛苦不可忍。\n諂誑妄言者，\n吞食熱鐵丸，\n而復飲洋銅，\n重重無暫住。\n輕慢若欺他，\n鐵牙惡獸等，\n來食身上肉，\n受苦俱胝歲。\n愛行非法行，\n墮入洋銅河，\n大熾洋銅汁，\n燒煮或浮沈。\n又復自愚迷，\n勸作非法行，\n往彼鐵輪獄，\n而被鐵火輪，\n碾拶身無數，\n或以鐵磨磨，\n或上刀山等。\n若人說邪道，\n破正法為非，\n滿道排鋒刃，\n令彼往來行，\n業力令身大，\n驅逐聚一處，\n四面山石合，\n如指甲拶虱。\n若壞修習行，\n遠離正等因，\n僻執心意邪，\n定入由增獄。\n暴惡蛆蟲類，\n恒居糞穢中，\n罪者遊履時，\n食啗於雙足。\n種植壓油等，\n蠕動多傷殺，\n重重臥鐵槽，\n熱鐵棒捶打。\n若起極瞋怒，\n造彼諸惡罪，\n死墮焰魔剎，\n具受一切苦。\n破結善種子，\n身口意俱罪，\n智者勿作罪，\n地獄相如是。",
+      "contentTc": "歸命一切佛，\n及諸菩薩眾，\n願開正智慧，\n憶念佛功德。\n歸依三界尊，\n身口意三業，\n所作善不善，\n為彼作分別。\n彼人受果報，\n無有主宰者，\n三界天中尊，\n願起於悲智，\n廣為世間說，\n我今聞彼說。\n如依於輪迴，\n觀察業果報，\n佛說惡道因，\n貪瞋癡為本。\n若人行殺害，\n彼業隨纏縛，\n決定墮等活，\n五百歲方出。\n彼彼等活者，\n重重受生死，\n是故說等活。\n父母及親姻，\n眷屬善知識，\n欺慢若憎嫌，\n墮落於黑繩。\n熾焰麁澁繩，\n纏縛有情體，\n如鋸解樹木，\n是故名黑繩。\n若墮於炎熱，\n猛火競來燒，\n焰焰相接續，\n令彼罪業人，\n奔聚都一處，\n燒燃苦惱深，\n是故說炎熱。\n修習非法行，\n惱亂於大眾，\n說彼無有盡，\n墮彼極炎熱。\n入此惡道已，\n熾極火燒煮，\n熱苦受長時，\n是名極炎熱。\n猪羊狼兔等，\n及餘諸物命，\n如是行殺害，\n而墮於眾合。\n墮彼惡趣已，\n眾山合身碎，\n痛苦不可當，\n故得名眾合。\n若起身口意，\n而發諸煩惱，\n欺誑於有情，\n墮落於號叫。\n入彼惡道已，\n暴惡火燒身，\n叫苦聲不絕，\n是故名號叫。\n聖賢淨行師，\n所有財寶等，\n若貪若偷盜，\n而墮大號叫。\n若諸偷盜業，\n感大火燒身，\n叫喚出大聲，\n是名大號叫。\n作大功德人，\n及與父母等，\n毀謗而返恩，\n決定墮無間。\n持罰骨髓碎，\n受苦純無間，\n身命報等爾，\n是故名無間。\n互相愛憎嫉，\n并及相殺害，\n感彼惡趣身，\n手生鋒刃甲，\n如是鐵爪甲，\n甲長十六指，\n暴惡熾焱身，\n抓擭相損害，\n故名鋒刃甲。\n愚癡邪婬者，\n登彼鐵叉樹，\n大身鐵牙鬼，\n醜惡身炎熾，\n逼惱恒無盡。\n復有鐵烏鳥，\n獯狐諸惡獸，\n食啗彼有情。\n復生劍葉林，\n割截於罪人，\n叫喚出惡聲，\n痛苦不可忍。\n諂誑妄言者，\n吞食熱鐵丸，\n而復飲洋銅，\n重重無暫住。\n輕慢若欺他，\n鐵牙惡獸等，\n來食身上肉，\n受苦俱胝歲。\n愛行非法行，\n墮入洋銅河，\n大熾洋銅汁，\n燒煮或浮沈。\n又復自愚迷，\n勸作非法行，\n往彼鐵輪獄，\n而被鐵火輪，\n碾拶身無數，\n或以鐵磨磨，\n或上刀山等。\n若人說邪道，\n破正法為非，\n滿道排鋒刃，\n令彼往來行，\n業力令身大，\n驅逐聚一處，\n四面山石合，\n如指甲拶虱。\n若壞修習行，\n遠離正等因，\n僻執心意邪，\n定入由增獄。\n暴惡蛆蟲類，\n恒居糞穢中，\n罪者遊履時，\n食啗於雙足。\n種植壓油等，\n蠕動多傷殺，\n重重臥鐵槽，\n熱鐵棒捶打。\n若起極瞋怒，\n造彼諸惡罪，\n死墮焰魔剎，\n具受一切苦。\n破結善種子，\n身口意俱罪，\n智者勿作罪，\n地獄相如是。",
+      "audioUrl": "",
+      "sourceAnchor": "lgT17p0452c0801"
+    },
+    {
+      "slug": "juan-001--pt17p0453b2401",
+      "title": "佛說六道伽陀經 · 第2段",
+      "originalText": "地獄品頌竟。",
+      "contentTc": "地獄品頌竟。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0453b2401"
+    },
+    {
+      "slug": "juan-001--lgt17p0453b2501",
+      "title": "佛說六道伽陀經 · 第3段",
+      "originalText": "牛驢猿猴等，\n鳩鴿鵝鴨身，\n行恚與貪婬，\n獲報斯如是。\n犲狼猛虎犳，\n蝮蝎及毒蛇，\n瞋忿我慢深，\n獲報斯如是。\n烏鵲鵰鷲等，\n蜈蚣路多蟲，\n羆熊猫牛馬，\n龍魚㜸路荼，\n如是傍生等，\n增益惡三業，\n墜墮焰魔界，\n獲報斯如是。",
+      "contentTc": "牛驢猿猴等，\n鳩鴿鵝鴨身，\n行恚與貪婬，\n獲報斯如是。\n犲狼猛虎犳，\n蝮蝎及毒蛇，\n瞋忿我慢深，\n獲報斯如是。\n烏鵲鵰鷲等，\n蜈蚣路多蟲，\n羆熊猫牛馬，\n龍魚㜸路荼，\n如是傍生等，\n增益惡三業，\n墜墮焰魔界，\n獲報斯如是。",
+      "audioUrl": "",
+      "sourceAnchor": "lgT17p0453b2501"
+    },
+    {
+      "slug": "juan-001--pt17p0453c0401",
+      "title": "佛說六道伽陀經 · 第4段",
+      "originalText": "傍生品頌竟。",
+      "contentTc": "傍生品頌竟。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0453c0401"
+    },
+    {
+      "slug": "juan-001--lgt17p0453c0501",
+      "title": "佛說六道伽陀經 · 第5段",
+      "originalText": "障他布施福，\n偷盜於飲食，\n墮在布怛那，\n飢虛為餓鬼。\n愚癡慳鄙人，\n我慢乏禮樂，\n求食又無慚，\n死為大癭鬼。\n自不行檀度，\n勸他作慳貪，\n而墮餓鬼中，\n腹大咽如針。\n慳貪深厚者，\n護財如眼睛，\n貧病與佛僧，\n不能施少分，\n亦復不自用，\n父母莫能得，\n死墮餓鬼身，\n漿飲永不遇。\n若盜他財物，\n施已心生悔，\n亦墮餓鬼身，\n常食於膿唾。\n口出惡言語，\n謗毀於賢善，\n墮彼餓鬼中，\n口生於火炬。\n慳貪與諍訟，\n惡意窺他財，\n墮彼餓鬼中，\n微獲祭祀食，\n或入聚落處，\n見彼遺棄食，\n嘔吐涎唾等，\n而恒為美饌。\n自行慳障礙，\n離間他行施，\n為鬼恭槃荼，\n惡形生膿血。\n傷殺群生類，\n自食與他食，\n墮鬼羅剎娑，\n愛食鬘香粖。\n雖然施飲食，\n少分懷瞋恚，\n墮鬼健闥婆，\n作樂諸天愛。\n若愛於兩舌，\n鬪亂行瞋恚，\n墮鬼畢舍佐，\n頭面而醜惡。\n雖愛行檀施，\n而恒苦惱人，\n墮彼惡趣中，\n為彼母馱鬼。\n自行猛利殺，\n教他猛利殺，\n墮彼藥叉身，\n亦復惡猛利。\n父母師長等，\n所欲多違背，\n墮彼藥叉宮，\n勇健行暴惡。\n慳貪瞋果報，\n餓鬼藥叉等，\n苦樂隨自因，\n諸惡不須作。",
+      "contentTc": "障他布施福，\n偷盜於飲食，\n墮在布怛那，\n飢虛為餓鬼。\n愚癡慳鄙人，\n我慢乏禮樂，\n求食又無慚，\n死為大癭鬼。\n自不行檀度，\n勸他作慳貪，\n而墮餓鬼中，\n腹大咽如針。\n慳貪深厚者，\n護財如眼睛，\n貧病與佛僧，\n不能施少分，\n亦復不自用，\n父母莫能得，\n死墮餓鬼身，\n漿飲永不遇。\n若盜他財物，\n施已心生悔，\n亦墮餓鬼身，\n常食於膿唾。\n口出惡言語，\n謗毀於賢善，\n墮彼餓鬼中，\n口生於火炬。\n慳貪與諍訟，\n惡意窺他財，\n墮彼餓鬼中，\n微獲祭祀食，\n或入聚落處，\n見彼遺棄食，\n嘔吐涎唾等，\n而恒為美饌。\n自行慳障礙，\n離間他行施，\n為鬼恭槃荼，\n惡形生膿血。\n傷殺群生類，\n自食與他食，\n墮鬼羅剎娑，\n愛食鬘香粖。\n雖然施飲食，\n少分懷瞋恚，\n墮鬼健闥婆，\n作樂諸天愛。\n若愛於兩舌，\n鬪亂行瞋恚，\n墮鬼畢舍佐，\n頭面而醜惡。\n雖愛行檀施，\n而恒苦惱人，\n墮彼惡趣中，\n為彼母馱鬼。\n自行猛利殺，\n教他猛利殺，\n墮彼藥叉身，\n亦復惡猛利。\n父母師長等，\n所欲多違背，\n墮彼藥叉宮，\n勇健行暴惡。\n慳貪瞋果報，\n餓鬼藥叉等，\n苦樂隨自因，\n諸惡不須作。",
+      "audioUrl": "",
+      "sourceAnchor": "lgT17p0453c0501"
+    },
+    {
+      "slug": "juan-001--pt17p0454a1001",
+      "title": "佛說六道伽陀經 · 第6段",
+      "originalText": "餓鬼品頌竟。",
+      "contentTc": "餓鬼品頌竟。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0454a1001"
+    },
+    {
+      "slug": "juan-001--lgt17p0454a1101",
+      "title": "佛說六道伽陀經 · 第7段",
+      "originalText": "天及修羅人，\n福壽有差等，\n樂求生天者，\n堅持八齋戒，\n快樂壽命長，\n遠離疾病苦。\n於禁若破犯，\n少分樂生天，\n而墮於修羅，\n部多為眷屬。\n雖不盜他財，\n纖毫不行施，\n悋惜廣慳貪，\n而為守財鬼。\n不盜亦不施，\n不慳亦不貪，\n決定得人身，\n衣食多辛苦。\n不盜不貪瞋，\n守分而安住，\n美味施聖賢，\n彼得生人世，\n壽命具色力，\n吉祥而無病。\n恒時行施食，\n淨信具慚愧，\n得富貴端嚴，\n廣饒資畜等。\n若施田宅等，\n及造僧伽藍，\n令彼心歡喜，\n於自彼身中，\n一切隨所欲，\n若施於鞋履，\n供養佛僧等，\n遊行得安樂，\n常獲車騎乘。\n若於曠野中，\n施水作泉井，\n而復作陰涼，\n令彼無疲渴，\n當獲於妙花，\n吉祥廣嚴飾，\n柔軟身圓滿。\n若於傳法人，\n捨施童子等，\n後復得為人，\n聰明多智慧。\n若施於藥餌，\n當離一切病，\n若施於燈明，\n眼目長清淨，\n若施於音樂，\n口生美妙音，\n若施臥具等，\n當感身安樂，\n若施傍類食，\n長壽多色力，\n若放女出家，\n眷屬獲增長，\n若以田地施，\n得花菓流泉。\n若怖於輪迴，\n親覲於賢聖，\n所須隨供養，\n精進常恭敬，\n善破於煩惱，\n當得安樂果。\n悲愍不慳悋，\n輟己而施他，\n定感富饒果，\n衣食自豐足。\n如彼四時中，\n隨時行布施，\n崇重具儀式，\n當獲一切福。\n偷盜他財物，\n自己作所須，\n違背於真空，\n煩惱不捨離。\n不作有相心，\n依如行布施，\n如是布施果，\n無為大安樂。\n如人離婬慾，\n童男等不生，\n遠出至他方，\n無思無罣礙。\n若人著婬慾，\n心行無返復，\n狂亂自耽著，\n永墮於三塗。\n嫌棄於女人，\n修戒薄癡愛，\n復至命終時，\n猶如破毒氣。\n若行正等因，\n不捨於梵行，\n精進得吉祥，\n天人恒供養。\n堅固不迷亂，\n無飲酒妄言，\n出語常真實，\n獲名聞安樂。\n種種造飲食，\n供養和合眾，\n當感善眷屬，\n同生不動國。\n互相作承事，\n歡喜意無違，\n觀察諦理空，\n不欺不顛倒，\n苦惱永已盡，\n安樂而解脫。\n若好於戲論，\n歌舞著頑愚，\n我慢恃端嚴，\n欺𪌒於貧賤，\n當受背傴身，\n瘖瘂形痤陋，\n疾病鎮纏縛，\n語言而不遜，\n罪苦轉彌深，\n無因得安樂。\n寂靜心恬澹，\n一切善出生，\n報應果不虛，\n速成離苦道。",
+      "contentTc": "天及修羅人，\n福壽有差等，\n樂求生天者，\n堅持八齋戒，\n快樂壽命長，\n遠離疾病苦。\n於禁若破犯，\n少分樂生天，\n而墮於修羅，\n部多為眷屬。\n雖不盜他財，\n纖毫不行施，\n悋惜廣慳貪，\n而為守財鬼。\n不盜亦不施，\n不慳亦不貪，\n決定得人身，\n衣食多辛苦。\n不盜不貪瞋，\n守分而安住，\n美味施聖賢，\n彼得生人世，\n壽命具色力，\n吉祥而無病。\n恒時行施食，\n淨信具慚愧，\n得富貴端嚴，\n廣饒資畜等。\n若施田宅等，\n及造僧伽藍，\n令彼心歡喜，\n於自彼身中，\n一切隨所欲，\n若施於鞋履，\n供養佛僧等，\n遊行得安樂，\n常獲車騎乘。\n若於曠野中，\n施水作泉井，\n而復作陰涼，\n令彼無疲渴，\n當獲於妙花，\n吉祥廣嚴飾，\n柔軟身圓滿。\n若於傳法人，\n捨施童子等，\n後復得為人，\n聰明多智慧。\n若施於藥餌，\n當離一切病，\n若施於燈明，\n眼目長清淨，\n若施於音樂，\n口生美妙音，\n若施臥具等，\n當感身安樂，\n若施傍類食，\n長壽多色力，\n若放女出家，\n眷屬獲增長，\n若以田地施，\n得花菓流泉。\n若怖於輪迴，\n親覲於賢聖，\n所須隨供養，\n精進常恭敬，\n善破於煩惱，\n當得安樂果。\n悲愍不慳悋，\n輟己而施他，\n定感富饒果，\n衣食自豐足。\n如彼四時中，\n隨時行布施，\n崇重具儀式，\n當獲一切福。\n偷盜他財物，\n自己作所須，\n違背於真空，\n煩惱不捨離。\n不作有相心，\n依如行布施，\n如是布施果，\n無為大安樂。\n如人離婬慾，\n童男等不生，\n遠出至他方，\n無思無罣礙。\n若人著婬慾，\n心行無返復，\n狂亂自耽著，\n永墮於三塗。\n嫌棄於女人，\n修戒薄癡愛，\n復至命終時，\n猶如破毒氣。\n若行正等因，\n不捨於梵行，\n精進得吉祥，\n天人恒供養。\n堅固不迷亂，\n無飲酒妄言，\n出語常真實，\n獲名聞安樂。\n種種造飲食，\n供養和合眾，\n當感善眷屬，\n同生不動國。\n互相作承事，\n歡喜意無違，\n觀察諦理空，\n不欺不顛倒，\n苦惱永已盡，\n安樂而解脫。\n若好於戲論，\n歌舞著頑愚，\n我慢恃端嚴，\n欺𪌒於貧賤，\n當受背傴身，\n瘖瘂形痤陋，\n疾病鎮纏縛，\n語言而不遜，\n罪苦轉彌深，\n無因得安樂。\n寂靜心恬澹，\n一切善出生，\n報應果不虛，\n速成離苦道。",
+      "audioUrl": "",
+      "sourceAnchor": "lgT17p0454a1101"
+    },
+    {
+      "slug": "juan-001--pt17p0454c1701",
+      "title": "佛說六道伽陀經 · 第8段",
+      "originalText": "人趣品頌竟。",
+      "contentTc": "人趣品頌竟。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0454c1701"
+    },
+    {
+      "slug": "juan-001--lgt17p0454c1801",
+      "title": "佛說六道伽陀經 · 第9段",
+      "originalText": "諂誑行毀禁，\n毒害鬪諍深，\n廣縱於無明，\n必墮修羅趣。",
+      "contentTc": "諂誑行毀禁，\n毒害鬪諍深，\n廣縱於無明，\n必墮修羅趣。",
+      "audioUrl": "",
+      "sourceAnchor": "lgT17p0454c1801"
+    },
+    {
+      "slug": "juan-001--pt17p0454c2001",
+      "title": "佛說六道伽陀經 · 第10段",
+      "originalText": "修羅品頌竟。",
+      "contentTc": "修羅品頌竟。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0454c2001"
+    },
+    {
+      "slug": "juan-001--lgt17p0454c2101",
+      "title": "佛說六道伽陀經 · 第11段",
+      "originalText": "棄名利歡樂，\n遠離於親眷，\n持禁中下品，\n生彼四王天。\n父母親族等，\n種種作供養，\n遠諍奉律儀，\n獲生忉利天。\n慈喜無傷殺，\n和顏離愛憎，\n純善守尸羅，\n得生夜摩界。\n多聞持法教，\n修慧求解脫，\n積德具威儀，\n獲生於覩史。\n若人自出家，\n布施堅持戒，\n令彼大安樂，\n得生變化天。\n上根有情類，\n持戒亦最上，\n功德超越前，\n生他化自在。\n持戒生天上，\n禪定亦如是，\n智慧若薰修，\n牽引復生慧，\n善惡業果報，\n我說無虛謬。\n由善得安樂，\n作惡獲苦惱，\n老病死輪轉，\n果報自如是。\n審觀此三種，\n勿愛須棄捨，\n求福遠離罪，\n了絕於色聲，\n通達真實義，\n必至大解脫。",
+      "contentTc": "棄名利歡樂，\n遠離於親眷，\n持禁中下品，\n生彼四王天。\n父母親族等，\n種種作供養，\n遠諍奉律儀，\n獲生忉利天。\n慈喜無傷殺，\n和顏離愛憎，\n純善守尸羅，\n得生夜摩界。\n多聞持法教，\n修慧求解脫，\n積德具威儀，\n獲生於覩史。\n若人自出家，\n布施堅持戒，\n令彼大安樂，\n得生變化天。\n上根有情類，\n持戒亦最上，\n功德超越前，\n生他化自在。\n持戒生天上，\n禪定亦如是，\n智慧若薰修，\n牽引復生慧，\n善惡業果報，\n我說無虛謬。\n由善得安樂，\n作惡獲苦惱，\n老病死輪轉，\n果報自如是。\n審觀此三種，\n勿愛須棄捨，\n求福遠離罪，\n了絕於色聲，\n通達真實義，\n必至大解脫。",
+      "audioUrl": "",
+      "sourceAnchor": "lgT17p0454c2101"
+    }
+  ],
+  "sourceFile": "sources/T17n0725.xml",
+  "sourceSha256": "6ebf69c8af63d18f3f918890b881f4b4c9a94b8c0807b6e29e1e1a69d838a51b",
+  "sourceScope": "所選CBETA來源檔正文全集；依XML結構排除標作xu的附序、w附文、獨立題署與卷題；排除note中的校勘、行內音義、譯注及咒句編號，保留咒文正文與原有全角間隔。經文節點內原有的攝頌、經記及敘事保留，不含本站新增白話或生成古注。"
+}

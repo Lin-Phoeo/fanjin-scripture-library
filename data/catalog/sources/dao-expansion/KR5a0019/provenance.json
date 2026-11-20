@@ -1,0 +1,28 @@
+{
+  "repo": "KR5a0019",
+  "slug": "xiaozai-huming-jing",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "5fcf3680aa67de044e8ed7c048fb1cb44feda98273894c86cee3efafae59da33",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "三经同卷中的本经正文，排除卷首其他经名列表。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "正文"
+  ],
+  "files": [
+    {
+      "file": "KR5a0019_000.txt",
+      "url": "https://github.com/kanripo/KR5a0019/blob/master/KR5a0019_000.txt",
+      "sha256": "475c0264f52fb57650af8718f3cf69f4f9e5e870533b8d1670337f545adbc381",
+      "bytes": 270
+    },
+    {
+      "file": "KR5a0019_001.txt",
+      "url": "https://github.com/kanripo/KR5a0019/blob/master/KR5a0019_001.txt",
+      "sha256": "e4f65450275a42137d84cb1e4e71cbeeaee7f2c786adfca55508c0044ef88d9c",
+      "bytes": 1673
+    }
+  ]
+}

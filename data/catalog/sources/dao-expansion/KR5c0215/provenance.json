@@ -1,0 +1,22 @@
+{
+  "repo": "KR5c0215",
+  "slug": "taiqing-daoyin-jing",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "94a00fa27982adeac2d2898a44d9543ea8744de76aa8abcb9e30ccfac1a54d3c",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "收录一卷底本文字，含原有夹注和导引题名；作为养生史文献，不补现代操作指导。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "正文"
+  ],
+  "files": [
+    {
+      "file": "KR5c0215_000.txt",
+      "url": "https://github.com/kanripo/KR5c0215/blob/master/KR5c0215_000.txt",
+      "sha256": "8a9649715f739db8aea47b1040f2a51c98bf759ddcc10631f2ba13ccab802e4e",
+      "bytes": 18872
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+{
+  "repo": "KR5c0057",
+  "slug": "dao-de-jing-selected",
+  "scope": "chapters 1–81",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "da174cf67786959ed4c9c11b1cdb25c2fd9df6bfcb427e8830d2a625d060afe8",
+  "preservedFirst32Sha256": "0cfdbebd8c041b776fc9ecf3171361bc39025a4a0b280d768ccd97e35d145394",
+  "files": [
+    {
+      "file": "KR5c0057_001.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_001.txt",
+      "sha256": "894bdf4ba53c468c19770f3b8ae0bae5b32fe339ea3e6bf46ca4e807bdd888ea",
+      "characters": 75
+    },
+    {
+      "file": "KR5c0057_002.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_002.txt",
+      "sha256": "6e49b493568945b1a148132ec30df9173a376021d762ab136ceaa6dd153fc675",
+      "characters": 106
+    },
+    {
+      "file": "KR5c0057_003.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_003.txt",
+      "sha256": "37dc7244e08fcc8676d65453e8c53b13542523a105996dccd01cbae8c3dfbb50",
+      "characters": 81
+    },
+    {
+      "file": "KR5c0057_004.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_004.txt",
+      "sha256": "327d0da3585c95f2b0cbacadbe7de0dd1b9ea399bf8dec5a34c71976232e2cde",
+      "characters": 51
+    },
+    {
+      "file": "KR5c0057_005.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_005.txt",
+      "sha256": "b1b1edf83504faab1f72f99a8e71fbaaae66e4a4a750aa1f5b31ddf9e1d365a7",
+      "characters": 55
+    },
+    {
+      "file": "KR5c0057_006.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_006.txt",
+      "sha256": "6b758725bc4c572b8542eed5ca5aec6f5cbcf58331a24274925ca98766f98ffd",
+      "characters": 31
+    },
+    {
+      "file": "KR5c0057_007.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_007.txt",
+      "sha256": "a80d337fed707e93a6f4faa092db62c47fe41e42008f81f7c31c12f8d0400b15",
+      "characters": 57
+    },
+    {
+      "file": "KR5c0057_008.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_008.txt",
+      "sha256": "dd097dd7f1c5d6d78ad7344b749c625373cc2ac4bb377e1723ad0a3abddcb548",
+      "characters": 63
+    },
+    {
+      "file": "KR5c0057_009.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_009.txt",
+      "sha256": "1fe9f7f1d5fc49accad40312ef00b1e947fa53047aa08d226f02df5c8ee1d9f7",
+      "characters": 49
+    },
+    {
+      "file": "KR5c0057_010.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_010.txt",
+      "sha256": "1097aa692d20285db17a2a587220c452a1bf77c238796a31552f6f02a07cd747",
+      "characters": 86
+    },
+    {
+      "file": "KR5c0057_011.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_011.txt",
+      "sha256": "f358e2528f9f7ac67410c4939b2fe3d3313507f6d61e77e702862e5bea43a7b4",
+      "characters": 60
+    },
+    {
+      "file": "KR5c0057_012.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_012.txt",
+      "sha256": "776af9db2e93020bbdb3814d96390fbe45e41d511e7008f5b3f9c93c48a42c5f",
+      "characters": 62
+    },
+    {
+      "file": "KR5c0057_013.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_013.txt",
+      "sha256": "99bb2e7cbf0a45a3995c1f109f8e1d1f88cd3eb8243919c59ed7c645831b52c7",
+      "characters": 98
+    },
+    {
+      "file": "KR5c0057_014.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_014.txt",
+      "sha256": "299d72291ce2efc2a7606c9b79f7ccfa4f634c1296eb556d0e8a320148976d1a",
+      "characters": 126
+    },
+    {
+      "file": "KR5c0057_015.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_015.txt",
+      "sha256": "5492d781cc3f5b88b79409c52e2f6541cc8bca1cf3937ceab5008a1e24a59a21",
+      "characters": 117
+    },
+    {
+      "file": "KR5c0057_016.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_016.txt",
+      "sha256": "ccae8a1f4dac44599f41c5df5ed9e2239f5face03c4afb1b13e206f585cbaab4",
+      "characters": 89
+    },
+    {
+      "file": "KR5c0057_017.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_017.txt",
+      "sha256": "026d3ecadd068de8db7c5a18978f58bc520b897e5e08d0c6b793284f2b391906",
+      "characters": 56
+    },
+    {
+      "file": "KR5c0057_018.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_018.txt",
+      "sha256": "79a9e59783dba644655bbc37eb4d2c11f96aece47befd8dc569731b1fdb537f8",
+      "characters": 38
+    },
+    {
+      "file": "KR5c0057_019.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_019.txt",
+      "sha256": "5e5edbf9f008b1976d0738adbce8d10e3a86db58b04dbd39721522abd5fbd42b",
+      "characters": 57
+    },
+    {
+      "file": "KR5c0057_020.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_020.txt",
+      "sha256": "6f851b70d8b87fa9e168f56d8077a02d6b389489974d7fbcb3f76b0ed5c968b1",
+      "characters": 172
+    },
+    {
+      "file": "KR5c0057_021.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_021.txt",
+      "sha256": "f5c7b2e51d056298b05f046577686ec4a7bd3ba413fc208dfe6a515c6f0fae43",
+      "characters": 88
+    },
+    {
+      "file": "KR5c0057_022.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_022.txt",
+      "sha256": "3cdc0b130d77c2472f4c13c07af9ecd8f9b0e11e3f7b045348fad2a77de10222",
+      "characters": 100
+    },
+    {
+      "file": "KR5c0057_023.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_023.txt",
+      "sha256": "9c2331d51a81c72e7d8a20b049db7509a401a4e4509263d06565efe2aa6d8bd9",
+      "characters": 112
+    },
+    {
+      "file": "KR5c0057_024.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_024.txt",
+      "sha256": "e5d88ce6e8dfa265d77595f6668bf0cad80c25faa1d968358baaabaa742a06b7",
+      "characters": 60
+    },
+    {
+      "file": "KR5c0057_025.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_025.txt",
+      "sha256": "ce3af196af240544d046d1d2471988d3e1b666b8a65bc436b18f85453009c010",
+      "characters": 109
+    },
+    {
+      "file": "KR5c0057_026.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_026.txt",
+      "sha256": "cd9101ce0ec4b4f55e362e7094989b0cb1125ecccdb2675f7f7cd0fd13222d05",
+      "characters": 56
+    },
+    {
+      "file": "KR5c0057_027.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_027.txt",
+      "sha256": "4b1243ab521d734c95addd1026f1944a5a2306658f243c8a0bfdf5ca75af6d17",
+      "characters": 114
+    },
+    {
+      "file": "KR5c0057_028.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_028.txt",
+      "sha256": "b19b3c07dd586e189525ab1f2505666cfa84b5afe7df8e3d16a201a8bf8100e8",
+      "characters": 117
+    },
+    {
+      "file": "KR5c0057_029.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_029.txt",
+      "sha256": "bf2181065e2a3237295f7a895f15a38eb23e4115d21ab6f038ccbddbd4afae92",
+      "characters": 72
+    },
+    {
+      "file": "KR5c0057_030.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_030.txt",
+      "sha256": "35e0c9642b4cc0ede4eaf69dfa844153e34dfdb164682baf3228dc33d843a3cf",
+      "characters": 95
+    },
+    {
+      "file": "KR5c0057_031.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_031.txt",
+      "sha256": "65fdc0bb0991ee524c6a5f64b9356e8576ab20a3328a7ceacff52a451dc84b2e",
+      "characters": 152
+    },
+    {
+      "file": "KR5c0057_032.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_032.txt",
+      "sha256": "52daf25e6eadd734e4f229e9dc29b3c77dde1b3fe8d70815943d831c620cb96f",
+      "characters": 88
+    },
+    {
+      "file": "KR5c0057_033.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_033.txt",
+      "sha256": "76750b961214e96c45db16861c3dacc542fdee2932b40ab2621b3e54c44e1e3a",
+      "characters": 54
+    },
+    {
+      "file": "KR5c0057_034.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_034.txt",
+      "sha256": "f59c6cc95b1b2b02ff75db7557f7d3ef4300cce26ab147e6e911e528b18f67ac",
+      "characters": 84
+    },
+    {
+      "file": "KR5c0057_035.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_035.txt",
+      "sha256": "6bdb0d9e44981af69d956fc97d67a144a471544222be1a4b75ea4b0d519e8042",
+      "characters": 59
+    },
+    {
+      "file": "KR5c0057_036.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_036.txt",
+      "sha256": "ff85c5a69a906d23aeee781f44aaa84ca1f9bd107777059e5bd613eefca496b7",
+      "characters": 69
+    },
+    {
+      "file": "KR5c0057_037.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_037.txt",
+      "sha256": "b220f487541e6e74279adcfa08e9dda196053d4da0af9bd9159aac122e8a6b42",
+      "characters": 63
+    },
+    {
+      "file": "KR5c0057_038.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_038.txt",
+      "sha256": "d7cb28db7b9a0ffa47c8f5fa7e496d967879162ea19b40fa291d7d581030e34e",
+      "characters": 159
+    },
+    {
+      "file": "KR5c0057_039.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_039.txt",
+      "sha256": "dfc20739ed00ede22d87ae18e209be6575221c9e905ea5f1ad81bd2c3fffc033",
+      "characters": 165
+    },
+    {
+      "file": "KR5c0057_040.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_040.txt",
+      "sha256": "50ebc28f6da1d77e4dcc515371a485d9bb7ddf7a73ec2b7844f1f8c06d415d71",
+      "characters": 31
+    },
+    {
+      "file": "KR5c0057_041.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_041.txt",
+      "sha256": "693e129edddd0c39b2b2aa41c1c3bf1fda0f9f6fe2e8d3649bef9ed18317b895",
+      "characters": 120
+    },
+    {
+      "file": "KR5c0057_042.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_042.txt",
+      "sha256": "7eeb706efd9f6ffad29201c4f5773dee24cc4c8d52949c82caadb260b7c1dd72",
+      "characters": 90
+    },
+    {
+      "file": "KR5c0057_043.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_043.txt",
+      "sha256": "15bd6c269bfd7268d85102c9d9d0661f4dec2ceb92dbdcafe97b1f7c73a85642",
+      "characters": 51
+    },
+    {
+      "file": "KR5c0057_044.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_044.txt",
+      "sha256": "38ed193baa21d3e50e39f27c1f0afea5d73b92ec05033b16a002a3d661d0deff",
+      "characters": 48
+    },
+    {
+      "file": "KR5c0057_045.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_045.txt",
+      "sha256": "cb087b9c128a30923f9d407cba1c85a3df4c0837b358569cc5bc476c29cde122",
+      "characters": 52
+    },
+    {
+      "file": "KR5c0057_046.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_046.txt",
+      "sha256": "88f32c18cefcd672bbcedd8418cb4f04caddaf02114f0f2d70071f4e73efbf2e",
+      "characters": 54
+    },
+    {
+      "file": "KR5c0057_047.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_047.txt",
+      "sha256": "46a2b053571181026288cbf1ab690c1b2cb935904f88e7e20128e1680bb5fde6",
+      "characters": 45
+    },
+    {
+      "file": "KR5c0057_048.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_048.txt",
+      "sha256": "92c1b6dca65ea4d5164c43fbba8ac507ad09aabcfd2e8348627e65f97f46b763",
+      "characters": 52
+    },
+    {
+      "file": "KR5c0057_049.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_049.txt",
+      "sha256": "009eca9cc59808ad3da436fdb1e266030c5d23d7d6656990efa699f607bc17b0",
+      "characters": 81
+    },
+    {
+      "file": "KR5c0057_050.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_050.txt",
+      "sha256": "4795f8fd5682e3c49f276643ffbf5a0d39a6d02e4ae3c68a082c1c83a33d39e1",
+      "characters": 103
+    },
+    {
+      "file": "KR5c0057_051.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_051.txt",
+      "sha256": "39fa358d79c63c9b109eb5f59a8bd80358ceb40580d5866af8420c44cbb17139",
+      "characters": 91
+    },
+    {
+      "file": "KR5c0057_052.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_052.txt",
+      "sha256": "96c6d3f2e7ffc37911922782443dd9e7896bbf2c3cbad071ea5065de6b8b6f55",
+      "characters": 91
+    },
+    {
+      "file": "KR5c0057_053.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_053.txt",
+      "sha256": "4773ee4c8b26ea2497f00d11d4aba43fbdd1f44597cbac7906bb331b68ec306e",
+      "characters": 69
+    },
+    {
+      "file": "KR5c0057_054.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_054.txt",
+      "sha256": "f973f8a4d2cd196f107f48539ae9e2027e515bfbb6f421b6411e776fdefd92c1",
+      "characters": 112
+    },
+    {
+      "file": "KR5c0057_055.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_055.txt",
+      "sha256": "4e33833452623cd0f9186fa6a948482dcb85c5a742d2c17224c07efcbbd08ac9",
+      "characters": 99
+    },
+    {
+      "file": "KR5c0057_056.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_056.txt",
+      "sha256": "c4405444a4b522bf4df23f2d29e3082c1fe233afd318c9f785d04f657f1eab15",
+      "characters": 85
+    },
+    {
+      "file": "KR5c0057_057.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_057.txt",
+      "sha256": "a01b3c89705d0b227ad0f532317b88cf4425a8317db868fe89b3b988e1f9222f",
+      "characters": 111
+    },
+    {
+      "file": "KR5c0057_058.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_058.txt",
+      "sha256": "7b61a069bf42fc8637b4b867dea8ea2f8380ad2e7b812236261e4a9476a850d0",
+      "characters": 91
+    },
+    {
+      "file": "KR5c0057_059.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_059.txt",
+      "sha256": "f2adaf7d84b1a024b5412f9ecd825c7afbc36a0ac9b1a341ca004604de4a10e7",
+      "characters": 78
+    },
+    {
+      "file": "KR5c0057_060.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_060.txt",
+      "sha256": "05eaa433931ebe4d58742d48b63863d392d3f6b75089385162fa4663e703a671",
+      "characters": 61
+    },
+    {
+      "file": "KR5c0057_061.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_061.txt",
+      "sha256": "54fb849bfc0a520dff287f57ea8be39f82bc240c9b6938c1f563d3411e018011",
+      "characters": 104
+    },
+    {
+      "file": "KR5c0057_062.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_062.txt",
+      "sha256": "e716559d886438f26e4ea0fa62d82fe97456c81158cdca6882ba4c4127e39ae9",
+      "characters": 104
+    },
+    {
+      "file": "KR5c0057_063.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_063.txt",
+      "sha256": "c478e255706f95571663d5cdf0ac1c07ba29d4bd62e136d81803de1972cb2796",
+      "characters": 99
+    },
+    {
+      "file": "KR5c0057_064.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_064.txt",
+      "sha256": "22424892e3f35502f49715a9a5f9e3e8cbbfd7b309630355e01b4e1cf74fa446",
+      "characters": 159
+    },
+    {
+      "file": "KR5c0057_065.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_065.txt",
+      "sha256": "3112c4f1136fdcce8c0ca6ec77420ee3674e11366dec41d9f18186e3676b7e43",
+      "characters": 93
+    },
+    {
+      "file": "KR5c0057_066.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_066.txt",
+      "sha256": "51016ed6bebf1c24e8589ab2ef866d642bef8faa3f287a83e42030f9013d01d5",
+      "characters": 99
+    },
+    {
+      "file": "KR5c0057_067.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_067.txt",
+      "sha256": "97d76887d491a4ab721495812484f6b4b9bec939e56c3d683aef5ade2560d01d",
+      "characters": 135
+    },
+    {
+      "file": "KR5c0057_068.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_068.txt",
+      "sha256": "9124a57472216e0a76289ecfc827911142b6f567c2088dbc6f8775a2efcd7d4b",
+      "characters": 51
+    },
+    {
+      "file": "KR5c0057_069.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_069.txt",
+      "sha256": "6ff980581b80c4102c58a7ead4b9293d3054f8cce69a8891a42e28bacbd19b3a",
+      "characters": 72
+    },
+    {
+      "file": "KR5c0057_070.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_070.txt",
+      "sha256": "ef1e0dc8b2238745d20972408c65be5c4f1f58fb0bec123105ae7c435f0f8aff",
+      "characters": 67
+    },
+    {
+      "file": "KR5c0057_071.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_071.txt",
+      "sha256": "01b2fcf747f691712c4d54e3f93f04500a0b0c02a192dad24b3a3b86805506a6",
+      "characters": 42
+    },
+    {
+      "file": "KR5c0057_072.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_072.txt",
+      "sha256": "ae0c3df99cdbb06fa6d2903190c777d576e90fb3249692a197e04fc0a2dfe416",
+      "characters": 61
+    },
+    {
+      "file": "KR5c0057_073.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_073.txt",
+      "sha256": "91b78829efbd8ebb378ae384aaf7198acf257255b44dd2be1d61a04fd30ef007",
+      "characters": 80
+    },
+    {
+      "file": "KR5c0057_074.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_074.txt",
+      "sha256": "763711a3375cd420998858c49c684c46ce6f5415ff72d6713adda5325b2ac0e6",
+      "characters": 87
+    },
+    {
+      "file": "KR5c0057_075.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_075.txt",
+      "sha256": "42911af476fc1078b1ac5be6ff4bf2ccdc6c0e483e5a1afcd80c176d35af780d",
+      "characters": 71
+    },
+    {
+      "file": "KR5c0057_076.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_076.txt",
+      "sha256": "b32c1e648a8dd88958ef170e7d82fa7a6323c531ff4e5dd094d2346fe00b0892",
+      "characters": 73
+    },
+    {
+      "file": "KR5c0057_077.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_077.txt",
+      "sha256": "3548e84b67d12650a6efed5a2e523204c0a19a1b0ae74057d32284cf97eff9fb",
+      "characters": 98
+    },
+    {
+      "file": "KR5c0057_078.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_078.txt",
+      "sha256": "3509820ce85b71bca44341bc2ff2cf3d659fbd1fcd7110291b6daeb99920ae68",
+      "characters": 84
+    },
+    {
+      "file": "KR5c0057_079.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_079.txt",
+      "sha256": "a74334337462a87ca5d99af1a28b36c11bbf7d7b8f73ba627a5e89350cb72580",
+      "characters": 50
+    },
+    {
+      "file": "KR5c0057_080.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_080.txt",
+      "sha256": "14fc179cc523c83a501c7794e832e47d1531fcb60a4ac0e2d0f2c61bdd554a03",
+      "characters": 91
+    },
+    {
+      "file": "KR5c0057_081.txt",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057/blob/master/KR5c0057_081.txt",
+      "sha256": "89f7dfcc2f982f9d9f5852f304ef5e66e83b10b0608c84be473eedff4fb980e7",
+      "characters": 71
+    }
+  ]
+}

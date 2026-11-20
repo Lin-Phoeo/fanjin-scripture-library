@@ -1,0 +1,22 @@
+{
+  "repo": "KR5c0227",
+  "slug": "fuqi-jingyi-lun",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "722ee215d509e00d8b8579e54fbf9aa7aac43a038cb194b9a6b9e8077220f319",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "一卷底本文字，含原有说明和夹注；按历史文献原样保留，不生成修炼指导。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "正文"
+  ],
+  "files": [
+    {
+      "file": "KR5c0227_000.txt",
+      "url": "https://github.com/kanripo/KR5c0227/blob/master/KR5c0227_000.txt",
+      "sha256": "0a042f0ed58660eda704fa3875fdaddab238a0f847c23c45a1bc370228836161",
+      "bytes": 12679
+    }
+  ]
+}

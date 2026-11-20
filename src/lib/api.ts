@@ -9,6 +9,12 @@ export type ScriptureMetadata = {
   isExcerpt?: boolean;
   sourceVerified?: boolean;
   sourceHeader?: string;
+  sourceHeaderUrl?: string;
+  sourceFileUrl?: string;
+  titleSc?: string;
+  titleTc?: string;
+  wordCount?: number;
+  passageCount?: number;
 };
 export type ScriptureSummary = ScriptureMetadata & {
   id: number;
@@ -38,6 +44,10 @@ export type ScripturePassage = {
   classicalCommentary?: string | null;
   commentarySource?: string | null;
   modernGuide?: string | null;
+  titleSc?: string;
+  titleTc?: string;
+  sourceAnchor?: string;
+  scriptVariants?: { sc: 'source' | 'converted'; tc: 'source' | 'converted' };
 };
 
 export type ScriptureDetail = ScriptureSummary & {

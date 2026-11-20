@@ -27,8 +27,10 @@ let book, noteId, planId;
 
 await test('public catalog and scope search read only static public assets', async () => {
   const health = await api('GET', '/api/health'); assert.equal(health.storage, 'indexeddb');
-  const home = await api('GET', '/api/home'); assert.equal(home.stats.scriptureCount, 6);
-  assert.equal(home.stats.passageCount, 617); assert.equal(home.stats.discussionCount, 0);
+  const manifest=JSON.parse(await readFile(resolve('data/catalog/catalog-manifest.json'),'utf8'));
+  const catalog=JSON.parse(await readFile(resolve('public/content/index.json'),'utf8'));
+  const home = await api('GET', '/api/home'); assert.equal(home.stats.scriptureCount, manifest.files.length);
+  assert.equal(home.stats.passageCount, catalog.books.reduce((sum,item)=>sum+item.passageCount,0)); assert.equal(home.stats.discussionCount, 0);
   assert.ok((await api('GET', '/api/settings')).site_name);
   assert.ok((await api('GET', '/api/categories')).length);
   const books = await api('GET', '/api/scriptures?category=dao'); assert.ok(books.length); assert.ok(books.every((item) => item.categorySlug === 'dao'));

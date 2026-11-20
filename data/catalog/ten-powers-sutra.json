@@ -1,0 +1,134 @@
+{
+  "slug": "ten-powers-sutra",
+  "title": "佛說十力經",
+  "categorySlug": "fojing",
+  "dynasty": "唐",
+  "translator": "唐 勿提提犀魚譯",
+  "role": "依原典逐段閱讀，保留自己的摘錄與理解。",
+  "overlay": "所選CBETA來源檔正文全集；依XML結構排除標作xu的附序、w附文、獨立題署與卷題；排除note中的校勘、行內音義、譯注及咒句編號，保留咒文正文與原有全角間隔。經文節點內原有的攝頌、經記及敘事保留，不含本站新增白話或生成古注。",
+  "summary": "佛說十力經，唐 勿提提犀魚譯。本次依 CBETA 大正藏 T17n0780 收錄1卷；保留正文、偈頌及咒文，排除校勘、行內音義、譯注和咒句編號。完整原XML可供核對，不添加白話導讀或注疏。",
+  "school": "佛家",
+  "tags": [
+    "佛家",
+    "原典",
+    "十力",
+    "修持"
+  ],
+  "edition": "大正新脩大藏經 T17n0780；$Revision: 1.11 $$Date: 2012/10/08 08:17:38 $新式標點版",
+  "sourceName": "中華電子佛典協會 CBETA / 大正新脩大藏經",
+  "sourceUrl": "https://github.com/cbeta-git/xml-p5/blob/master/T/T17/T17n0780.xml",
+  "license": "CBETA A類古典佛典：CC BY-NC-SA 4.0（非商業、署名、相同方式共享）。此XML另載明非商業分發須完整保留檔頭；本資料保留全部teiHeader與來源XML。公益閱讀不代表免除署名、版本及相同方式共享要求。",
+  "licenseUrl": "https://cbeta.org/copyright",
+  "sourceHeader": "<teiHeader>\n\t<fileDesc>\n\t\t<titleStmt>\n\t\t\t<title>Taisho Tripitaka, Electronic version, No. 0780 佛說十力經</title>\n\t\t\t<author>唐 勿提提犀魚譯</author>\n\t\t\t<respStmt>\n\t\t\t\t<resp>Electronic Version by</resp>\n\t\t\t\t<name>CBETA</name>\n\t\t\t</respStmt>\n\t\t</titleStmt>\n\t<editionStmt>\n\t\t<edition>$Revision: 1.11 $<date>$Date: 2012/10/08 08:17:38 $</date>新式標點版</edition>\n\t</editionStmt>\n\t<extent>1卷</extent>\n\t<publicationStmt>\n\t\t<distributor>\n\t\t\t<name>中華電子佛典協會 (CBETA)</name>\n\t\t\t<address>\n\t\t\t\t<addrLine>service@cbeta.org</addrLine>\n\t\t\t</address>\n\t\t</distributor>\n\t\t<availability>\n\t\t\t<p>Available for non-commercial use when distributed with this header intact.</p>\n\t\t</availability>\n\t\t<date>$Date: 2012/10/08 08:17:38 $</date>\n\t</publicationStmt>\n\t<sourceDesc>\n\t\t<bibl>Taisho Tripitaka Vol. 17, No. 780 </bibl>\n\t</sourceDesc>\n</fileDesc>\n<encodingDesc>\n\t<projectDesc>\n\t\t<p xml:lang=\"en\" cb:type=\"ly\">Text as provided by Mr. Hsiao Chen-Kuo, Tripitaka Koreana as provided by Mr. Christian Wittern, Text as provided by Anonymous from USA, Punctuated text as provided by Jasmine</p>\n\t\t<p xml:lang=\"zh\" cb:type=\"ly\">蕭鎮國大德提供，維習安大德提供之高麗藏 CD 經文，北美某大德提供，Jasmine 提供新式標點</p>\n\t</projectDesc>\n<charDecl>\n<char xml:id=\"CB00452\">\n\t<charName>CBETA CHARACTER CB00452</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[亭*也]</value>\n\t</charProp>\n\t<mapping cb:dec=\"983492\" type=\"PUA\">U+F01C4</mapping>\n</char>\n<char xml:id=\"CB00501\">\n\t<charName>CBETA CHARACTER CB00501</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[馬*犬]</value>\n\t</charProp>\n\t<charProp>\n\t\t<localName>normalized form</localName>\n\t\t<value>馱</value>\n\t</charProp>\n\t<mapping type=\"unicode\">U+4B7E</mapping>\n\t<mapping cb:dec=\"983541\" type=\"PUA\">U+F01F5</mapping>\n</char>\n<char xml:id=\"CB02303\">\n\t<charName>CBETA CHARACTER CB02303</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[革*(卄/(ㄇ@人)/戍)]</value>\n\t</charProp>\n\t<charProp>\n\t\t<localName>normalized form</localName>\n\t\t<value>襪</value>\n\t</charProp>\n\t<mapping cb:dec=\"985343\" type=\"PUA\">U+F08FF</mapping>\n</char>\n<char xml:id=\"CB03056\">\n\t<charName>CBETA CHARACTER CB03056</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[言*谷]</value>\n\t</charProp>\n\t<charProp>\n\t\t<localName>normalized form</localName>\n\t\t<value>訟</value>\n\t</charProp>\n\t<mapping type=\"unicode\">U+46E6</mapping>\n\t<mapping cb:dec=\"986096\" type=\"PUA\">U+F0BF0</mapping>\n</char>\n</charDecl>\n</encodingDesc>\n<profileDesc>\n\t\t<langUsage>\n\t\t\t<language ident=\"en\">English</language>\n\t\t\t<language ident=\"zh\">Chinese</language>\n\t\t</langUsage>\n\t</profileDesc>\n\t<revisionDesc>\n\t\t<change when=\"2013-05-20\">\n\t\t\t<name>CW</name><name>Ray Chou 周邦信</name>P4 to P5 conversion by p4top5a.py, intended for publication\n\t\t</change>\n\t<change when=\"1999-10-12T10:16:31\">CW (ed.) Created initial TEI XML version with BASICX.BAT (99/10/12)</change>\n<!--\n$Log: T17n0780.xml,v $\nRevision 1.11  2012/10/08 08:17:38  maha\n修訂新標小圓點及著重號\n\nRevision 1.10  2012/09/28 08:51:55  eva\n新式標點版 上傳\n\nRevision 1.9  2009/04/23 07:59:26  amtbgrace\nmodified: 檔頭編碼由 big5 改為 cp950。\n\nRevision 1.8  2006/04/12 21:55:19  saywhat\nlem 加 wit 屬性，p, lg, item 第二次加 id 屬性\n\nRevision 1.6  2004/11/20 09:50:30  saywhat\np0716b23,c22 added 全型空格\n\nRevision 1.5  2004/10/12 16:02:55  saywhat\n段落前加入圈點\n\nRevision 1.4  2004/09/13 05:01:58  saywhat\n<trailer> => <juan fun=\"close\"><jhead>\n\nRevision 1.3  2004/05/11 14:39:03  saywhat\n修訂經號的<head> → <head type=\"no\">\n\nRevision 1.2  2004/04/20 08:38:28  maha\n「版本日期」標記修訂\n\nRevision 1.1.1.1  2003/05/05 04:09:03  ray\nrecover cvs\n\nRevision 1.15  2002/12/05 06:38:00  saywhat\n校勘插入處理\n\nRevision 1.14  2002/11/04 10:43:48  ray\ntei.2 => TEI.2\n\nRevision 1.13  2002/07/29 09:55:35  vinking\nmodified lang\n\nRevision 1.12  2002/04/04 09:05:00  ray\nxml:stylesheet => xml-stylesheet\n\nRevision 1.11  2001/11/05 06:12:32  ray\n<note type=\"foot\"> => <note place=\"foot\">\n<note type=\"inline\"> => <note place=\"inline\">\n\nRevision 1.10  2001/07/27 07:12:14  ray\n去除多餘的 <author>\n\nRevision 1.9  2001/07/24 06:52:02  ray\nadd 作者、譯者 <author> 卷數 <extent>\n\nRevision 1.8  2001/05/25 08:57:27  ray\n經號統一為四碼\n\nRevision 1.7  2001/03/30 05:47:09  ray\n缺字CB碼由四碼增長為五碼\n\nRevision 1.6  2001/03/25 09:07:22  ray\nadd <milestone>\n\nRevision 1.5  2001/02/07 06:52:27  chris\nFixed problem with comment in the previous checkin\n\nRevision 1.4  2001/02/03 07:42:06  chris\nAdded keywords $Revision: 1.11 $, $Date: 2012/10/08 08:17:38 $ and $Log.\nAdded comment  for Emacs\n\n-->\n </revisionDesc>\n</teiHeader>",
+  "isExcerpt": false,
+  "sourceVerified": true,
+  "passages": [
+    {
+      "slug": "juan-001--pt17p0717c1001",
+      "title": "佛說十力經 · 第1段",
+      "originalText": "如是我聞：",
+      "contentTc": "如是我聞：",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0717c1001"
+    },
+    {
+      "slug": "juan-001--pt17p0717c1005",
+      "title": "佛說十力經 · 第2段",
+      "originalText": "一時，佛在舍衛國祇樹給孤獨園。",
+      "contentTc": "一時，佛在舍衛國祇樹給孤獨園。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0717c1005"
+    },
+    {
+      "slug": "juan-001--pt17p0717c1101",
+      "title": "佛說十力經 · 第3段",
+      "originalText": "爾時，世尊告諸苾芻：「汝等當知諸佛、如來、應正等覺具足十力，具十力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。何等為十？所謂如來、應、正等覺，於是處如實知是處，於非處如實知非處，皆如實知。若諸如來、應、正等覺，於是處如實知是處，於非處如實知非處，以如實知處非處故，是名第一處非處智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "爾時，世尊告諸苾芻：「汝等當知諸佛、如來、應正等覺具足十力，具十力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。何等為十？所謂如來、應、正等覺，於是處如實知是處，於非處如實知非處，皆如實知。若諸如來、應、正等覺，於是處如實知是處，於非處如實知非處，以如實知處非處故，是名第一處非處智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0717c1101"
+    },
+    {
+      "slug": "juan-001--pt17p0717c2102",
+      "title": "佛說十力經 · 第4段",
+      "originalText": "「復次，如來、應、正等覺於諸有情過去未來現在諸業，及諸法互觸應異熟，皆如實知。若諸如來、應正等覺，於諸有情過去未來現在諸業，及諸法互觸應異熟如實知故，是名第二業異熟智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "「復次，如來、應、正等覺於諸有情過去未來現在諸業，及諸法互觸應異熟，皆如實知。若諸如來、應正等覺，於諸有情過去未來現在諸業，及諸法互觸應異熟如實知故，是名第二業異熟智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0717c2102"
+    },
+    {
+      "slug": "juan-001--pt17p0717c2801",
+      "title": "佛說十力經 · 第5段",
+      "originalText": "「復次，如來應正等覺，於諸有情於一切靜慮解脫等持，雜染清淨解脫清淨，建立剎別皆如實知。若諸如來、應、正等覺，於諸有情於一切靜慮解脫等持，雜染清淨解脫清淨，建立剎別如實知故，是名第三靜慮解脫等持智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "「復次，如來應正等覺，於諸有情於一切靜慮解脫等持，雜染清淨解脫清淨，建立剎別皆如實知。若諸如來、應、正等覺，於諸有情於一切靜慮解脫等持，雜染清淨解脫清淨，建立剎別如實知故，是名第三靜慮解脫等持智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0717c2801"
+    },
+    {
+      "slug": "juan-001--pt17p0718a0701",
+      "title": "佛說十力經 · 第6段",
+      "originalText": "「復次，如來、應、正等覺，於諸有情諸根勝劣皆如實知。若諸如來、應、正等覺，於諸有情諸根勝劣如實知故，是名第四根上下智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "「復次，如來、應、正等覺，於諸有情諸根勝劣皆如實知。若諸如來、應、正等覺，於諸有情諸根勝劣如實知故，是名第四根上下智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0718a0701"
+    },
+    {
+      "slug": "juan-001--pt17p0718a1301",
+      "title": "佛說十力經 · 第7段",
+      "originalText": "「復次，如來、應、正等覺，於諸有情種種樂欲勝解剎別皆如實知。若諸如來、應正等覺，於諸有情種種樂欲勝解剎別如實知故，是名第五種種樂欲勝解剎別智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "「復次，如來、應、正等覺，於諸有情種種樂欲勝解剎別皆如實知。若諸如來、應正等覺，於諸有情種種樂欲勝解剎別如實知故，是名第五種種樂欲勝解剎別智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0718a1301"
+    },
+    {
+      "slug": "juan-001--pt17p0718a1901",
+      "title": "佛說十力經 · 第8段",
+      "originalText": "「復次，如來、應、正等覺，於諸有情於一切世間，非一種種諸界種性剎別皆如實知。若諸如來、應、正等覺，於諸有情於一切世間，非一種種諸界種性剎別如實知故，是名第六種種諸界智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛，自在能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "「復次，如來、應、正等覺，於諸有情於一切世間，非一種種諸界種性剎別皆如實知。若諸如來、應、正等覺，於諸有情於一切世間，非一種種諸界種性剎別如實知故，是名第六種種諸界智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛，自在能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0718a1901"
+    },
+    {
+      "slug": "juan-001--pt17p0718a2601",
+      "title": "佛說十力經 · 第9段",
+      "originalText": "「復次，如來、應、正等覺，於諸有情於遍趣行皆如實知。若諸如來、應、正等覺，於諸有情於遍趣行如實知故，是名第七遍趣行智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "「復次，如來、應、正等覺，於諸有情於遍趣行皆如實知。若諸如來、應、正等覺，於諸有情於遍趣行如實知故，是名第七遍趣行智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0718a2601"
+    },
+    {
+      "slug": "juan-001--pt17p0718b0201",
+      "title": "佛說十力經 · 第10段",
+      "originalText": "「復次，如來、應、正等覺，於諸有情過去無量諸宿住事，假使一生乃至十生，或二十生乃至百生千生，或無量生或一增減劫，乃至百千無量諸增減劫皆如實知。諸有情類若干名字，如是方所、如是種姓、如是飲食、如是苦樂、如是壽命住時修短，彼處壽命盡彼處受生，此處命盡此處受生，彼處壽命所有諸行諸識諸想如實知故，是名第八宿住智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "「復次，如來、應、正等覺，於諸有情過去無量諸宿住事，假使一生乃至十生，或二十生乃至百生千生，或無量生或一增減劫，乃至百千無量諸增減劫皆如實知。諸有情類若干名字，如是方所、如是種姓、如是飲食、如是苦樂、如是壽命住時修短，彼處壽命盡彼處受生，此處命盡此處受生，彼處壽命所有諸行諸識諸想如實知故，是名第八宿住智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0718b0201"
+    },
+    {
+      "slug": "juan-001--pt17p0718b1301",
+      "title": "佛說十力經 · 第11段",
+      "originalText": "「復次，如來、應、正等覺，於諸有情以淨天眼超過於人，見諸有情死時生時，善不善色勝劣等行，行善不善感善不善皆如實知。復見有情起身惡行及口意業，毀謗賢聖起大邪見，作邪見業具此業緣，身壞命終墮三惡道。復見有情起身善行及口意業，不謗賢聖不毀正信，心為正見，起正見業具此業緣，身壞命終得生天上如實知故，是名第九死生智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "contentTc": "「復次，如來、應、正等覺，於諸有情以淨天眼超過於人，見諸有情死時生時，善不善色勝劣等行，行善不善感善不善皆如實知。復見有情起身惡行及口意業，毀謗賢聖起大邪見，作邪見業具此業緣，身壞命終墮三惡道。復見有情起身善行及口意業，不謗賢聖不毀正信，心為正見，起正見業具此業緣，身壞命終得生天上如實知故，是名第九死生智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0718b1301"
+    },
+    {
+      "slug": "juan-001--pt17p0718b2401",
+      "title": "佛說十力經 · 第12段",
+      "originalText": "「復次，如來、應、正等覺，於諸漏盡靜慮，心解脫慧解脫，自證通慧而住，我生已盡、梵行已立、所作已辦、不受後有，皆如實知。若諸如來、應、正等覺，於漏盡靜慮，心解脫慧解脫，自證通慧而住，我生已盡、梵行已立、所作已辦、不受後有，如實知故，是名第十漏盡智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。」",
+      "contentTc": "「復次，如來、應、正等覺，於諸漏盡靜慮，心解脫慧解脫，自證通慧而住，我生已盡、梵行已立、所作已辦、不受後有，皆如實知。若諸如來、應、正等覺，於漏盡靜慮，心解脫慧解脫，自證通慧而住，我生已盡、梵行已立、所作已辦、不受後有，如實知故，是名第十漏盡智力。具此力故得名如來、應、正等覺，尊勝殊特雄猛自在，能轉無上清淨梵輪，於大眾中正師子吼。」",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0718b2401"
+    },
+    {
+      "slug": "juan-001--pt17p0718c0301",
+      "title": "佛說十力經 · 第13段",
+      "originalText": "爾時，世尊說是經已，諸苾芻眾，天、龍、藥叉、乾闥婆、阿素洛等，皆大歡喜，信受奉行。",
+      "contentTc": "爾時，世尊說是經已，諸苾芻眾，天、龍、藥叉、乾闥婆、阿素洛等，皆大歡喜，信受奉行。",
+      "audioUrl": "",
+      "sourceAnchor": "pT17p0718c0301"
+    }
+  ],
+  "sourceFile": "sources/T17n0780.xml",
+  "sourceSha256": "b2403cea554df854e5e3863087567a146ce53f2f6ce5b53f516ad69e7c82e7c3",
+  "sourceScope": "所選CBETA來源檔正文全集；依XML結構排除標作xu的附序、w附文、獨立題署與卷題；排除note中的校勘、行內音義、譯注及咒句編號，保留咒文正文與原有全角間隔。經文節點內原有的攝頌、經記及敘事保留，不含本站新增白話或生成古注。"
+}

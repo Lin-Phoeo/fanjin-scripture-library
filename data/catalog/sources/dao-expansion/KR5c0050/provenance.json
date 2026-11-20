@@ -1,0 +1,31 @@
+{
+  "repo": "KR5c0050",
+  "slug": "dongling-zhenjing",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "8b7e414d7d2269571ecc46fd29e053f72930b043b38e6726fbd0d99c566f6478",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "九篇正文及源本小序，原有音注保留，不能称无注定本。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "原序 · 卷首",
+    "全道篇第一",
+    "用道篇第二",
+    "政道篇第三",
+    "君道篇第四",
+    "臣道篇第五",
+    "賢道篇第六",
+    "順道篇第七",
+    "農道篇第八",
+    "兵道篇第九"
+  ],
+  "files": [
+    {
+      "file": "KR5c0050_000.txt",
+      "url": "https://github.com/kanripo/KR5c0050/blob/master/KR5c0050_000.txt",
+      "sha256": "2563873d792eaeee27dc71f1605ff9d9b7991f007cb81704313b4605268a1cb6",
+      "bytes": 33986
+    }
+  ]
+}

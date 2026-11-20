@@ -115,12 +115,13 @@ export async function dispatchLocalApi(path: string, init: RequestInit = {}): Pr
       if (!query) return items;
       const index = await getLocalSearch(); aborted(signal);
       const normalized = normalizeLocalSearch(query, index.charMap);
-      const matched = new Set(index.items.filter((item) => normalizeLocalSearch(`${item.scriptureTitle} ${item.passageTitle} ${item.original} ${item.plain} ${item.commentary} ${Object.values(item.normalized || {}).join(' ')}`, index.charMap).includes(normalized)).map((item) => item.scriptureSlug));
+      const results = await searchLocalCatalog(new URLSearchParams({ q:query,scope:'all' }),signal);
+      const matched = new Set(results.matchingBookSlugs);
       return items.filter((book) => matched.has(book.slug) || normalizeLocalSearch(`${book.title} ${book.role} ${book.overlay} ${book.summary}`, index.charMap).includes(normalized));
     }
     const bookRoute = route.match(/^\/api\/(?:scriptures|books)\/([^/]+)$/);
     if (bookRoute) { const result = await getLocalBook(decodeURIComponent(bookRoute[1])); aborted(signal); return result; }
-    if (route === '/api/search') { const result = await searchLocalCatalog(url.searchParams); aborted(signal); return result; }
+    if (route === '/api/search') { const result = await searchLocalCatalog(url.searchParams,signal); aborted(signal); return result; }
     const state = await readLocalState(); aborted(signal);
     if (route === '/api/me') return { id: 1, name: state.profile.name, role: 'user', stats: { favoritesCount: state.favorites.length, notesCount: state.notes.length } };
     if (route === '/api/local/export') return { format: 'fanjin-local-backup', version: 1, exportedAt: new Date().toISOString(), data: state } satisfies LocalBackup;

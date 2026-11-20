@@ -1,0 +1,71 @@
+{
+  "repo": "KR5c0124",
+  "slug": "liezi",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "9df35ff6c4adec64536f2b8d5f4e6f77dd5b60a9259564a8fb28ab90a618adae",
+  "baseEditions": [
+    "tls"
+  ],
+  "scope": "TLS本天瑞、黄帝、周穆王、仲尼、汤问、力命、杨朱、说符八篇全文。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "天瑞第一",
+    "黃帝第二",
+    "周穆王第三",
+    "仲尼第四",
+    "湯問第五",
+    "力命第六",
+    "楊朱第七",
+    "說符第八"
+  ],
+  "files": [
+    {
+      "file": "KR5c0124_001.txt",
+      "url": "https://github.com/kanripo/KR5c0124/blob/master/KR5c0124_001.txt",
+      "sha256": "88d61e2a4039221986229fa3545102eed65abcf328a04894051b3f99742ffa7d",
+      "bytes": 16033
+    },
+    {
+      "file": "KR5c0124_002.txt",
+      "url": "https://github.com/kanripo/KR5c0124/blob/master/KR5c0124_002.txt",
+      "sha256": "31d555f39b2ccc3eedc96a64582bfcec2ded3411ef2784e5108fa0a8b37e91b2",
+      "bytes": 27665
+    },
+    {
+      "file": "KR5c0124_003.txt",
+      "url": "https://github.com/kanripo/KR5c0124/blob/master/KR5c0124_003.txt",
+      "sha256": "dc7a71a7e18def0fb30a915dfc949448d55dee3c5b1f1f3e26fc123324915434",
+      "bytes": 13788
+    },
+    {
+      "file": "KR5c0124_004.txt",
+      "url": "https://github.com/kanripo/KR5c0124/blob/master/KR5c0124_004.txt",
+      "sha256": "b69a15045c5b159b6af30621d7a18df8cff54a65d3fa73b1305be621921a1c0a",
+      "bytes": 16714
+    },
+    {
+      "file": "KR5c0124_005.txt",
+      "url": "https://github.com/kanripo/KR5c0124/blob/master/KR5c0124_005.txt",
+      "sha256": "20a5c3da89675d125bcdf7366dc7091dac03e3bc394f10feb1c3a26ff6d5811c",
+      "bytes": 24403
+    },
+    {
+      "file": "KR5c0124_006.txt",
+      "url": "https://github.com/kanripo/KR5c0124/blob/master/KR5c0124_006.txt",
+      "sha256": "d82bf43355f9b745607a8231618f8569b34fc0e4acacb9bc68fa0937bf9df52a",
+      "bytes": 15624
+    },
+    {
+      "file": "KR5c0124_007.txt",
+      "url": "https://github.com/kanripo/KR5c0124/blob/master/KR5c0124_007.txt",
+      "sha256": "7f536c5c3347923b519733697dc840b288ca2d7e898f6d1d60604cf00dddd71c",
+      "bytes": 19373
+    },
+    {
+      "file": "KR5c0124_008.txt",
+      "url": "https://github.com/kanripo/KR5c0124/blob/master/KR5c0124_008.txt",
+      "sha256": "509ac2115944c210de550467ff7958fbe57056f11040c4967c9736b1915f900d",
+      "bytes": 24114
+    }
+  ]
+}

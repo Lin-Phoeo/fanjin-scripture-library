@@ -1,0 +1,440 @@
+{
+  "repository": "cbeta-git/xml-p5",
+  "branch": "master",
+  "retrievedAt": "2026-11-20",
+  "notes": "候选书名与编号须以实际XML titleStmt核验；本清单不等于已下载或已发布。阿含与正法念处等长篇可按机器解析容量择期发布。",
+  "books": [
+    {
+      "id": "T08n0235",
+      "path": "T/T08/T08n0235.xml",
+      "slug": "diamond-sutra",
+      "title": "金刚般若波罗蜜经",
+      "categorySlug": "banruo",
+      "tags": [
+        "般若",
+        "金刚经"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T08/T08n0235.xml"
+    },
+    {
+      "id": "T12n0366",
+      "path": "T/T12/T12n0366.xml",
+      "slug": "amitabha-sutra",
+      "title": "佛说阿弥陀经",
+      "categorySlug": "jingtu",
+      "tags": [
+        "净土",
+        "阿弥陀"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T12/T12n0366.xml"
+    },
+    {
+      "id": "T12n0360",
+      "path": "T/T12/T12n0360.xml",
+      "slug": "infinite-life-sutra",
+      "title": "佛说无量寿经",
+      "categorySlug": "jingtu",
+      "tags": [
+        "净土",
+        "无量寿"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T12/T12n0360.xml"
+    },
+    {
+      "id": "T12n0365",
+      "path": "T/T12/T12n0365.xml",
+      "slug": "contemplation-sutra",
+      "title": "佛说观无量寿佛经",
+      "categorySlug": "jingtu",
+      "tags": [
+        "净土",
+        "观经"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T12/T12n0365.xml"
+    },
+    {
+      "id": "T14n0450",
+      "path": "T/T14/T14n0450.xml",
+      "slug": "medicine-buddha-sutra",
+      "title": "药师琉璃光如来本愿功德经",
+      "categorySlug": "fojing",
+      "tags": [
+        "药师",
+        "愿行"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T14/T14n0450.xml"
+    },
+    {
+      "id": "T13n0412",
+      "path": "T/T13/T13n0412.xml",
+      "slug": "ksitigarbha-sutra",
+      "title": "地藏菩萨本愿经",
+      "categorySlug": "fojing",
+      "tags": [
+        "地藏",
+        "愿行"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T13/T13n0412.xml"
+    },
+    {
+      "id": "T12n0389",
+      "path": "T/T12/T12n0389.xml",
+      "slug": "buddha-last-teaching",
+      "title": "佛垂般涅槃略说教诫经",
+      "categorySlug": "fojing",
+      "tags": [
+        "遗教",
+        "修持"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T12/T12n0389.xml"
+    },
+    {
+      "id": "T17n0784",
+      "path": "T/T17/T17n0784.xml",
+      "slug": "forty-two-chapters",
+      "title": "佛说四十二章经",
+      "categorySlug": "fojing",
+      "tags": [
+        "四十二章",
+        "修持"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T17/T17n0784.xml"
+    },
+    {
+      "id": "T17n0779",
+      "path": "T/T17/T17n0779.xml",
+      "slug": "eight-realizations",
+      "title": "佛说八大人觉经",
+      "categorySlug": "fojing",
+      "tags": [
+        "八大人觉",
+        "修持"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T17/T17n0779.xml"
+    },
+    {
+      "id": "T15n0600",
+      "path": "T/T15/T15n0600.xml",
+      "slug": "ten-virtuous-actions",
+      "title": "佛说十善业道经",
+      "categorySlug": "fojing",
+      "tags": [
+        "十善",
+        "修持"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T15/T15n0600.xml"
+    },
+    {
+      "id": "T17n0842",
+      "path": "T/T17/T17n0842.xml",
+      "slug": "perfect-enlightenment-sutra",
+      "title": "大方广圆觉修多罗了义经",
+      "categorySlug": "fojing",
+      "tags": [
+        "圆觉",
+        "禅观"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T17/T17n0842.xml"
+    },
+    {
+      "id": "T14n0475",
+      "path": "T/T14/T14n0475.xml",
+      "slug": "vimalakirti-sutra",
+      "title": "维摩诘所说经",
+      "categorySlug": "fojing",
+      "tags": [
+        "维摩诘",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T14/T14n0475.xml"
+    },
+    {
+      "id": "T09n0262",
+      "path": "T/T09/T09n0262.xml",
+      "slug": "lotus-sutra",
+      "title": "妙法莲华经",
+      "categorySlug": "fahua",
+      "tags": [
+        "法华",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T09/T09n0262.xml"
+    },
+    {
+      "id": "T16n0670",
+      "path": "T/T16/T16n0670.xml",
+      "slug": "lankavatara-sutra",
+      "title": "楞伽阿跋多罗宝经",
+      "categorySlug": "fojing",
+      "tags": [
+        "楞伽",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T16/T16n0670.xml"
+    },
+    {
+      "id": "T16n0663",
+      "path": "T/T16/T16n0663.xml",
+      "slug": "golden-light-sutra",
+      "title": "金光明经",
+      "categorySlug": "fojing",
+      "tags": [
+        "金光明",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T16/T16n0663.xml"
+    },
+    {
+      "id": "T16n0665",
+      "path": "T/T16/T16n0665.xml",
+      "slug": "golden-light-supreme-sutra",
+      "title": "金光明最胜王经",
+      "categorySlug": "fojing",
+      "tags": [
+        "金光明",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T16/T16n0665.xml"
+    },
+    {
+      "id": "T19n0945",
+      "path": "T/T19/T19n0945.xml",
+      "slug": "surangama-sutra",
+      "title": "大佛顶如来密因修证了义诸菩萨万行首楞严经",
+      "categorySlug": "fojing",
+      "tags": [
+        "楞严",
+        "修持"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T19/T19n0945.xml"
+    },
+    {
+      "id": "T09n0277",
+      "path": "T/T09/T09n0277.xml",
+      "slug": "samantabhadra-contemplation",
+      "title": "佛说观普贤菩萨行法经",
+      "categorySlug": "fahua",
+      "tags": [
+        "普贤",
+        "修持"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T09/T09n0277.xml"
+    },
+    {
+      "id": "T09n0276",
+      "path": "T/T09/T09n0276.xml",
+      "slug": "innumerable-meanings-sutra",
+      "title": "无量义经",
+      "categorySlug": "fahua",
+      "tags": [
+        "无量义",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T09/T09n0276.xml"
+    },
+    {
+      "id": "T16n0685",
+      "path": "T/T16/T16n0685.xml",
+      "slug": "filial-piety-ullambana",
+      "title": "佛說盂蘭盆經",
+      "categorySlug": "fojing",
+      "tags": [
+        "盂兰盆",
+        "孝亲"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T16/T16n0685.xml"
+    },
+    {
+      "id": "T17n0780",
+      "path": "T/T17/T17n0780.xml",
+      "slug": "ten-powers-sutra",
+      "title": "佛說十力經",
+      "categorySlug": "fojing",
+      "tags": [
+        "十力",
+        "修持"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T17/T17n0780.xml"
+    },
+    {
+      "id": "T01n0001",
+      "path": "T/T01/T01n0001.xml",
+      "slug": "long-agama",
+      "title": "长阿含经",
+      "categorySlug": "ahan",
+      "tags": [
+        "阿含",
+        "长阿含"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T01/T01n0001.xml"
+    },
+    {
+      "id": "T01n0026",
+      "path": "T/T01/T01n0026.xml",
+      "slug": "middle-agama",
+      "title": "中阿含经",
+      "categorySlug": "ahan",
+      "tags": [
+        "阿含",
+        "中阿含"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T01/T01n0026.xml"
+    },
+    {
+      "id": "T02n0099",
+      "path": "T/T02/T02n0099.xml",
+      "slug": "mixed-agama",
+      "title": "杂阿含经",
+      "categorySlug": "ahan",
+      "tags": [
+        "阿含",
+        "杂阿含"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T02/T02n0099.xml"
+    },
+    {
+      "id": "T02n0125",
+      "path": "T/T02/T02n0125.xml",
+      "slug": "increased-agama",
+      "title": "增壹阿含经",
+      "categorySlug": "ahan",
+      "tags": [
+        "阿含",
+        "增壹阿含"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T02/T02n0125.xml"
+    },
+    {
+      "id": "T17n0762",
+      "path": "T/T17/T17n0762.xml",
+      "slug": "definitive-meaning-sutra",
+      "title": "佛說決定義經",
+      "categorySlug": "fojing",
+      "tags": [
+        "決定義",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T17/T17n0762.xml"
+    },
+    {
+      "id": "T17n0721",
+      "path": "T/T17/T17n0721.xml",
+      "slug": "true-law-mindfulness",
+      "title": "正法念处经",
+      "categorySlug": "fojing",
+      "tags": [
+        "念处",
+        "修持"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T17/T17n0721.xml"
+    },
+    {
+      "id": "T15n0602",
+      "path": "T/T15/T15n0602.xml",
+      "slug": "anapanasati-sutra",
+      "title": "佛说大安般守意经",
+      "categorySlug": "fojing",
+      "tags": [
+        "安般",
+        "禅观"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T15/T15n0602.xml"
+    },
+    {
+      "id": "T15n0614",
+      "path": "T/T15/T15n0614.xml",
+      "slug": "seated-meditation-sutra",
+      "title": "坐禅三昧经",
+      "categorySlug": "fojing",
+      "tags": [
+        "坐禅",
+        "禅观"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T15/T15n0614.xml"
+    },
+    {
+      "id": "T17n0725",
+      "path": "T/T17/T17n0725.xml",
+      "slug": "six-realms-verses",
+      "title": "佛說六道伽陀經",
+      "categorySlug": "fojing",
+      "tags": [
+        "六道",
+        "偈頌"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T17/T17n0725.xml"
+    },
+    {
+      "id": "T16n0657",
+      "path": "T/T16/T16n0657.xml",
+      "slug": "avatamsaka-manifestation-sutra",
+      "title": "佛说华手经",
+      "categorySlug": "fojing",
+      "tags": [
+        "大乘",
+        "华手"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T16/T16n0657.xml"
+    },
+    {
+      "id": "T16n0666",
+      "path": "T/T16/T16n0666.xml",
+      "slug": "tathagata-garbha-sutra",
+      "title": "大方等如來藏經",
+      "categorySlug": "fojing",
+      "tags": [
+        "如來藏",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T16/T16n0666.xml"
+    },
+    {
+      "id": "T14n0454",
+      "path": "T/T14/T14n0454.xml",
+      "slug": "maitreya-descent-sutra",
+      "title": "佛说弥勒下生经",
+      "categorySlug": "fojing",
+      "tags": [
+        "弥勒",
+        "净土"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T14/T14n0454.xml"
+    },
+    {
+      "id": "T14n0452",
+      "path": "T/T14/T14n0452.xml",
+      "slug": "maitreya-ascent-sutra",
+      "title": "佛说观弥勒菩萨上生兜率天经",
+      "categorySlug": "fojing",
+      "tags": [
+        "弥勒",
+        "净土"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T14/T14n0452.xml"
+    },
+    {
+      "id": "T14n0426",
+      "path": "T/T14/T14n0426.xml",
+      "slug": "thousand-buddhas-causality",
+      "title": "佛說千佛因緣經",
+      "categorySlug": "fojing",
+      "tags": [
+        "千佛",
+        "因緣"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T14/T14n0426.xml"
+    },
+    {
+      "id": "T16n0681",
+      "path": "T/T16/T16n0681.xml",
+      "slug": "ghanavyuha-sutra",
+      "title": "大乘密嚴經",
+      "categorySlug": "fojing",
+      "tags": [
+        "密嚴",
+        "大乘"
+      ],
+      "url": "https://raw.githubusercontent.com/cbeta-git/xml-p5/master/T/T16/T16n0681.xml"
+    }
+  ]
+}

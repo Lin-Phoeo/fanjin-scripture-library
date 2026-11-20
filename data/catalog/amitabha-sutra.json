@@ -1,0 +1,190 @@
+{
+  "slug": "amitabha-sutra",
+  "title": "佛說阿彌陀經",
+  "categorySlug": "jingtu",
+  "dynasty": "姚秦",
+  "translator": "姚秦 鳩摩羅什譯",
+  "role": "依原典逐段閱讀，保留自己的摘錄與理解。",
+  "overlay": "所選CBETA來源檔正文全集；依XML結構排除標作xu的附序、w附文、獨立題署與卷題；排除note中的校勘、行內音義、譯注及咒句編號，保留咒文正文與原有全角間隔。經文節點內原有的攝頌、經記及敘事保留，不含本站新增白話或生成古注。",
+  "summary": "佛說阿彌陀經，姚秦 鳩摩羅什譯。本次依 CBETA 大正藏 T12n0366 收錄1卷；保留正文、偈頌及咒文，排除校勘、行內音義、譯注和咒句編號。完整原XML可供核對，不添加白話導讀或注疏。",
+  "school": "佛家",
+  "tags": [
+    "佛家",
+    "原典",
+    "净土",
+    "阿弥陀"
+  ],
+  "edition": "大正新脩大藏經 T12n0366；$Revision: 1.30 $$Date: 2012/08/27 03:14:38 $新式標點版",
+  "sourceName": "中華電子佛典協會 CBETA / 大正新脩大藏經",
+  "sourceUrl": "https://github.com/cbeta-git/xml-p5/blob/master/T/T12/T12n0366.xml",
+  "license": "CBETA A類古典佛典：CC BY-NC-SA 4.0（非商業、署名、相同方式共享）。此XML另載明非商業分發須完整保留檔頭；本資料保留全部teiHeader與來源XML。公益閱讀不代表免除署名、版本及相同方式共享要求。",
+  "licenseUrl": "https://cbeta.org/copyright",
+  "sourceHeader": "<teiHeader>\n        <fileDesc>\n                <titleStmt>\n                        <title>Taisho Tripitaka, Electronic version, No. 0366 佛說阿彌陀經</title>\n                        <author>姚秦 鳩摩羅什譯</author>\n                        <respStmt>\n                                <resp>Electronic Version by</resp>\n                                <name>CBETA</name>\n                        </respStmt>\n                </titleStmt>\n        <editionStmt>\n                <edition>$Revision: 1.30 $<date>$Date: 2012/08/27 03:14:38 $</date>新式標點版</edition>\n\t\t<respStmt xml:id=\"resp1\"><resp>corrections</resp><name>Taisho</name></respStmt>\n\t\t<respStmt xml:id=\"resp2\"><resp>corrections</resp><name>CBETA</name></respStmt>\n\t\t<respStmt xml:id=\"resp3\"><resp>corrections</resp><name>CBETA.say</name></respStmt>\n\t\t<respStmt xml:id=\"resp4\"><resp>corrections</resp><name>CBETA.march</name></respStmt>\n\t\t<respStmt xml:id=\"resp5\"><resp>corrections</resp><name>CBETA.maha</name></respStmt>\n\t\t<respStmt xml:id=\"resp6\"><resp>corrections</resp><name>CBETA.pan</name></respStmt>\n        </editionStmt>\n        <extent>1卷</extent>\n        <publicationStmt>\n                <distributor>\n                        <name>中華電子佛典協會 (CBETA)</name>\n                        <address>\n                                <addrLine>service@cbeta.org</addrLine>\n                        </address>\n                </distributor>\n                <availability>\n                        <p>Available for non-commercial use when distributed with this header intact.</p>\n                </availability>\n                <date>$Date: 2012/08/27 03:14:38 $</date>\n        </publicationStmt>\n        <sourceDesc>\n                <bibl>Taisho Tripitaka Vol. 12, No. 366 </bibl>\n        <listWit>\n\t\t<witness xml:id=\"wit1\">【大】</witness>\n\t\t<witness xml:id=\"wit2\">【宋】</witness>\n\t\t<witness xml:id=\"wit3\">【元】</witness>\n\t\t<witness xml:id=\"wit4\">【明】</witness>\n\t\t<witness xml:id=\"wit5\">【流布本】</witness>\n\t\t<witness xml:id=\"wit6\">【CBETA】</witness>\n\t\t<witness xml:id=\"wit7\">【磧砂】</witness>\n\t</listWit>\n\t</sourceDesc>\n</fileDesc>\n<encodingDesc>\n        <projectDesc>\n                <p xml:lang=\"en\" cb:type=\"ly\">Text as provided by Mr. Hsiao Chen-Kuo, Tripitaka Koreana as provided by Mr. Christian Wittern, Text as provided by Anonymous from USA, Punctuated text as provided by Maha Studio</p>\n                <p xml:lang=\"zh\" cb:type=\"ly\">蕭鎮國大德提供，維習安大德提供之高麗藏 CD 經文，北美某大德提供，摩訶工作室提供新式標點</p>\n        </projectDesc>\n<charDecl>\n<char xml:id=\"CB00006\">\n\t<charName>CBETA CHARACTER CB00006</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[(王*巨)/木]</value>\n\t</charProp>\n\t<charProp>\n\t\t<localName>normalized form</localName>\n\t\t<value>璩</value>\n\t</charProp>\n\t<mapping type=\"unicode\">U+249B2</mapping>\n\t<mapping cb:dec=\"983046\" type=\"PUA\">U+F0006</mapping>\n</char>\n<char xml:id=\"CB00145\">\n\t<charName>CBETA CHARACTER CB00145</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[少/兔]</value>\n\t</charProp>\n\t<mapping type=\"unicode\">U+3779</mapping>\n\t<mapping cb:dec=\"983185\" type=\"PUA\">U+F0091</mapping>\n</char>\n<char xml:id=\"CB03240\">\n\t<charName>CBETA CHARACTER CB03240</charName>\n\t<charProp>\n\t\t<localName>composition</localName>\n\t\t<value>[旃-丹+冉]</value>\n\t</charProp>\n\t<charProp>\n\t\t<localName>normalized form</localName>\n\t\t<value>旃</value>\n\t</charProp>\n\t<mapping type=\"unicode\">U+3ACB</mapping>\n\t<mapping cb:dec=\"986280\" type=\"PUA\">U+F0CA8</mapping>\n</char>\n</charDecl>\n</encodingDesc>\n<profileDesc>\n                <langUsage>\n                        <language ident=\"sa\">Sanskrit</language>\n                        <language ident=\"zh\">Chinese</language>\n                        <language ident=\"en\">English</language>\n                </langUsage>\n        </profileDesc>\n        <revisionDesc>\n\t\t<change when=\"2013-05-20\">\n\t\t\t<name>CW</name><name>Ray Chou 周邦信</name>P4 to P5 conversion by p4top5a.py, intended for publication\n\t\t</change>\n        <change when=\"1999-06-28T19:58:30\">CW (ed.) Created initial TEI XML version with BASICX.BAT (99/6/28)</change>\n<!--\n$Log: T12n0366.xml,v $\nRevision 1.30  2012/08/27 03:14:38  maha\n修訂新標小圓點及著重號\n\nRevision 1.29  2009/04/23 07:58:01  amtbgrace\nmodified: 檔頭編碼由 big5 改為 cp950。\n\nRevision 1.28  2006/05/18 02:02:15  saywhat\n修訂梵巴轉寫字, eg. 編號&Ndotblw; => 編號.N\n\nRevision 1.27  2006/04/12 21:54:40  saywhat\nlem 加 wit 屬性，p, lg, item 第二次加 id 屬性\n\nRevision 1.25  2006/01/05 04:46:20  saywhat\n[0346037],[0347028] 轉寫 AA => &Amacron;\n\nRevision 1.24  2005/11/27 02:16:40  saywhat\n[0348006]  l => k\n\nRevision 1.23  2005/08/02 03:35:25  saywhat\np0348a07 經名 用“”標點\n\nRevision 1.22  2005/07/19 10:06:06  saywhat\nmodified 檔頭「新標提供者」\n\nRevision 1.21  2005/07/12 00:33:39  saywhat\n修訂[0346044]梵字\n\nRevision 1.20  2005/05/28 12:38:07  saywhat\n新式標點版\n\nRevision 1.19  2005/05/20 16:06:15  saywhat\np0348b06 modified 折行\n\nRevision 1.18  2005/05/12 08:11:51  saywhat\np0348b06 added <note resp=\"CBETA.say\">...</note>\n\nRevision 1.17  2005/05/11 12:36:37  saywhat\np0348b10 delete space.\n\nRevision 1.16  2005/05/11 09:18:55  saywhat\np0346b28-p0348a26 added <p place=\"inline\"> ; p0348b05-06 added space.\n\nRevision 1.15  2005/05/06 07:30:11  saywhat\np0348b12 [藻>澡], [揚>楊]\n\nRevision 1.14  2004/11/14 03:17:09  maha\n將八個M碼(M024261 M040426 M034294 M005505 M010528 M010527 M026945 M006710) 取代為 Big5 系統字(碁 銹 裏 墻 恒 恒 粧 嫺)\n\nRevision 1.13  2004/10/12 13:45:36  saywhat\n段落前加入圈點\n\nRevision 1.12  2004/09/15 02:07:28  saywhat\njuan加上jhead\n\nRevision 1.11  2004/05/11 02:02:32  saywhat\n行中<p type=\"dharani\"> 改成 <p type=\"dharani\" place=\"inline\">\n\nRevision 1.10  2004/04/20 08:37:42  maha\n「版本日期」標記修訂\n\nRevision 1.9  2004/03/16 02:18:18  ray\nresp 屬性 統一格式為 CBETA.xxx\n\nRevision 1.8  2004/02/27 00:38:05  ray\nadd cvs log\n\n-->\n </revisionDesc>\n</teiHeader>",
+  "isExcerpt": false,
+  "sourceVerified": true,
+  "passages": [
+    {
+      "slug": "juan-001--pt12p0346b2801",
+      "title": "佛說阿彌陀經 · 第1段",
+      "originalText": "如是我聞：",
+      "contentTc": "如是我聞：",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0346b2801"
+    },
+    {
+      "slug": "juan-001--pt12p0346b2805",
+      "title": "佛說阿彌陀經 · 第2段",
+      "originalText": "一時，佛在舍衛國祇樹給孤獨園，與大比丘僧千二百五十人俱，皆是大阿羅漢，眾所知識。長老舍利弗、摩訶目乾連、摩訶迦葉、摩訶迦栴延、摩訶拘絺羅、離婆多、周梨槃陀迦、難陀、阿難陀、羅睺羅、憍梵波提、賓頭盧頗羅墮、迦留陀夷、摩訶劫賓那、薄俱羅、阿㝹樓馱，如是等諸大弟子，并諸菩薩摩訶薩——文殊師利法王子、阿逸多菩薩、乾陀訶提菩薩、常精進菩薩，與如是等諸大菩薩，及釋提桓因等無量諸天大眾俱。",
+      "contentTc": "一時，佛在舍衛國祇樹給孤獨園，與大比丘僧千二百五十人俱，皆是大阿羅漢，眾所知識。長老舍利弗、摩訶目乾連、摩訶迦葉、摩訶迦栴延、摩訶拘絺羅、離婆多、周梨槃陀迦、難陀、阿難陀、羅睺羅、憍梵波提、賓頭盧頗羅墮、迦留陀夷、摩訶劫賓那、薄俱羅、阿㝹樓馱，如是等諸大弟子，并諸菩薩摩訶薩——文殊師利法王子、阿逸多菩薩、乾陀訶提菩薩、常精進菩薩，與如是等諸大菩薩，及釋提桓因等無量諸天大眾俱。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0346b2805"
+    },
+    {
+      "slug": "juan-001--pt12p0346c1001",
+      "title": "佛說阿彌陀經 · 第3段",
+      "originalText": "爾時，佛告長老舍利弗：",
+      "contentTc": "爾時，佛告長老舍利弗：",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0346c1001"
+    },
+    {
+      "slug": "juan-001--pt12p0346c1010",
+      "title": "佛說阿彌陀經 · 第4段",
+      "originalText": "「從是西方過十萬億佛土，有世界名曰極樂。其土有佛，號阿彌陀，今現在說法。舍利弗！彼土何故名為極樂？其國眾生無有眾苦，但受諸樂，故名極樂。又舍利弗！極樂國土，七重欄楯、七重羅網、七重行樹，皆是四寶周匝圍繞，是故彼國名曰極樂。",
+      "contentTc": "「從是西方過十萬億佛土，有世界名曰極樂。其土有佛，號阿彌陀，今現在說法。舍利弗！彼土何故名為極樂？其國眾生無有眾苦，但受諸樂，故名極樂。又舍利弗！極樂國土，七重欄楯、七重羅網、七重行樹，皆是四寶周匝圍繞，是故彼國名曰極樂。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0346c1010"
+    },
+    {
+      "slug": "juan-001--pt12p0346c1605",
+      "title": "佛說阿彌陀經 · 第5段",
+      "originalText": "「又舍利弗！極樂國土有七寶池，八功德水充滿其中，池底純以金沙布地。四邊階道，金、銀、琉璃、頗梨合成。上有樓閣，亦以金、銀、琉璃、頗梨、車𤦲、赤珠、馬瑙而嚴飾之。池中蓮花，大如車輪，青色青光，黃色黃光，赤色赤光，白色白光，微妙香潔。舍利弗！極樂國土成就如是功德莊嚴。",
+      "contentTc": "「又舍利弗！極樂國土有七寶池，八功德水充滿其中，池底純以金沙布地。四邊階道，金、銀、琉璃、頗梨合成。上有樓閣，亦以金、銀、琉璃、頗梨、車𤦲、赤珠、馬瑙而嚴飾之。池中蓮花，大如車輪，青色青光，黃色黃光，赤色赤光，白色白光，微妙香潔。舍利弗！極樂國土成就如是功德莊嚴。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0346c1605"
+    },
+    {
+      "slug": "juan-001--pt12p0347a0701",
+      "title": "佛說阿彌陀經 · 第6段",
+      "originalText": "「又舍利弗！彼佛國土，常作天樂，黃金為地，晝夜六時天雨曼陀羅華。其國眾生，常以清旦，各以衣裓盛眾妙華，供養他方十萬億佛；即以食時，還到本國，飯食經行。舍利弗！極樂國土成就如是功德莊嚴。",
+      "contentTc": "「又舍利弗！彼佛國土，常作天樂，黃金為地，晝夜六時天雨曼陀羅華。其國眾生，常以清旦，各以衣裓盛眾妙華，供養他方十萬億佛；即以食時，還到本國，飯食經行。舍利弗！極樂國土成就如是功德莊嚴。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347a0701"
+    },
+    {
+      "slug": "juan-001--pt12p0347a1201",
+      "title": "佛說阿彌陀經 · 第7段",
+      "originalText": "「復次舍利弗！彼國常有種種奇妙雜色之鳥——白鵠、孔雀、鸚鵡、舍利、迦陵頻伽、共命之鳥。是諸眾鳥，晝夜六時出和雅音，其音演暢五根、五力、七菩提分、八聖道分如是等法。其土眾生聞是音已，皆悉念佛、念法、念僧。舍利弗！汝勿謂：『此鳥實是罪報所生。』所以者何？彼佛國土無三惡趣。舍利弗！其佛國土尚無三惡道之名，何況有實？是諸眾鳥皆是阿彌陀佛欲令法音宣流變化所作。舍利弗！彼佛國土，微風吹動，諸寶行樹及寶羅網出微妙音，譬如百千種樂同時俱作，聞是音者皆自然生念佛、念法、念僧之心。舍利弗！其佛國土成就如是功德莊嚴。",
+      "contentTc": "「復次舍利弗！彼國常有種種奇妙雜色之鳥——白鵠、孔雀、鸚鵡、舍利、迦陵頻伽、共命之鳥。是諸眾鳥，晝夜六時出和雅音，其音演暢五根、五力、七菩提分、八聖道分如是等法。其土眾生聞是音已，皆悉念佛、念法、念僧。舍利弗！汝勿謂：『此鳥實是罪報所生。』所以者何？彼佛國土無三惡趣。舍利弗！其佛國土尚無三惡道之名，何況有實？是諸眾鳥皆是阿彌陀佛欲令法音宣流變化所作。舍利弗！彼佛國土，微風吹動，諸寶行樹及寶羅網出微妙音，譬如百千種樂同時俱作，聞是音者皆自然生念佛、念法、念僧之心。舍利弗！其佛國土成就如是功德莊嚴。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347a1201"
+    },
+    {
+      "slug": "juan-001--pt12p0347a2501",
+      "title": "佛說阿彌陀經 · 第8段",
+      "originalText": "「舍利弗！於汝意云何？彼佛何故號阿彌陀？舍利弗！彼佛光明無量，照十方國無所障礙，是故號為阿彌陀。又舍利弗！彼佛壽命及其人民，無量無邊阿僧祇劫，故名阿彌陀。舍利弗！阿彌陀佛成佛已來，於今十劫。又舍利弗！彼佛有無量無邊聲聞弟子，皆阿羅漢，非是算數之所能知；諸菩薩，亦復如是。舍利弗！彼佛國土，成就如是功德莊嚴。",
+      "contentTc": "「舍利弗！於汝意云何？彼佛何故號阿彌陀？舍利弗！彼佛光明無量，照十方國無所障礙，是故號為阿彌陀。又舍利弗！彼佛壽命及其人民，無量無邊阿僧祇劫，故名阿彌陀。舍利弗！阿彌陀佛成佛已來，於今十劫。又舍利弗！彼佛有無量無邊聲聞弟子，皆阿羅漢，非是算數之所能知；諸菩薩，亦復如是。舍利弗！彼佛國土，成就如是功德莊嚴。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347a2501"
+    },
+    {
+      "slug": "juan-001--pt12p0347b0401",
+      "title": "佛說阿彌陀經 · 第9段",
+      "originalText": "「又舍利弗！極樂國土眾生生者，皆是阿鞞跋致。其中多有一生補處，其數甚多，非是算數所能知之，但可以無量無邊阿僧祇劫說。舍利弗！眾生聞者，應當發願，願生彼國。所以者何？得與如是諸上善人俱會一處。",
+      "contentTc": "「又舍利弗！極樂國土眾生生者，皆是阿鞞跋致。其中多有一生補處，其數甚多，非是算數所能知之，但可以無量無邊阿僧祇劫說。舍利弗！眾生聞者，應當發願，願生彼國。所以者何？得與如是諸上善人俱會一處。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347b0401"
+    },
+    {
+      "slug": "juan-001--pt12p0347b0903",
+      "title": "佛說阿彌陀經 · 第10段",
+      "originalText": "「舍利弗！不可以少善根福德因緣，得生彼國。舍利弗！若有善男子、善女人，聞說阿彌陀佛，執持名號，若一日、若二日、若三日、若四日、若五日、若六日、若七日，一心不亂。其人臨命終時，阿彌陀佛與諸聖眾現在其前。是人終時，心不顛倒，即得往生阿彌陀佛極樂國土。舍利弗！我見是利，故說此言。若有眾生聞是說者，應當發願生彼國土。",
+      "contentTc": "「舍利弗！不可以少善根福德因緣，得生彼國。舍利弗！若有善男子、善女人，聞說阿彌陀佛，執持名號，若一日、若二日、若三日、若四日、若五日、若六日、若七日，一心不亂。其人臨命終時，阿彌陀佛與諸聖眾現在其前。是人終時，心不顛倒，即得往生阿彌陀佛極樂國土。舍利弗！我見是利，故說此言。若有眾生聞是說者，應當發願生彼國土。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347b0903"
+    },
+    {
+      "slug": "juan-001--pt12p0347b1801",
+      "title": "佛說阿彌陀經 · 第11段",
+      "originalText": "「舍利弗！如我今者，讚歎阿彌陀佛不可思議功德；東方亦有阿閦鞞佛、須彌相佛、大須彌佛、須彌光佛、妙音佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "contentTc": "「舍利弗！如我今者，讚歎阿彌陀佛不可思議功德；東方亦有阿閦鞞佛、須彌相佛、大須彌佛、須彌光佛、妙音佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347b1801"
+    },
+    {
+      "slug": "juan-001--pt12p0347b2401",
+      "title": "佛說阿彌陀經 · 第12段",
+      "originalText": "「舍利弗！南方世界有日月燈佛、名聞光佛、大焰肩佛、須彌燈佛、無量精進佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "contentTc": "「舍利弗！南方世界有日月燈佛、名聞光佛、大焰肩佛、須彌燈佛、無量精進佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347b2401"
+    },
+    {
+      "slug": "juan-001--pt12p0347b2901",
+      "title": "佛說阿彌陀經 · 第13段",
+      "originalText": "「舍利弗！西方世界有無量壽佛、無量相佛、無量幢佛、大光佛、大明佛、寶相佛、淨光佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "contentTc": "「舍利弗！西方世界有無量壽佛、無量相佛、無量幢佛、大光佛、大明佛、寶相佛、淨光佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347b2901"
+    },
+    {
+      "slug": "juan-001--pt12p0347c0601",
+      "title": "佛說阿彌陀經 · 第14段",
+      "originalText": "「舍利弗！北方世界有焰肩佛、最勝音佛、難沮佛、日生佛、網明佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "contentTc": "「舍利弗！北方世界有焰肩佛、最勝音佛、難沮佛、日生佛、網明佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347c0601"
+    },
+    {
+      "slug": "juan-001--pt12p0347c1101",
+      "title": "佛說阿彌陀經 · 第15段",
+      "originalText": "「舍利弗！下方世界有師子佛、名聞佛、名光佛、達摩佛、法幢佛、持法佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "contentTc": "「舍利弗！下方世界有師子佛、名聞佛、名光佛、達摩佛、法幢佛、持法佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347c1101"
+    },
+    {
+      "slug": "juan-001--pt12p0347c1601",
+      "title": "佛說阿彌陀經 · 第16段",
+      "originalText": "「舍利弗！上方世界有梵音佛、宿王佛、香上佛、香光佛、大焰肩佛、雜色寶華嚴身佛、娑羅樹王佛、寶華德佛、見一切義佛、如須彌山佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "contentTc": "「舍利弗！上方世界有梵音佛、宿王佛、香上佛、香光佛、大焰肩佛、雜色寶華嚴身佛、娑羅樹王佛、寶華德佛、見一切義佛、如須彌山佛，如是等恒河沙數諸佛，各於其國出廣長舌相，遍覆三千大千世界，說誠實言：『汝等眾生，當信是稱讚不可思議功德一切諸佛所護念經。』",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0347c1601"
+    },
+    {
+      "slug": "juan-001--pt12p0348a0701",
+      "title": "佛說阿彌陀經 · 第17段",
+      "originalText": "「舍利弗！於汝意云何？何故名為『一切諸佛所護念經』？舍利弗！若有善男子、善女人，聞是經受持者，及聞諸佛名者；是諸善男子、善女人，皆為一切諸佛共所護念，皆得不退轉於阿耨多羅三藐三菩提。是故舍利弗！汝等皆當信受我語及諸佛所說。",
+      "contentTc": "「舍利弗！於汝意云何？何故名為『一切諸佛所護念經』？舍利弗！若有善男子、善女人，聞是經受持者，及聞諸佛名者；是諸善男子、善女人，皆為一切諸佛共所護念，皆得不退轉於阿耨多羅三藐三菩提。是故舍利弗！汝等皆當信受我語及諸佛所說。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0348a0701"
+    },
+    {
+      "slug": "juan-001--pt12p0348a1301",
+      "title": "佛說阿彌陀經 · 第18段",
+      "originalText": "「舍利弗！若有人已發願、今發願、當發願，欲生阿彌陀佛國者；是諸人等，皆得不退轉於阿耨多羅三藐三菩提，於彼國土若已生、若今生、若當生。是故舍利弗！諸善男子、善女人若有信者，應當發願生彼國土。",
+      "contentTc": "「舍利弗！若有人已發願、今發願、當發願，欲生阿彌陀佛國者；是諸人等，皆得不退轉於阿耨多羅三藐三菩提，於彼國土若已生、若今生、若當生。是故舍利弗！諸善男子、善女人若有信者，應當發願生彼國土。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0348a1301"
+    },
+    {
+      "slug": "juan-001--pt12p0348a1801",
+      "title": "佛說阿彌陀經 · 第19段",
+      "originalText": "「舍利弗！如我今者，稱讚諸佛不可思議功德；彼諸佛等，亦稱說我不可思議功德，而作是言：『釋迦牟尼佛能為甚難希有之事，能於娑婆國土五濁惡世——劫濁、見濁、煩惱濁、眾生濁、命濁中，得阿耨多羅三藐三菩提，為諸眾生說是一切世間難信之法。』舍利弗！當知我於五濁惡世，行此難事；得阿耨多羅三藐三菩提，為一切世間說此難信之法，是為甚難！」",
+      "contentTc": "「舍利弗！如我今者，稱讚諸佛不可思議功德；彼諸佛等，亦稱說我不可思議功德，而作是言：『釋迦牟尼佛能為甚難希有之事，能於娑婆國土五濁惡世——劫濁、見濁、煩惱濁、眾生濁、命濁中，得阿耨多羅三藐三菩提，為諸眾生說是一切世間難信之法。』舍利弗！當知我於五濁惡世，行此難事；得阿耨多羅三藐三菩提，為一切世間說此難信之法，是為甚難！」",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0348a1801"
+    },
+    {
+      "slug": "juan-001--pt12p0348a2606",
+      "title": "佛說阿彌陀經 · 第20段",
+      "originalText": "佛說此經已。舍利弗及諸比丘，一切世間天、人、阿修羅等，聞佛所說，歡喜信受，作禮而去。",
+      "contentTc": "佛說此經已。舍利弗及諸比丘，一切世間天、人、阿修羅等，聞佛所說，歡喜信受，作禮而去。",
+      "audioUrl": "",
+      "sourceAnchor": "pT12p0348a2606"
+    }
+  ],
+  "sourceFile": "sources/T12n0366.xml",
+  "sourceSha256": "8aa85d696e60f07dcf6e4304130e2c6dae9aadb51a78a46aa3f7f639bb4f744f",
+  "sourceScope": "所選CBETA來源檔正文全集；依XML結構排除標作xu的附序、w附文、獨立題署與卷題；排除note中的校勘、行內音義、譯注及咒句編號，保留咒文正文與原有全角間隔。經文節點內原有的攝頌、經記及敘事保留，不含本站新增白話或生成古注。"
+}

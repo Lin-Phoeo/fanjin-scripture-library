@@ -1,0 +1,22 @@
+{
+  "repo": "KR5c0022",
+  "slug": "laojun-neiguan-jing",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "f502dfddd19a97c72a06c4de77bd0592260d969752cd1c25792a4b4d57c9f270",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "七经同卷中的本经正文；不收入卷首其他六经名目。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "正文"
+  ],
+  "files": [
+    {
+      "file": "KR5c0022_000.txt",
+      "url": "https://github.com/kanripo/KR5c0022/blob/master/KR5c0022_000.txt",
+      "sha256": "1df216af36b1d1eedcac8215dc73479c3b3cb5ff04d386b54ada3dd98de7a54b",
+      "bytes": 6719
+    }
+  ]
+}

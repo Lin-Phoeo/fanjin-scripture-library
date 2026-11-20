@@ -1,0 +1,115 @@
+{
+  "repo": "KR5c0138",
+  "slug": "zhuangzi-guoxiang-zhu",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "7a7684482911fda9f0b853c70d7c940cee8ca1030f78da9922d2cf83efa8e8b8",
+  "baseEditions": [
+    "WYG"
+  ],
+  "scope": "内篇七、外篇十五、杂篇十一，共三十三篇；文渊阁本郭象注与音义夹注同收，提要和原序单列。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "四库提要与郭象原序（附录）",
+    "内篇逍遥逰第一",
+    "齊物論第二",
+    "養生主第三",
+    "人間世第四",
+    "徳充符第五",
+    "大宗師第六",
+    "應帝王第七",
+    "外篇駢拇第八",
+    "馬蹄第九",
+    "胠篋第十",
+    "在宥第十一",
+    "天地第十二",
+    "天道第十三",
+    "天運第十四",
+    "刻意第十五",
+    "繕性第十六",
+    "秋水第十七",
+    "至樂第十八",
+    "達生第十九",
+    "山木第二十",
+    "田子方第二十一",
+    "知北遊第二十二",
+    "雜篇庚桑楚第二十三",
+    "徐無鬼第二十四",
+    "則陽第二十五",
+    "外物第二十六",
+    "寓言第二十七",
+    "讓王第二十八",
+    "盗跖第二十九",
+    "説劒第三十",
+    "漁父第三十一",
+    "列御冦第三十二",
+    "天下第三十三"
+  ],
+  "files": [
+    {
+      "file": "KR5c0138_000.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_000.txt",
+      "sha256": "4088c9b7ff97196f343b17b830bf7f801f4f53e2b54fd3b53edb50809a023323",
+      "bytes": 5010
+    },
+    {
+      "file": "KR5c0138_001.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_001.txt",
+      "sha256": "f3da300dada745a52a3f8bf35008bdb88a6a929b5bcddabdfd4d91d4022f78c0",
+      "bytes": 53051
+    },
+    {
+      "file": "KR5c0138_002.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_002.txt",
+      "sha256": "8f0e360846e1abdbb1fe3fa469a2f9d2d1b81279b8f98292ead21e476b2df152",
+      "bytes": 48037
+    },
+    {
+      "file": "KR5c0138_003.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_003.txt",
+      "sha256": "b83d62e56243e67cbfba4bed9c6e29a15ad74103395a775a70e4bc384de724c7",
+      "bytes": 38844
+    },
+    {
+      "file": "KR5c0138_004.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_004.txt",
+      "sha256": "00d63ebfbe8cc8ad8f2a5e8c0a46c9e0e900bc9c2b91ca3eae1e5953328b28f4",
+      "bytes": 40863
+    },
+    {
+      "file": "KR5c0138_005.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_005.txt",
+      "sha256": "99e60838f938a90402e5621e7ef8edf81444559f43c4682cacb9895a4b6d9885",
+      "bytes": 51633
+    },
+    {
+      "file": "KR5c0138_006.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_006.txt",
+      "sha256": "ad498d6e537f31ce5bbb46f4e0a439ae1cbd4a152d85a3e2af6799f85ec10cb4",
+      "bytes": 37416
+    },
+    {
+      "file": "KR5c0138_007.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_007.txt",
+      "sha256": "9152b221858d588eb94b508d66fed9f06a904418c3853acd7fea3e40022d26fa",
+      "bytes": 55844
+    },
+    {
+      "file": "KR5c0138_008.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_008.txt",
+      "sha256": "96f10b334ac1a37bfa238318ead3bdcdfc516206fc0d46566c362296b20d724b",
+      "bytes": 64493
+    },
+    {
+      "file": "KR5c0138_009.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_009.txt",
+      "sha256": "2e1fda23540ed43eec1503f6e25c3e21f83927e2f0ecd4715d0d56e7ffb46b07",
+      "bytes": 44631
+    },
+    {
+      "file": "KR5c0138_010.txt",
+      "url": "https://github.com/kanripo/KR5c0138/blob/master/KR5c0138_010.txt",
+      "sha256": "91011b4df95a11da312fdc682357cbfe3017f527c33f2002f54b8111326b8ae7",
+      "bytes": 43688
+    }
+  ]
+}

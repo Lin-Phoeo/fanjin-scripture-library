@@ -1,0 +1,283 @@
+{
+  "date": "2026-11-20",
+  "books": [
+    {
+      "repo": "KR5a0013",
+      "slug": "yuhuang-xinyin-jing",
+      "title": "高上玉皇心印经",
+      "passages": 1,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 214,
+      "scope": "一卷正文，保留原有四言分组。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0014",
+      "slug": "yuhuang-taixi-jing",
+      "title": "高上玉皇胎息经",
+      "passages": 1,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 88,
+      "scope": "仅取首尾同名题记之间的胎息经正文；源文件随后混入的谢雷经及赞诗不收。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0016",
+      "slug": "yushu-baojing",
+      "title": "九天应元雷声普化天尊玉枢宝经",
+      "passages": 6,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 3228,
+      "scope": "一卷经文，含原有偈颂与咒语。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0018",
+      "slug": "xuhuang-sishijiu-jing",
+      "title": "太上虚皇天尊四十九章经",
+      "passages": 49,
+      "sourceUnits": 1,
+      "chapters": 49,
+      "characters": 3559,
+      "scope": "依源文四十九章题分章，保留底本文字。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0019",
+      "slug": "xiaozai-huming-jing",
+      "title": "太上升玄消灾护命妙经",
+      "passages": 1,
+      "sourceUnits": 2,
+      "chapters": 1,
+      "characters": 304,
+      "scope": "三经同卷中的本经正文，排除卷首其他经名列表。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0021",
+      "slug": "changsheng-jifude-jing",
+      "title": "太上长生延寿集福德经",
+      "passages": 1,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 530,
+      "scope": "一卷正文，保留经文中的偈颂。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0024",
+      "slug": "shengtian-dedao-jing",
+      "title": "元始天尊说生天得道经",
+      "passages": 1,
+      "sourceUnits": 2,
+      "chapters": 1,
+      "characters": 323,
+      "scope": "二经同卷中的本经正文，排除卷首其他经名列表。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0025",
+      "slug": "dedao-liaoshen-jing",
+      "title": "元始天尊说得道了身经",
+      "passages": 2,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 1313,
+      "scope": "一卷经文；按历史宗教文献保存，不作现代功效解释。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0031",
+      "slug": "huangdi-yinfu-jing",
+      "title": "黄帝阴符经",
+      "passages": 3,
+      "sourceUnits": 1,
+      "chapters": 3,
+      "characters": 476,
+      "scope": "依原文件上中下三章题分组，保留原字及疑讹。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5a0035",
+      "slug": "qingjing-shenxin-jing",
+      "title": "太上玄都妙本清静身心经",
+      "passages": 3,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 1855,
+      "scope": "一卷正文及原有偈颂。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5c0025",
+      "slug": "shouyi-zhending-jing",
+      "title": "太上内丹守一真定经",
+      "passages": 1,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 277,
+      "scope": "一卷正文，保留源本题署。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5c0215",
+      "slug": "taiqing-daoyin-jing",
+      "title": "太清导引养生经",
+      "passages": 9,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 5435,
+      "scope": "收录一卷底本文字，含原有夹注和导引题名；作为养生史文献，不补现代操作指导。",
+      "containsNotes": true
+    },
+    {
+      "repo": "KR5c0224",
+      "slug": "taixi-baoyi-ge",
+      "title": "胎息抱一歌",
+      "passages": 2,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 825,
+      "scope": "收本篇及原序；不把同卷目录列出的另一书误当本篇正文。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5c0227",
+      "slug": "fuqi-jingyi-lun",
+      "title": "服气精义论",
+      "passages": 6,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 3686,
+      "scope": "一卷底本文字，含原有说明和夹注；按历史文献原样保留，不生成修炼指导。",
+      "containsNotes": true
+    },
+    {
+      "repo": "KR5c0231",
+      "slug": "cunshen-lianqi-ming",
+      "title": "存神炼气铭",
+      "passages": 2,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 788,
+      "scope": "一卷传本正文，保留五时七候等原文结构。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5c0239",
+      "slug": "baopu-yangsheng-lun",
+      "title": "抱朴子养生论",
+      "passages": 1,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 667,
+      "scope": "一卷传本文字，含原有夹注；不与《抱朴子内篇》全书等同。",
+      "containsNotes": true
+    },
+    {
+      "repo": "KR5c0050",
+      "slug": "dongling-zhenjing",
+      "title": "洞灵真经（庚桑子）",
+      "passages": 20,
+      "sourceUnits": 1,
+      "chapters": 10,
+      "characters": 10016,
+      "scope": "九篇正文及源本小序，原有音注保留，不能称无注定本。",
+      "containsNotes": true
+    },
+    {
+      "repo": "KR5c0124",
+      "slug": "liezi",
+      "title": "列子",
+      "passages": 60,
+      "sourceUnits": 8,
+      "chapters": 8,
+      "characters": 38092,
+      "scope": "TLS本天瑞、黄帝、周穆王、仲尼、汤问、力命、杨朱、说符八篇全文。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5c0118",
+      "slug": "wenzi",
+      "title": "文子",
+      "passages": 71,
+      "sourceUnits": 3,
+      "chapters": 13,
+      "characters": 40139,
+      "scope": "文渊阁本上下卷十二篇，提要另作附录；源文少量音注保留，不新增注释。",
+      "containsNotes": true
+    },
+    {
+      "repo": "KR5c0022",
+      "slug": "laojun-neiguan-jing",
+      "title": "太上老君内观经",
+      "passages": 3,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 1781,
+      "scope": "七经同卷中的本经正文；不收入卷首其他六经名目。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5d0059",
+      "slug": "zuowang-lun",
+      "title": "坐忘论",
+      "passages": 14,
+      "sourceUnits": 2,
+      "chapters": 9,
+      "characters": 5989,
+      "scope": "正文七篇与附枢翼，底本序文单列，原字不改。",
+      "containsNotes": false
+    },
+    {
+      "repo": "KR5b0084",
+      "slug": "dingguan-jing-zhu",
+      "title": "洞玄灵宝定观经注",
+      "passages": 3,
+      "sourceUnits": 1,
+      "chapters": 1,
+      "characters": 1731,
+      "scope": "本经与古注完整同收，含卷末跋；原文栏是该注本连续文本，不冒称纯经文。",
+      "containsNotes": true
+    },
+    {
+      "repo": "KR5f0001",
+      "slug": "taishang-ganying-pian-zhu",
+      "title": "太上感应篇（李昌龄注本）",
+      "passages": 205,
+      "sourceUnits": 31,
+      "chapters": 31,
+      "characters": 118226,
+      "scope": "三十卷经文与注释、事例及原序同收，不与千余字白文等同。",
+      "containsNotes": true
+    },
+    {
+      "repo": "KR5c0138",
+      "slug": "zhuangzi-guoxiang-zhu",
+      "title": "庄子（郭象注本）",
+      "passages": 293,
+      "sourceUnits": 11,
+      "chapters": 34,
+      "characters": 158372,
+      "scope": "内篇七、外篇十五、杂篇十一，共三十三篇；文渊阁本郭象注与音义夹注同收，提要和原序单列。",
+      "containsNotes": true
+    },
+    {
+      "repo": "KR5c0048",
+      "slug": "wenshi-zhenjing",
+      "title": "无上妙道文始真经（关尹子）",
+      "passages": 19,
+      "sourceUnits": 4,
+      "chapters": 4,
+      "characters": 11857,
+      "scope": "依道藏底本完整收录，保留源本序跋及夹注；作者题署不作为断代定论。",
+      "containsNotes": true
+    }
+  ],
+  "pending": [],
+  "newBooks": 25,
+  "newPassages": 777
+}

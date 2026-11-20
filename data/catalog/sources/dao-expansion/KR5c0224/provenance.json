@@ -1,0 +1,22 @@
+{
+  "repo": "KR5c0224",
+  "slug": "taixi-baoyi-ge",
+  "retrievedAt": "2026-11-20",
+  "archiveSha256": "dfa196d1bbc73caa57fcd7319731f7448054feddd636be85d7173145d6b22929",
+  "baseEditions": [
+    "HFL"
+  ],
+  "scope": "收本篇及原序；不把同卷目录列出的另一书误当本篇正文。",
+  "transform": "仅去除文件元数据、页码与段落标记，连接原物理行并按来源章节/页块分段；原字、疑讹、缺字及夹注符号均保留，不加现代标点、译文或解释。",
+  "chapters": [
+    "正文与原序"
+  ],
+  "files": [
+    {
+      "file": "KR5c0224_000.txt",
+      "url": "https://github.com/kanripo/KR5c0224/blob/master/KR5c0224_000.txt",
+      "sha256": "6437a01d27e1a0604cc10230238ff7e0422cfa9d513d196e43a2ab64e92665ef",
+      "bytes": 3310
+    }
+  ]
+}

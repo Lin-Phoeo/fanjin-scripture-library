@@ -1485,3 +1485,4 @@
     transition: none;
   }
 }
+@media(max-width:760px){.reader-paragraph-note{display:none}}

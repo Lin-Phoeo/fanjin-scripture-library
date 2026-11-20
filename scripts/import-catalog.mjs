@@ -3,7 +3,10 @@ import { resolve } from 'node:path';
 import { validateScripture } from '../server/validation.ts';
 
 const directory=resolve(process.argv.find(value=>value.startsWith('--directory='))?.slice(12)||'data/catalog');
-const paths=(await readdir(directory)).filter(name=>name.endsWith('.json') && name!=='catalog-manifest.json').sort();
+let paths;
+try { paths=JSON.parse(await readFile(resolve(directory,'catalog-manifest.json'),'utf8')).files; }
+catch(error) { if(error.code!=='ENOENT')throw error; paths=(await readdir(directory)).filter(name=>name.endsWith('.json') && !name.endsWith('coverage.json')).sort(); }
+if(!Array.isArray(paths)||paths.some(name=>typeof name!=='string'||!/^[a-z0-9][a-z0-9-]*\.json$/.test(name)))throw new Error('Invalid catalog manifest.');
 const inputs=[];
 for(const name of paths) inputs.push(validateScripture(JSON.parse(await readFile(resolve(directory,name),'utf8'))));
 if(!inputs.length) throw new Error('No catalog JSON files found.');
