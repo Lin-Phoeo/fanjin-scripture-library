@@ -1,127 +1,104 @@
 ---
-name: 梵烬 · 阅读工作台
-description: 以真实书架、连续阅读、段落书签与同屏私人笔记完成日常阅读。
+name: 梵烬 · 以阅读为中心
+description: 书架识别、章节定位、连续正文与按需记录各司其职。
 colors:
-  cinnabar: "#9B3B31"
-  ink-teal: "#3E5C58"
-  paper: "#FAF8F5"
-  paper-surface: "#F3EFEA"
-  ink: "#24211E"
-  secondary-ink: "#68625D"
-  rule: "#E5E0D8"
-  sepia-paper: "#F2EBD9"
-  sepia-surface: "#E9E0CA"
-  sepia-ink: "#2A241E"
-  sepia-secondary: "#6E6354"
-  sepia-accent: "#8F342A"
-  sepia-rule: "#DCD1BA"
-  night-paper: "#161616"
-  night-surface: "#1F1F1E"
-  night-ink: "#D5CFC7"
-  night-secondary: "#8A847C"
-  night-accent: "#C1594D"
-  night-teal: "#95B9B0"
-  night-rule: "#2B2A28"
+  canvas: "#f7f7f3"
+  surface: "#ffffff"
+  muted-surface: "#eef1e9"
+  ink: "#242924"
+  secondary-ink: "#5d665f"
+  primary: "#456454"
+  secondary: "#8d493e"
+  border: "#dde3d9"
 typography:
-  display:
-    fontFamily: '"Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", Georgia, serif'
-    fontSize: "29px"
+  interface:
+    fontFamily: '"PingFang SC", "Microsoft YaHei", system-ui, sans-serif'
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.65
+  controls:
+    fontFamily: '"PingFang SC", "Microsoft YaHei", system-ui, sans-serif'
+    fontSize: "14px"
     fontWeight: 500
-    lineHeight: 1.5
-    letterSpacing: "0.015em"
+    lineHeight: 1.4
   reading:
-    fontFamily: '"Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", Georgia, serif'
+    fontFamily: '"Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", SimSun, serif'
     fontSize: "18px"
     fontWeight: 400
     lineHeight: 1.9
-    letterSpacing: "0.015em"
-  interface:
-    fontFamily: '"Microsoft YaHei", "PingFang SC", sans-serif'
-    fontSize: "14px"
-    fontWeight: 400
-    lineHeight: 1.8
-rounded:
-  control: "4px"
-  primary-button: "3px"
+  title:
+    fontFamily: '"PingFang SC", "Microsoft YaHei", system-ui, sans-serif'
+    fontSize: "32px"
+    fontWeight: 600
+    lineHeight: 1.3
 spacing:
-  option-gap: "8px"
-  group-gap: "25px"
-  page-gutter-mobile: "20px"
-  section-gap: "43px"
-components:
-  button-primary:
-    backgroundColor: "{colors.cinnabar}"
-    textColor: "#FFFFFF"
-    rounded: "{rounded.primary-button}"
-    padding: "11px 21px"
-    height: "44px"
-  option-selected:
-    backgroundColor: "{colors.ink-teal}"
-    textColor: "{colors.paper}"
-    rounded: "{rounded.control}"
-    padding: "9px 15px"
-  reading-page:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    width: "680px"
+  small: "8px"
+  related: "12px"
+  field: "16px"
+  group: "24px"
+  section: "32px"
+  major: "48px"
+rounded:
+  control: "8px"
+  panel: "12px"
 ---
 
-# Design System: 梵烬 · 阅读工作台
+# 梵烬阅读设计系统
 
-## Overview
+当前为 GitHub Pages 纯静态应用，私人数据存于 IndexedDB。此次重构仅改变展示和交互组织，不变更备份格式、稳定段落身份和存储范围。
 
-**Creative North Star: "阅读工作台"**
+## 设计依据
 
-用户明确拒绝空泛的展示页和首屏偏好问卷。当前界面以真实书目和直接阅读操作开始；已有本机记录时优先显示继续阅读、收藏/在读书架与近期摘录。阅读区同时容纳固定目录、连续正文与可编辑私人笔记，减少短段频繁翻页与跨页面往返。
+依据 [一手研究](docs/research/2026-11-20-content-reading-ux-evidence.md) 和 [阅读产品实访](docs/research/2026-11-20-reading-products.md)，把界面分成四种任务：
 
-**Key Characteristics:**
-- 首次打开直接搜索、筛选、选择真实经典；已有本机记录时使用本机聚合书架，不展示假统计。
-- 桌面常驻目录与书签索引，正文最大680px；笔记侧栏同屏新增、编辑与回跳。手机目录按需展开、笔记使用抽屉。
-- 兴趣与时间是折叠辅助，只有选择“适合这次阅读”时改变目录排序；偏好可清除，通过完整备份手动迁移。
+- 书架和经藏：识别一本书，开始或继续阅读。
+- 书籍详情：选章节；版本、来源、许可始终有明确入口，默认不全部展开。
+- 阅读：原文连续可读，目录可收起，笔记按需打开。
+- 个人工具：笔记优先自己的内容，日课优先记录，设置按偏好/备份/说明分组。
 
-## Colors
+不以“字数少”“有封面”或“留白多”代替用户任务。主要阅读按钮始终可找；原文不因精简文案被删改。
 
-纸、墨、青黛与朱红。朱红给主行动与私人笔记印记，青黛表示选择、链接与阅读辅助。主题值由 `src/reading.css` 的 `data-theme` 定义；`src/personal.css` 消费同一套变量。
+## 单一视觉来源
 
-素宣用于一般室内阅读，古纸降低明暗刺激，松烟用于低照度场景。不要在页面局部硬写浅色底或灰字；所有公开页面都应跟随三主题。
+公开页面仅加载 `src/design-system.css`、`src/reading-tools.css` 与 `src/settings.css`。旧四套 CSS 保留作历史，但不进入当前产物；不再用大批 !important 叠加修补。
 
-## Typography
+- 界面为系统无衬线，14px 控件、16px 说明；原文和书名用中文衬线。
+- 主色青黛用于行动与选中，朱红仅用于少量强调。未选中区域以中性色和留白组织。
+- 控件、段落、章节采用不同间距；主体不是表格字段的平铺，也不是重复卡片。
+- 纸色、古纸、暗色均由同名变量切换。正文默认桌面18px/1.9、手机17px/1.9，用户可调。
+- 正文默认最大660px。中文行宽以字身近似和真实长文测量，不能套用英文字母行长；320px优先重排。
+- 仅状态变化使用140ms反馈，尊重 reduced-motion。无入场表演或长滚动动画。
 
-正文与标题使用已确认的中文系统衬线栈，无远程 Webfont 首屏阻塞。控件、标签和说明使用系统中文无衬线。正文桌面默认 18px、手机默认 17px；允许 16/17/18/20/23px；行距 1.85/1.9/1.95。古注与导读比正文小 2px、行距 1.7。
+## 书封与内容
 
-工作台标题29px、手机27px；书目标题23px、正文标题29px。不得在标题上方增加空泛眉题，也不以编号制造虚构顺序。
+`BookCover` 为本站原创文字封面；色差帮助区分书目，不冒充历史底本封面。封面没有加入假出版社、版本年代或权威标签。
 
-## Layout
+每本书只显示书名、学派、全文/节选、篇幅和一句短提示。完整作者、底本与许可保留在详情；不得缩减必须保留的出版头。
 
-首页最大1320px，桌面左右32px；目录采用书名、阅读位置、私人记录与操作的紧凑行。740px以下改为书名/位置与阅读按钮的两列堆叠，左右20px。阅读区最大1560px，常驻目录190–210px，正文最大680px，笔记侧栏310px；1200px以下笔记改抽屉。阅读正文最大680px，段间1.4em。导航使用熟悉的顶部链接，手机保留底部首页/经藏/自修/我的。所有关键按钮点击区至少 44px。
+`LibraryShelf` 被首次书架与经藏复用。回访书架显示真实记录和一次续读行动。兴趣排序保留在经藏排序选择内。
 
-## Elevation & Depth
+## 阅读界面
 
-无装饰阴影。原文推荐页靠纸面色阶与 1px 边线区别，书目、注解和私人心得靠留白与细线组织。没有光晕、玻璃或仿古纹理。
+48px简洁站头＋56px阅读工具条；阅读页不显示大页脚、重复本机提示或底部全站导航。桌面210px目录可收起；手机按需打开目录。选中原文后只显示一组段落操作，平常不在每段下面重复按钮和说明。
 
-## Shapes
+短经全文连续展示，多段作品依稳定 `chapter--paragraph` 标识分组。详情页以章节为单位，段落定位按需展开或直接搜索。文本原样保存，不自动补译注。
 
-按钮 3–4px 圆角，主体内容平直。时间采用三段分组控件，兴趣为可多选按钮，阅读意向为小型选项。边注和引用的侧线最多 1px。
+笔记编辑保留原文关联，保存后保持所在段落；设置、目录、笔记在窄屏互斥，Escape关闭并返回入口焦点。无内容的古注/导读开关不占位。
 
-## Components
+## 次级工具
 
-- `PreferenceChoices`：兴趣多选、5/15/30 分钟、安静/理解/心得意向。`aria-pressed` 暴露选中态，保存状态与重设控制就近呈现。
-- 工作台书架：真实聚合收藏、进度、计划、摘录与书签。章节位置不冒充阅读完成百分比；下架书保留本人记录但不显示可读链接。
-- 同屏笔记：段落点击决定引用、书签与笔记范围；侧栏可查看当前段/全书摘录并直接编辑。三个辅助开头收进编辑器，不代写答案。
-- 本机数据：无需账号。IndexedDB保存收藏、书签、摘录、阅读位置、日课和兴趣偏好；完整JSON可导出、预览导入并确认覆盖。清除浏览器数据会丢失记录，无云端找回或自动同步。阅读外观单独保存，备份文案明确不包含外观。
-- 设置与错误：不弹出无必要模态；错误保留当前选择并提供重试。
+- 摘录为空时只提供开始阅读的动作，不展示无用筛选和导出。
+- 有摘录时按书筛选、全文搜索、展开原文、编辑/删除、导出均保留。
+- 日课无计划时直接建立计划，不先展示四个零统计。归档、暂停为次级操作。
+- 我的页面三个标签：偏好、数据备份、关于数据。导入的完整校验、预览、覆盖确认和清除双确认不得为简洁而省略。
+- 本机存储说明在首次书架和数据设置明确呈现，不每页重复警告。
 
-实际参考：Minimal Gallery 的内容层级和筛选；Navbar Gallery 的静态导航与明确当前位置；Animate UI 的状态变更反馈。三站已通过独立浏览器标签实际查看，页面文本与截图存 `output/design-reference/`。未复制其订阅转化、巨型卡片和滚动数字。
+## 响应式与可访问性
 
-## Do's and Don'ts
+宽屏书目3列、中屏2列、手机单列；手机保留紧凑底部导航，阅读页仅阅读工具。核心点击区44px；输入16px避免手机缩放，文字颜色满足对比度目标。允许文字间距覆盖、浏览器放大与键盘操作。
 
-- Do 让主动选择改变真实推荐，并说明原因。
-- Do 将选择、原文、心得组织为一个连续的私人流程。
-- Do 保留版本来源与三层文本边界。
-- Don't 生成或冒充经典原文、古人注解与用户心得。
-- Don't 隐蔽推断信仰、情绪或上传私人记录或假称云端同步。
-- Don't 用眉题、均等卡片、排行和炫技动画替代内容。
+验收截图需同时包含默认态、展开态、空态、有真实长文和已有记录状态。不得把隐藏details子树的几何box当成实际可见内容。图像和DOM结果共同判断。
 
-连续阅读兼容规则：现有稳定 passage slug 含 `--` 时，以前缀（如 `ch-01`）聚合章节；无前缀且整书不超过20段时以全篇连续阅读；其余保留单段作为章节。当前论语512段聚合20篇，心经7段与清静经11段整篇呈现。这是对既有数据的兼容分组，不声称拥有独立章节/段落表模型。URL、书签、进度、摘录仍绑定原始完整slug。滚动定位更新段级进度；编辑笔记或打开移动目录期间不自动切段。
+## 刻意不做
 
-实际工作台层级：辅助信息10/11/12px，说明13/14px，正文17/18/20/23px，书名22/23/24px，标题27/29/30px。现有余留非激活样式不代表当前首屏策略。
+不添加 AI 对话、社交、热度、排行榜或服务器。数据备份依旧由用户持有，不暗示云同步。没有出处的古注不填充。视觉重构不迁移或清空任何本机数据。

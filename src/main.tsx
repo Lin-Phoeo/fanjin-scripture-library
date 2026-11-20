@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './index.css';
-import './reading.css';
-import './personal.css';
-import './workbench.css';
+import './design-system.css';
+import './reading-tools.css';
+import './settings.css';
 import { applyTheme, readPreferences } from './lib/reading-preferences';
 
 applyTheme(readPreferences().theme);

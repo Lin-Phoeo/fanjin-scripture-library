@@ -1,31 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useAppState } from '../context/AppStateContext';
-import { frontNavigation } from '../data/site';
-import { getPublicSettings } from '../lib/api';
-import { useResource } from '../lib/useResource';
+import Icon from './Icon';
 
-function SiteLayout() {
+const navigation = [{to:'/',label:'书架',icon:'book'},{to:'/library',label:'经藏',icon:'search'},{to:'/notes',label:'摘录',icon:'note'},{to:'/study',label:'日课',icon:'calendar'}] as const;
+export default function SiteLayout() {
   const { storageError } = useAppState();
-  const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const { data: settings, reload } = useResource(getPublicSettings);
-  const brandName = settings?.site_name || '梵烬';
-  const subtitle = settings?.site_subtitle || '东方经典个人自修驿站';
-  useEffect(() => { const listener = () => reload(); window.addEventListener('fanjin-settings-updated', listener); return () => window.removeEventListener('fanjin-settings-updated', listener); }, [reload]);
-  useEffect(() => { setMenuOpen(false); if (!(location.pathname.startsWith('/read/') || location.pathname.startsWith('/reader/'))) window.scrollTo({ top: 0, behavior: 'instant' }); }, [location.pathname]);
-  useEffect(() => { document.title = `${frontNavigation.find((item) => item.to === location.pathname)?.label ?? (location.pathname.startsWith('/reader/') || location.pathname.startsWith('/read/') ? '静心阅读' : '我的书斋')} · ${brandName} · ${subtitle}`; document.querySelector('meta[name="description"]')?.setAttribute('content', settings?.site_description || '公益阅读佛道与诸子经典，保存私人摘录、心得与日常功课。'); }, [location.pathname, settings, brandName, subtitle]);
-  return <div className="page-shell reading-site">
-    <button className="skip-link" type="button" onClick={() => document.getElementById('main-content')?.focus()}>跳至正文</button>
-    <header className="reading-header"><div className="reading-header-inner">
-      <Link className="reading-brand" to="/" aria-label={`${brandName} · ${subtitle}`}><span className="brand-seal" aria-hidden="true">梵</span><span><strong>{brandName}</strong><small>{subtitle}</small></span></Link>
-      <button className="mobile-menu" type="button" aria-label={menuOpen ? '关闭导航' : '打开导航'} aria-expanded={menuOpen} aria-controls="reading-navigation" onClick={() => setMenuOpen((value) => !value)}>{menuOpen ? '关闭' : '目录'}</button>
-      <nav id="reading-navigation" className={menuOpen ? 'reading-nav is-open' : 'reading-nav'} aria-label="主导航">{frontNavigation.map((item) => <NavLink key={item.to} end={item.to === '/'} to={item.to} className={({ isActive }) => isActive ? 'is-current' : ''}>{item.label}</NavLink>)}</nav>
-      <Link className="reading-account" to="/profile">本机书斋</Link>
+  const location=useLocation();
+  const reading=/^\/(read|reader)\//.test(location.pathname);
+  useEffect(()=>{if(!reading)window.scrollTo({top:0,behavior:'instant'});document.title=(reading?'阅读':navigation.find(item=>item.to===location.pathname)?.label||'梵烬')+' · 梵烬';},[location.pathname,reading]);
+  return <div className={'app-shell reading-site'+(reading?' is-reading':'')}>
+    <button className="skip-link" onClick={()=>document.getElementById('main-content')?.focus()}>跳至正文</button>
+    <header className="app-header"><div className="app-header-inner">
+      <Link className="app-brand" to="/" aria-label="梵烬书架"><span className="brand-sign">梵</span><strong>梵烬</strong></Link>
+      <nav className="desktop-navigation" aria-label="主导航">{navigation.map(item=><NavLink key={item.to} end={item.to==='/'} to={item.to}>{item.label}</NavLink>)}</nav>
+      <div className="header-utilities"><Link className="icon-button" to="/search" aria-label="搜索原文"><Icon name="search"/></Link><Link className="header-library-link" to="/profile"><Icon name="settings" size={19}/><span>我的</span></Link></div>
     </div></header>
-    <div className="local-storage-notice">记录保存在此浏览器，无云端同步。<Link to="/profile">备份 / 导入</Link></div>{storageError ? <p className="local-storage-error" role="alert">{storageError}</p> : null}<div id="main-content" tabIndex={-1}><Outlet /></div>
-    <footer className="reading-footer"><div><Link className="footer-brand" to="/">{brandName}</Link><p>{settings?.footer_notice || '为阅读留一方清净，为自己留一点时间。'}</p><small>公益开放 · 私人自修 · 各版本来源与许可见经典详情</small></div><nav aria-label="页脚导航"><Link to="/library">浏览经藏</Link><Link to="/study">我的自修</Link><Link to="/notes">私人摘录</Link><Link to="/about">关于梵烬</Link><Link to="/privacy">隐私说明</Link><a href={`${import.meta.env.BASE_URL}content-notices.txt`} target="_blank" rel="noreferrer">内容来源与转载说明</a></nav><div className="footer-note">佛道为本，兼读诸子。<br />一卷一念，各有所得。</div></footer>
-    <nav className="mobile-bottom-nav" aria-label="移动导航"><NavLink end to="/">首页</NavLink><NavLink to="/library">经藏</NavLink><NavLink to="/study">自修</NavLink><NavLink to="/profile">我的</NavLink></nav>
+    {storageError?<p className="storage-error" role="alert">{storageError}<Link to="/profile">管理数据</Link></p>:null}
+    <div id="main-content" tabIndex={-1}><Outlet/></div>
+    {!reading?<footer className="app-footer"><span>梵烬 · 公益阅读</span><nav aria-label="网站说明"><Link to="/profile">本机保存与备份</Link><Link to="/about">关于</Link><Link to="/privacy">隐私</Link><a href={import.meta.env.BASE_URL+'content-notices.txt'} target="_blank" rel="noreferrer">版权</a></nav></footer>:null}
+    {!reading?<nav className="mobile-navigation" aria-label="移动导航">{navigation.map(item=><NavLink end={item.to==='/'} key={item.to} to={item.to}><Icon name={item.icon}/><span>{item.label}</span></NavLink>)}</nav>:null}
   </div>;
 }
-export default SiteLayout;

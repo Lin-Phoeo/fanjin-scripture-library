@@ -2,13 +2,10 @@ import { Link } from 'react-router-dom';
 
 function NotFoundPage() {
   return (
-    <main className="content-page not-found-page">
-      <p className="eyebrow">404</p>
-      <h1>这个页面还没有修建完成。</h1>
-      <p className="page-lead">你可以先返回首页或进入经藏页继续浏览，我们会继续把全站补齐。</p>
-      <Link className="primary-link" to="/">
-        返回首页
-      </Link>
+    <main className="page-container not-found-page">
+      <div className="empty-state"><h1>没有找到这一页</h1>
+      <p>链接可能已变更。书架和本机记录不受影响。</p>
+      <Link className="button-secondary" to="/">返回书架</Link></div>
     </main>
   );
 }
