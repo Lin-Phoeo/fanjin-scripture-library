@@ -1,0 +1,65 @@
+{
+  "note": "Pinned evidence for the initial editions that predate corpus coverage. This is a published identity/source regression baseline, not a catalogue count. New corpus editions must use coverage/provenance rather than being silently exempted here.",
+  "books": [
+    {
+      "filename": "heart-sutra.json",
+      "slug": "heart-sutra",
+      "kind": "cbeta",
+      "id": "T08n0251",
+      "sourceFile": "sources/heart-sutra-T08n0251.xml",
+      "sourceSha256": "3d2b0b404b888d5e42011aeebef850671b31c06cfb67f6c4279b800126c647e8",
+      "sourceUrl": "https://github.com/cbeta-git/xml-p5/blob/master/T/T08/T08n0251.xml",
+      "publishedPassagesSha256": "c077fdef72a9badf4bf9af780bf58060c83c196680ffbea168e419ba3871434d"
+    },
+    {
+      "filename": "qingjing-jing.json",
+      "slug": "qingjing-jing",
+      "kind": "dao",
+      "id": "KR5i0008",
+      "sourceFile": "sources/qingjing-jing-KR5i0008_001.txt",
+      "sourceSha256": "1ef781f242f61f7b0ec131d9950498a5e2ec5f65e286d8d66b38ccf43ee1c32b",
+      "sourceUrl": "https://github.com/kanripo/KR5i0008/blob/master/KR5i0008_001.txt",
+      "publishedPassagesSha256": "f4583a1bc6d1dbca9ad402f7b9aa7275d7ff98fae062d059b402caee78c71fe7"
+    },
+    {
+      "filename": "dao-de-jing-selected.json",
+      "slug": "dao-de-jing-selected",
+      "kind": "dao",
+      "id": "KR5c0057",
+      "sourceFile": "sources/dao-de-jing-ch01-ch32-upstream.json",
+      "sourceSha256": "499b4f8e81ec50eefa95e4675bc8e422866eb7654e93ae33e1349d134bd2b7b6",
+      "sourceUrl": "https://github.com/kanripo/KR5c0057",
+      "legacyOnly": true
+    },
+    {
+      "filename": "daxue.json",
+      "slug": "daxue",
+      "kind": "literary",
+      "id": "/chinese-poetry/chinese-poetry/blob/master/四书五经/daxue.json",
+      "sourceFile": "sources/daxue-upstream.json",
+      "sourceSha256": "a921544ab309c859e84ac338efae243bad026377f384caa8712959b25364be61",
+      "sourceUrl": "https://github.com/chinese-poetry/chinese-poetry/blob/master/%E5%9B%9B%E4%B9%A6%E4%BA%94%E7%BB%8F/daxue.json",
+      "publishedPassagesSha256": "10d81663e0bc4221c83235cdb82bf9898c47f5ae3376b0cf39e49c1d0ff78a75"
+    },
+    {
+      "filename": "zhongyong.json",
+      "slug": "zhongyong",
+      "kind": "literary",
+      "id": "/chinese-poetry/chinese-poetry/blob/master/四书五经/zhongyong.json",
+      "sourceFile": "sources/zhongyong-upstream.json",
+      "sourceSha256": "39e0b198857442f8b8cb97ff1d721ffb828a6c9dbab65f5ef692ddbf9edfb2e8",
+      "sourceUrl": "https://github.com/chinese-poetry/chinese-poetry/blob/master/%E5%9B%9B%E4%B9%A6%E4%BA%94%E7%BB%8F/zhongyong.json",
+      "publishedPassagesSha256": "8bd7feb5090c1511f4970f832b82a73a99407dd824b24458e49fa383fd66da36"
+    },
+    {
+      "filename": "lunyu.json",
+      "slug": "lunyu",
+      "kind": "literary",
+      "id": "/chinese-poetry/chinese-poetry/blob/master/论语/lunyu.json",
+      "sourceFile": "sources/lunyu-upstream.json",
+      "sourceSha256": "ac6b5b093bdc394f7f49066767cecc7c7daaf66ce2e5f28fee93c93c18078eef",
+      "sourceUrl": "https://github.com/chinese-poetry/chinese-poetry/blob/master/%E8%AE%BA%E8%AF%AD/lunyu.json",
+      "publishedPassagesSha256": "2e3de6a9a0e33aba314d51c197f5edd3e0241c4788319be96086c415ffb92e98"
+    }
+  ]
+}

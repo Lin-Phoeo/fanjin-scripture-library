@@ -12,9 +12,11 @@
     "build:catalog": "node --import tsx scripts/build-catalog.mjs",
     "build:pages": "npm run build:catalog && npm run typecheck && node scripts/build-pages.mjs",
     "typecheck": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && tsc -p tsconfig.server.json",
-    "lint": "eslint src server scripts tests vite.config.ts",
+    "lint": "eslint src server scripts tests vite.config.ts playwright.config.ts",
     "check": "npm run check:pages",
-    "check:pages": "npm run lint && npm run build:pages && npm run test:static",
+    "check:docs": "node scripts/check-docs.mjs && node tests/engineering-docs.mjs",
+    "check:pages": "npm run check:docs && npm run lint && npm run build:pages && npm run test:static && npm run test:parser",
+    "check:release": "npm run check:pages && npm run test:e2e",
     "check:server": "npm run lint && npm run build && npm run test:server && npm run test:production && npm run test:catalog",
     "backup": "node --env-file-if-exists=.env scripts/backup.mjs",
     "preview": "vite preview --config vite.config.ts",
@@ -22,6 +24,8 @@
     "test:server": "node scripts/test.mjs",
     "test:production": "node tests/production.mjs",
     "test:catalog": "node tests/catalog.mjs",
+    "test:parser": "python -X utf8 scripts/test-cbeta-parser.py",
+    "test:e2e": "playwright test --config=playwright.config.ts",
     "test:static": "node --import tsx tests/static-catalog.mjs && node --import tsx tests/local-state.mjs && node --import tsx tests/local-api.mjs && node tests/corpus-inventory.mjs && node --import tsx tests/i18n.mjs"
   },
   "engines": {
@@ -39,6 +43,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.1",
     "@types/better-sqlite3": "^9.6.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",

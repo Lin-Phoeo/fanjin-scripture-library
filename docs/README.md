@@ -34,5 +34,6 @@
 | [阅读产品实访](research/2026-11-20-reading-products.md) | 三类成熟阅读产品的观察与取舍 |
 | [本轮改造验收](research/2026-11-20-reading-redesign-results.md) | 结构变化、前后测量与验证范围 |
 | [佛道扩刊与简繁](research/2026-11-20-catalog-and-language-release.md) | 67个版本、来源目录、转换规则与本轮验证 |
+| [工程流程落地](research/2026-11-20-engineering-workflow-validation.md) | 自动门禁、内容证据、浏览器回归与资源清理验证 |
 
 `plans/` 下的研究参考与历史材料说明设计依据；`server/` 下是已取消部署的旧服务器文档。当前以纯静态 Pages 与本机数据保存为准。

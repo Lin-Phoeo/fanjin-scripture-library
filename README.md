@@ -31,11 +31,15 @@ npm run dev
 打开 <http://127.0.0.1:5173> 即可，**不需要启动 API 或数据库服务**。
 
 ```sh
-npm run check:pages  # lint、类型检查、Pages构建、静态数据与本机存储验证
+npm run check:docs   # 仅文档：链接、命令与共享智能体入口
+npm run check:pages  # 日常：文档、lint、类型、Pages构建、静态数据、本机存储与解析验证
+npm run check:release # 发布：上述检查 + 隔离浏览器回归
 npm run build:pages  # 输出 dist/，默认基础路径 /fanjin-scripture-library/
 npm run test:static  # 目录、简繁检索、IndexedDB并发与备份验证
 npm audit --audit-level=moderate
 ```
+
+完整检查需要 PATH 上可用的 Python 3；首次浏览器验收运行 `npx playwright install chromium`。测试使用自有无头浏览器与临时预览，结束后自动释放，不复用个人 Chrome。环境准备与日常/发布流程见 [开发说明](docs/DEVELOPMENT.md)。
 
 页面使用 Hash 路由，例如 `/#/library`、`/#/read/heart-sutra`，可直接刷新或分享，不依赖服务器重写。
 
