@@ -47,6 +47,8 @@ test('Pages routes, chapters, source links and simplified search work without a 
 
 test('language switching preserves drafts, saved notes, bookmarks and a validated backup', async ({ page }, testInfo) => {
   const draft = 'Smoke 私人草稿：学习與實踐保持原样。';
+  // The draft editor can contain the same text while saved notes are rendering.
+  const savedNote = page.getByRole('paragraph').filter({ hasText: draft });
   await openRoute(page, readingRoute);
   const paragraph = page.getByRole('group', { name: /按回车选中此段/ }).first();
   await selectOriginalText(page);
@@ -64,12 +66,12 @@ test('language switching preserves drafts, saved notes, bookmarks and a validate
   await expect(page.locator('html')).toHaveAttribute('lang', 'zh-Hans-CN');
   await expect(page.getByRole('textbox', { name: '我的心得', exact: true })).toHaveValue(draft);
   await page.getByRole('button', { name: '保存摘录', exact: true }).click();
-  await expect(page.getByText(draft, { exact: true })).toBeVisible();
+  await expect(savedNote).toBeVisible();
   await page.reload();
   const notesButton = page.getByRole('button', { name: /^笔记/ });
   await expect(notesButton).toBeVisible();
   if (await notesButton.getAttribute('aria-expanded') !== 'true') await notesButton.click();
-  await expect(page.getByText(draft, { exact: true })).toBeVisible();
+  await expect(savedNote).toBeVisible();
 
   await openRoute(page, '/profile');
   await page.getByRole('tab', { name: '数据备份', exact: true }).click();
@@ -104,7 +106,7 @@ test('language switching preserves drafts, saved notes, bookmarks and a validate
   await page.getByRole('tab', { name: '偏好', exact: true }).click();
   await expect(page.getByRole('textbox', { name: '书斋称呼', exact: true })).toHaveValue('Smoke 还原书斋');
   await openRoute(page, '/notes');
-  await expect(page.getByText(draft, { exact: true })).toBeVisible();
+  await expect(savedNote).toBeVisible();
   await expect(page.getByRole('blockquote')).toContainText(first.originalText);
 });
 
