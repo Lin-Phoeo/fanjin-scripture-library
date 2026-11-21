@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-21",
+  "scope": "GitHub handoff and fresh-clone reproducibility; no application behavior change or multi-model tool installation",
+  "repository": "https://github.com/Lin-Phoeo/fanjin-scripture-library",
+  "fresh_clone_commit": "9cb5e548e21b254b9a75cdf930c035c6d78a1b13",
+  "legacy_snapshot_commit": "6c629444b42e3674191fa7c9d531cd995ff790df",
+  "legacy_snapshot_branch": "codex/archive-local-theme-20261121",
+  "remote_refs_read_back": ["main", "endfield-theme", "codex/archive-local-theme-20261121", "v0.1.0"],
+  "fresh_clone": {
+    "complete_history": true,
+    "dependencies_reinstalled_from_lockfile": true,
+    "npm_ci": "passed; 287 packages installed, 0 vulnerabilities",
+    "check_release": "passed after the initial preview-start timeout and bounded recheck",
+    "browser_tests_passed": 3,
+    "parser_tests_passed": 3,
+    "published_editions_verified": 67,
+    "passages_verified": 37085,
+    "archive_hash_checks": {"files": 95, "mismatches": 0},
+    "initial_failure": "First Windows check:release passed build/static/parser stages, then timed out waiting 15000ms for the preview webServer.",
+    "recheck_conditions": "Existing proxy preserved; loopback hosts merged into NO_PROXY only for the test process. Same build browser recheck passed, then complete check:release passed.",
+    "causality_limit": "No controlled test established that proxy bypass alone caused the recovery. No application fix is claimed."
+  },
+  "github_actions": {
+    "verified_commit": "9cb5e548e21b254b9a75cdf930c035c6d78a1b13",
+    "url": "https://github.com/Lin-Phoeo/fanjin-scripture-library/actions/runs/44882357281",
+    "build": "success",
+    "audit": "success",
+    "deploy": "success",
+    "later_documentation_commits": "Verify their own run by commit; this record does not substitute for later deployment evidence."
+  },
+  "online_readback": {
+    "site_status": 200,
+    "script_status": 200,
+    "script_type": "application/javascript; charset=utf-8",
+    "script_is_html": false,
+    "catalog_status": 200,
+    "catalog_entries": 67
+  },
+  "public_safety": "Authored archive checked for credential-like tokens, private keys, user-specific absolute paths and missing Markdown links. Credentials, personal backups, database files and browser sessions excluded.",
+  "cleanup_policy": "After final remote verification, remove confirmed project checkouts, verification clone and owned temporary files. Preserve Desktop research, Downloads originals, this conversation, global tools/proxy settings and user browser data. No forensic-erasure claim."
+}
