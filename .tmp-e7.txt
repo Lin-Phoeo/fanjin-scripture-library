@@ -1,0 +1,7 @@
+✓ 梵烬网 | 佛教共修公益古籍网
+    - link "登录 / 注册" [ref=e4]
+    - link "进入账号" [ref=e5]
+        - StaticText "账号系统"
+      - heading "登录后可使用收藏、摘录、讨论与共修记录。" [level=1, ref=e22]
+        - StaticText "当前已接入基础注册与登录。找回密码和更完整的账号安全机制仍是后续上线前需要补齐的部分。"
+✓ Browser closed

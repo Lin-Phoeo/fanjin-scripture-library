@@ -1,5 +1,5 @@
 /* ============================================================
-   终末地主题（Endfield Theme）
+   终末地主题（Endfield Theme）— 站点唯一默认视觉主题
    ────────────────────────────────────────────────────────────
    视觉语言源自《明日方舟：终末地》官方界面设计方法，
    参考仓库：Statrue/endfield-design-skill（设计方法论）、
@@ -12,8 +12,9 @@
    · 技术副层：网格、坐标刻度、`//` 编号、角括号 [ ]、
      幽灵描边大字、黄色横带分节、黑色底行动带
 
-   通过 <html data-theme="endfield"> 启用，覆盖默认的「经典纸墨」主题。
-   不动任何组件结构与业务逻辑，纯视觉皮肤层。
+   通过 <html data-theme="endfield">（index.html 中已默认设置）启用，
+   覆盖 index.css 中遗留的经典纸墨视觉层。
+   不动任何组件结构与业务逻辑，纯视觉主题层。
    ============================================================ */
 
 :root[data-theme='endfield'] {
@@ -358,4 +359,309 @@
   :root[data-theme='endfield'] * {
     transition: none !important;
   }
+}
+
+/* ============================================================
+   深度优化：消灭经典主题残留的奶油底与胶囊圆角
+   ============================================================ */
+
+/* ---------- 首页 hero 面板：纸白 + 墨线 + 硬投影 ---------- */
+:root[data-theme='endfield'] .classic-home-hero-panel {
+  background: #fbfaf6 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: 6px 6px 0 var(--ef-signal) !important;
+}
+
+:root[data-theme='endfield'] .classic-home-subtitle {
+  color: #55544d !important;
+}
+
+/* ---------- 标签 / 徽章：直角 + 墨线描边（终末地方形标签） ---------- */
+:root[data-theme='endfield'] .classic-home-manifest span,
+:root[data-theme='endfield'] .classic-study-tag {
+  background: transparent !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+}
+
+/* ---------- 搜索框：纸白直角输入 + 信号黄切角按钮 ---------- */
+:root[data-theme='endfield'] .classic-search input {
+  background: #fbfaf6 !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+}
+
+:root[data-theme='endfield'] .classic-search button {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: 3px 3px 0 #171715 !important;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+:root[data-theme='endfield'] .classic-search button:hover {
+  background: #ffd400 !important;
+}
+
+/* ---------- 头部按钮：干掉 999px 胶囊，统一直角 ---------- */
+:root[data-theme='endfield'] .header-button,
+:root[data-theme='endfield'] .header-link,
+:root[data-theme='endfield'] .classic-inline-link {
+  border-radius: 0 !important;
+  border: 1px solid #171715 !important;
+  background: transparent !important;
+  color: #171715 !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme='endfield'] .header-button:hover,
+:root[data-theme='endfield'] .header-link:hover,
+:root[data-theme='endfield'] .classic-inline-link:hover {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+}
+
+/* ---------- 全局直角强制：任何残余圆角一律压平 ---------- */
+:root[data-theme='endfield'] button,
+:root[data-theme='endfield'] input,
+:root[data-theme='endfield'] select,
+:root[data-theme='endfield'] textarea,
+:root[data-theme='endfield'] .classic-panel,
+:root[data-theme='endfield'] .classic-card,
+:root[data-theme='endfield'] .classic-article,
+:root[data-theme='endfield'] .classic-side-panel,
+:root[data-theme='endfield'] .classic-main-panel,
+:root[data-theme='endfield'] .classic-section-panel,
+:root[data-theme='endfield'] .classic-list-panel,
+:root[data-theme='endfield'] .classic-reading-article,
+:root[data-theme='endfield'] .classic-reading-nav,
+:root[data-theme='endfield'] .classic-note-card,
+:root[data-theme='endfield'] .classic-reply-card,
+:root[data-theme='endfield'] .classic-audio-panel {
+  border-radius: 0 !important;
+}
+
+/* ---------- 可访问性：信号黄焦点态（键盘可见） ---------- */
+:root[data-theme='endfield'] a:focus-visible,
+:root[data-theme='endfield'] button:focus-visible,
+:root[data-theme='endfield'] input:focus-visible,
+:root[data-theme='endfield'] select:focus-visible,
+:root[data-theme='endfield'] textarea:focus-visible {
+  outline: 2px solid var(--ef-signal-deep) !important;
+  outline-offset: 2px !important;
+}
+
+/* ---------- 文本选中：信号黄 ---------- */
+:root[data-theme='endfield'] ::selection {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+}
+
+/* ---------- 滚动条：工业细条 ---------- */
+:root[data-theme='endfield'] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+:root[data-theme='endfield'] ::-webkit-scrollbar-track {
+  background: #efece4;
+}
+
+:root[data-theme='endfield'] ::-webkit-scrollbar-thumb {
+  background: #171715;
+  border: 2px solid #efece4;
+}
+
+:root[data-theme='endfield'] ::-webkit-scrollbar-thumb:hover {
+  background: var(--ef-signal-deep);
+}
+
+/* ============================================================
+   登录页与全站卡片残留清理
+   ============================================================ */
+
+/* 大标题：绿色 → 墨黑 + 黄竖条（page-hero / reader-hero / auth 等） */
+:root[data-theme='endfield'] .auth-card h1,
+:root[data-theme='endfield'] .page-hero h1,
+:root[data-theme='endfield'] .reader-hero h1,
+:root[data-theme='endfield'] .not-found-page h1 {
+  color: #171715 !important;
+  border-left: 4px solid var(--ef-signal) !important;
+  padding-left: 0.7rem !important;
+}
+
+/* eyebrow 微标签：金色 → 烟灰 + 等宽字（技术副层） */
+:root[data-theme='endfield'] .eyebrow {
+  color: #55544d !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+/* 全站卡片底：奶油 → 纸白直角 */
+:root[data-theme='endfield'] .auth-card,
+:root[data-theme='endfield'] .content-card,
+:root[data-theme='endfield'] .list-card,
+:root[data-theme='endfield'] .reader-sidebar,
+:root[data-theme='endfield'] .reader-main,
+:root[data-theme='endfield'] .reader-panel {
+  background: #fbfaf6 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 rgba(23, 23, 21, 0.1) !important;
+  color: #171715 !important;
+}
+
+/* 登录页左右子面板与备注条 */
+:root[data-theme='endfield'] .auth-notes,
+:root[data-theme='endfield'] .auth-form-classic,
+:root[data-theme='endfield'] .auth-copy {
+  border-radius: 0 !important;
+  border: 1px solid var(--ef-line) !important;
+  background: #fbfaf6 !important;
+  box-shadow: none !important;
+}
+
+/* 主行动按钮：青色渐变 → 信号黄切角 */
+:root[data-theme='endfield'] .primary-link {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: 3px 3px 0 #171715 !important;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+:root[data-theme='endfield'] .primary-link:hover {
+  background: #ffd400 !important;
+}
+
+/* 次行动按钮：纸白 + 墨线 */
+:root[data-theme='endfield'] .secondary-link,
+:root[data-theme='endfield'] .row-actions button,
+:root[data-theme='endfield'] .reader-toolbar button {
+  background: #fbfaf6 !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+}
+
+:root[data-theme='endfield'] .secondary-link:hover,
+:root[data-theme='endfield'] .row-actions button:hover,
+:root[data-theme='endfield'] .reader-toolbar button:hover {
+  background: var(--ef-signal-faint) !important;
+}
+
+/* 表单输入：纸白直角（覆盖奶油底输入框） */
+:root[data-theme='endfield'] .auth-form input,
+:root[data-theme='endfield'] .form-grid input,
+:root[data-theme='endfield'] .form-grid textarea,
+:root[data-theme='endfield'] .form-grid select,
+:root[data-theme='endfield'] .note-textarea {
+  background: #fbfaf6 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  color: #171715 !important;
+}
+
+/* ============================================================
+   后台管理区：暗色工业外壳 + 浅色详情（终末地官方组合）
+   ============================================================ */
+
+/* 重定义旧深色 token：黑金 → 烟黑 + 信号黄（后台自动换装） */
+:root[data-theme='endfield'] {
+  --bg: #1d1d1a;
+  --bg-soft: #262622;
+  --panel: rgba(38, 38, 34, 0.92);
+  --panel-strong: rgba(46, 46, 41, 0.96);
+  --line: rgba(240, 192, 64, 0.28);
+  --text: #f2f0ea;
+  --muted: rgba(242, 240, 234, 0.62);
+  --accent: var(--ef-signal);
+  --accent-strong: var(--ef-signal);
+  --shadow: 6px 6px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* 后台骨架：全直角 */
+:root[data-theme='endfield'] .admin-shell,
+:root[data-theme='endfield'] .admin-sidebar,
+:root[data-theme='endfield'] .admin-main,
+:root[data-theme='endfield'] .admin-card,
+:root[data-theme='endfield'] .admin-panel,
+:root[data-theme='endfield'] .admin-section,
+:root[data-theme='endfield'] .admin-subsection {
+  border-radius: 0 !important;
+}
+
+/* 侧栏：近黑 + 黄色右缘刻度线 */
+:root[data-theme='endfield'] .admin-sidebar {
+  background: #1d1d1a !important;
+  border-right: 3px solid var(--ef-signal) !important;
+}
+
+/* 品牌与导航文字 */
+:root[data-theme='endfield'] .admin-brand {
+  color: var(--ef-signal) !important;
+}
+
+:root[data-theme='endfield'] .admin-nav .admin-link,
+:root[data-theme='endfield'] .admin-link {
+  border-radius: 0 !important;
+}
+
+:root[data-theme='endfield'] .admin-link.is-active,
+:root[data-theme='endfield'] .admin-nav .is-active {
+  background: var(--ef-signal) !important;
+  color: #171715 !important;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+/* 主区：纸白工作台 */
+:root[data-theme='endfield'] .admin-main {
+  background: #f2f0ea !important;
+  color: #171715 !important;
+}
+
+:root[data-theme='endfield'] .admin-main h1,
+:root[data-theme='endfield'] .admin-main h2,
+:root[data-theme='endfield'] .admin-main h3 {
+  color: #171715 !important;
+}
+
+/* 顶栏：纸白 + 底部黄带 */
+:root[data-theme='endfield'] .admin-topbar {
+  background: #fbfaf6 !important;
+  border-bottom: 3px solid var(--ef-signal) !important;
+  border-radius: 0 !important;
+}
+
+/* 卡片 / 面板：纸白 + 墨线 + 硬投影 */
+:root[data-theme='endfield'] .admin-card,
+:root[data-theme='endfield'] .admin-panel,
+:root[data-theme='endfield'] .admin-section,
+:root[data-theme='endfield'] .admin-subsection {
+  background: #fbfaf6 !important;
+  color: #171715 !important;
+  border: 1px solid #171715 !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 rgba(23, 23, 21, 0.1) !important;
+}
+
+/* 指标格：直角 + 左缘黄条 */
+:root[data-theme='endfield'] .admin-metric-grid > * {
+  border-radius: 0 !important;
+  border-left: 4px solid var(--ef-signal) !important;
+}
+
+/* 列表行分隔线：烟灰 */
+:root[data-theme='endfield'] .admin-list-row {
+  border-radius: 0 !important;
+}
+
+/* 后台按钮 */
+:root[data-theme='endfield'] .admin-main button {
+  border-radius: 0 !important;
 }

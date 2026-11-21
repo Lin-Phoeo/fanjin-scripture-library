@@ -1,0 +1,14 @@
+=== reader ===
+✓ 梵烬网 | 佛教共修公益古籍网
+=== shot ===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789391550345.png
+=== canon ===
+✓ 梵烬网 | 佛教共修公益古籍网
+=== shot ===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789391556824.png
+=== auth ===
+✓ 梵烬网 | 佛教共修公益古籍网
+=== shot ===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789391563236.png
+=== close ===
+✓ Browser closed

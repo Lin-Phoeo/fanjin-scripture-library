@@ -1,0 +1,13 @@
+=== 同一会话内登录并进后台 ===
+✓ 梵烬网 | 佛教共修公益古籍网
+✓ Done
+✓ Done
+✓ Done
+--- 等 3 秒让登录完成 ---
+=== snapshot 确认登录态（header 应显示 当前用户）===
+    - link "个人中心" [ref=e13]
+=== 通过点击侧栏/直接 SPA 导航进后台 ===
+✓ 梵烬网 | 佛教共修公益古籍网
+=== shot ===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789392079554.png
+✓ Browser closed

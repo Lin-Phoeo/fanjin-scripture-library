@@ -1,0 +1,6 @@
+✓ 梵烬网 | 佛教共修公益古籍网
+=== 填完后截图（确认填进去了）===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789392182984.png
+=== 点击登录 3 秒后截图（看跳转到哪）===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789392192637.png
+✓ Browser closed

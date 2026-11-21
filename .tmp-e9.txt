@@ -1,0 +1,16 @@
+✓ 梵烬网 | 佛教共修公益古籍网
+=== 快照：登录表单结构 ===
+        - button "登录" [ref=e23]
+        - button "注册" [ref=e24]
+          - textbox "法名 / 昵称" [ref=e27]
+          - textbox "密码" [ref=e28]: •••••••••
+        - button "登录" [ref=e25]
+        - button "切换到注册" [ref=e26]
+=== 填写 ===
+✓ Done
+✓ Done
+✓ Done
+=== 等 2 秒 ===
+=== 点击后快照（看 header/错误提示）===
+  - banner
+✓ Browser closed

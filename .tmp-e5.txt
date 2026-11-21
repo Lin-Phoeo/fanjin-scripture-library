@@ -1,0 +1,15 @@
+=== admin 需要登录，先登录 ===
+✓ 梵烬网 | 佛教共修公益古籍网
+=== 填账号 ===
+✓ Done
+=== 填密码 ===
+✓ Done
+=== 点击登录 ===
+✓ Done
+=== 等 2 秒 ===
+=== open admin ===
+✓ 梵烬网 | 佛教共修公益古籍网
+=== shot ===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789391818560.png
+=== close ===
+✓ Browser closed

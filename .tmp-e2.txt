@@ -1,0 +1,7 @@
+=== open home ===
+✓ 梵烬网 | 佛教共修公益古籍网
+  http://localhost:5173/
+=== screenshot 优化后 ===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789391512654.png
+=== close ===
+✓ Browser closed

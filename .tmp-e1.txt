@@ -1,0 +1,9 @@
+=== open home (应默认终末地主题) ===
+✓ 梵烬网 | 佛教共修公益古籍网
+  http://localhost:5173/
+=== 验证 html data-theme ===
+          - heading "推荐经典" [level=2, ref=e33]
+=== screenshot ===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789391398228.png
+=== close ===
+✓ Browser closed

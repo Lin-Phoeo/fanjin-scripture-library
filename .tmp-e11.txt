@@ -1,0 +1,9 @@
+✓ 梵烬网 | 佛教共修公益古籍网
+=== 点击 card-actions 里的提交钮 ===
+✓ Done
+=== 登录后截图（应跳到 /profile）===
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789392260909.png
+=== 同会话进入后台 ===
+✓ 梵烬网 | 佛教共修公益古籍网
+✓ Screenshot saved to {USER_HOME}\.agent-browser\tmp\screenshots\screenshot-1789392271752.png
+✓ Browser closed

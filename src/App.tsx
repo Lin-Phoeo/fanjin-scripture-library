@@ -2,7 +2,6 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import AdminLayout from './components/AdminLayout';
 import SiteLayout from './components/SiteLayout';
-import ThemeToggle from './components/ThemeToggle';
 import { AppStateProvider } from './context/AppStateContext';
 
 const AdminDashboardPage = lazy(() => import('./pages/AdminDashboardPage'));
@@ -60,7 +59,6 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
-        <ThemeToggle />
       </BrowserRouter>
     </AppStateProvider>
   );
