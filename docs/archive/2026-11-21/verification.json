@@ -58,6 +58,17 @@
       "targeted_repetitions_passed": 3
     },
     "application_logic_changed": false,
-    "final_ci": "Verify the same fix commit in Actions; earlier runs do not substitute."
+    "final_ci": "Verify the same fix commit in Actions; earlier runs do not substitute.",
+    "verified_fix_commit": "50836c16b13f9fea8605e48fc2d5da76ebd152ab",
+    "verified_fix_run": "https://github.com/Lin-Phoeo/fanjin-scripture-library/actions/runs/44883318008",
+    "verified_fix_result": "build, full release checks, dependency audit and Pages deployment succeeded"
+  },
+  "cleanup_execution": {
+    "status": "partial; requires user-run file cleanup",
+    "removed": "Current linked worktree contents and Git registration removed by git worktree remove.",
+    "remaining": "Empty linked-worktree directory, original source checkout, verification clone and owned legacy screenshots.",
+    "blocker": "Automatic execution policy rejected direct file deletion commands with blocked by policy and no more specific reason; the restriction was not bypassed.",
+    "fallback": "A user-reviewable cleanup script was prepared outside the repository within the preserved Desktop report directory.",
+    "preserved": "Desktop research, Downloads originals, conversation, global settings and user browser data."
   }
 }
