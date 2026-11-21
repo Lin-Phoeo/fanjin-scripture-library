@@ -8,6 +8,8 @@
 
 智能体参与开发前遵循 [AGENTS.md](AGENTS.md)。接续任务查看 [当前状态](docs/agents/STATUS.md)，按任务查找 [文档路由](docs/README.md)；Claude、Gemini 等入口引用同一份规范。
 
+项目以本 GitHub 仓库作为交接来源，不依赖某台电脑的工作区。新接手者克隆 `main` 后按 [开发说明](docs/DEVELOPMENT.md) 准备环境并验收；旧分支、未提交成果的归档及脱敏过程资料见 [开发归档](docs/archive/2026-11-21/README.md)。多工具/多模型联合开发目前暂停，不是恢复项目的前提。
+
 ## 使用
 
 - 经藏按学派浏览与分页，支持简繁关键词检索和段落定位。

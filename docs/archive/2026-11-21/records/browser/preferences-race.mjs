@@ -1,0 +1,36 @@
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+const base = 'http://127.0.0.1:5188';
+const list = await (await fetch('http://127.0.0.1:9223/json/list')).json();
+const target = list.find((item) => item.url.startsWith(base));
+if (!target) throw new Error('The local test tab is not open.');
+const ws = new WebSocket(target.webSocketDebuggerUrl);
+await new Promise((resolve, reject) => { ws.addEventListener('open', resolve, { once: true }); ws.addEventListener('error', reject, { once: true }); });
+const pending = new Map(); let seq = 0;
+ws.addEventListener('message', (event) => { const message = JSON.parse(event.data); const request = pending.get(message.id); if (request) { pending.delete(message.id); message.error ? request.reject(new Error(message.error.message)) : request.resolve(message.result); } });
+const call = (method, params = {}) => new Promise((resolve, reject) => { const id = ++seq; pending.set(id, { resolve, reject }); ws.send(JSON.stringify({ id, method, params })); });
+const evaluate = async (expression) => { const result = await call('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true }); if (result.exceptionDetails) throw new Error(result.exceptionDetails.text + ': ' + result.exceptionDetails.exception?.description); return result.result.value; };
+const waitFor = async (expression) => { const start = Date.now(); while (Date.now() - start < 20000) { if (await evaluate(expression)) return; await new Promise((resolve) => setTimeout(resolve, 100)); } throw new Error('Wait timed out: ' + expression); };
+const nav = async (path, selector) => { await call('Page.navigate', { url: base + path }); await waitFor(`!!document.querySelector(${JSON.stringify(selector)})`); };
+const clickText = async (text) => evaluate(`(() => { const element = [...document.querySelectorAll('button,a')].find(item => item.textContent.trim() === ${JSON.stringify(text)}); if (!element) throw new Error('Button not found'); element.click(); })()`);
+const assert = (value, label) => { if (!value) throw new Error(label); console.log('PASS ' + label); };
+const screenshot = async (name) => { const result = await call('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false }); const path = resolve('output/browser', name + '.png'); mkdirSync(resolve('output/browser'), { recursive: true }); writeFileSync(path, Buffer.from(result.data, 'base64')); return path; };
+try{
+ await call('Page.enable');await call('Runtime.enable');await nav('/output/browser/preferences-harness.html','#state');await waitFor('window.preferenceHarness&&!window.preferenceHarness.preferences.loading');
+ await evaluate(`(async()=>{const stamp=Date.now();window.raceUsers=['甲'+stamp,'乙'+stamp];for(const name of window.raceUsers)await fetch('/api/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,password:'[REDACTED_LITERAL]'})});await window.preferenceHarness.account.signIn(window.raceUsers[0],'Preference-Race-2026');})()`);
+ await waitFor(`window.preferenceHarness.account.session?.name===window.raceUsers[0]&&!window.preferenceHarness.preferences.loading`);
+ await evaluate(`(()=>{window.nativeFetch=window.fetch;window.pendingReleases=[];window.fetch=async(url,options)=>{const response=await window.nativeFetch(url,options);if(String(url).includes('/api/me/preferences')&&['PUT','DELETE'].includes(options?.method))return new Promise(resolve=>window.pendingReleases.push(()=>resolve(response)));return response;};window.preferenceHarness.preferences.update({minutes:5,interests:['佛家']});})()`);
+ await waitFor('window.pendingReleases.length===1');assert(await evaluate('window.preferenceHarness.preferences.saving'),'save is pending before account switch');
+ await evaluate(`window.preferenceHarness.account.signIn(window.raceUsers[1],'Preference-Race-2026')`);await waitFor(`window.preferenceHarness.account.session?.name===window.raceUsers[1]&&!window.preferenceHarness.preferences.loading`);
+ assert(await evaluate('!window.preferenceHarness.preferences.saving&&window.preferenceHarness.preferences.value.minutes===15'),'new account controls recover while previous save is pending');
+ await evaluate('window.pendingReleases.shift()()');await new Promise(r=>setTimeout(r,100));assert(await evaluate('window.preferenceHarness.preferences.value.minutes===15&&!window.preferenceHarness.preferences.saving'),'old save response cannot overwrite new account');
+ await evaluate('window.fetch=window.nativeFetch;window.preferenceHarness.preferences.update({minutes:30,interests:["道家"]})');await waitFor('window.preferenceHarness.preferences.status.includes("已保存")');
+ await evaluate(`window.preferenceHarness.account.signIn(window.raceUsers[0],'Preference-Race-2026')`);await waitFor(`window.preferenceHarness.account.session?.name===window.raceUsers[0]&&!window.preferenceHarness.preferences.loading`);
+ await evaluate(`(()=>{window.fetch=async(url,options)=>{const response=await window.nativeFetch(url,options);if(String(url).includes('/api/me/preferences')&&options?.method==='DELETE')return new Promise(resolve=>window.pendingReleases.push(()=>resolve(response)));return response;};void window.preferenceHarness.preferences.reset();})()`);await waitFor('window.pendingReleases.length===1');
+ await evaluate(`window.preferenceHarness.account.signIn(window.raceUsers[1],'Preference-Race-2026')`);await waitFor(`window.preferenceHarness.account.session?.name===window.raceUsers[1]&&!window.preferenceHarness.preferences.loading`);
+ await evaluate('window.pendingReleases.shift()()');await new Promise(r=>setTimeout(r,100));assert(await evaluate('window.preferenceHarness.preferences.value.minutes===30&&!window.preferenceHarness.preferences.saving'),'delayed old reset cannot clear new account preferences');
+ await evaluate(`(()=>{window.failOnce=true;window.fetch=(url,options)=>{if(window.failOnce&&String(url).includes('/api/me/preferences')&&options?.method==='PUT'){window.failOnce=false;return Promise.reject(new Error('模拟临时网络故障'));}return window.nativeFetch(url,options);};window.preferenceHarness.preferences.update({minutes:5});})()`);await waitFor('window.preferenceHarness.preferences.error.length>0');
+ assert(await evaluate('window.preferenceHarness.preferences.value.minutes===5'),'failed save retains the unsaved choice');await evaluate('window.preferenceHarness.preferences.retry()');await waitFor('window.preferenceHarness.preferences.status.includes("已保存")&&!window.preferenceHarness.preferences.error');
+ assert(await evaluate(`fetch('/api/me/preferences').then(r=>r.json()).then(v=>v.minutes===5)`),'retry resends unsaved choice without reloading old data');
+ await evaluate('window.fetch=window.nativeFetch;window.preferenceHarness.account.signOut()');console.log('PREFERENCE_RACE_CHECK_COMPLETE');await nav('/','.workbench-home,.personal-home');
+}finally{ws.close();}

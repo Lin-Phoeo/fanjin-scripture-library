@@ -1,0 +1,3883 @@
+{
+  "base": "http://127.0.0.1:5195/fanjin-scripture-library/",
+  "stage": "final-verified",
+  "catalogBooks": 6,
+  "lunyuPassages": 512,
+  "results": [
+    {
+      "name": "1440px home: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "name": "1440px home: books or direct reading link in first screen",
+      "passed": true,
+      "detail": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ]
+    },
+    {
+      "name": "1440px library: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "name": "1440px library: books or direct reading link in first screen",
+      "passed": true,
+      "detail": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选",
+        "大学",
+        "中庸",
+        "论语"
+      ]
+    },
+    {
+      "name": "1440px book: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1425
+      }
+    },
+    {
+      "name": "1440px book: twenty chapter groups replace 512 flat links",
+      "passed": true,
+      "detail": {
+        "groups": 20,
+        "height": 1184.666748046875,
+        "pageHeight": 1887,
+        "openDetails": 0,
+        "visibleLinks": 20
+      }
+    },
+    {
+      "name": "1440px reader: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1425
+      }
+    },
+    {
+      "name": "1440px notes: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "name": "1440px study: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "name": "1440px profile: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1425
+      }
+    },
+    {
+      "name": "390px home: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "390px home: books or direct reading link in first screen",
+      "passed": true,
+      "detail": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ]
+    },
+    {
+      "name": "390px library: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "390px library: books or direct reading link in first screen",
+      "passed": true,
+      "detail": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选"
+      ]
+    },
+    {
+      "name": "390px book: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "390px book: twenty chapter groups replace 512 flat links",
+      "passed": true,
+      "detail": {
+        "groups": 20,
+        "height": 2388.33349609375,
+        "pageHeight": 3099,
+        "openDetails": 0,
+        "visibleLinks": 20
+      }
+    },
+    {
+      "name": "390px reader: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "390px notes: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "390px study: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "390px profile: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "320px home: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "320px home: books or direct reading link in first screen",
+      "passed": true,
+      "detail": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ]
+    },
+    {
+      "name": "320px library: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "320px library: books or direct reading link in first screen",
+      "passed": true,
+      "detail": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选"
+      ]
+    },
+    {
+      "name": "320px book: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "320px book: twenty chapter groups replace 512 flat links",
+      "passed": true,
+      "detail": {
+        "groups": 20,
+        "height": 2388.33349609375,
+        "pageHeight": 3191,
+        "openDetails": 0,
+        "visibleLinks": 20
+      }
+    },
+    {
+      "name": "320px reader: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "320px notes: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "320px study: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "320px profile: no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "reader renders the full short scripture",
+      "passed": true,
+      "detail": 7
+    },
+    {
+      "name": "chapter directory remains accessible",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "UI note save preserves existing snapshots and stores real passage text",
+      "passed": true,
+      "detail": [
+        {
+          "id": 1,
+          "note": "界面验收：这条记录必须保留。"
+        },
+        {
+          "id": 2,
+          "note": "新增心得：真实点击保存"
+        }
+      ]
+    },
+    {
+      "name": "paper 1440px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 289.88543701171875,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 340.0833435058594,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 424.47918701171875,
+          "width": 660,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 577.2708740234375,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 661.6666870117188,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 746.0625,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 796.2604370117188,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "paper 390px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 342,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 342,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 342,
+          "height": 239.3854217529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 723.8646240234375,
+          "width": 342,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "paper 320px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 272,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 272,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 272,
+          "height": 273.5833435058594,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 758.0625,
+          "width": 272,
+          "height": 170.98959350585938,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "sepia 1440px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 289.88543701171875,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 340.0833435058594,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 424.47918701171875,
+          "width": 660,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 577.2708740234375,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 661.6666870117188,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 746.0625,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 796.2604370117188,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "sepia 390px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 342,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 342,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 342,
+          "height": 239.3854217529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 723.8646240234375,
+          "width": 342,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "sepia 320px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 272,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 272,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 272,
+          "height": 273.5833435058594,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 758.0625,
+          "width": 272,
+          "height": 170.98959350585938,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "dark 1440px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 289.88543701171875,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 340.0833435058594,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 424.47918701171875,
+          "width": 660,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 577.2708740234375,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 661.6666870117188,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 746.0625,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 796.2604370117188,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "dark 390px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 342,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 342,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 342,
+          "height": 239.3854217529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 723.8646240234375,
+          "width": 342,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "dark 320px: readable theme and no hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 272,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 272,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 272,
+          "height": 273.5833435058594,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 758.0625,
+          "width": 272,
+          "height": 170.98959350585938,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "profile default preferences tab hides import and destructive actions",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "backup tab exposes explicit download and collapsed clear controls",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "real downloaded backup preserves snapshots and complete state",
+      "passed": true,
+      "detail": {
+        "notes": 2
+      }
+    },
+    {
+      "name": "invalid backup gives a visible error without replacing data or crashing",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "valid backup remains a preview before explicit confirmation",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "confirmed restore preserves note snapshots and updates profile",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "WCAG spacing 1440px reader",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 259,
+          "width": 660,
+          "height": 27,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 322,
+          "width": 660,
+          "height": 54,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 412,
+          "width": 660,
+          "height": 108,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 556,
+          "width": 660,
+          "height": 81,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 673,
+          "width": 660,
+          "height": 54,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 763,
+          "width": 660,
+          "height": 27,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 826,
+          "width": 660,
+          "height": 27,
+          "font": "18px",
+          "lineHeight": "27px"
+        }
+      ]
+    },
+    {
+      "name": "WCAG spacing 1440px library",
+      "passed": true,
+      "detail": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 160,
+          "y": 329.3333435058594,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 549.3333740234375,
+          "y": 329.3333435058594,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 938.6666870117188,
+          "y": 329.3333435058594,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "大学梵烬 · 原典大学儒家·全本·2,209 字从修身出发。开始阅读 ",
+          "x": 160,
+          "y": 591,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "中庸梵烬 · 原典中庸儒家·全本·4,456 字中和、诚与慎独。开始阅读 ",
+          "x": 549.3333740234375,
+          "y": 591,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "论语梵烬 · 原典论语儒家·全本·2.1 万字孔子与弟子的言行。开始阅读 ",
+          "x": 938.6666870117188,
+          "y": 591,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    {
+      "name": "WCAG spacing 1440px book",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "WCAG spacing 1440px profile",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "WCAG spacing 390px reader",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 230,
+          "width": 342,
+          "height": 51,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 315,
+          "width": 342,
+          "height": 76.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 425.5,
+          "width": 342,
+          "height": 178.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 638,
+          "width": 342,
+          "height": 127.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 24,
+          "y": 799.5,
+          "width": 342,
+          "height": 76.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        }
+      ]
+    },
+    {
+      "name": "WCAG spacing 390px library",
+      "passed": true,
+      "detail": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 20,
+          "y": 329.8333435058594,
+          "width": 350,
+          "height": 224.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 20,
+          "y": 554.5,
+          "width": 350,
+          "height": 224.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 20,
+          "y": 779.1666870117188,
+          "width": 350,
+          "height": 224.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    {
+      "name": "WCAG spacing 390px book",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "WCAG spacing 390px profile",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "WCAG spacing 320px reader",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 230,
+          "width": 272,
+          "height": 76.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 340.5,
+          "width": 272,
+          "height": 76.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 451,
+          "width": 272,
+          "height": 229.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 714.5,
+          "width": 272,
+          "height": 153,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        }
+      ]
+    },
+    {
+      "name": "WCAG spacing 320px library",
+      "passed": true,
+      "detail": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 20,
+          "y": 343.8333435058594,
+          "width": 280,
+          "height": 257.66668701171875,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 20,
+          "y": 601.5,
+          "width": 280,
+          "height": 257.66668701171875,
+          "font": "16px",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    {
+      "name": "WCAG spacing 320px book",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "WCAG spacing 320px profile",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "320px user text doubled keeps readable content without hscroll",
+      "passed": true,
+      "detail": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 317.5833435058594,
+          "width": 272,
+          "height": 258.375,
+          "font": "34px",
+          "lineHeight": "64.6px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 591.9583740234375,
+          "width": 272,
+          "height": 322.96875,
+          "font": "34px",
+          "lineHeight": "64.6px"
+        }
+      ]
+    },
+    {
+      "name": "320px empty notes presents primary action in first screen",
+      "passed": true,
+      "detail": [
+        "摘录与心得",
+        "还没有摘录"
+      ]
+    },
+    {
+      "name": "320px empty study presents primary action in first screen",
+      "passed": true,
+      "detail": [
+        "每日功课",
+        "建立第一个计划"
+      ]
+    },
+    {
+      "name": "all interactions made zero API network requests",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "no uncaught page errors",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "observations": [
+    {
+      "name": "1440-home",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "firstScreenText": "我的书架\n\n接着上次的书页。\n\n数据备份\n全部\n在读\n收藏\n添加经典\n心经\n般若波罗蜜多心经\n\n尚未开始\n\n1\n最近写下\n全部摘录\n般若波罗蜜多心经\n\n界面验收：这条记录必须保留。",
+      "heading": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ],
+      "visibleLinks": [
+        {
+          "text": "数据备份",
+          "href": "#/profile"
+        },
+        {
+          "text": "添加经典",
+          "href": "#/library"
+        },
+        {
+          "text": "",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "全部摘录",
+          "href": "#/notes"
+        },
+        {
+          "text": "般若波罗蜜多心经界面验收：这条记录必须保留。",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经尚未开始1",
+          "x": 160,
+          "y": 293.32293701171875,
+          "width": 540,
+          "height": 138.05209350585938,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "1440-home-content",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "firstScreenText": "我的书架\n\n接着上次的书页。\n\n数据备份\n全部\n在读\n收藏\n添加经典\n心经\n般若波罗蜜多心经\n\n尚未开始\n\n1\n最近写下\n全部摘录\n般若波罗蜜多心经\n\n界面验收：这条记录必须保留。",
+      "heading": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ],
+      "visibleLinks": [
+        {
+          "text": "数据备份",
+          "href": "#/profile"
+        },
+        {
+          "text": "添加经典",
+          "href": "#/library"
+        },
+        {
+          "text": "",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "全部摘录",
+          "href": "#/notes"
+        },
+        {
+          "text": "般若波罗蜜多心经界面验收：这条记录必须保留。",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经尚未开始1",
+          "x": 160,
+          "y": 293.32293701171875,
+          "width": 540,
+          "height": 138.05209350585938,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "1440-library",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选",
+        "大学",
+        "中庸",
+        "论语"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "道德经梵烬 · 原典",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "道德经·前32章节选",
+          "href": "#/book/dao-de-jing-selected"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "大学梵烬 · 原典",
+          "href": "#/read/daxue"
+        },
+        {
+          "text": "大学",
+          "href": "#/book/daxue"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/daxue"
+        },
+        {
+          "text": "中庸梵烬 · 原典",
+          "href": "#/read/zhongyong"
+        },
+        {
+          "text": "中庸",
+          "href": "#/book/zhongyong"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/zhongyong"
+        },
+        {
+          "text": "论语梵烬 · 原典",
+          "href": "#/read/lunyu"
+        },
+        {
+          "text": "论语",
+          "href": "#/book/lunyu"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 160,
+          "y": 293.32293701171875,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 549.3333740234375,
+          "y": 293.32293701171875,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 938.6666870117188,
+          "y": 293.32293701171875,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "大学梵烬 · 原典大学儒家·全本·2,209 字从修身出发。开始阅读 ",
+          "x": 160,
+          "y": 528.1771240234375,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "中庸梵烬 · 原典中庸儒家·全本·4,456 字中和、诚与慎独。开始阅读 ",
+          "x": 549.3333740234375,
+          "y": 528.1771240234375,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "论语梵烬 · 原典论语儒家·全本·2.1 万字孔子与弟子的言行。开始阅读 ",
+          "x": 938.6666870117188,
+          "y": 528.1771240234375,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "1440-library-content",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选",
+        "大学",
+        "中庸",
+        "论语"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "道德经梵烬 · 原典",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "道德经·前32章节选",
+          "href": "#/book/dao-de-jing-selected"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "大学梵烬 · 原典",
+          "href": "#/read/daxue"
+        },
+        {
+          "text": "大学",
+          "href": "#/book/daxue"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/daxue"
+        },
+        {
+          "text": "中庸梵烬 · 原典",
+          "href": "#/read/zhongyong"
+        },
+        {
+          "text": "中庸",
+          "href": "#/book/zhongyong"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/zhongyong"
+        },
+        {
+          "text": "论语梵烬 · 原典",
+          "href": "#/read/lunyu"
+        },
+        {
+          "text": "论语",
+          "href": "#/book/lunyu"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 160,
+          "y": 293.32293701171875,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 549.3333740234375,
+          "y": 293.32293701171875,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 938.6666870117188,
+          "y": 293.32293701171875,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "大学梵烬 · 原典大学儒家·全本·2,209 字从修身出发。开始阅读 ",
+          "x": 160,
+          "y": 528.1771240234375,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "中庸梵烬 · 原典中庸儒家·全本·4,456 字中和、诚与慎独。开始阅读 ",
+          "x": 549.3333740234375,
+          "y": 528.1771240234375,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "论语梵烬 · 原典论语儒家·全本·2.1 万字孔子与弟子的言行。开始阅读 ",
+          "x": 938.6666870117188,
+          "y": 528.1771240234375,
+          "width": 341.3333435058594,
+          "height": 198.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "1440-book",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/book/lunyu",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "经藏\n儒家\n论语\n梵烬 · 原典\n全本 · 2.1 万字 · 20 章\n论语\n\n春秋战国 · 孔子弟子及再传弟子编\n\n孔子与弟子的言行。\n\n开始阅读\n加入日课\n目录\n01\n学而篇\n16 段\n段落定位\n02\n为政篇\n24 段\n段落定位\n03\n八佾篇\n26 段\n段落定位\n04\n里仁篇\n26 段\n段落定位\n05\n公冶长篇\n28 段\n段落定位\n06\n雍也篇\n30 段\n段落定位\n07\n述而篇\n38 段\n段落定位\n08\n泰伯篇\n21 段\n段落定位\n09\n子罕篇\n31 段\n段落定位\n10\n乡党篇\n27 段\n段落定位\n11\n先进篇\n26 段\n段落定位\n12\n颜渊篇\n24 段\n段落定位\n13\n子路篇\n30 段\n段落定位\n14\n宪问篇\n44 段\n段落定位\n15\n卫灵公篇\n42 段\n段落定位\n16\n季氏篇\n14 段\n段落定位\n17\n阳货篇\n26 段\n段落定位\n18\n微子篇\n11 段\n段落定位\n19\n子张篇\n25 段\n段落定位\n20\n尧曰篇\n3 段\n段落定位\n版本与来源\nchinese-poetry/chinese-poetry 开放古典文集",
+      "heading": [
+        "论语",
+        "目录"
+      ],
+      "visibleLinks": [
+        {
+          "text": "经藏  儒家",
+          "href": "#/library"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "加入日课",
+          "href": "#/study?scripture=lunyu"
+        },
+        {
+          "text": "01学而篇16 段",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "02为政篇24 段",
+          "href": "#/read/lunyu/ch-02--p-001#p-ch-02--p-001"
+        },
+        {
+          "text": "03八佾篇26 段",
+          "href": "#/read/lunyu/ch-03--p-001#p-ch-03--p-001"
+        },
+        {
+          "text": "04里仁篇26 段",
+          "href": "#/read/lunyu/ch-04--p-001#p-ch-04--p-001"
+        },
+        {
+          "text": "05公冶长篇28 段",
+          "href": "#/read/lunyu/ch-05--p-001#p-ch-05--p-001"
+        },
+        {
+          "text": "06雍也篇30 段",
+          "href": "#/read/lunyu/ch-06--p-001#p-ch-06--p-001"
+        },
+        {
+          "text": "07述而篇38 段",
+          "href": "#/read/lunyu/ch-07--p-001#p-ch-07--p-001"
+        },
+        {
+          "text": "08泰伯篇21 段",
+          "href": "#/read/lunyu/ch-08--p-001#p-ch-08--p-001"
+        },
+        {
+          "text": "09子罕篇31 段",
+          "href": "#/read/lunyu/ch-09--p-001#p-ch-09--p-001"
+        },
+        {
+          "text": "10乡党篇27 段",
+          "href": "#/read/lunyu/ch-10--p-001#p-ch-10--p-001"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "1440-reader",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "目录\n般若波罗蜜多心经\n笔记1\n阅读设置\n目录\n书签（0）\n1\n般若波罗蜜多心经（7段）\n\n第 1 / 1 章\n\n版本与来源\n取消收藏这部书\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "版本与来源",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "记录今日功课",
+          "href": "#/study?scripture=heart-sutra&passage=pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 226.7916717529297,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 276.9895935058594,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 361.38543701171875,
+          "width": 660,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 514.1771240234375,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 598.5729370117188,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 682.96875,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 733.1666870117188,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "1440-notes",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/notes",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "firstScreenText": "摘录与心得\n\n1 条记录，保存在此浏览器。\n\n导出全部\n全部经典\n1\n般若波罗蜜多心经\n1\n搜索摘录与心得\n\n1 条摘录\n\n般若波罗蜜多心经\n\n心经 · 第1段\n\n2026/11/20\n验收快照：此字符串不会随书籍文本变化。\n\n界面验收：这条记录必须保留。\n\n展开全文\n回到原文\n更多",
+      "heading": [
+        "摘录与心得",
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        },
+        {
+          "text": "回到原文",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "1440-study",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/study",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "firstScreenText": "每日功课\n\n按自己的节奏读书，记录保存在本机。\n\n建立第一个计划\n\n选择一本书和每天想留出的时间，随时可以暂停。\n\n经典\n请选择一本书\n般若波罗蜜多心经\n太上老君说常清静经\n道德经·前32章节选\n大学\n中庸\n论语\n每日阅读时间（分钟）\n建立计划",
+      "heading": [
+        "每日功课",
+        "建立第一个计划"
+      ],
+      "visibleLinks": [],
+      "textBoxes": []
+    },
+    {
+      "name": "1440-profile",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/profile",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "我的\n\n此浏览器的阅读数据\n\n返回书架\n1 部收藏\n1 条摘录\n0 处书签\n0 条功课\n偏好\n数据备份\n关于数据\n书斋称呼\n书斋称呼\n保存称呼\n阅读偏好\n\n用于“适合这次阅读”的排序，可随时调整。\n\n想读哪一类？可多选\n都想看看\n佛家\n道家\n儒家\n诸子\n今天留多少时间？\n5分钟\n15分钟\n30分钟\n这次更想\n安静读一会\n多理解一点\n留一点心得\n选择后自动保存\n清除偏好",
+      "heading": [
+        "我的",
+        "书斋称呼",
+        "阅读偏好"
+      ],
+      "visibleLinks": [
+        {
+          "text": "返回书架",
+          "href": "#/"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "390-home",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "我的书架\n\n接着上次的书页。\n\n数据备份\n全部\n在读\n收藏\n添加经典\n心经\n般若波罗蜜多心经\n\n尚未开始\n\n1\n最近写下\n全部摘录\n般若波罗蜜多心经\n\n界面验收：这条记录必须保留。",
+      "heading": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ],
+      "visibleLinks": [
+        {
+          "text": "数据备份",
+          "href": "#/profile"
+        },
+        {
+          "text": "添加经典",
+          "href": "#/library"
+        },
+        {
+          "text": "",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "全部摘录",
+          "href": "#/notes"
+        },
+        {
+          "text": "般若波罗蜜多心经界面验收：这条记录必须保留。",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经尚未开始1",
+          "x": 20,
+          "y": 298.5208435058594,
+          "width": 350,
+          "height": 128.40625,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "390-home-content",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "我的书架\n\n接着上次的书页。\n\n数据备份\n全部\n在读\n收藏\n添加经典\n心经\n般若波罗蜜多心经\n\n尚未开始\n\n1\n最近写下\n全部摘录\n般若波罗蜜多心经\n\n界面验收：这条记录必须保留。",
+      "heading": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ],
+      "visibleLinks": [
+        {
+          "text": "数据备份",
+          "href": "#/profile"
+        },
+        {
+          "text": "添加经典",
+          "href": "#/library"
+        },
+        {
+          "text": "",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "全部摘录",
+          "href": "#/notes"
+        },
+        {
+          "text": "般若波罗蜜多心经界面验收：这条记录必须保留。",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经尚未开始1",
+          "x": 20,
+          "y": 298.5208435058594,
+          "width": 350,
+          "height": 128.40625,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "390-library",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "道德经梵烬 · 原典",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "道德经·前32章节选",
+          "href": "#/book/dao-de-jing-selected"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/dao-de-jing-selected"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 20,
+          "y": 298.5208435058594,
+          "width": 350,
+          "height": 191.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 20,
+          "y": 490.375,
+          "width": 350,
+          "height": 191.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 20,
+          "y": 682.2291870117188,
+          "width": 350,
+          "height": 191.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "390-library-content",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "道德经梵烬 · 原典",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "道德经·前32章节选",
+          "href": "#/book/dao-de-jing-selected"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/dao-de-jing-selected"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 20,
+          "y": 298.5208435058594,
+          "width": 350,
+          "height": 191.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 20,
+          "y": 490.375,
+          "width": 350,
+          "height": 191.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 20,
+          "y": 682.2291870117188,
+          "width": 350,
+          "height": 191.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "390-book",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/book/lunyu",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "经藏\n儒家\n论语\n梵烬 · 原典\n全本 · 2.1 万字 · 20 章\n论语\n\n春秋战国 · 孔子弟子及再传弟子编\n\n孔子与弟子的言行。\n\n开始阅读\n加入日课\n目录\n01\n学而篇\n16 段\n段落定位\n02\n为政篇\n24 段\n段落定位\n03\n八佾篇\n26 段\n段落定位\n04\n里仁篇\n26 段\n段落定位\n05\n公冶长篇\n28 段\n段落定位\n06\n雍也篇\n30 段\n段落定位\n07\n述而篇\n38 段\n段落定位\n08\n泰伯篇\n21 段\n段落定位\n09\n子罕篇\n31 段\n段落定位\n10\n乡党篇\n27 段\n段落定位\n11\n先进篇\n26 段\n段落定位\n12\n颜渊篇\n24 段\n段落定位\n13\n子路篇\n30 段\n段落定位\n14\n宪问篇\n44 段\n段落定位\n15\n卫灵公篇\n42 段\n段落定位\n16\n季氏篇\n14 段\n段落定位\n17\n阳货篇\n26 段\n段落定位\n18\n微子篇\n11 段\n段落定位\n19\n子张篇\n25 段\n段落定位\n20\n尧曰篇\n3 段\n段落定位\n版本与来源\nchinese-poetry/chinese-poetry 开放古典文集",
+      "heading": [
+        "论语",
+        "目录"
+      ],
+      "visibleLinks": [
+        {
+          "text": "经藏  儒家",
+          "href": "#/library"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "加入日课",
+          "href": "#/study?scripture=lunyu"
+        },
+        {
+          "text": "01学而篇16 段",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "02为政篇24 段",
+          "href": "#/read/lunyu/ch-02--p-001#p-ch-02--p-001"
+        },
+        {
+          "text": "03八佾篇26 段",
+          "href": "#/read/lunyu/ch-03--p-001#p-ch-03--p-001"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "390-reader",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "般若波罗蜜多心经\n笔记1\n阅读设置\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 202.39584350585938,
+          "width": 342,
+          "height": 64.58333587646484,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 282.97918701171875,
+          "width": 342,
+          "height": 64.58333587646484,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 363.5625,
+          "width": 342,
+          "height": 193.75,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 573.3125,
+          "width": 342,
+          "height": 129.1666717529297,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 24,
+          "y": 718.4791870117188,
+          "width": 342,
+          "height": 96.875,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 24,
+          "y": 831.3541870117188,
+          "width": 342,
+          "height": 32.29166793823242,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        }
+      ]
+    },
+    {
+      "name": "390-notes",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/notes",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "摘录与心得\n\n1 条记录，保存在此浏览器。\n\n导出全部\n全部经典\n1\n般若波罗蜜多心经\n1\n搜索摘录与心得\n\n1 条摘录\n\n般若波罗蜜多心经\n\n心经 · 第1段\n\n2026/11/20\n验收快照：此字符串不会随书籍文本变化。\n\n界面验收：这条记录必须保留。\n\n展开全文\n回到原文\n更多",
+      "heading": [
+        "摘录与心得",
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        },
+        {
+          "text": "回到原文",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "390-study",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/study",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "每日功课\n\n按自己的节奏读书，记录保存在本机。\n\n建立第一个计划\n\n选择一本书和每天想留出的时间，随时可以暂停。\n\n经典\n请选择一本书\n般若波罗蜜多心经\n太上老君说常清静经\n道德经·前32章节选\n大学\n中庸\n论语\n每日阅读时间（分钟）\n建立计划",
+      "heading": [
+        "每日功课",
+        "建立第一个计划"
+      ],
+      "visibleLinks": [],
+      "textBoxes": []
+    },
+    {
+      "name": "390-profile",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/profile",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "我的\n\n此浏览器的阅读数据\n\n返回书架\n1 部收藏\n1 条摘录\n0 处书签\n0 条功课\n偏好\n数据备份\n关于数据\n书斋称呼\n书斋称呼\n保存称呼\n阅读偏好\n\n用于“适合这次阅读”的排序，可随时调整。\n\n想读哪一类？可多选\n都想看看\n佛家\n道家\n儒家\n诸子\n今天留多少时间？\n5分钟\n15分钟\n30分钟\n这次更想\n安静读一会\n多理解一点\n留一点心得\n选择后自动保存\n清除偏好",
+      "heading": [
+        "我的",
+        "书斋称呼",
+        "阅读偏好"
+      ],
+      "visibleLinks": [
+        {
+          "text": "返回书架",
+          "href": "#/"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "320-home",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "我的书架\n\n接着上次的书页。\n\n数据备份\n全部\n在读\n收藏\n添加经典\n心经\n般若波罗蜜多心经\n\n尚未开始\n\n1\n最近写下\n全部摘录\n般若波罗蜜多心经\n\n界面验收：这条记录必须保留。",
+      "heading": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ],
+      "visibleLinks": [
+        {
+          "text": "数据备份",
+          "href": "#/profile"
+        },
+        {
+          "text": "添加经典",
+          "href": "#/library"
+        },
+        {
+          "text": "",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "全部摘录",
+          "href": "#/notes"
+        },
+        {
+          "text": "般若波罗蜜多心经界面验收：这条记录必须保留。",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经尚未开始1",
+          "x": 20,
+          "y": 298.5208435058594,
+          "width": 280,
+          "height": 159.90625,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "320-home-content",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "我的书架\n\n接着上次的书页。\n\n数据备份\n全部\n在读\n收藏\n添加经典\n心经\n般若波罗蜜多心经\n\n尚未开始\n\n1\n最近写下\n全部摘录\n般若波罗蜜多心经\n\n界面验收：这条记录必须保留。",
+      "heading": [
+        "我的书架",
+        "般若波罗蜜多心经",
+        "最近写下"
+      ],
+      "visibleLinks": [
+        {
+          "text": "数据备份",
+          "href": "#/profile"
+        },
+        {
+          "text": "添加经典",
+          "href": "#/library"
+        },
+        {
+          "text": "",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "全部摘录",
+          "href": "#/notes"
+        },
+        {
+          "text": "般若波罗蜜多心经界面验收：这条记录必须保留。",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经尚未开始1",
+          "x": 20,
+          "y": 298.5208435058594,
+          "width": 280,
+          "height": 159.90625,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "320-library",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "道德经梵烬 · 原典",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "道德经·前32章节选",
+          "href": "#/book/dao-de-jing-selected"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 20,
+          "y": 316.7083435058594,
+          "width": 280,
+          "height": 224.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 20,
+          "y": 541.5625,
+          "width": 280,
+          "height": 224.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 20,
+          "y": 766.4166870117188,
+          "width": 280,
+          "height": 224.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "320-library-content",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "道德经梵烬 · 原典",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "道德经·前32章节选",
+          "href": "#/book/dao-de-jing-selected"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 20,
+          "y": 316.7083435058594,
+          "width": 280,
+          "height": 224.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 20,
+          "y": 541.5625,
+          "width": 280,
+          "height": 224.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 20,
+          "y": 766.4166870117188,
+          "width": 280,
+          "height": 224.8541717529297,
+          "font": "16px",
+          "lineHeight": "26.4px"
+        }
+      ]
+    },
+    {
+      "name": "320-book",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/book/lunyu",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "经藏\n儒家\n论语\n梵烬 · 原典\n全本 · 2.1 万字 · 20 章\n论语\n\n春秋战国 · 孔子弟子及再传弟子编\n\n孔子与弟子的言行。\n\n开始阅读\n加入日课\n目录\n01\n学而篇\n16 段\n段落定位\n02\n为政篇\n24 段\n段落定位\n03\n八佾篇\n26 段\n段落定位\n04\n里仁篇\n26 段\n段落定位\n05\n公冶长篇\n28 段\n段落定位\n06\n雍也篇\n30 段\n段落定位\n07\n述而篇\n38 段\n段落定位\n08\n泰伯篇\n21 段\n段落定位\n09\n子罕篇\n31 段\n段落定位\n10\n乡党篇\n27 段\n段落定位\n11\n先进篇\n26 段\n段落定位\n12\n颜渊篇\n24 段\n段落定位\n13\n子路篇\n30 段\n段落定位\n14\n宪问篇\n44 段\n段落定位\n15\n卫灵公篇\n42 段\n段落定位\n16\n季氏篇\n14 段\n段落定位\n17\n阳货篇\n26 段\n段落定位\n18\n微子篇\n11 段\n段落定位\n19\n子张篇\n25 段\n段落定位\n20\n尧曰篇\n3 段\n段落定位\n版本与来源\nchinese-poetry/chinese-poetry 开放古典文集",
+      "heading": [
+        "论语",
+        "目录"
+      ],
+      "visibleLinks": [
+        {
+          "text": "经藏  儒家",
+          "href": "#/library"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "加入日课",
+          "href": "#/study?scripture=lunyu"
+        },
+        {
+          "text": "01学而篇16 段",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "02为政篇24 段",
+          "href": "#/read/lunyu/ch-02--p-001#p-ch-02--p-001"
+        },
+        {
+          "text": "03八佾篇26 段",
+          "href": "#/read/lunyu/ch-03--p-001#p-ch-03--p-001"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "320-reader",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "般若波罗蜜多心经\n笔记1\n阅读设置\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 202.39584350585938,
+          "width": 272,
+          "height": 64.58333587646484,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 282.97918701171875,
+          "width": 272,
+          "height": 96.875,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 395.85418701171875,
+          "width": 272,
+          "height": 258.3333435058594,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 670.1875,
+          "width": 272,
+          "height": 161.45834350585938,
+          "font": "17px",
+          "lineHeight": "32.3px"
+        }
+      ]
+    },
+    {
+      "name": "320-notes",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/notes",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "摘录与心得\n\n1 条记录，保存在此浏览器。\n\n导出全部\n全部经典\n1\n般若波罗蜜多心经\n1\n搜索摘录与心得\n\n1 条摘录\n\n般若波罗蜜多心经\n\n心经 · 第1段\n\n2026/11/20\n验收快照：此字符串不会随书籍文本变化。\n\n界面验收：这条记录必须保留。\n\n展开全文\n回到原文\n更多",
+      "heading": [
+        "摘录与心得",
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        },
+        {
+          "text": "回到原文",
+          "href": "#/read/heart-sutra/pt08p0848c0701#p-pt08p0848c0701"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "320-study",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/study",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "每日功课\n\n按自己的节奏读书，记录保存在本机。\n\n建立第一个计划\n\n选择一本书和每天想留出的时间，随时可以暂停。\n\n经典\n请选择一本书\n般若波罗蜜多心经\n太上老君说常清静经\n道德经·前32章节选\n大学\n中庸\n论语\n每日阅读时间（分钟）\n建立计划",
+      "heading": [
+        "每日功课",
+        "建立第一个计划"
+      ],
+      "visibleLinks": [],
+      "textBoxes": []
+    },
+    {
+      "name": "320-profile",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/profile",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "我的\n\n此浏览器的阅读数据\n\n返回书架\n1 部收藏\n1 条摘录\n0 处书签\n0 条功课\n偏好\n数据备份\n关于数据\n书斋称呼\n书斋称呼\n保存称呼\n阅读偏好\n\n用于“适合这次阅读”的排序，可随时调整。\n\n想读哪一类？可多选\n都想看看\n佛家\n道家\n儒家\n诸子\n今天留多少时间？\n5分钟\n15分钟\n30分钟\n这次更想\n安静读一会\n多理解一点\n留一点心得\n选择后自动保存\n清除偏好",
+      "heading": [
+        "我的",
+        "书斋称呼",
+        "阅读偏好"
+      ],
+      "visibleLinks": [
+        {
+          "text": "返回书架",
+          "href": "#/"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "paper-1440",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "目录\n般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n目录\n书签（0）\n1\n般若波罗蜜多心经（7段）\n\n第 1 / 1 章\n\n版本与来源\n取消收藏这部书\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "版本与来源",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "记录今日功课",
+          "href": "#/study?scripture=heart-sutra&passage=pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 289.88543701171875,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 340.0833435058594,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 424.47918701171875,
+          "width": 660,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 577.2708740234375,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 661.6666870117188,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 746.0625,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 796.2604370117188,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "paper-390",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 342,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 342,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 342,
+          "height": 239.3854217529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 723.8646240234375,
+          "width": 342,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "paper-320",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 272,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 272,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 272,
+          "height": 273.5833435058594,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 758.0625,
+          "width": 272,
+          "height": 170.98959350585938,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "sepia-1440",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "目录\n般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n目录\n书签（0）\n1\n般若波罗蜜多心经（7段）\n\n第 1 / 1 章\n\n版本与来源\n取消收藏这部书\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "版本与来源",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "记录今日功课",
+          "href": "#/study?scripture=heart-sutra&passage=pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 289.88543701171875,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 340.0833435058594,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 424.47918701171875,
+          "width": 660,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 577.2708740234375,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 661.6666870117188,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 746.0625,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 796.2604370117188,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "sepia-390",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 342,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 342,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 342,
+          "height": 239.3854217529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 723.8646240234375,
+          "width": 342,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "sepia-320",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 272,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 272,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 272,
+          "height": 273.5833435058594,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 758.0625,
+          "width": 272,
+          "height": 170.98959350585938,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "dark-1440",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "目录\n般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n目录\n书签（0）\n1\n般若波罗蜜多心经（7段）\n\n第 1 / 1 章\n\n版本与来源\n取消收藏这部书\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "版本与来源",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "记录今日功课",
+          "href": "#/study?scripture=heart-sutra&passage=pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 289.88543701171875,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 340.0833435058594,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 424.47918701171875,
+          "width": 660,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 577.2708740234375,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 661.6666870117188,
+          "width": 660,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 746.0625,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 796.2604370117188,
+          "width": 660,
+          "height": 34.19791793823242,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "dark-390",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 342,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 342,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 342,
+          "height": 239.3854217529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 723.8646240234375,
+          "width": 342,
+          "height": 136.7916717529297,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "dark-320",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n\n摘录已保存到你的私人书斋。\n\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 265.4895935058594,
+          "width": 272,
+          "height": 68.39583587646484,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 349.88543701171875,
+          "width": 272,
+          "height": 102.59375,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 468.47918701171875,
+          "width": 272,
+          "height": 273.5833435058594,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 758.0625,
+          "width": 272,
+          "height": 170.98959350585938,
+          "font": "18px",
+          "lineHeight": "34.2px"
+        }
+      ]
+    },
+    {
+      "name": "spacing-1440-reader",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "目录\n般若波罗蜜多心经\n笔记2\n阅读设置\n目录\n书签（0）\n1\n般若波罗蜜多心经（7段）\n\n第 1 / 1 章\n\n版本与来源\n取消收藏这部书\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "版本与来源",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "记录今日功课",
+          "href": "#/study?scripture=heart-sutra&passage=pt08p0848c0701"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 487.3333435058594,
+          "y": 259,
+          "width": 660,
+          "height": 27,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 487.3333435058594,
+          "y": 322,
+          "width": 660,
+          "height": 54,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 487.3333435058594,
+          "y": 412,
+          "width": 660,
+          "height": 108,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 487.3333435058594,
+          "y": 556,
+          "width": 660,
+          "height": 81,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 487.3333435058594,
+          "y": 673,
+          "width": 660,
+          "height": 54,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "即說咒曰：",
+          "x": 487.3333435058594,
+          "y": 763,
+          "width": 660,
+          "height": 27,
+          "font": "18px",
+          "lineHeight": "27px"
+        },
+        {
+          "text": "「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」",
+          "x": 487.3333435058594,
+          "y": 826,
+          "width": 660,
+          "height": 27,
+          "font": "18px",
+          "lineHeight": "27px"
+        }
+      ]
+    },
+    {
+      "name": "spacing-1440-library",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选",
+        "大学",
+        "中庸",
+        "论语"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "道德经梵烬 · 原典",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "道德经·前32章节选",
+          "href": "#/book/dao-de-jing-selected"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "大学梵烬 · 原典",
+          "href": "#/read/daxue"
+        },
+        {
+          "text": "大学",
+          "href": "#/book/daxue"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/daxue"
+        },
+        {
+          "text": "中庸梵烬 · 原典",
+          "href": "#/read/zhongyong"
+        },
+        {
+          "text": "中庸",
+          "href": "#/book/zhongyong"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/zhongyong"
+        },
+        {
+          "text": "论语梵烬 · 原典",
+          "href": "#/read/lunyu"
+        },
+        {
+          "text": "论语",
+          "href": "#/book/lunyu"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 160,
+          "y": 329.3333435058594,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 549.3333740234375,
+          "y": 329.3333435058594,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 938.6666870117188,
+          "y": 329.3333435058594,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "大学梵烬 · 原典大学儒家·全本·2,209 字从修身出发。开始阅读 ",
+          "x": 160,
+          "y": 591,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "中庸梵烬 · 原典中庸儒家·全本·4,456 字中和、诚与慎独。开始阅读 ",
+          "x": 549.3333740234375,
+          "y": 591,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "论语梵烬 · 原典论语儒家·全本·2.1 万字孔子与弟子的言行。开始阅读 ",
+          "x": 938.6666870117188,
+          "y": 591,
+          "width": 341.3333435058594,
+          "height": 225.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    {
+      "name": "spacing-1440-book",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/book/lunyu",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "经藏\n儒家\n论语\n梵烬 · 原典\n全本 · 2.1 万字 · 20 章\n论语\n\n春秋战国 · 孔子弟子及再传弟子编\n\n孔子与弟子的言行。\n\n开始阅读\n加入日课\n目录\n01\n学而篇\n16 段\n段落定位\n02\n为政篇\n24 段\n段落定位\n03\n八佾篇\n26 段\n段落定位\n04\n里仁篇\n26 段\n段落定位\n05\n公冶长篇\n28 段\n段落定位\n06\n雍也篇\n30 段\n段落定位\n07\n述而篇\n38 段\n段落定位\n08\n泰伯篇\n21 段\n段落定位\n09\n子罕篇\n31 段\n段落定位\n10\n乡党篇\n27 段\n段落定位\n11\n先进篇\n26 段\n段落定位\n12\n颜渊篇\n24 段\n段落定位\n13\n子路篇\n30 段\n段落定位\n14\n宪问篇\n44 段\n段落定位\n15\n卫灵公篇\n42 段\n段落定位\n16\n季氏篇\n14 段\n段落定位\n17\n阳货篇\n26 段\n段落定位\n18\n微子篇\n11 段\n段落定位\n19\n子张篇\n25 段\n段落定位\n20\n尧曰篇\n3 段\n段落定位\n版本与来源\nchinese-poetry/chinese-poetry 开放古典文集",
+      "heading": [
+        "论语",
+        "目录"
+      ],
+      "visibleLinks": [
+        {
+          "text": "经藏  儒家",
+          "href": "#/library"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "加入日课",
+          "href": "#/study?scripture=lunyu"
+        },
+        {
+          "text": "01学而篇16 段",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "02为政篇24 段",
+          "href": "#/read/lunyu/ch-02--p-001#p-ch-02--p-001"
+        },
+        {
+          "text": "03八佾篇26 段",
+          "href": "#/read/lunyu/ch-03--p-001#p-ch-03--p-001"
+        },
+        {
+          "text": "04里仁篇26 段",
+          "href": "#/read/lunyu/ch-04--p-001#p-ch-04--p-001"
+        },
+        {
+          "text": "05公冶长篇28 段",
+          "href": "#/read/lunyu/ch-05--p-001#p-ch-05--p-001"
+        },
+        {
+          "text": "06雍也篇30 段",
+          "href": "#/read/lunyu/ch-06--p-001#p-ch-06--p-001"
+        },
+        {
+          "text": "07述而篇38 段",
+          "href": "#/read/lunyu/ch-07--p-001#p-ch-07--p-001"
+        },
+        {
+          "text": "08泰伯篇21 段",
+          "href": "#/read/lunyu/ch-08--p-001#p-ch-08--p-001"
+        },
+        {
+          "text": "09子罕篇31 段",
+          "href": "#/read/lunyu/ch-09--p-001#p-ch-09--p-001"
+        },
+        {
+          "text": "10乡党篇27 段",
+          "href": "#/read/lunyu/ch-10--p-001#p-ch-10--p-001"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "spacing-1440-profile",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/profile",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "firstScreenText": "我的\n\n此浏览器的阅读数据\n\n返回书架\n1 部收藏\n2 条摘录\n0 处书签\n0 条功课\n偏好\n数据备份\n关于数据\n书斋称呼\n书斋称呼\n保存称呼\n阅读偏好\n\n用于“适合这次阅读”的排序，可随时调整。\n\n想读哪一类？可多选\n都想看看\n佛家\n道家\n儒家\n诸子\n今天留多少时间？\n5分钟\n15分钟\n30分钟\n这次更想\n安静读一会\n多理解一点\n留一点心得\n选择后自动保存\n清除偏好",
+      "heading": [
+        "我的",
+        "书斋称呼",
+        "阅读偏好"
+      ],
+      "visibleLinks": [
+        {
+          "text": "返回书架",
+          "href": "#/"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "spacing-390-reader",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 230,
+          "width": 342,
+          "height": 51,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 315,
+          "width": 342,
+          "height": 76.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 425.5,
+          "width": 342,
+          "height": 178.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 638,
+          "width": 342,
+          "height": 127.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」",
+          "x": 24,
+          "y": 799.5,
+          "width": 342,
+          "height": 76.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        }
+      ]
+    },
+    {
+      "name": "spacing-390-library",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经",
+        "道德经·前32章节选"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "道德经梵烬 · 原典",
+          "href": "#/read/dao-de-jing-selected"
+        },
+        {
+          "text": "道德经·前32章节选",
+          "href": "#/book/dao-de-jing-selected"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 20,
+          "y": 329.8333435058594,
+          "width": 350,
+          "height": 224.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 20,
+          "y": 554.5,
+          "width": 350,
+          "height": 224.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "道德经梵烬 · 原典道德经·前32章节选道家·节选·2,692 字关于道、无为与知止。开始阅读 ",
+          "x": 20,
+          "y": 779.1666870117188,
+          "width": 350,
+          "height": 224.6666717529297,
+          "font": "16px",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    {
+      "name": "spacing-390-book",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/book/lunyu",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "经藏\n儒家\n论语\n梵烬 · 原典\n全本 · 2.1 万字 · 20 章\n论语\n\n春秋战国 · 孔子弟子及再传弟子编\n\n孔子与弟子的言行。\n\n开始阅读\n加入日课\n目录\n01\n学而篇\n16 段\n段落定位\n02\n为政篇\n24 段\n段落定位\n03\n八佾篇\n26 段\n段落定位\n04\n里仁篇\n26 段\n段落定位\n05\n公冶长篇\n28 段\n段落定位\n06\n雍也篇\n30 段\n段落定位\n07\n述而篇\n38 段\n段落定位\n08\n泰伯篇\n21 段\n段落定位\n09\n子罕篇\n31 段\n段落定位\n10\n乡党篇\n27 段\n段落定位\n11\n先进篇\n26 段\n段落定位\n12\n颜渊篇\n24 段\n段落定位\n13\n子路篇\n30 段\n段落定位\n14\n宪问篇\n44 段\n段落定位\n15\n卫灵公篇\n42 段\n段落定位\n16\n季氏篇\n14 段\n段落定位\n17\n阳货篇\n26 段\n段落定位\n18\n微子篇\n11 段\n段落定位\n19\n子张篇\n25 段\n段落定位\n20\n尧曰篇\n3 段\n段落定位\n版本与来源\nchinese-poetry/chinese-poetry 开放古典文集",
+      "heading": [
+        "论语",
+        "目录"
+      ],
+      "visibleLinks": [
+        {
+          "text": "经藏  儒家",
+          "href": "#/library"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "加入日课",
+          "href": "#/study?scripture=lunyu"
+        },
+        {
+          "text": "01学而篇16 段",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "02为政篇24 段",
+          "href": "#/read/lunyu/ch-02--p-001#p-ch-02--p-001"
+        },
+        {
+          "text": "03八佾篇26 段",
+          "href": "#/read/lunyu/ch-03--p-001#p-ch-03--p-001"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "spacing-390-profile",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/profile",
+      "width": 390,
+      "scrollWidth": 390,
+      "firstScreenText": "我的\n\n此浏览器的阅读数据\n\n返回书架\n1 部收藏\n2 条摘录\n0 处书签\n0 条功课\n偏好\n数据备份\n关于数据\n书斋称呼\n书斋称呼\n保存称呼\n阅读偏好\n\n用于“适合这次阅读”的排序，可随时调整。\n\n想读哪一类？可多选\n都想看看\n佛家\n道家\n儒家\n诸子\n今天留多少时间？\n5分钟\n15分钟\n30分钟\n这次更想\n安静读一会\n多理解一点\n留一点心得\n选择后自动保存\n清除偏好",
+      "heading": [
+        "我的",
+        "书斋称呼",
+        "阅读偏好"
+      ],
+      "visibleLinks": [
+        {
+          "text": "返回书架",
+          "href": "#/"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "spacing-320-reader",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 230,
+          "width": 272,
+          "height": 76.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 340.5,
+          "width": 272,
+          "height": 76.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無",
+          "x": 24,
+          "y": 451,
+          "width": 272,
+          "height": 229.5,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        },
+        {
+          "text": "「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提",
+          "x": 24,
+          "y": 714.5,
+          "width": 272,
+          "height": 153,
+          "font": "17px",
+          "lineHeight": "25.5px"
+        }
+      ]
+    },
+    {
+      "name": "spacing-320-library",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/library",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "经藏\n\n佛道为主，兼读百家。\n\n6 部原典\n全部\n佛家\n道家\n儒家\n书目排序\n默认排序\n按阅读偏好\n心经\n梵烬 · 原典\n般若波罗蜜多心经\n\n佛家\n·\n全本\n·\n335 字\n\n般若经典，短篇通读。\n\n开始阅读\n清静经\n梵烬 · 原典\n太上老君说常清静经\n\n道家\n·\n全本\n·\n391 字\n\n静观与清静的修读。\n\n开始阅读\n道德经\n梵烬 · 原典\n道德经·前32章节选\n\n道家\n·\n节选\n·\n2,692 字\n\n关于道、无为与知止。\n\n开始阅读\n大学\n梵烬 · 原典\n大学\n\n儒家\n·\n全本\n·\n2,209 字\n\n从修身出发。\n\n开始阅读\n中庸\n梵烬 · 原典\n中庸\n\n儒家\n·\n全本\n·\n4,456 字\n\n中和、诚与慎独。\n\n开始阅读\n论语\n梵烬 · 原典\n论语\n\n儒家\n·\n全本\n·\n2.1 万字\n\n孔子与弟子的言行。\n\n开始阅读",
+      "heading": [
+        "经藏",
+        "般若波罗蜜多心经",
+        "太上老君说常清静经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "心经梵烬 · 原典",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/heart-sutra"
+        },
+        {
+          "text": "清静经梵烬 · 原典",
+          "href": "#/read/qingjing-jing"
+        },
+        {
+          "text": "太上老君说常清静经",
+          "href": "#/book/qingjing-jing"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/qingjing-jing"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "心经梵烬 · 原典般若波罗蜜多心经佛家·全本·335 字般若经典，短篇通读。开始阅读 ",
+          "x": 20,
+          "y": 343.8333435058594,
+          "width": 280,
+          "height": 257.66668701171875,
+          "font": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "清静经梵烬 · 原典太上老君说常清静经道家·全本·391 字静观与清静的修读。开始阅读 ",
+          "x": 20,
+          "y": 601.5,
+          "width": 280,
+          "height": 257.66668701171875,
+          "font": "16px",
+          "lineHeight": "24px"
+        }
+      ]
+    },
+    {
+      "name": "spacing-320-book",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/book/lunyu",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "经藏\n儒家\n论语\n梵烬 · 原典\n全本 · 2.1 万字 · 20 章\n论语\n\n春秋战国 · 孔子弟子及再传弟子编\n\n孔子与弟子的言行。\n\n开始阅读\n加入日课\n目录\n01\n学而篇\n16 段\n段落定位\n02\n为政篇\n24 段\n段落定位\n03\n八佾篇\n26 段\n段落定位\n04\n里仁篇\n26 段\n段落定位\n05\n公冶长篇\n28 段\n段落定位\n06\n雍也篇\n30 段\n段落定位\n07\n述而篇\n38 段\n段落定位\n08\n泰伯篇\n21 段\n段落定位\n09\n子罕篇\n31 段\n段落定位\n10\n乡党篇\n27 段\n段落定位\n11\n先进篇\n26 段\n段落定位\n12\n颜渊篇\n24 段\n段落定位\n13\n子路篇\n30 段\n段落定位\n14\n宪问篇\n44 段\n段落定位\n15\n卫灵公篇\n42 段\n段落定位\n16\n季氏篇\n14 段\n段落定位\n17\n阳货篇\n26 段\n段落定位\n18\n微子篇\n11 段\n段落定位\n19\n子张篇\n25 段\n段落定位\n20\n尧曰篇\n3 段\n段落定位\n版本与来源\nchinese-poetry/chinese-poetry 开放古典文集",
+      "heading": [
+        "论语",
+        "目录"
+      ],
+      "visibleLinks": [
+        {
+          "text": "经藏  儒家",
+          "href": "#/library"
+        },
+        {
+          "text": "开始阅读",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "加入日课",
+          "href": "#/study?scripture=lunyu"
+        },
+        {
+          "text": "01学而篇16 段",
+          "href": "#/read/lunyu/ch-01--p-001#p-ch-01--p-001"
+        },
+        {
+          "text": "02为政篇24 段",
+          "href": "#/read/lunyu/ch-02--p-001#p-ch-02--p-001"
+        },
+        {
+          "text": "03八佾篇26 段",
+          "href": "#/read/lunyu/ch-03--p-001#p-ch-03--p-001"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "spacing-320-profile",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/profile",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "我的\n\n此浏览器的阅读数据\n\n返回书架\n1 部收藏\n2 条摘录\n0 处书签\n0 条功课\n偏好\n数据备份\n关于数据\n书斋称呼\n书斋称呼\n保存称呼\n阅读偏好\n\n用于“适合这次阅读”的排序，可随时调整。\n\n想读哪一类？可多选\n都想看看\n佛家\n道家\n儒家\n诸子\n今天留多少时间？\n5分钟\n15分钟\n30分钟\n这次更想\n安静读一会\n多理解一点\n留一点心得\n选择后自动保存\n清除偏好",
+      "heading": [
+        "我的",
+        "书斋称呼",
+        "阅读偏好"
+      ],
+      "visibleLinks": [
+        {
+          "text": "返回书架",
+          "href": "#/"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "200pct-320-reader",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/read/heart-sutra/pt08p0848c0701",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "般若波罗蜜多心经\n笔记2\n阅读设置\n般若波罗蜜多心经\n\n唐 · 玄奘译 · 按来源字形显示\n\n1\n\n觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。\n\n2\n\n「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。\n\n3\n\n「舍利子！是諸法空相，不生不滅，不垢不淨，不增不減。是故，空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明亦無無明盡，乃至無老死亦無老死盡；無苦、集、滅、道；無智，亦無得。\n\n4\n\n「以無所得故，菩提薩埵依般若波羅蜜多故，心無罣礙；無罣礙故，無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛依般若波羅蜜多故，得阿耨多羅三藐三菩提。\n\n5\n\n「故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦真實不虛，故說般若波羅蜜多咒。」\n\n6\n\n即說咒曰：\n\n7\n\n「揭帝　揭帝　般羅揭帝　般羅僧揭帝　菩提　僧莎訶」\n\n上一章\n第 1 / 1 章 · 当前段 1\n下一章\n记录今日功课\n留下心得",
+      "heading": [
+        "般若波罗蜜多心经"
+      ],
+      "visibleLinks": [
+        {
+          "text": "般若波罗蜜多心经",
+          "href": "#/book/heart-sutra"
+        }
+      ],
+      "textBoxes": [
+        {
+          "text": "觀自在菩薩行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。",
+          "x": 24,
+          "y": 317.5833435058594,
+          "width": 272,
+          "height": 258.375,
+          "font": "34px",
+          "lineHeight": "64.6px"
+        },
+        {
+          "text": "「舍利子！色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。",
+          "x": 24,
+          "y": 591.9583740234375,
+          "width": 272,
+          "height": 322.96875,
+          "font": "34px",
+          "lineHeight": "64.6px"
+        }
+      ]
+    },
+    {
+      "name": "empty-320-notes",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/notes",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "摘录与心得\n\n阅读时选中一段原文，就能留下摘录和心得。\n\n还没有摘录\n\n选一本书开始读，遇到想留下的句子时点“记笔记”。\n\n去经藏选书",
+      "heading": [
+        "摘录与心得",
+        "还没有摘录"
+      ],
+      "visibleLinks": [
+        {
+          "text": "去经藏选书",
+          "href": "#/library"
+        }
+      ],
+      "textBoxes": []
+    },
+    {
+      "name": "empty-320-study",
+      "url": "http://127.0.0.1:5195/fanjin-scripture-library/#/study",
+      "width": 320,
+      "scrollWidth": 320,
+      "firstScreenText": "每日功课\n\n按自己的节奏读书，记录保存在本机。\n\n建立第一个计划\n\n选择一本书和每天想留出的时间，随时可以暂停。\n\n经典\n请选择一本书\n般若波罗蜜多心经\n太上老君说常清静经\n道德经·前32章节选\n大学\n中庸\n论语\n每日阅读时间（分钟）\n建立计划",
+      "heading": [
+        "每日功课",
+        "建立第一个计划"
+      ],
+      "visibleLinks": [],
+      "textBoxes": []
+    }
+  ],
+  "apiCalls": [],
+  "consoleErrors": []
+}

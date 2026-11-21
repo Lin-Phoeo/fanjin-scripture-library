@@ -1,0 +1,69 @@
+{
+  "booksCompared": 36,
+  "passagesCompared": 35642,
+  "changedPassages": 44,
+  "restoredIdeographicSpaces": 666,
+  "changedBooks": [
+    "golden-light-supreme-sutra",
+    "golden-light-sutra",
+    "long-agama",
+    "lotus-sutra",
+    "mixed-agama",
+    "seated-meditation-sutra",
+    "surangama-sutra"
+  ],
+  "contentDiffRule": "Only U+3000 additions; all other original characters, title, slug and sourceAnchor unchanged",
+  "metadataDiffRule": "summary/overlay/sourceScope clarify exclusion of all inline note types",
+  "samples": [
+    {
+      "book": "lotus-sutra",
+      "slug": "chapter-pt09p0058b0901--pt09p0058b1901",
+      "restoredSpaces": 42
+    },
+    {
+      "book": "golden-light-sutra",
+      "slug": "chapter-pt16p0345a0501--pt16p0345b0801",
+      "restoredSpaces": 6
+    },
+    {
+      "book": "golden-light-supreme-sutra",
+      "slug": "chapter-pt16p0417c2301--pt16p0420b0101",
+      "restoredSpaces": 6
+    },
+    {
+      "book": "golden-light-supreme-sutra",
+      "slug": "chapter-pt16p0417c2301--pt16p0420b1201",
+      "restoredSpaces": 3
+    },
+    {
+      "book": "golden-light-supreme-sutra",
+      "slug": "chapter-pt16p0417c2301--pt16p0420b2201",
+      "restoredSpaces": 4
+    },
+    {
+      "book": "golden-light-supreme-sutra",
+      "slug": "chapter-pt16p0417c2301--pt16p0420c1101",
+      "restoredSpaces": 2
+    },
+    {
+      "book": "golden-light-supreme-sutra",
+      "slug": "chapter-pt16p0417c2301--pt16p0420c2101",
+      "restoredSpaces": 2
+    },
+    {
+      "book": "golden-light-supreme-sutra",
+      "slug": "chapter-pt16p0417c2301--pt16p0421a1101",
+      "restoredSpaces": 3
+    },
+    {
+      "book": "golden-light-supreme-sutra",
+      "slug": "chapter-pt16p0417c2301--pt16p0421a2301",
+      "restoredSpaces": 1
+    },
+    {
+      "book": "golden-light-supreme-sutra",
+      "slug": "chapter-pt16p0417c2301--pt16p0421b0401",
+      "restoredSpaces": 2
+    }
+  ]
+}

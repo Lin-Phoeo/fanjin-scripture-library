@@ -1,0 +1,44 @@
+{
+  "scope": "Exact AST pure functions from published 0.69.7; no adapter transport/runtime/native test",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "sources": [
+    {
+      "path": "timestamps.py",
+      "sha256": "ece9b378629defb29ee8d4801c64dd487a5566e3bda43dcb9152cecfba7fe0d1",
+      "symbols": [
+        "utc_now"
+      ]
+    },
+    {
+      "path": "buddy/harnesses/dsh/protocol.py",
+      "sha256": "ad3edf34e722c019cffd34088fb142f6a878bca0467d529d20d93dce5d4b9218",
+      "symbols": [
+        "NativeError"
+      ]
+    },
+    {
+      "path": "buddy/harnesses/dsh/native_run.py",
+      "sha256": "61f15bed6c4bdb3599e7475eec3e7e67eda985e050b27e38e882bfd875664911",
+      "symbols": [
+        "_declared_model_value",
+        "_declared_effort_value",
+        "_readback",
+        "_catalog",
+        "_catalog_receipt",
+        "_micro_task_binding",
+        "_valid_micro_task_binding"
+      ]
+    },
+    {
+      "path": "buddy/harnesses/discovery.py",
+      "sha256": "cf5eb5aedd56af3be913d62d846004cae15b2021f9fcc962569eef09fbc3235f",
+      "symbols": [
+        "native_environment",
+        "shim_environment"
+      ]
+    }
+  ],
+  "nativeOrModelInvocations": 0
+}

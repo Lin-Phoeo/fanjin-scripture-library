@@ -1,0 +1,53 @@
+{
+  "source": "dsh/node_modules/@deepseek-ai/dsh-tool-subagent/lib/index.js",
+  "packageVersion": "0.2.2-rc.5",
+  "method": "Exact pure helper source extracted into isolated Node vm; no DSH boot, network, model request, or user configuration access.",
+  "limitations": [
+    "No adapter preflight or live sessions tested.",
+    "Explicit nonempty reasoning effort success path is not tested because it calls an imported branded-type constructor.",
+    "This verifies bundled code, not which version the running Host resolved."
+  ],
+  "passed": 10,
+  "results": [
+    {
+      "name": "No override preserves configured static route and budget",
+      "passed": true
+    },
+    {
+      "name": "Disabled dynamic selection rejects explicit route",
+      "passed": true
+    },
+    {
+      "name": "Provider-only selection rejects before adapter lookup",
+      "passed": true
+    },
+    {
+      "name": "Effort-only selection rejects before adapter lookup",
+      "passed": true
+    },
+    {
+      "name": "Session without recorded policy rejects another route",
+      "passed": true
+    },
+    {
+      "name": "Session without policy accepts current parent route and clears old effort",
+      "passed": true
+    },
+    {
+      "name": "Exact allowlist rejects an unlisted model on allowed provider",
+      "passed": true
+    },
+    {
+      "name": "Exact allowlist accepts allowed route and clears configured effort",
+      "passed": true
+    },
+    {
+      "name": "Duplicate routes reject",
+      "passed": true
+    },
+    {
+      "name": "Empty provider or model rejects",
+      "passed": true
+    }
+  ]
+}

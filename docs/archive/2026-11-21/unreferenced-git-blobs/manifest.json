@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-21",
+  "files": [
+    {
+      "original_git_blob": "5109542588391289734d9aa90ffd4eb57f8f4d06",
+      "file": "5109542588391289734d9aa90ffd4eb57f8f4d06.txt",
+      "sanitized_sha256": "854dbdbb25460cd7aab066b07a92625292007dc0438b9bf5b7c167fd5ba39b0f",
+      "bytes": 3861,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    },
+    {
+      "original_git_blob": "d9126c3efede8bf15fadc031a240284dae0bf46d",
+      "file": "d9126c3efede8bf15fadc031a240284dae0bf46d.txt",
+      "sanitized_sha256": "8530b6d29022ad04a99605efda7fefd441a85098b08a08f1a76139f4bfba2ec2",
+      "bytes": 6726,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    },
+    {
+      "original_git_blob": "a8bb0c3b281aeb8b4823f7e44e26b020e54cff4f",
+      "file": "a8bb0c3b281aeb8b4823f7e44e26b020e54cff4f.txt",
+      "sanitized_sha256": "5f15ee7eeb73cbe658f8136decd912b4822fa7e2ad5620c396c206acbc2eda97",
+      "bytes": 5271,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    },
+    {
+      "original_git_blob": "5a843bc448700222cb194f70550e94ee11522801",
+      "file": "5a843bc448700222cb194f70550e94ee11522801.txt",
+      "sanitized_sha256": "1028942b995de8bf27eadee3335ac290227284bab7dbccae17d7c2458a4e0b84",
+      "bytes": 6107,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    },
+    {
+      "original_git_blob": "66adae45abc7dea156a39cfe8de8eb6125e021fa",
+      "file": "66adae45abc7dea156a39cfe8de8eb6125e021fa.txt",
+      "sanitized_sha256": "dd31f216a306f44a87364e107cc0835667e8459a589bc5a88e1bc0d7b4e401cf",
+      "bytes": 24324,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    },
+    {
+      "original_git_blob": "6a2e508ce2874de50daadc946d5058662d197aa2",
+      "file": "6a2e508ce2874de50daadc946d5058662d197aa2.txt",
+      "sanitized_sha256": "c50256753cb2b0c59c58e38e0b30106b31f44273cb1369eb03636eb18e772992",
+      "bytes": 25346,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    },
+    {
+      "original_git_blob": "56170f444f3898d73b4975c7ff66cfb3bbedd754",
+      "file": "56170f444f3898d73b4975c7ff66cfb3bbedd754.txt",
+      "sanitized_sha256": "2d201986780f80a6b16ac1a242f130021382e955bff3bfbb2a89dde9d19c0c27",
+      "bytes": 5290,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    },
+    {
+      "original_git_blob": "789faae8bcfba0084c4fcef4e92b2d10894e93ce",
+      "file": "789faae8bcfba0084c4fcef4e92b2d10894e93ce.txt",
+      "sanitized_sha256": "e0207d9c11a06b3de6d00a6fc9e1e9f038fe02f1881d122bd6c0195ba0a119cb",
+      "bytes": 1847,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    },
+    {
+      "original_git_blob": "92cfa45eaa2a79f0ff26a8071d1364954c9d994a",
+      "file": "92cfa45eaa2a79f0ff26a8071d1364954c9d994a.txt",
+      "sanitized_sha256": "ed9c05b2aa6d8e7e7aadca00c85a667a232b19fdf5294472288a7cdc49410911",
+      "bytes": 22168,
+      "provenance": "Unreferenced local Git blob; original filename/revision uncertain; historical reference only"
+    }
+  ]
+}

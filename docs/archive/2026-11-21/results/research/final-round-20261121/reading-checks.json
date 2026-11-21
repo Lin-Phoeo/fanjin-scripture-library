@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "title": "多编码智能体协作：选型与落地报告",
+      "tocLinks": 14,
+      "overflow": false,
+      "remoteResources": [],
+      "headingCount": 14,
+      "brokenAnchors": []
+    },
+    {
+      "viewport": "mobile",
+      "overflow": false,
+      "overflowElements": [
+        "CODE"
+      ]
+    }
+  ],
+  "browserClosed": true
+}

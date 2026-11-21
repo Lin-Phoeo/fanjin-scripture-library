@@ -1,0 +1,42 @@
+{
+  "booksCompared": 36,
+  "passagesCompared": 35642,
+  "titleChanges": 573,
+  "samples": [
+    {
+      "book": "buddha-last-teaching",
+      "slug": "juan-001--pt12p1110c1701",
+      "before": "佛垂般涅槃略說教誡經亦名遺教經 · 第1段",
+      "after": "佛垂般涅槃略說教誡經 · 第1段"
+    },
+    {
+      "book": "buddha-last-teaching",
+      "slug": "juan-001--pt12p1111a0801",
+      "before": "佛垂般涅槃略說教誡經亦名遺教經 · 第2段",
+      "after": "佛垂般涅槃略說教誡經 · 第2段"
+    },
+    {
+      "book": "buddha-last-teaching",
+      "slug": "juan-001--pt12p1111a2201",
+      "before": "佛垂般涅槃略說教誡經亦名遺教經 · 第3段",
+      "after": "佛垂般涅槃略說教誡經 · 第3段"
+    },
+    {
+      "book": "buddha-last-teaching",
+      "slug": "juan-001--pt12p1111a2701",
+      "before": "佛垂般涅槃略說教誡經亦名遺教經 · 第4段",
+      "after": "佛垂般涅槃略說教誡經 · 第4段"
+    },
+    {
+      "book": "buddha-last-teaching",
+      "slug": "juan-001--pt12p1111b1001",
+      "before": "佛垂般涅槃略說教誡經亦名遺教經 · 第5段",
+      "after": "佛垂般涅槃略說教誡經 · 第5段"
+    }
+  ],
+  "changedBooks": [
+    "anapanasati-sutra",
+    "buddha-last-teaching",
+    "surangama-sutra"
+  ]
+}

@@ -1,0 +1,6 @@
+#show heading.where(level: 1): set text(fill: rgb("08696b"), size: 16pt)
+#show heading.where(level: 2): set text(fill: rgb("08696b"), size: 16pt)
+#show heading.where(level: 3): set text(fill: rgb("184d50"), size: 12pt)
+#set table(inset: 5pt, stroke: (bottom: 0.35pt + rgb("d9e4e6")))
+#show raw: set text(font: ("Cascadia Mono", "Microsoft YaHei"), size: 8pt)
+#show link: set text(fill: rgb("08696b"))
